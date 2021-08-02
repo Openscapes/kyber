@@ -1,2 +1,2 @@
 # openscapesr
-Openscapes utility functions
+Openscapes utility functions.
