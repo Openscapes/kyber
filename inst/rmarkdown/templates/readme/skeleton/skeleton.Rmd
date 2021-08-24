@@ -1,0 +1,22 @@
+---
+params:
+  schedule:
+    value:
+    - Date: 09/17
+      Cohort Call Agendas: >
+        1. Openscapes mindset and better science in less time
+      Series Chapters: >
+        [mindset](#mindset),
+        [better science in less time](#bsilt)
+      Between Cohort Calls: >
+        Seaside Chat (trailhead);
+        Team 1:1's with Eli
+output:
+  md_document
+---
+ 
+```{r, echo=FALSE}
+library(tibble)
+library(knitr)
+params$schedule[[1]] |> as_tibble() |> kable()
+```
