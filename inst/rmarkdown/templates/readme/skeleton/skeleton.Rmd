@@ -1,5 +1,6 @@
 ---
 params:
+  title: 2021 NOAA NMFS Openscapes Champions Cohort
   schedule:
     value:
     - Date: 09/17
@@ -11,12 +12,46 @@ params:
       Between Cohort Calls: >
         Seaside Chat (trailhead);
         Team 1:1's with Eli
+    - Date: 9/20, 9/22
+      Cohort Call Agendas: >
+        > GitHub Clinics <
+      Series Chapters: >
+        [publishing](https://openscapes.github.io/series/github-pub), 
+        [project management](https://openscapes.github.io/series/github-issues)
+      Between Cohort Calls: >
+        Hands-on collaboration in the browser: editing, committing, and Issues
 output:
   md_document
 ---
- 
-```{r, echo=FALSE}
+
+```{r, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, 
+                      warning = FALSE, error = FALSE)
+
 library(tibble)
+library(dplyr)
 library(knitr)
-params$schedule[[1]] |> as_tibble() |> kable()
+library(lubridate)
+```
+
+<a align="left" href="https://github.com/Openscapes/2021-noaa-nmfs"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="35px"></a>
+
+# `r params$title`
+
+Welcome to the `r params$title`! This is a Cohort for the NOAA National Marine Fisheries Service ([NMFS](https://www.fisheries.noaa.gov/)). Learn more about Openscapes and the Champions Program: <https://openscapes.org>. 
+
+<img align="right" src="https://raw.githubusercontent.com/Openscapes/2021-sasi/main/horst-champions-trailhead.png" width="450">
+
+## Cohort Agendas
+
+We will meet as a Cohort via Zoom four times over two months for 1.5 hours, on alternating Fridays in September and October 2021. Additionally, we will schedule several GitHub Clinics before Call 2.
+
+- **Dates: September 17, October 1, 15 & 29**
+- **Times: 11-12:30pm PST**
+- **Location: Remotely, via Zoom**
+
+Agenda links below are only accessible to Cohort participants (*coming soon!*), as they are also an archive of our live google-docing. Please see <https://openscapes.org/series> for more detail and to view blank versions of the agendas.
+ 
+```{r}
+params$schedule |> bind_rows() |> as_tibble() |> kable()
 ```
