@@ -1,6 +1,28 @@
 ---
 params:
-  title: 2021 NOAA NMFS Openscapes Champions Cohort
+  title: 2021 ILM ROTJ Openscapes Champions Cohort
+  wiki: https://github.com/Openscapes/2021-ilm-rotj/wiki
+  cohort: ILM ROTJ Visual Effects Division ([ILM](https://www.ilm.com/))
+  dates: September 17, October 1, 15 & 29
+  times: 11-12:30pm PST
+  location: Remotely, via Zoom
+  agenda_text: >
+    We will meet as a Cohort via Zoom four times over two months for 1.5 hours, on 
+    alternating Fridays in September and October 2021. Additionally, we will 
+    schedule several GitHub Clinics before Call 2.
+  openscapes_team: >
+    **Julia Stewart Lowndes**, Co-Director and Founder of Openscapes, is co-leading
+    
+    
+    **Erin Robinson**, Co-Director of Openscapes, is assisting
+  support: >
+    **This opportunity is supported by [Lucasfilm Ltd. LLC](https://www.lucasfilm.com/), 
+    funded by [The Walt Disney Studios](https://www.waltdisneystudios.com/).**
+  teams:
+      value:
+      - The Boonta Eve Classic Racing Team
+      - The Galactic Moisture Farming Lab
+      - The Midichlorian Research Group
   schedule:
     value:
     - Date: 09/17
@@ -10,8 +32,7 @@ params:
         [mindset](#mindset),
         [better science in less time](#bsilt)
       Between Cohort Calls: >
-        Seaside Chat (trailhead);
-        Team 1:1's with Eli
+        Seaside Chat (trailhead); Team 1:1's with Julie
     - Date: 9/20, 9/22
       Cohort Call Agendas: >
         > GitHub Clinics <
@@ -20,38 +41,91 @@ params:
         [project management](https://openscapes.github.io/series/github-issues)
       Between Cohort Calls: >
         Hands-on collaboration in the browser: editing, committing, and Issues
+    - Date: 10/01
+      Cohort Call Agendas: >
+        2. Team culture and data strategies for future us
+      Series Chapters: >
+        [team culture](https://openscapes.github.io/series/team-culture),
+        [data strategies](https://openscapes.github.io/series/data-strategies)
+      Between Cohort Calls: >
+        Seaside Chat (code of conduct); Team 1:1's with Eli; Co-working
+    - Date: 10/01
+      Cohort Call Agendas: >
+        2. Team culture and data strategies for future us
+      Series Chapters: >
+        [team culture](https://openscapes.github.io/series/team-culture),
+        [data strategies](https://openscapes.github.io/series/data-strategies)
+      Between Cohort Calls: >
+        Seaside Chat (code of conduct); Team 1:1's with Eli; Co-working 
+    - Date: 10/15
+      Cohort Call Agendas: >
+        3. Open communities and coding strategies for future us
+      Series Chapters: >
+        [coding with communities](https://openscapes.github.io/series/communities),
+        [coding strategies](https://openscapes.github.io/series/coding-strategies)
+      Between Cohort Calls: >
+        Seaside Chat (pathways); Team 1:1's with Eli; Co-working
+    - Date: 10/29
+      Cohort Call Agendas: >
+        4. Pathways share
+      Series Chapters: >
+      Between Cohort Calls: >
 output:
   md_document
 ---
 
-```{r, echo=FALSE, message=FALSE}
-knitr::opts_chunk$set(echo = FALSE, message = FALSE, 
-                      warning = FALSE, error = FALSE)
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE)
 
 library(tibble)
 library(dplyr)
 library(knitr)
-library(lubridate)
 ```
 
 <a align="left" href="https://github.com/Openscapes/2021-noaa-nmfs"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="35px"></a>
 
 # `r params$title`
 
-Welcome to the `r params$title`! This is a Cohort for the NOAA National Marine Fisheries Service ([NMFS](https://www.fisheries.noaa.gov/)). Learn more about Openscapes and the Champions Program: <https://openscapes.org>. 
+Welcome to the `r params$title`! This is a Cohort for the `r params$cohort`. Learn more about 
+Openscapes and the Champions Program: <https://openscapes.org>. 
 
 <img align="right" src="https://raw.githubusercontent.com/Openscapes/2021-sasi/main/horst-champions-trailhead.png" width="450">
 
 ## Cohort Agendas
 
-We will meet as a Cohort via Zoom four times over two months for 1.5 hours, on alternating Fridays in September and October 2021. Additionally, we will schedule several GitHub Clinics before Call 2.
+`r params$agenda_text`
 
-- **Dates: September 17, October 1, 15 & 29**
-- **Times: 11-12:30pm PST**
-- **Location: Remotely, via Zoom**
+- **Dates: `r params$dates`**
+- **Times: `r params$times`**
+- **Location: `r params$location`**
 
-Agenda links below are only accessible to Cohort participants (*coming soon!*), as they are also an archive of our live google-docing. Please see <https://openscapes.org/series> for more detail and to view blank versions of the agendas.
+Agenda links below are only accessible to Cohort participants (*coming soon!*),
+as they are also an archive of our live google-docing. Please 
+see <https://openscapes.org/series> for more detail and to view blank versions 
+of the agendas.
  
 ```{r}
-params$schedule |> bind_rows() |> as_tibble() |> kable()
+params$schedule |> bind_rows() |> kable()
 ```
+
+`r if(!is.null(params$wiki)){paste0("This cohort GitHub organzation also has a [wiki](", params$wiki, ") with GitHub links and resources that you can reference and add to.")}`
+
+## Participating teams
+
+These are the teams participating: please edit this repo yourself following our
+GitHub Clinic!
+
+`r paste0("**", params$teams, "**") |> paste("*Coming soon*", collapse = "\n\n")`
+
+## Openscapes Team
+
+`r params$openscapes_team`
+
+## More Background on Openscapes and the Champions program:
+
+* **[Our path to better science in less time using open data science tools](https://www.nature.com/articles/s41559-017-0160)** (Lowndes et al 2017, _Nature Ecology & Evolution_) - this paper greatly influences the whole Champions program and we’ll ask that everyone participating reads it before our first Cohort Call. 
+* **[Openscapes: Better Science for Future Us](https://docs.google.com/presentation/d/1HGw4P095-lblHiGQHXYidHiVysjrPxuojxTxKtE13vk/edit#slide=id.ge2b7c2f974_0_2017)** - 2021 plenary talk at the Society for Open, Reliable, and Transparent Ecology and Evolutionary biology (SORTEE) inaugural conference 
+* **[Openscapes embraces kindness and inclusion in open science](https://sparcopen.org/impact-story/openscapes-embraces-kindness-and-inclusion-of-open-science/)** - 2021 article about Openscapes
+* **[openscapes.org](https://openscapes.org/)** – Openscapes is operated at the National Center for Ecological Analysis & Synthesis, UC Santa Barbara
+
+`r params$support`
