@@ -10,19 +10,16 @@ params:
     We will meet as a Cohort via Zoom four times over two months for 1.5 hours, on 
     alternating Fridays in September and October 2021. Additionally, we will 
     schedule several GitHub Clinics before Call 2.
-  openscapes_team: >
-    **Julia Stewart Lowndes**, Co-Director and Founder of Openscapes, is co-leading
-    
-    
-    **Erin Robinson**, Co-Director of Openscapes, is assisting
+  teams:
+    - The Boonta Eve Classic Racing Team
+    - The Galactic Moisture Farming Lab
+    - The Midichlorian Research Group
+  openscapes_team:
+    - "**Julia Stewart Lowndes**, Co-Director and Founder of Openscapes, is co-leading"
+    - "**Erin Robinson**, Co-Director of Openscapes, is assisting"
   support: >
     **This opportunity is supported by [Lucasfilm Ltd. LLC](https://www.lucasfilm.com/), 
     funded by [The Walt Disney Studios](https://www.waltdisneystudios.com/).**
-  teams:
-      value:
-      - The Boonta Eve Classic Racing Team
-      - The Galactic Moisture Farming Lab
-      - The Midichlorian Research Group
   schedule:
     value:
     - Date: 09/17
@@ -119,7 +116,7 @@ GitHub Clinic!
 
 ## Openscapes Team
 
-`r params$openscapes_team`
+`r params$openscapes_team |> paste(collapse = "\n\n")`
 
 ## More Background on Openscapes and the Champions program:
 
