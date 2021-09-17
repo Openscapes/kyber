@@ -1,0 +1,8 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^\.travis\.yml$
+^CODE_OF_CONDUCT\.md$
+^cran-comments\.md$
+^\.github$
+^CRAN-RELEASE$
