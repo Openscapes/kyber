@@ -11,9 +11,9 @@ params:
     alternating Fridays in September and October 2021. Additionally, we will 
     schedule several GitHub Clinics before Call 2.
   teams:
-    - **The Boonta Eve Classic Racing Team**
-    - **The Galactic Moisture Farming Lab**
-    - **The Midichlorian Research Group**
+    - "**The Boonta Eve Classic Racing Team**"
+    - "**The Galactic Moisture Farming Lab**"
+    - "**The Midichlorian Research Group**"
   openscapes_team:
     - "**Julia Stewart Lowndes**, Co-Director and Founder of Openscapes, is co-leading"
     - "**Erin Robinson**, Co-Director of Openscapes, is assisting"
