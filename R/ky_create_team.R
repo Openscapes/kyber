@@ -1,0 +1,33 @@
+#' Create a Team on GitHub for an Organization
+#' 
+#' @param name The name of the team.
+#' @param org The GitHub organization that will own the team.
+#' @param maintainers One or more GitHub usernames that will be the team maintainers.
+#' @param visible Should the team be visible to every member of the organization?
+#' 
+#' @importFrom gh gh
+#' @export
+#' @examples
+#' \dontrun{
+#'
+#' # One maintainer
+#' kyber::ky_create_team("2021-ilm-rotj-team", maintainers = "jules32")
+#' 
+#' # Multiple maintainers
+#' kyber::ky_create_team("2021-ilm-rotj-team", maintainers = c("jules32", "seankross"))
+#' }
+ky_create_team <- function(name, org = "openscapes", maintainers, visible = TRUE) {
+  check_gh_pat()
+  
+  # The way these parameter options are named makes no sense.
+  # See: https://docs.github.com/en/rest/reference/teams#create-a-team
+  if(visible){
+    privacy <- "closed"
+  } else {
+    privacy <- "secret"
+  }
+  
+  response <- gh("POST /orgs/{org}/teams", org = org, name = name,
+                 maintainers = as.list(maintainers), privacy = privacy)
+  invisible(response)
+}

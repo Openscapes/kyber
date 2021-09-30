@@ -11,9 +11,9 @@ params:
     alternating Fridays in September and October 2021. Additionally, we will 
     schedule several GitHub Clinics before Call 2.
   teams:
-    - The Boonta Eve Classic Racing Team
-    - The Galactic Moisture Farming Lab
-    - The Midichlorian Research Group
+    - **The Boonta Eve Classic Racing Team**
+    - **The Galactic Moisture Farming Lab**
+    - **The Midichlorian Research Group**
   openscapes_team:
     - "**Julia Stewart Lowndes**, Co-Director and Founder of Openscapes, is co-leading"
     - "**Erin Robinson**, Co-Director of Openscapes, is assisting"
@@ -71,12 +71,9 @@ output:
   md_document
 ---
 
-```{r, include=FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE)
-
-library(tibble)
-library(dplyr)
-library(knitr)
+library(kyber)
 ```
 
 <a align="left" href="https://github.com/Openscapes/2021-noaa-nmfs"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="35px"></a>
@@ -102,21 +99,21 @@ see <https://openscapes.org/series> for more detail and to view blank versions
 of the agendas.
  
 ```{r}
-params$schedule |> bind_rows() |> kable()
+ky_fmt_schedule(params$schedule)
 ```
 
-`r if(!is.null(params$wiki)){paste0("This cohort GitHub organzation also has a [wiki](", params$wiki, ") with GitHub links and resources that you can reference and add to.")}`
+`r ky_fmt_wiki_link(params$wiki)`
 
 ## Participating teams
 
 These are the teams participating: please edit this repo yourself following our
 GitHub Clinic!
 
-`r paste0("**", params$teams, "**") |> paste("*Coming soon*", collapse = "\n\n")`
+`r paste(params$teams, collapse = "\n\n")`
 
 ## Openscapes Team
 
-`r params$openscapes_team |> paste(collapse = "\n\n")`
+`r paste(params$openscapes_team, collapse = "\n\n")`
 
 ## More Background on Openscapes and the Champions program:
 
