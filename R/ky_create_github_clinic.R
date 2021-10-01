@@ -1,8 +1,8 @@
 #' Create GitHub Clinic Files
 #'
-#' @param path Path to the directory where `github-clinic` should be created.
 #' @param names A vector of names for the markdown files that should be created.
 #' The `.md` extension will be added automatically.
+#' @param path Path to the directory where `github-clinic` should be created.
 #' 
 #' @importFrom fs path dir_create file_copy
 #' @export
@@ -17,8 +17,8 @@
 #' list.files("github-clinic")
 #' #> "erin.md"  "julia.md"
 #' }
-ky_create_github_clinic <- function(path = getwd(), names){
-  clinic_template <- system.file("openscapes-templates", 
+ky_create_github_clinic <- function(names, path = getwd()){
+  clinic_template <- system.file("kyber-templates", 
                                  "github_clinic_md_text.md", package = "kyber")
   clinic_path <- fs::path(path, "github-clinic")
   fs::dir_create(clinic_path)

@@ -4,14 +4,14 @@
 \alias{ky_create_team}
 \title{Create a Team on GitHub for an Organization}
 \usage{
-ky_create_team(name, org = "openscapes", maintainers, visible = TRUE)
+ky_create_team(name, maintainers, org = "openscapes", visible = TRUE)
 }
 \arguments{
 \item{name}{The name of the team.}
 
-\item{org}{The GitHub organization that will own the team.}
-
 \item{maintainers}{One or more GitHub usernames that will be the team maintainers.}
+
+\item{org}{The GitHub organization that will own the team.}
 
 \item{visible}{Should the team be visible to every member of the organization?}
 }

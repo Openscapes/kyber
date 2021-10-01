@@ -37,6 +37,9 @@
 ky_short_names <- function(first, last) {
   stopifnot(length(first) == length(last))
   
+  first <- tolower(first)
+  last <- tolower(last)
+  
   if(length(unique(first)) == length(first)) {
     return(first)
   } else {

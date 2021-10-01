@@ -4,14 +4,14 @@
 \alias{ky_add_team_members}
 \title{Add GitHub Users to a Team}
 \usage{
-ky_add_team_members(team, org = "openscapes", members)
+ky_add_team_members(team, members, org = "openscapes")
 }
 \arguments{
 \item{team}{The name of the team.}
 
-\item{org}{The GitHub organization that owns the team and the repository.}
-
 \item{members}{A vector of GitHub usernames.}
+
+\item{org}{The GitHub organization that owns the team and the repository.}
 }
 \description{
 Add GitHub Users to a Team

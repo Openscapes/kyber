@@ -4,13 +4,13 @@
 \alias{ky_create_github_clinic}
 \title{Create GitHub Clinic Files}
 \usage{
-ky_create_github_clinic(path = getwd(), names)
+ky_create_github_clinic(names, path = getwd())
 }
 \arguments{
-\item{path}{Path to the directory where \code{github-clinic} should be created.}
-
 \item{names}{A vector of names for the markdown files that should be created.
 The \code{.md} extension will be added automatically.}
+
+\item{path}{Path to the directory where \code{github-clinic} should be created.}
 }
 \description{
 Create GitHub Clinic Files
