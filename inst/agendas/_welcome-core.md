@@ -10,5 +10,5 @@
         * Lead by example and match your actions with your words.
     * Openscapes team here on this call: 
         * Julie Lowndes, Openscapes Co-Director, NCEAS
-        * Eli Holmes, NWFSC Mathematical Biology and Systems Monitoring Program
+        * Erin Robinson, Openscapes Co-Director, Metadata Game Changers
     * I am grateful I am for the land where I am here in Santa Barbara California and I want to honor the Chumash peoples who have been and continue to be stewards of the lands and waters here.

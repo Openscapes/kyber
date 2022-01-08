@@ -6,18 +6,19 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 
 ## TODO read in Google Doc registry sheet
-cohort_info <- tibble(cohort_name = "2022-faseb",
+cohort_metadata <- tibble(cohort_name = "2022-faseb",
                       date_start = "01/28/2021",
                       time_start = "10:00am PT", 
-                      cohort_type = "core-4calls",
+                      cohort_type = "core-5calls",
                       website = "https://openscapes.github.io/2022-faseb",
                       google_drive_folder = "TODO"
 )
 
 
 ## TODO depending on cohort_type, read in Google Doc sheet
-call_info <- tibble(call = 1, 
+call_metadata <- tibble(call = 1, 
                     title = "Openscapes Mindset",
+                    opening = "Introductions"
                     topic1 = "Openscapes Mindset",
                     topic2 = "Onboarding", 
                     goals = "We'll start working towards a common understanding...",
@@ -26,15 +27,15 @@ call_info <- tibble(call = 1,
   
 ```
 
-# Call 1: `r call_info$title`
+# Call `r call_metadata$call`: `r call_metadata$title`
 
-Openscapes Champions Cohort Series [ `r cohort_info$cohort_name` ] 
+Openscapes Champions Cohort Series [ `r cohort_metadata$cohort_name` ] 
 
-`r date_start`. `r time_start`. 
+`r cohort_metadata$date_start`. `r cohort_metadata$time_start`. 
 
-Links: [Cohort Google Drive folder]( `r cohort_info$google_drive_folder` ), Zoom: 
+Links: [Cohort Google Drive folder]( `r cohort_metadata$google_drive_folder` ), Zoom: 
   
-Web: `r cohort_info$website`
+Web: `r cohort_metadata$website`
   
   **Quick introduction: **
   
@@ -53,12 +54,12 @@ Web: `r cohort_info$website`
   
 ## Agenda
   
-**Today:**  `r call_info$goals`
+**Today:**  `r call_metadata$goals`
 
 
-## Roll call • `r cohort_info$time_start` - `r cohort_info$time_start + 2`
+## Roll call • `r cohort_metadata$time_start` - `r cohort_metadata$time_start + 2`
 
-_Name / pronouns / [team]() / `r call_info$roll-call`
+_Name / pronouns / [team]() / `r call_metadata$roll-call`
 
 * 
 *    
@@ -73,33 +74,33 @@ _Name / pronouns / [team]() / `r call_info$roll-call`
 
 ## Welcome • 10:02-10:15 PT
 
-```{r, child = either "welcome-first.md" or "welcome-core.md"}
+```{r, child = either "_welcome-first.md" or "_welcome-core.md"}
 
 ```
 
 
-```{r, child = "welcome-overview.md"}
+```{r, child = "_welcome-overview.md"}
 
 ```
 
-## Introductions OR Reflections • 10:15-10:30 PT
+## `r call_metadata$opening` • 10:15-10:30 PT
 
-```{r, child = "introductions.md"}
+```{r, child = either "_introductions.md" or "_reflections.md"}
 
 ```
 
 
-## `r call_info$topic1` • 10:30-11:10 PT
+## `r call_metadata$topic1` • 10:30-11:10 PT
 
 _All Champions program slides are also linked from [https://openscapes.org/series](https://openscapes.github.io/series) _
 
-```{r, child = "introductions.md"}
+```{r, child = "_mindset.md"}
 # note: slide link is in this .md right now, so can easily re-use in digests
 ```
 
-## `r call_info$topic2` • 10:10-11:25 PT
+## `r call_metadata$topic2` • 10:10-11:25 PT
 
-```{r, child = "onboarding.md"}
+```{r, child = "_onboarding.md"}
 # note: slide link is in this .md right now, so can easily re-use in digests
 ```
 
