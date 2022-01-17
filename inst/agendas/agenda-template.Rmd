@@ -18,7 +18,7 @@ cohort_metadata <- tibble(cohort_name = "2022-faseb",
 ## TODO depending on cohort_type, read in Google Doc sheet
 call_metadata <- tibble(call = 1, 
                     title = "Openscapes Mindset",
-                    opening = "Introductions"
+                    opening = "Introductions",
                     topic1 = "Openscapes Mindset",
                     topic2 = "Onboarding", 
                     goals = "We'll start working towards a common understanding...",
