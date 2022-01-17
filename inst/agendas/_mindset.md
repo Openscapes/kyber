@@ -1,3 +1,7 @@
+---
+duration: 30 minutes
+---
+
 * **Openscapes mindset** ([slides](https://docs.google.com/presentation/d/1giEW0EIYVnxneGpOBSJnEqg-1CVBUGrbH8Z5gawdeBc/edit?usp=sharing) 1-19) (20 min) – Julie
     * Examples are R-heavy; concepts are broad. Showing what’s possible.
     *  
