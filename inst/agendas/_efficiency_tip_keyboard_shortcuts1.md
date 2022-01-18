@@ -1,3 +1,7 @@
+---
+duration: 0 minutes
+---
+
 - **Efficiency Tip of the Day ** (2 min) – Julie
 - Keyboard Shortcuts Part 1: Useful for any application (docs, email, code)
     - **Mac: **Arrow keys + option, + command, + shift, & in combination
