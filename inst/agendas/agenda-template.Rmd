@@ -1,0 +1,172 @@
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+## libraries
+library(tidyverse)
+
+## TODO read in Google Doc registry sheet
+cohort_metadata <- tibble(cohort_name = "2022-faseb",
+                      date_start = "01/28/2021",
+                      time_start = "10:00am PT", 
+                      cohort_type = "core-5calls",
+                      website = "https://openscapes.github.io/2022-faseb",
+                      google_drive_folder = "TODO"
+)
+
+
+## TODO depending on cohort_type, read in Google Doc sheet
+call_metadata <- tibble(call = 1, 
+                    title = "Openscapes Mindset",
+                    opening = "Introductions",
+                    topic1 = "Openscapes Mindset",
+                    topic2 = "Onboarding", 
+                    goals = "We'll start working towards a common understanding...",
+                    roll-call = "Share something you're good at"
+)
+  
+```
+
+# Call `r call_metadata$call`: `r call_metadata$title`
+
+Openscapes Champions Cohort Series [ `r cohort_metadata$cohort_name` ] 
+
+`r cohort_metadata$date_start`. `r cohort_metadata$time_start`. 
+
+Links: [Cohort Google Drive folder]( `r cohort_metadata$google_drive_folder` ), Zoom: 
+  
+Web: `r cohort_metadata$website`
+  
+  **Quick introduction: **
+  
+  * Welcome, thank you for being here! 
+  * We’ll be using Zoom for video calls & Google docs for notes 
+* Everything you share in this doc is available to everyone else on the call
+* Comments / emojis / gifs / +1s to say “me too” are welcome! 🎉🤓
+* As you join each session, please:
+  * Add your name to the Roll Call below
+* Rename yourself as how you’d like to be called and add your team name
+* Hover over your name or video > 3 dots > rename
+
+
+---
+  
+  
+## Agenda
+  
+**Today:**  `r call_metadata$goals`
+
+
+## Roll call • `r cohort_metadata$time_start` - `r cohort_metadata$time_start + 2`
+
+_Name / pronouns / [team]() / `r call_metadata$roll-call`
+
+* 
+*    
+*   
+*  
+* 
+*  
+*  
+*  
+* 
+*  
+
+## Welcome • 10:02-10:15 PT
+
+```{r, child = either "_welcome-first.md" or "_welcome-core.md"}
+
+```
+
+
+```{r, child = "_welcome-overview.md"}
+
+```
+
+## `r call_metadata$opening` • 10:15-10:30 PT
+
+```{r, child = either "_introductions.md" or "_reflections.md"}
+
+```
+
+
+## `r call_metadata$topic1` • 10:30-11:10 PT
+
+_All Champions program slides are also linked from [https://openscapes.org/series](https://openscapes.github.io/series) _
+
+```{r, child = "_mindset.md"}
+# note: slide link is in this .md right now, so can easily re-use in digests
+```
+
+## `r call_metadata$topic2` • 10:10-11:25 PT
+
+```{r, child = "_onboarding.md"}
+# note: slide link is in this .md right now, so can easily re-use in digests
+```
+
+## Closing • 11:25-11:30 PT
+
+```{r}
+## note to Sean -- not sure the following should be markdown templates or be shorter parameters from the cohort registry: https://docs.google.com/spreadsheets/d/1Oej46BMX_SLIc1cwoyLHzNWwGlT3szez8FDKc3b418w/edit#gid=942365997
+```
+
+
+
+* **Task for next time: Have a Seaside Chat & start your Pathway** (3 min) – All 
+    * 1) Have a Seaside Chat with your research group to explore/practice GitHub. Options:
+        * a) Join a GitHub Clinic with us (Google Calendar Invites upcoming)
+            * Sept 13, 12-1pm PT 
+            * Sept 14, 9-10am PT
+        * b) Follow along on your own ([slides](https://docs.google.com/presentation/d/1PzGAbEpNhT6CDPe1DCHf5-eVAjy-2R2D3VMHz7dY774/edit#slide=id.p) & recording)
+        * *share your GitHub username ahead of time: [OpenscapesParticipants](https://docs.google.com/spreadsheets/d/1BKxaZgv7iVkG2n8lGZVGIJcv8iObdEty9tgbov2fuH4/edit#gid=0)
+    * 2) Start thinking about your Pathway: Focus on your trailhead (now). 
+        * [Pathways Sheet](https://drive.google.com/open?id=1X_-qPdWDCpw2F3nZr6vZnq87guyUIGLvekm0XV2H-A8) (File > Make a copy)
+        * Upload to THIS PathwayShare FOLDER folder before Call 4
+    * 3) Join Slack (we’ll invite you to our Openscapes org)
+        * Introduce yourself and tag your team
+            * Private channel for our cohort as you get comfortable 
+            * New to Slack? [quickstart doc](https://zenodo.org/record/3763730#.YIxK6-tlDUI)
+* **Connecting between sessions**
+    * https://openscapes.github.io/2021-sasi - details & links
+    * Slack
+    * Twitter – [@openscapes](https://twitter.com/openscapes) 
+    * Call Digest next week 
+* **Efficiency Tip of the Day **(3 min) – Julie
+* Keyboard Shortcuts Part 1: Useful for any application (docs, email, code)
+    * **Mac: **Arrow keys + option, + command, + shift, & in combination
+    * **PC:** Arrow keys + Ctrl + Fn + shift, & in combination
+    * Here is some sample text for our demo. What a great sentence.
+* **Inclusion Tip of the Day**
+    * Be mindful of words and idioms you use. Move away from language that is racist, sexist, violent, ableist, etc. Example: 
+        * Use “main” instead of “master” (GitHub branches, bedrooms)
+        * Welcome people to meetings with gender-neutral/gender-inclusive language, like “Hi all/everyone/folks/team” instead of “Hi guys/ladies”
+        * Others?
+        *  
+* **Announcements **(please contribute!)
+    * **Sept 30, 12pm PT: Openscapes Community Call: RMarkdown chat with Alison Hill of RStudio: **[https://openscapes.github.io/events/](https://openscapes.github.io/events/) 
+    * **Sept 21, 7pm PT: [Relations First, with Ta7talíya Nahanee](https://www.eventbrite.ca/e/relations-first-with-ta7taliya-nahanee-tickets-167114803877)**
+    *  
+    *  
+    *  
+* **Requests for peer-assists **(please share what you need and how you can assist!)
+    *  
+    *  
+    * 
+* **<span style="text-decoration:underline;">Resources</span>** available for reuse/remix
+    * [openscapes.org](https://openscapes.org)
+        * [/series](https://openscapes.github.io/series): Champions program lesson series
+        * [/media](https://openscapes.org/media): slide decks, publications, media
+        * [/blog](https://openscapes.org/blog): stories from the community
+    * github: [@openscapes](https://github.com/openscapes)
+        * [how_we_work](https://github.com/Openscapes/how_we_work), [seaside-chats](https://github.com/Openscapes/seaside-chats): Examples from previous cohorts
+    * twitter: [@openscapes](https://twitter.com/openscapes)
+    * artwork: by the incredible [Allison Horst](https://twitter.com/allison_horst)
+* **Feedback on this session**
+    * What worked? What didn’t? What surprised you? What would you change? 
+        *  
+        *  
+        *  
+
+ 
+
+Thank you, see you next time!
