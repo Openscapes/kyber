@@ -1,5 +1,8 @@
+---
+duration: 0 minutes
+---
 <div><font size="2">
-**Openscapes Champions Cohort Series [ `r cohort_metadata$cohort_name` ]** 
+**Openscapes Champions Cohort Series \\[ `r cohort_metadata$cohort_name` ]** 
 
 Links: [Cohort Google Drive folder](`r cohort_metadata$google_drive_folder), <font color="purple">Zoom:</font>
 
@@ -9,7 +12,7 @@ Web: `r cohort_metadata$website`
 
 - Welcome, thank you for being here! 
 - We’ll be using Zoom for video calls & Google docs for notes 
-    - Everything you share in this doc is available to everyone else on the call
+  - Everything you share in this doc is available to everyone else on the call
     - Comments / emojis / gifs / +1s to say “me too” are welcome! 🎉🤓
 - As you join each session, please:
     - Add your name to the Roll Call below
