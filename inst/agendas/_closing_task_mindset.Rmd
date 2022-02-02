@@ -1,8 +1,10 @@
 ---
-duration: 5 minutes
+params:
+  start_time: "12:00pm PT"
+  duration: 5
 ---
 
-## Closing • 
+## Closing • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 - **Task for next time: Have a Seaside Chat & start your Pathway** (2 min) – All 
   - 1) Create a copy of [Pathways Sheet](https://drive.google.com/open?id=1X_-qPdWDCpw2F3nZr6vZnq87guyUIGLvekm0XV2H-A8) (File > Make a copy > in our shared folder)

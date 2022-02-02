@@ -1,8 +1,10 @@
 ---
-duration: 15 minutes
+params:
+  start_time: "12:00pm PT"
+  duration: 15
 ---
 
-## Introductions • 
+## Introductions • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 Two rapid rounds of breakout groups to meet your “neighbors”. 
 
