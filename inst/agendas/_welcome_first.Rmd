@@ -16,7 +16,7 @@ params:
             - ...
     - I am grateful I am for the land where I am here in Santa Barbara California and I want to honor the Chumash peoples who have been and continue to be stewards of the lands and waters here.
 - **Today’s goals** (1 min) – Julie
-    - 
+  - 
 - **You are all welcome here** (3 min) – Julie
   - This is a positive learning space where everyone is welcome to ask questions and participate.
   - Our Code of Conduct ([full version](https://www.openscapes.org/code-of-conduct/))
@@ -29,7 +29,7 @@ params:
       - Julie - [lowndes@nceas.ucsb.edu](mailto:lowndes@nceas.ucsb.edu)
       - Erin - [erin@metadatagamechangers.com](mailto:erin@metadatagamechangers.com) 
   - Let’s name power dynamics. Science is hierarchical, through titles, degrees, institutions… We want to be mindful of how hierarchy can get in the way of our learning. Here, we’ll work to flatten that hierarchy.
-  - We know there is a range of technical experience – by design! We are all here because we want to improve data analysis and stewardship practices, get a sense of new software and approaches, reduce friction when collaborating with others, promote diversity, equity, and inclusion in our work and communities, and develop leadership skills.
+  - We know there is a range of technical experience – by design! We are all here because we want to improve our work around data-intensive science, get a sense of new software and approaches, reduce friction when collaborating with others, promote diversity, equity, and inclusion in our work and communities, and develop leadership skills.
   - We’re all imperfect and learning together – Openscapes included
     - Vulnerability: yes! Shame: no.
     - If something doesn’t feel right, let’s talk about it
@@ -51,6 +51,7 @@ params:
     - Develop modern skills and habits that are of immediate value to you, including confidence and agency as leaders 
     - Cultivate collaborative and inclusive research communities 
   - **Outcomes**
+  - Different for everybody - this is about changing habits as a team so you shape where you invest based on what you need.
   - A practice of talking and collaborating about data workflows with your team and community (“Seaside Chats”)
   - A pathway you’ve identified with your team to help prioritize next steps 
     - You’ll share your progress to the Cohort in our last call 

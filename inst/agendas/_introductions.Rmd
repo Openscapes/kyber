@@ -1,34 +1,26 @@
 ---
 params:
   start_time: "12:00pm PT"
-  duration: 15
+  duration: 10
 ---
 
 ## Introductions • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-Two rapid rounds of breakout groups to meet your “neighbors”. 
+One rapid round of breakout groups to meet your “neighbors”. 
 
 **Prompt: Share your name, team, one thing about your data workflow**
 
-  - **Round 1 - Breakout groups** (5 min) – All (groups of 3, leads separate – Erin)
-    - 
-    -  
-    -  
-    - 
-    -  
-    -   
-  - **Round 2 - Breakout groups** (5 min) – All (groups of 3, leads separate – Erin)
-    - 
-    -  
-    -  
-    - 
-    -  
-    -       
-- **Share-outs** (3 min) – Erin
-    - Write or say something you heard from someone you talked with
-    -  
-    -  
-    - 
-    -   
-    - 
+- **Breakout groups** (5 min)
+  - ‎
+  - 
+  - 
+  - 
+  -
+- **Share-outs** (5 min) – Erin
+  - Write or say something you heard from someone you talked with
+  -  
+  -  
+  - 
+  -   
+  - 
 
