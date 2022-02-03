@@ -1,8 +1,10 @@
 ---
-duration: 30 minutes
+params:
+  start_time: "12:00pm PT"
+  duration: 30
 ---
 
-## Openscapes mindset • 
+## Openscapes mindset • `r kyber:::fmt_duration(params$start_time, params$duration)`
 *All Champions program slides are also linked from <https://openscapes.org/series>* 
 
 
