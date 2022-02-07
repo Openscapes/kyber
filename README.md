@@ -25,7 +25,7 @@ can act as you on GitHub.
 
 ``` r
 # First make sure to set your GitHub PAT
-Sys.setenv(GITHUB_PAT = "ghp_4X73I5ACF1JWZY92STBE")
+Sys.setenv(GITHUB_PAT = "ghp_4X73I5ACF1JWZY92STBE") # must do this each R session
 
 library(kyber) 
 library(rmarkdown)

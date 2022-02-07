@@ -14,18 +14,21 @@ raw_sheet <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1
 
 ## create members object
 members <- raw_sheet %>%
-  select("First" =`First Name`, "Last" = `Last Name`, "GitHub" = `GitHub username`) %>%
+  select("First" =`First Name`, "Last" = `Last Name`, "GitHub" = `GitHub username`)
+
+## create github_clinic folder with .mds for each member
+ky_short_names(members$First, members$Last) |>
+  ky_create_github_clinic()
+
+## filter for na GH names
+members <- members %>%
   filter(!is.na(GitHub)) %>%
-  filter(!(GitHub %in% c("Erin-Fedewa-NOAA", "LeahZacher-NOAA", "jimianelli-NOAA", "geoff.mayhew")))
+  filter(!(GitHub %in% c("jimianelli-NOAA", "geoff.mayhew", "MikeLevine-NOAA")))
 
 
 ## create repo and team name
 repo_name <- "2022-noaa-afsc"
 team_name <- paste0(repo_name, "-team")
-
-## create github_clinic folder with .mds for each member
-ky_short_names(members$First, members$Last) |>
-  ky_create_github_clinic()
 
 ## create GitHub team, add team members, agnostic of the repo!
 ky_create_team(team_name, maintainers = "jules32")
