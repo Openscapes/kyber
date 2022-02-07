@@ -16,7 +16,7 @@ duration: 5 minutes
         - New to Slack? [quickstart doc](https://zenodo.org/record/3763730#.YIxK6-tlDUI)
 
 - **Connecting between sessions**
-    - https://openscapes.github.io/2021-sasi - details & links
-    - Slack
-    - Twitter – [@openscapes](https://twitter.com/openscapes) 
-    - Call Digest next week 
+  - https://openscapes.github.io/2021-sasi - details & links
+  - Slack
+  - Twitter – [@openscapes](https://twitter.com/openscapes) 
+  - Call Digest next week 
