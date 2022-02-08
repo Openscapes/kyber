@@ -19,3 +19,4 @@ duration: 10 minutes
       - Consider adopting (or creating) a Code of Conduct for your research group, posting publicly (on your website, on GitHub, etc) 
   - 3) Summarize your Seaside Chat in a GitHub Issue!
       - https://github.com/Openscapes/2021-noaa-nmfs/issues 
+      

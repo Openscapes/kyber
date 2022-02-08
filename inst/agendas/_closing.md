@@ -25,8 +25,8 @@ duration: 0 minutes
 
 - **Feedback on this session**
   - What worked? What didn’t? What surprised you? What would you change? 
-    -  
+    -  ‎
     -  
     -  
 
- Thank you, see you next time!
+Thank you, see you next time!

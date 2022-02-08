@@ -5,8 +5,8 @@ duration: 5 minutes
 ## Welcome •
 
 - **Welcome to Openscapes! 👋** (1 min) – Julie
-  - We are now recording this meeting. 
-  - Live transcriptions are available.
+  - <font color="red">We are now recording this meeting.</font> 
+  - <font color="red">Live transcriptions are available.</font>
   - CoC Reminder ([full version](https://www.openscapes.org/code-of-conduct/))
     - Be respectful and value each other’s ideas, styles and viewpoints.
     - Be direct but professional; we cannot withhold hard truths.
@@ -24,8 +24,8 @@ duration: 5 minutes
 
 
 - **Followups** (1 min) – Julie
-  - <!--- Overwhelm is real. We’re all showing up to start thinking about collaborating in a different way together, and it’s hard. We’re all working on being empathetic teachers and learners with each other so we can help each other and do the work we need to do together. --->
-  - <!--- GROUP PHOTO! Call 3 --->
+  - <!--- Call 2: Overwhelm is real. We’re all showing up to start thinking about collaborating in a different way together, and it’s hard. We’re all working on being empathetic teachers and learners with each other so we can help each other and do the work we need to do together. --->
+  - <!--- Call 3: GROUP PHOTO! --->
   - 
 
 - **Questions** before we get started?
