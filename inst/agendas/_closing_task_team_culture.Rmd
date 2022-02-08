@@ -1,12 +1,12 @@
 ---
-duration: 10 minutes
+duration: 8 minutes
 ---
 
 ## Closing • 
 
 - **Pathway Check-in** (3 min) - Erin  
   - [Pathways](https://drive.google.com/open?id=1X_-qPdWDCpw2F3nZr6vZnq87guyUIGLvekm0XV2H-A8) spreadsheet 
-  - Onboarding, Code of Conduct
+  - Transition to "Next Steps" - think about onboarding, Code of Conduct
   - 
 - **Questions**
   -  
