@@ -9,7 +9,7 @@
 #' @return A vector of file paths
 #' @export
 #' @examples
-#' kyber_file("ari_intro.Rmd")
+#' kyber_file("_opening.Rmd")
 #'
 kyber_file <- function(path = NULL){
   if(is.null(path)) {

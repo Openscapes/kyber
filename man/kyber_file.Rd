@@ -18,6 +18,6 @@ This function allows you to quickly access files that are installed with
 kyber.
 }
 \examples{
-kyber_file("ari_intro.Rmd")
+kyber_file("_opening.Rmd")
 
 }
