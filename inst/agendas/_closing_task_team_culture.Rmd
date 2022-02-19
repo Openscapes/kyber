@@ -6,7 +6,7 @@ duration: 8 minutes
 
 - **Pathway Check-in** (3 min) - Erin  
   - [Pathways](https://drive.google.com/open?id=1X_-qPdWDCpw2F3nZr6vZnq87guyUIGLvekm0XV2H-A8) spreadsheet 
-  - Transition to "Next Steps" - think about onboarding, Code of Conduct
+  - Shifting to "Next Steps" - think about onboarding/offboarding
   - 
 - **Questions**
   -  
@@ -14,7 +14,7 @@ duration: 8 minutes
 
 - **Task: Have a Seaside Chat and work on your pathway** (2 min) – All 
   - 1) Have a Seaside Chat with your broader research group 
-  - 2) Continue your Pathway - shifting to "Next Steps", think about Onboarding
+  - 2) Continue your Pathway - shifting to "Next Steps", think about onboarding/offboarding
       - [Pathways](https://drive.google.com/open?id=1X_-qPdWDCpw2F3nZr6vZnq87guyUIGLvekm0XV2H-A8) spreadsheet > Make a copy in the PathwayShare Folder 
       - Consider adopting (or creating) a Code of Conduct for your research group, posting publicly (on your website, on GitHub, etc) 
   - 3) Summarize your Seaside Chat in a GitHub Issue!

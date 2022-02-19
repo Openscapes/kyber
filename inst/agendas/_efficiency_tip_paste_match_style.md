@@ -8,7 +8,7 @@ duration: 0 minutes
   - PC: Control + Shift + V (in some applications)
   - Prevents this: 
   - <font size="20" color="green">Psychological safety</font>
-
+  - I’ll demo: 
 - **“redoing” formatting** 
   - Mac: Command-Y
   - PC: Control-Y
