@@ -16,7 +16,7 @@ duration: 33 minutes
   - **Prompt: Explore communities resources & tutorials relevant for your next Seaside Chat**
   - Explore a few communities of interest / from the slides
   - What communities are you already a part of?
-  - Screenshare, switch who leads, write notes to share with the group!
+  - What would you like to learn with your research group? How does this fit with your Pathway?
   - ‎
   - 
   -  
