@@ -1,12 +1,14 @@
 ---
-duration: 2 minutes
+params: 
+  start_time: "12:00pm PT"
+  duration: 2
 ---
 
-## Roll call • 
+## Roll call • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-*Name / team / share a place you enjoy spending time*
+*Name / team / share something you’re good at*
 
-- Julie Lowndes / Openscapes / my backyard
+- Julie Lowndes / Openscapes / packing (bags, cars)
 -    
 -   
 -  

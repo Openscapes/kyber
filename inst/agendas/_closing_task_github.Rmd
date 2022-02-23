@@ -1,8 +1,10 @@
 ---
-duration: 5 minutes
+params:
+  start_time: "12:00pm PT"
+  duration: 3
 ---
 
-## Closing • 
+## Closing • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 - **Task for next time: Have a Seaside Chat about GitHub** (3 min) – All 
   - 1) Have a Seaside Chat with your research group to explore/practice GitHub. Options:

@@ -1,8 +1,10 @@
 ---
-duration: 40 minutes
+params: 
+  start_time: "12:00pm PT"
+  duration: 40
 ---
 
-## Data strategies • 
+## Data strategies • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 - **Data strategies for Future Us** ([slides](https://docs.google.com/presentation/d/1rv-JfJeuYhogxV6Dpn_hNDm09nfKnOMtmZpgcciI_98/edit?usp=sharing)) (20 min) – Julie
   - Data organization in spreadsheets ([Broman & Woo 2018](https://peerj.com/preprints/3183/))
