@@ -4,15 +4,14 @@ duration: 40 minutes
 
 ## Data strategies • 
 
-- **Data strategies for Future Us** ([slides](https://docs.google.com/presentation/d/1rv-JfJeuYhogxV6Dpn_hNDm09nfKnOMtmZpgcciI_98/edit?usp=sharing)) (15 min) – Julie
+- **Data strategies for Future Us** ([slides](https://docs.google.com/presentation/d/1rv-JfJeuYhogxV6Dpn_hNDm09nfKnOMtmZpgcciI_98/edit?usp=sharing)) (20 min) – Julie
   - Data organization in spreadsheets ([Broman & Woo 2018](https://peerj.com/preprints/3183/))
   - Spreadsheet drama ([Parker, Peng & Bryan 2016](https://nssdeviations.com/episode-9-spreadsheet-drama))
   - Good enough practices for scientific computing ([Wilson et al. 2017](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510))
   - Tidy data illustrated series ([Lowndes & Horst 2020](https://www.openscapes.org/blog/2020/10/12/tidy-data/))
   - 
-- **Breakout groups** (12 min) – All (groups of 3-4, random)
-- *Discuss the prompts, and take notes below:*
-  - **Do these data strategies resonate with you / in your work?**
+- **Silent journaling** (5 min) – All
+  - **How do these data strategies resonate with you / in your work?**
   - ‎
   -  
   -   
@@ -29,12 +28,12 @@ duration: 40 minutes
   -  
   -   
   -  
-  - **General reflections/reactions  **
+  - **General reflections/reactions**
   - ‎
   - 
   - 
   - 
-- **Discussion*- (13 min) – All*- **
+- **Discussion** (15 min) – All
   - ‎
   -  
   - 
