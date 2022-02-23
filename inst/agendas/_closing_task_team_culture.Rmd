@@ -1,8 +1,10 @@
 ---
-duration: 10 minutes
+params: 
+  start_time: "12:00pm PT"
+  duration: 10
 ---
 
-## Closing • 
+## Closing • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 - **Pathway Check-in** (3 min) - Erin  
   - [Pathways](https://drive.google.com/open?id=1X_-qPdWDCpw2F3nZr6vZnq87guyUIGLvekm0XV2H-A8) spreadsheet 

@@ -1,8 +1,10 @@
 ---
-duration: 25 minutes
+params: 
+  start_time: "12:00pm PT"
+  duration: 25
 ---
 
-## Team culture • 
+## Team culture • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 - **Psychological safety** ([slides](https://docs.google.com/presentation/d/1TwCyf9xicLWBfPhW9HnYQH3-mHycEyVKTm38zSg4D3Q/edit?usp=sharing)) (5min) – Julie
   - 

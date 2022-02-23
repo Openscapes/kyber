@@ -26,7 +26,8 @@ call_agenda <- function(registry_url, cohort_id, call_number, tz = "PT",
   cohort_registry <- read_sheet(registry_url, cohort_sheet)
   call_registry <- read_sheet(registry_url, call_sheet)
   temp_dir <- tempdir()
-  params_registry <- list(website = website, cohort_name = cohort_id)
+  params_registry <- list(website = website, cohort_name = cohort_id, 
+                          call = call_number)
   cohort_name <- date_start <- type <- NULL
   
   template_files <- call_registry %>% 

@@ -1,8 +1,10 @@
 ---
-duration: 5 minutes
+params: 
+  start_time: "12:00pm PT"
+  duration: 5
 ---
 
-## Welcome •
+## Welcome • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 - **Welcome to Openscapes! 👋** (1 min) – Julie
   - We are now recording this meeting. 
