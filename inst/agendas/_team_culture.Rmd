@@ -7,7 +7,7 @@ params:
 ## Team culture • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 - **Psychological safety** ([slides](https://docs.google.com/presentation/d/1TwCyf9xicLWBfPhW9HnYQH3-mHycEyVKTm38zSg4D3Q/edit?usp=sharing)) (5min) – Julie
-  - 
+  -  ‎
   -  
   -  
   -    
