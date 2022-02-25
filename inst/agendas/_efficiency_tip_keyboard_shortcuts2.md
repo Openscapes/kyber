@@ -7,8 +7,8 @@ duration: 0 minutes
     - Mac:
         - `Command tab` for carouseling between applications
         - `Command `\` for carouseling between applications
-        - `Command option arrow `for carouseling between tabs (browser)
+        - `Command option arrow` for carouseling between tabs (browser)
     - Windows:
         - `Alt-tab `or `Windows-tab`
-        - `Alt-tab `again or `Alt-shift-tab` to go backwards
+        - `Alt-tab` again or `Alt-shift-tab` to go backwards
         - `Control page up / page down` for carouseling between tabs (browser)

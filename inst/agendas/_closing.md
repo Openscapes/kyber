@@ -21,7 +21,7 @@ duration: 0 minutes
     - github: [@openscapes](https://github.com/openscapes)
         - [how_we_work](https://github.com/Openscapes/how_we_work), [seaside-chats](https://github.com/Openscapes/seaside-chats): Examples from previous cohorts
     - twitter: [@openscapes](https://twitter.com/openscapes)
-    - artwork: by the incredible [Allison Horst](https://twitter.com/allison_horst)
+    - artwork: by the amazing [Allison Horst](https://twitter.com/allison_horst)
 
 - **Feedback on this session**
   - What worked? What didn’t? What surprised you? What would you change? 
