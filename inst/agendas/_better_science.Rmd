@@ -1,8 +1,10 @@
---
-duration: 30 minutes
---
+---
+params:
+  start_time: "12:00pm PT"
+  duration: 30
+---
 
-## Better science in less time •
+## Better science in less time • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 - Ocean Health Index ([slides](https://docs.google.com/presentation/d/162tpUZEFkpTUI4K3Yl_mF6HLxsgwO_d7bvF5F4igxfk/edit?usp=sharing)) (5 min) - Julie
   - ‎

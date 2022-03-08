@@ -1,8 +1,14 @@
 ---
-duration: 5 minutes
+params:
+  start_time: "12:00pm PT"
+  duration: 5
 ---
 
+<<<<<<< HEAD:inst/agendas/_closing_task_mindset.md
 ## Closing •
+=======
+## Closing • `r kyber:::fmt_duration(params$start_time, params$duration)`
+>>>>>>> dev:inst/agendas/_closing_task_mindset.Rmd
 
 -   **We've covered a lot today; we'll explore these ideas more deeply**
     -   Cohort website: `r params$website` TODO

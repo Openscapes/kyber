@@ -14,12 +14,19 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Imports: 
+    dplyr,
     fs,
     gert,
     gh,
+    googlesheets4,
     knitr,
+    lubridate,
+    magrittr,
+    parsermd,
+    purrr,
     rmarkdown,
-    rstudioapi
+    rstudioapi,
+    stringr
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3

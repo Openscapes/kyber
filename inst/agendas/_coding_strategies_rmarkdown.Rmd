@@ -1,8 +1,10 @@
 ---
-duration: 35 minutes
+params: 
+  start_time: "12:00pm PT"
+  duration: 35
 ---
 
-## Coding strategies for Future Us • 
+## Coding strategies for Future Us • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 - **RMarkdown** (15 min) – Julie
   - **Why are we so enthused about RMarkdown**?
