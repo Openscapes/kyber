@@ -1,5 +1,5 @@
 ---
-duration: 5 minutes
+duration: 4 minutes
 ---
 
 ## Welcome •
