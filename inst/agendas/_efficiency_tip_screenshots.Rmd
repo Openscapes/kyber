@@ -1,5 +1,7 @@
 ---
-duration: 0 minutes
+params: 
+  start_time: "12:00pm PT"
+  duration: 0
 ---
 
 - **Efficiency Tip of the Day ** (2 min) – Julie

@@ -1,8 +1,10 @@
 ---
-duration: 59 minutes
+params: 
+  start_time: "12:00pm PT"
+  duration: 59
 ---
 
-## Team Pathways "work in progress" • 
+## Team Pathways "work in progress" • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 This is our favorite day! Hearing how you're identifying your trailhead and starting your pathways
 
