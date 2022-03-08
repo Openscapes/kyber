@@ -4,6 +4,8 @@ params:
   duration: 12
 ---
 
+## Reflections • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
 1 rapid round of breakout groups to meet your neighbors. 
 
 **Prompt**: Share about your Seaside Chat – Are there questions you have or ideas you want to follow up on or learn?

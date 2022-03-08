@@ -1,8 +1,10 @@
 ---
-duration: 2 minutes
+params: 
+  start_time: "12:00pm PT"
+  duration: 2
 ---
 
-## Roll call • 
+## Roll call • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 *Name / pronouns / share someone or something that influences your work*
 

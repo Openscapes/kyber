@@ -1,8 +1,10 @@
 ---
-duration: 5 minutes
+params: 
+  start_time: "12:00pm PT"
+  duration: 5
 ---
 
-## Closing • 
+## Closing • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 - **Task for next time: Prepare your Pathways presentation** (3 min) – All 
   - Have a Seaside Chat with your research group

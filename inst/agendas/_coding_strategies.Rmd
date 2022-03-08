@@ -1,8 +1,10 @@
 ---
-duration: 35 minutes
+params: 
+  start_time: "12:00pm PT"
+  duration: 35
 ---
 
-## Coding strategies • 
+## Coding strategies • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 - **Coding strategies for Future Us** ([slides](https://docs.google.com/presentation/d/1nTLJ782dpZqp3MEhQU9zNaFInrTaFUVQbj9OqsmxUYo/edit?usp=sharing)) (15 min) – Julie
   - Type of tool needed:

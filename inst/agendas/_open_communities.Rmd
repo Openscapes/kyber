@@ -1,8 +1,10 @@
 ---
-duration: 33 minutes
+params: 
+  start_time: "12:00pm PT"
+  duration: 33
 ---
 
-## Open communities • 
+## Open communities • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 - **Open communities** ([slides](https://docs.google.com/presentation/d/17HSNmBYvPw-7Prioys7WIhL9QGVb3s3bJCLaAJVaChc/edit?usp=sharing)) (10 min) – Julie
   -  ‎
