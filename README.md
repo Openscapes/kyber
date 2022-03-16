@@ -17,6 +17,8 @@ remotes::install_github("openscapes/kyber@main")
 
 ## Example Workflow
 
+### GitHub Repos
+
 Kyber requires you to set up a GitHub Personal Access Token with scopes for 
 **repo** and **admin:org**. See the [GitHub PAT documentation][gh-pat-docs] for 
 more information about how to generate your PAT. Please make sure that you do
@@ -63,8 +65,14 @@ ky_add_team_members(team_name, members = members$Username)
 ky_add_repo_to_team(repo_name, team_name)
 ```
 
-### Prior Work:
+### Agendas
 
-- [ohirepos](https://github.com/ohi-science/ohirepos) and [ohirepos-log](https://github.com/ohi-science/ohirepos-log)
+```
+kyber::call_agenda(
+    registry_url = "https://docs.google.com/spreadsheets/d/1Oej46BMX_SLIc1cwoyLHzNWwGlT3szez8FDKc3b418w/edit#gid=942365997", 
+    cohort_id = "2022-nasa-champions", 
+    call_number = 12)
+```
 
+### Other
 [gh-pat-docs]:https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
