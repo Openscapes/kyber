@@ -65,6 +65,28 @@ ky_add_team_members(team_name, members = members$Username)
 ky_add_repo_to_team(repo_name, team_name)
 ```
 
+### GitHub Clinic
+
+Clone then run this in the cohort's repo:
+
+```
+library(stringr)
+library(datapasta) # install.packages("datapasta")
+library(kyber) ## remotes::install_github("openscapes/kyber")
+
+## use `datapasta` addin to vector_paste these names formatted from the spreadsheet!
+cohort <-c(tibble::tribble(
+                     ~first,             ~last,
+                     "Erin",        "Robinson",
+                    "Julie",         "Lowndes",
+              )
+)
+
+ky_short_names(cohort$first, cohort$last) |>
+  ky_create_github_clinic(here())
+
+```
+
 ### Agendas
 
 ```
