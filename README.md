@@ -1,4 +1,4 @@
-# kyber
+# kyber 
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/Openscapes/kyber/workflows/R-CMD-check/badge.svg)](https://github.com/Openscapes/kyber/actions)
