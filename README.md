@@ -17,40 +17,34 @@ remotes::install_github("openscapes/kyber@main")
 
 ## Example Workflow
 
-### GitHub Repos
+This workflow often happens in 3 separate stages: 
 
+1. create the repo and readme (pre-cohort)
+1. create `github-clinic` files (days before GitHub Clinic)
+1. create github team and add usernames (day before Clinic, when we have all usernames)
+
+For creating the GitHub Team and adding usernames, 
 Kyber requires you to set up a GitHub Personal Access Token with scopes for 
 **repo** and **admin:org**. See the [GitHub PAT documentation][gh-pat-docs] for 
 more information about how to generate your PAT. Please make sure that you do
 not share your PAT or commit it to a Git repository, since anyone with your PAT
 can act as you on GitHub.
 
-``` r
-# First make sure to set your GitHub PAT
-Sys.setenv(GITHUB_PAT = "ghp_4X73I5ACF1JWZY92STBE") # must do this each R session
+### Create GitHub repo 
 
+``` r
 library(kyber) 
 library(rmarkdown)
 library(tibble)
 library(fs)
 
-members <- tribble(
-  ~First, ~Last,      ~Username,
-  "Erin", "Robinson", "erinmr",
-  "Sean", "Kross",    "seankross"
-)
-
 repo_name <- "2021-ilm-rotj"
-team_name <- paste0(repo_name, "-team")
 
 # This will open a README.Rmd for you to edit
 repo_path <- ky_create_repo(repo_name)
 
 # Then render the README.Rmd to README.md
 render(path(repo_path, "README.Rmd"))
-
-ky_short_names(members$First, members$Last) |>
-  ky_create_github_clinic(repo_path)
 
 # We still need to work out the next part of the workflow and the extent to
 # which it should be automated, but I imagine something like:
@@ -59,10 +53,6 @@ ky_short_names(members$First, members$Last) |>
 # only contains README.Rmds.
 # 2. Git add, commit, and push in the repo that only contains README.Rmds.
 # 3. Git add, commit, and push in this repository.
-
-ky_create_team(team_name, maintainers = "jules32")
-ky_add_team_members(team_name, members = members$Username)
-ky_add_repo_to_team(repo_name, team_name)
 ```
 
 ### GitHub Clinic
@@ -86,6 +76,35 @@ ky_short_names(cohort$first, cohort$last) |>
   ky_create_github_clinic(here())
 
 ```
+
+### Create GitHub team, add usernames 
+
+``` r
+# First make sure to set your GitHub PAT
+usethis::create_github_token()
+## use their defaults plus `admin:org`
+Sys.setenv(GITHUB_PAT = "ghp_H66hXjyad78Sx4rHNW0ths5aOxQF4QjuxQ") # must do this each R session
+
+library(kyber) 
+library(rmarkdown)
+library(tibble)
+library(fs)
+
+members <- tibble::tribble(
+          ~username,
+     "jules32",
+       "erinmr"
+  )
+
+
+repo_name <- "2022-nasa-champions"
+team_name <- paste0(repo_name, "-team")
+
+ky_create_team(team_name, maintainers = "jules32", org = "nasa-openscapes")
+ky_add_team_members(team_name, members = members$username, org = "nasa-openscapes")
+ky_add_repo_to_team(repo_name, team_name, org = "nasa-openscapes")
+```
+
 
 ### Agendas
 
