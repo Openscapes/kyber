@@ -112,7 +112,7 @@ ky_add_repo_to_team(repo_name, team_name, org = "nasa-openscapes")
 kyber::call_agenda(
     registry_url = "https://docs.google.com/spreadsheets/d/1Oej46BMX_SLIc1cwoyLHzNWwGlT3szez8FDKc3b418w/edit#gid=942365997", 
     cohort_id = "2022-nasa-champions", 
-    call_number = 12)
+    call_number = 3)
 ```
 
 ### Other
