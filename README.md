@@ -1,11 +1,19 @@
+---
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
 # kyber
 
 <!-- badges: start -->
+
 [![R-CMD-check](https://github.com/Openscapes/kyber/workflows/R-CMD-check/badge.svg)](https://github.com/Openscapes/kyber/actions)
+
 <!-- badges: end -->
 
-Tools for setting up learning cohorts on GitHub, inspired by the Openscapes
-Champions Program.
+Tools for setting up learning cohorts on GitHub, inspired by the
+Openscapes Champions Program.
 
 ## Installation
 
@@ -17,20 +25,23 @@ remotes::install_github("openscapes/kyber@main")
 
 ## Example Workflow
 
-This workflow often happens in 3 separate stages: 
+This workflow often happens in 4 separate stages:
 
-1. create the repo and readme (pre-cohort)
-1. create `github-clinic` files (days before GitHub Clinic)
-1. create github team and add usernames (day before Clinic, when we have all usernames)
+1.  create the repo and readme (pre-cohort)
+2.  create `github-clinic` files (days before GitHub Clinic in Call 2)
+3.  create github team and add usernames (day before Clinic, when we
+    have all usernames)
+4.  create agenda documents before each Cohort Call
 
-For creating the GitHub Team and adding usernames, 
-Kyber requires you to set up a GitHub Personal Access Token with scopes for 
-**repo** and **admin:org**. See the [GitHub PAT documentation][gh-pat-docs] for 
-more information about how to generate your PAT. Please make sure that you do
-not share your PAT or commit it to a Git repository, since anyone with your PAT
-can act as you on GitHub.
+For creating the GitHub Team and adding usernames, Kyber requires you to
+set up a GitHub Personal Access Token with scopes for **repo** and
+**admin:org**. See the [GitHub PAT
+documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+for more information about how to generate your PAT. Please make sure
+that you do not share your PAT or commit it to a Git repository, since
+anyone with your PAT can act as you on GitHub.
 
-### Create GitHub repo 
+### Create GitHub repo
 
 ``` r
 library(kyber) 
@@ -59,25 +70,22 @@ render(path(repo_path, "README.Rmd"))
 
 Clone then run this in the cohort's repo:
 
-```
-library(stringr)
-library(datapasta) # install.packages("datapasta")
-library(kyber) ## remotes::install_github("openscapes/kyber")
+    library(stringr)
+    library(datapasta) # install.packages("datapasta")
+    library(kyber) ## remotes::install_github("openscapes/kyber")
 
-## use `datapasta` addin to vector_paste these names formatted from the spreadsheet!
-cohort <-c(tibble::tribble(
-                     ~first,             ~last,
-                     "Erin",        "Robinson",
-                    "Julie",         "Lowndes",
-              )
-)
+    ## use `datapasta` addin to vector_paste these names formatted from the spreadsheet!
+    cohort <-c(tibble::tribble(
+                         ~first,             ~last,
+                         "Erin",        "Robinson",
+                        "Julie",         "Lowndes",
+                  )
+    )
 
-ky_short_names(cohort$first, cohort$last) |>
-  ky_create_github_clinic(here())
+    ky_short_names(cohort$first, cohort$last) |>
+      ky_create_github_clinic(here())
 
-```
-
-### Create GitHub team, add usernames 
+### Create GitHub team, add usernames
 
 ``` r
 # First make sure to set your GitHub PAT
@@ -105,16 +113,11 @@ ky_add_team_members(team_name, members = members$username, org = "nasa-openscape
 ky_add_repo_to_team(repo_name, team_name, org = "nasa-openscapes")
 ```
 
-
 ### Agendas
 
-```
-kyber::call_agenda(
-    registry_url = "https://docs.google.com/spreadsheets/d/1Oej46BMX_SLIc1cwoyLHzNWwGlT3szez8FDKc3b418w/edit#gid=942365997", 
-    cohort_id = "2022-nasa-champions", 
-    call_number = 3)
-```
+    kyber::call_agenda(
+        registry_url = "https://docs.google.com/spreadsheets/d/1Oej46BMX_SLIc1cwoyLHzNWwGlT3szez8FDKc3b418w/edit#gid=942365997", 
+        cohort_id = "2022-nasa-champions", 
+        call_number = 3)
 
 ### Other
-
-[gh-pat-docs]:https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
