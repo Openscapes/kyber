@@ -37,7 +37,8 @@ For creating the GitHub Team and adding usernames, Kyber requires you to
 set up a GitHub Personal Access Token with scopes for **repo** and
 **admin:org**. See the [GitHub PAT
 documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-for more information about how to generate your PAT. Please make sure
+for more information about how to generate your PAT. You can create your PAT with `usethis::create_github_token()` with their defaults, plus `admin:org`.
+Please make sure
 that you do not share your PAT or commit it to a Git repository, since
 anyone with your PAT can act as you on GitHub.
 
