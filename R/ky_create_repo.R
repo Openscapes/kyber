@@ -32,5 +32,10 @@ ky_create_repo <- function(name, org = "openscapes", path = getwd(),
     )
   }
   
+  ## copy code of conduct file
+  fs::file_copy(system.file("kyber-templates", 
+                            "code_of_conduct.md", package = "kyber"), 
+                repo_path)
+  
   invisible(repo_path)
 }

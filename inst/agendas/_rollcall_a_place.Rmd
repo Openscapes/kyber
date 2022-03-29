@@ -6,9 +6,9 @@ params:
 
 ## Roll call • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-*Name / team / share something you’re good at*
+*Name / pronouns / share a place that's meaningful*
 
-- Julie Lowndes / Openscapes / packing (bags, cars)
+- Julie Lowndes / she,her / Monterey coast, California
 -    
 -   
 -  

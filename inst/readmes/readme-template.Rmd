@@ -36,12 +36,12 @@ Cohort Call Agendas          | Series Chapters |      Between Cohort Calls
 4. Open communities and coding strategies for future us | [open communities](#communities), [coding strategies](#coding-strategies) | Seaside Chat (pathway); Co-working
 5. Pathways share and next steps |  | 
 
-<!---
+[**Cohort Call Digests**](`r paste0(params$github_repo, "issues")`)
+
 ## Participating teams
 
-These are the teams participating: please add any edits directly (we'll learn how in our GitHub Call!)
+Some brief information about participating teams. Teams, please add any edits directly (we'll learn how in our GitHub Clinic!)
 
---->
 
 ## Openscapes team
 
