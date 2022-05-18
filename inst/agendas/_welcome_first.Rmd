@@ -4,6 +4,8 @@ params:
   duration: 13
 ---
 
+TO ADD: we're all accountable to each other
+
 ## Welcome • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 - **Welcome to Openscapes!** 👋 (2 min) – Julie
@@ -29,7 +31,11 @@ params:
     - If you have issues, please direct them to:
       - Julie - [lowndes@nceas.ucsb.edu](mailto:lowndes@nceas.ucsb.edu)
       - Erin - [erin@metadatagamechangers.com](mailto:erin@metadatagamechangers.com) 
-  - Let’s name power dynamics. Science is hierarchical, through titles, degrees, institutions… We want to be mindful of how hierarchy can get in the way of our learning. Here, we’ll work to flatten that hierarchy.
+  - Let’s be aware of positionality & power dynamics - how differences in social position and power shape identities and access in society. 
+  
+  ![](wheel_of_power_duckworth.jpg)
+
+  - Science is hierarchical, through titles, degrees, institutions… We want to be mindful of how hierarchy can get in the way of our learning. Here, we’ll work to flatten that hierarchy.
   - We know there is a range of technical experience – by design! We are all here because we want to improve our work around data-intensive science, get a sense of new software and approaches, reduce friction when collaborating with others, promote diversity, equity, and inclusion in our work and communities, and develop leadership skills.
   - We’re all imperfect and learning together – Openscapes included
     - Vulnerability: yes! Shame: no.

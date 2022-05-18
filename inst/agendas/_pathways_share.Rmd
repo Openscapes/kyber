@@ -6,13 +6,13 @@ params:
 
 ## Team Pathways "work in progress" • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-This is our favorite day! Hearing how you're identifying your trailhead and starting your pathways
+This is our favorite day! Hearing how you're identifying your trailhead and starting your pathways. The Openscapes team will kick us off with some things we've learned.
 
 **Each group has 5 minutes to share their pathway:** (3 min present + 2 min Qs) — Erin
 
 -   PathwayShare Folder
 
-**Team 1**
+**Team 1: Openscapes Team**
 
 -  ‎
 -

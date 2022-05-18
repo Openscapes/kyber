@@ -8,7 +8,9 @@ params:
 
 - **Task for next time: Prepare your Pathways presentation** (3 min) – All 
   - Have a Seaside Chat with your research group
-  - Explore more open communities & tools
-  - Prepare to present your Pathway on Call 5 
+  - Prepare to present your Pathway on our final call
     - Each group has 5 minutes to share their pathway: (3 min present + 2 min Qs)
-    - Share Pathway Doc in our PathwayShare folder before Call 4
+    - You've been practicing this through the reflections breakout groups on earlier Calls
+    - Team leads are encouraged not to present!
+    - See [Champions Series - Pathways Chapter](https://openscapes.github.io/series/core-lessons/pathways.html) for more details and examples
+    - Share Pathway Doc in our PathwayShare folder
