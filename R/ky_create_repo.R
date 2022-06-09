@@ -25,7 +25,7 @@ ky_create_repo <- function(name, org = "openscapes", path = getwd(),
   repo_path <- gert::git_clone(response$html_url, path = fs::path(path, name))
   
   if(!isFALSE(template)) {
-    ky_create_readme(
+    create_readme(
       fs::path(repo_path, "README.Rmd"),
       template,
       edit = edit

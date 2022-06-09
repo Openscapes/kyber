@@ -10,9 +10,9 @@
 #' @examples
 #' \dontrun{
 #'
-#' kyber::ky_create_readme()
+#' kyber::create_readme()
 #' }
-ky_create_readme <- function(file = "README.Rmd", 
+create_readme <- function(file = "README.Rmd", 
                              template = "openscapes-cohort-readme", edit = TRUE){
   readme <- rmarkdown::draft(
     file,
@@ -21,6 +21,9 @@ ky_create_readme <- function(file = "README.Rmd",
     create_dir = FALSE,
     edit = FALSE
   )
+  
+  file.copy(system.file("agendas", "horst-champions-trailhead.png", package = "kyber"), 
+            dirname(file))
   
   if (edit) {
     if (rstudioapi::hasFun("navigateToFile"))

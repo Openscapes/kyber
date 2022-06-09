@@ -1,7 +1,7 @@
 test_template <- function(template){
   temp_file <- tempfile()
   
-  test_file_path <- kyber::ky_create_readme(temp_file, template, edit = FALSE)
+  test_file_path <- kyber::create_readme(temp_file, template, edit = FALSE)
   file.exists(test_file_path)
 }
 
