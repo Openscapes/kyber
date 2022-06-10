@@ -92,7 +92,7 @@ Clone then run this in the cohort's repo:
 # First make sure to set your GitHub PAT
 usethis::create_github_token()
 ## use their defaults plus `admin:org`
-Sys.setenv(GITHUB_PAT = "ghp_H66hXjyad78Sx4rHNW0ths5aOxQF4QjuxQ") # must do this each R session
+Sys.setenv(GITHUB_PAT = "ghp_0id4zkO4GqSuEsC6Zs22wf34Y0u3270") # must do this each R session
 
 library(kyber) 
 library(rmarkdown)
@@ -107,7 +107,7 @@ members <- tibble::tribble(
 
 
 repo_name <- "2022-nasa-champions"
-team_name <- paste0(repo_name, "-team")
+team_name <- paste0(repo_name, "-cohort")
 
 ky_create_team(team_name, maintainers = "jules32", org = "nasa-openscapes")
 ky_add_team_members(team_name, members = members$username, org = "nasa-openscapes")
@@ -121,4 +121,9 @@ ky_add_repo_to_team(repo_name, team_name, org = "nasa-openscapes")
         cohort_id = "2022-nasa-champions", 
         call_number = 3)
 
-### Other
+### With Erin, April 25
+
+```{r}
+devtools::load_all()
+library(kyber)
+```
