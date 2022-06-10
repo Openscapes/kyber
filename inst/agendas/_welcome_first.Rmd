@@ -2,6 +2,7 @@
 params:
   start_time: "12:00pm PT"
   duration: 13
+  files: ["openscapes_champions_landscape.png", "screenshot-gdoc-zoom-setup.png", "wheel_of_power_duckworth.jpg"]
 ---
 
 TO ADD: we're all accountable to each other

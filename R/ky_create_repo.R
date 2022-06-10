@@ -15,9 +15,9 @@
 #' @examples
 #' \dontrun{
 #'
-#' kyber::ky_create_repo("2021-ilm-rotj")
+#' kyber::create_repo("2021-ilm-rotj")
 #' }
-ky_create_repo <- function(name, org = "openscapes", path = getwd(),
+create_repo <- function(name, org = "openscapes", path = getwd(),
                            template = "openscapes-cohort-readme", edit = TRUE){
   check_gh_pat()
   

@@ -3,7 +3,6 @@
 #' @param registry_url The URL to the cohort registry.
 #' @param cohort_id The ID of the cohort.
 #' @param call_number The call number of the agenda.
-#' @param tz The time zone.
 #' @param cohort_sheet The sheet in the registry with cohort information.
 #' @param call_sheet The sheet in the registry with information about 
 #' individual calls.
@@ -12,19 +11,19 @@
 #' @param output_file The name of the output file with no file extension.
 #' @importFrom googlesheets4 read_sheet
 #' @importFrom tools file_ext
-#' @importFrom purrr keep map_lgl map map_chr map_dfr map_dbl
+#' @importFrom purrr keep map_lgl map map_chr map_dfr map_dbl discard
 #' @importFrom dplyr filter pull
 #' @importFrom parsermd parse_rmd as_tibble as_document
 #' @importFrom rmarkdown render yaml_front_matter
 #' @export
-call_agenda <- function(registry_url, cohort_id, call_number, tz = "PT",
+call_agenda <- function(registry_url, cohort_id, call_number,
                         cohort_sheet = "cohort_metadata", 
                         call_sheet = "call_metadata",
                         website = paste0("https://openscapes.github.io/", cohort_id), 
-                        output_format = md_agenda(), output_file = "agenda"){
+                        output_format = md_agenda(), output_file = "agenda.md"){
   
-  cohort_registry <- read_sheet(registry_url, cohort_sheet)
-  call_registry <- read_sheet(registry_url, call_sheet)
+  cohort_registry <- read_sheet(registry_url, cohort_sheet, col_types = "c")
+  call_registry <- read_sheet(registry_url, call_sheet, col_types = "c")
   temp_dir <- tempdir()
   params_registry <- list(website = website, cohort_name = cohort_id, 
                           call = call_number)
@@ -62,12 +61,14 @@ call_agenda <- function(registry_url, cohort_id, call_number, tz = "PT",
   params_registry$date <- cohort_registry %>% 
     filter(cohort_name == cohort_id) %>% 
     pull(date_start) %>% 
-    as.Date() %>% 
+    usa_date_to_iso8601() %>% 
     as.character()
   
   params_registry$call_start_time <- cohort_registry %>% 
     filter(cohort_name == cohort_id) %>% 
     pull("time_start")
+  
+  tz <- tz(params_registry$call_start_time)
   
   params_registry$google_drive_folder <- cohort_registry %>% 
     filter(cohort_name == cohort_id) %>% 
@@ -92,7 +93,21 @@ call_agenda <- function(registry_url, cohort_id, call_number, tz = "PT",
     map_chr(fmt_time) %>% 
     paste(tz)
   
-  param_names <- template_params %>% map(names)
+  files <- template_params %>% 
+    map(~.x$files) %>% 
+    keep(Negate(is.null)) %>% 
+    unlist() %>% 
+    unique()
+  
+  if(length(files) > 0) {
+    file.copy(
+      system.file("inst", "agendas", files, package = "kyber"),
+      dirname(output_file)
+    )
+  }
+  
+  param_names <- template_params %>% map(names) %>% 
+    map(~discard(.x, ..1 %in% "files"))
   
   output_md_paths <- rep("", length(template_files))
   for(i in seq_along(template_files)){
@@ -115,7 +130,7 @@ call_agenda <- function(registry_url, cohort_id, call_number, tz = "PT",
   
   result <- FALSE
   if(output_format$type == "md"){
-    result <- paste0(output_file, ".md")
+    result <- output_file
     output_md_paths %>% 
       map(parse_rmd) %>% 
       map_dfr(as_tibble) %>% 

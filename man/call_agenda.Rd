@@ -8,12 +8,11 @@ call_agenda(
   registry_url,
   cohort_id,
   call_number,
-  tz = "PT",
   cohort_sheet = "cohort_metadata",
   call_sheet = "call_metadata",
   website = paste0("https://openscapes.github.io/", cohort_id),
   output_format = md_agenda(),
-  output_file = "agenda"
+  output_file = "agenda.md"
 )
 }
 \arguments{
@@ -22,8 +21,6 @@ call_agenda(
 \item{cohort_id}{The ID of the cohort.}
 
 \item{call_number}{The call number of the agenda.}
-
-\item{tz}{The time zone.}
 
 \item{cohort_sheet}{The sheet in the registry with cohort information.}
 

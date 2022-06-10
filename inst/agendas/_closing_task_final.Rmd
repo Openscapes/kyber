@@ -2,6 +2,7 @@
 params: 
   start_time: "12:00pm PT"
   duration: 5
+  files: ["openscapes_champions_landscape.png", "khora-laptop-sleep.png"]
 ---
 
 ## Closing --- Better science for future us • `r kyber:::fmt_duration(params$start_time, params$duration)`
