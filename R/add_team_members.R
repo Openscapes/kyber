@@ -14,6 +14,10 @@
 add_team_members <- function(team, members, org = "openscapes"){
   check_gh_pat()
   
+  if(!identical(members, gsub("\\s", "", members))){
+    stop("GitHub usernames: ", paste0("'", members[grep("\\s", members)], "'"), " must not contain any whitespace.")
+  }
+  
   responses <- members %>% 
     map(safely(~gh("/users/{username}", username = .x)))
   
