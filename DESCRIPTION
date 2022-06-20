@@ -1,12 +1,17 @@
 Package: kyber
-Title: Set Up Learning Cohorts on  GitHub
+Title: Set Up Learning Cohorts on GitHub
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Sean",
+    c(person(given = "Sean",
              family = "Kross",
              role = c("aut", "cre"),
              email = "sean@seankross.com",
-             comment = c(ORCID = "0000-0001-5215-0316"))
+             comment = c(ORCID = "0000-0001-5215-0316")),
+      person(given = "Julia",
+             family = "Lowndes",
+             middle = "Stewart",
+             role = c("aut"),
+             comment = c(ORCID = "0000-0003-1682-3872")))
 Description: What the package does (one paragraph).
 License: file LICENSE
 Encoding: UTF-8
@@ -18,6 +23,7 @@ Imports:
     fs,
     gert,
     gh,
+    gitcreds,
     googlesheets4,
     knitr,
     lubridate,
@@ -30,3 +36,5 @@ Imports:
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+URL: https://openscapes.github.io/kyber/
+VignetteBuilder: knitr
