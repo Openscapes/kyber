@@ -25,7 +25,7 @@ schedule <- tibble(
 )
 ```
 
-<a align="left" href="`r cr$github_repo_url`"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="35px"></a>
+<a align="left" href="`r cr$github_repo`"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="35px"></a>
 
 # `r cr$cohort_name_long`
 
@@ -41,7 +41,7 @@ We will meet as a Cohort via Zoom five times over two months for 1.5 hours each:
 - **Times:** `r kyber:::fmt_duration(cr$time_start, 90)`
 - **Location:** remotely, via Zoom
 
-Agendas are accessible to Cohort participants in our [Cohort Google Drive Folder](`r cr$cohort_gdrive_folder`); they are also an archive of our live google-docing. Please see <https://openscapes.org/series> to view blank versions of the agendas. 
+Agendas are accessible to Cohort participants in our [Cohort Google Drive Folder](`r cr$google_drive_folder`); they are also an archive of our live google-docing. Please see <https://openscapes.org/series> to view blank versions of the agendas. 
 
 ```{r, echo=FALSE}
 knitr::kable(schedule)

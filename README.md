@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # kyber
 
 <!-- badges: start -->
@@ -23,7 +17,7 @@ You can install Kyber using the `remotes` package:
 remotes::install_github("openscapes/kyber@main")
 ```
 
-## Example Workflow
+## Example Workflow for Setting Up a Cohort
 
 This workflow often happens in 4 separate stages:
 

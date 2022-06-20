@@ -1,7 +1,14 @@
+#' @importFrom gitcreds gitcreds_get
 check_gh_pat <- function(){
-  if(nchar(Sys.getenv("GITHUB_PAT")) < 1) {
+  gh_pat <- Sys.getenv("GITHUB_PAT")
+  if(!nzchar(gh_pat)){
+    gh_pat <- gitcreds_get()$"password"
+  }
+  
+  if(!nzchar(gh_pat)) {
     stop("Please set your GITHUB_PAT.", call. = FALSE)
   }
+  invisible(TRUE)
 }
 
 #' @importFrom stringr str_extract
