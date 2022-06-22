@@ -6,30 +6,15 @@ output: github_document
 ---
 
 ```{r setup, message=FALSE, warning=FALSE, error=FALSE, echo=FALSE}
-library(dplyr)
-library(lubridate)
 library(knitr)
-occr <- kyber:::get_registry(params$cohort_registry)
-cr <- occr$cohort_metadata %>% 
-  filter(cohort_name == params$cohort_name)
-
-date_start <- cr$date_start %>% kyber:::usa_date_to_iso8601()
-date_end <- cr$date_end %>% kyber:::usa_date_to_iso8601()
-date_range <- seq.Date(date_start, date_end, by = "2 weeks")
-schedule <- tibble(
-  Date = kyber:::fmt_schedule_dates(date_range),
-  "Cohort Call Topics" = occr$call_metadata %>% 
-    filter(!is.na(call)) %>% 
-    arrange(call) %>% 
-    pull(title)
-)
+db <- readme_setup(params)
 ```
 
-<a align="left" href="`r cr$github_repo`"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="35px"></a>
+<a align="left" href="`r db$cr$github_repo`"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="35px"></a>
 
-# `r cr$cohort_name_long`
+# `r db$cr$cohort_name_long`
 
-Welcome to the `r cr$cohort_name_long` Cohort! This is a Cohort for [TODO: who is this cohort for?]. Learn more about Openscapes and the Champions Program: <https://openscapes.org>. 
+Welcome to the `r db$cr$cohort_name_long` Cohort! This is a Cohort for [TODO: who is this cohort for?]. Learn more about Openscapes and the Champions Program: <https://openscapes.org>. 
 
 <img align="right" src="horst-champions-trailhead.png" width="450">  
 
@@ -37,14 +22,14 @@ Welcome to the `r cr$cohort_name_long` Cohort! This is a Cohort for [TODO: who i
 
 We will meet as a Cohort via Zoom five times over two months for 1.5 hours each:  
 
-- **Dates:** `r kyber:::pretty_date_sequence(date_range)`
-- **Times:** `r kyber:::fmt_duration(cr$time_start, 90)`
+- **Dates:** `r kyber:::pretty_date_sequence(db$date_range)`
+- **Times:** `r kyber:::fmt_duration(db$cr$time_start, 90)`
 - **Location:** remotely, via Zoom
 
-Agendas are accessible to Cohort participants in our [Cohort Google Drive Folder](`r cr$google_drive_folder`); they are also an archive of our live google-docing. Please see <https://openscapes.org/series> to view blank versions of the agendas. 
+Agendas are accessible to Cohort participants in our [Cohort Google Drive Folder](`r db$cr$google_drive_folder`); they are also an archive of our live google-docing. Please see <https://openscapes.org/series> to view blank versions of the agendas. 
 
 ```{r, echo=FALSE}
-knitr::kable(schedule)
+knitr::kable(db$schedule)
 ```
 
 ## Co-working times (optional)

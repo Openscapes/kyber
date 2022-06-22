@@ -1,3 +1,5 @@
+#' @import knitr
+
 #' @importFrom gitcreds gitcreds_get
 check_gh_pat <- function(){
   gh_pat <- Sys.getenv("GITHUB_PAT")

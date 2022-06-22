@@ -11,12 +11,12 @@
 #' \dontrun{
 #'
 #' # One maintainer
-#' kyber::ky_create_team("2021-ilm-rotj-team", maintainers = "jules32")
+#' kyber::create_team("2021-ilm-rotj-team", maintainers = "jules32")
 #' 
 #' # Multiple maintainers
-#' kyber::ky_create_team("2021-ilm-rotj-team", maintainers = c("jules32", "seankross"))
+#' kyber::create_team("2021-ilm-rotj-team", maintainers = c("jules32", "seankross"))
 #' }
-ky_create_team <- function(name, maintainers, org = "openscapes", visible = TRUE) {
+create_team <- function(name, maintainers, org = "openscapes", visible = TRUE) {
   check_gh_pat()
   
   # The way these parameter options are named makes no sense.

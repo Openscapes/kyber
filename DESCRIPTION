@@ -9,7 +9,6 @@ Authors@R:
              comment = c(ORCID = "0000-0001-5215-0316")),
       person(given = "Julia",
              family = "Lowndes",
-             middle = "Stewart",
              role = c("aut"),
              comment = c(ORCID = "0000-0003-1682-3872")))
 Description: What the package does (one paragraph).

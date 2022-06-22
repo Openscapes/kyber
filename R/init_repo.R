@@ -6,7 +6,7 @@
 #' @param path The path to a directory where the repository will be initialized.
 #' 
 #' @importFrom fs path dir_create file_copy
-#' @importFrom gert git_clone
+#' @importFrom gert git_clone git_init git_add git_commit git_branch git_branch_move git_remote_add git_push
 #' @importFrom gh gh
 #' @importFrom purrr map_chr
 #' @export

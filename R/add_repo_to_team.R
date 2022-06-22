@@ -8,9 +8,9 @@
 #' @examples
 #' \dontrun{
 #'
-#' kyber::ky_add_repo_to_team("2021-ilm-rotj", "2021-ilm-rotj-team")
+#' kyber::add_repo_to_team("2021-ilm-rotj", "2021-ilm-rotj-team")
 #' }
-ky_add_repo_to_team <- function(repository, team, org = "openscapes"){
+add_repo_to_team <- function(repository, team, org = "openscapes"){
   check_gh_pat()
   
   response <- gh("PUT /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}",

@@ -8,33 +8,33 @@
 #' 
 #' first <- c("a", "b", "c")
 #' last <- c("x1", "y2", "z3")
-#' ky_short_names(first, last)
+#' short_names(first, last)
 #' #> "a" "b" "c"
 #' 
 #' first <- c("a", "a", "c")
 #' last <- c("x1", "y2", "z3")
-#' ky_short_names(first, last)
+#' short_names(first, last)
 #' #> "a_x" "a_y" "c"
 #' 
 #' first <- c("a", "a", "c")
 #' last <- c("x144", "x255", "z3")
-#' ky_short_names(first, last)
+#' short_names(first, last)
 #' #> "a_x144" "a_x255" "c"
 #' 
 #' first <- c("a", "a", "c", "d", "d")
 #' last <- c("x144", "x255", "z3", "r4", "t5")
-#' ky_short_names(first, last)
+#' short_names(first, last)
 #' #> "a_x144" "a_x255" "c"      "d_r"    "d_t"
 #' 
 #' first <- c("a", "a", "c")
 #' last <- c("x1", "x1", "z3")
-#' ky_short_names(first, last)
+#' short_names(first, last)
 #' #> "a_x1" "c"
 #' #> Warning message:
 #' #> In ky_short_names(first, last) :
 #' #> First and Last pairs are not unique. Returning only unique combinations.
 #' }
-ky_short_names <- function(first, last) {
+short_names <- function(first, last) {
   stopifnot(length(first) == length(last))
   
   first <- tolower(first)
@@ -64,7 +64,8 @@ ky_short_names <- function(first, last) {
   }
   
   if(length(unique(result)) != length(result)){
-    warning("First and Last pairs are not unique. Returning only unique combinations.")
+    warning("First and Last pairs are not unique. Returning only unique combinations.",
+            " The following short names are duplicates: ", result[duplicated(result)])
     unique(result)
   } else {
     result  
