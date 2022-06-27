@@ -1,0 +1,25 @@
+---
+params: 
+  start_time: "12:00pm PT"
+  duration: 12
+---
+
+## Reflections • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+1 rapid round of breakout groups. This is your time. Reflect on what you've learned, say things out loud, meet your colleagues
+
+**Prompt**: Share about your Seaside Chat – Are there questions you have or ideas you want to follow up on or learn?
+
+
+- **Breakout groups** (7 min) (random groups of 3) – Erin
+  -  ‎
+  -  
+  -  
+  -  
+  -   
+- **Discussion / Share-outs** (5 min) – Erin
+  -  ‎
+  -  
+  -   
+  - 
+  -  

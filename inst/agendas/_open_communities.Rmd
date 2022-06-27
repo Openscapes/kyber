@@ -1,0 +1,31 @@
+---
+params: 
+  start_time: "12:00pm PT"
+  duration: 33
+---
+
+## Open communities • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+- **Open communities** ([slides](https://docs.google.com/presentation/d/17HSNmBYvPw-7Prioys7WIhL9QGVb3s3bJCLaAJVaChc/edit?usp=sharing)) (10 min) – Julie
+  -  ‎
+  -  
+  -  
+  -    
+  -  
+  -  
+  - 
+- **Breakout groups** (15 min) – All (groups of 3-4, same as reflections)
+  - **Prompt: Explore communities resources & tutorials relevant for your next Seaside Chat**
+  - Explore a few communities of interest / from the slides
+  - What communities are you already a part of?
+  - What would you like to learn with your research group? How does this fit with your Pathway?
+  - ‎
+  - 
+  -  
+  -   
+  - 
+- **Share outs** (8 min) – All
+  - ‎
+  - 
+  -  
+  -  

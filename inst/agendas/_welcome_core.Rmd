@@ -1,0 +1,35 @@
+---
+params: 
+  start_time: "12:00pm PT"
+  duration: 4
+---
+
+## Welcome • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+- **Welcome to Openscapes! 👋** (1 min) – Julie
+  - <font color="red">We are now recording this meeting.</font> 
+  - <font color="red">Live transcriptions are available.</font>
+  - CoC Reminder ([full version](https://www.openscapes.org/code-of-conduct/))
+    - Be respectful and value each other’s ideas, styles and viewpoints.
+    - Be direct but professional; we cannot withhold hard truths.
+    - Be inclusive and help new perspectives be heard.
+    - Be open to learning from others.
+    - Lead by example and match your actions with your words.
+   - Openscapes team here on this call: 
+    - Julie Lowndes, Openscapes Co-Director, NCEAS
+    - Erin Robinson, Openscapes Co-Director, Metadata Game Changers
+  - I am grateful I am for the land where I am here in Santa Barbara California and I want to honor the Chumash peoples who have been and continue to be stewards of the lands and waters here.
+  
+- **Today’s goals** (1 min) – Julie
+  - ‎
+  -
+
+
+- **Followups** (1 min) – Julie
+  - <!--- Call 2: Overwhelm is real. We’re all showing up to start thinking about collaborating in a different way together, and it’s hard. We’re all working on being empathetic teachers and learners with each other so we can help each other and do the work we need to do together. --->
+  - <!--- Call 3: GROUP PHOTO! --->
+  - 
+
+- **Questions** before we get started?
+  - ‎
+  - 

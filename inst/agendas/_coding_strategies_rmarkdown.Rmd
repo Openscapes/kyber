@@ -1,0 +1,49 @@
+---
+params: 
+  start_time: "12:00pm PT"
+  duration: 35
+---
+
+## Coding strategies for Future Us • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+- **RMarkdown** (15 min) – Julie
+  - **Why are we so enthused about RMarkdown**?
+  - **R Markdown helps us iterate while we work**, since our code, outputs (figures and tables), and text are all in the same place. This means that instead of those things being in separate places (and our brains being in separate places), it’s more efficient to develop and document our analyses as we go — and no more copy-pasting figures into a different document!
+  - **R Markdown has changed how we approach science communication and publishing** since we can create not only Word documents and PDFs but also webpages, websites, e-books, slides, and more as a part of our daily workflows. 
+  - Brief slides & demo from Allison Horst (reuse!)
+    - <https://www.allisonhorst.com/talk/urban_drainage_2022_rmarkdown_workshop>
+  - Also highlight:
+    - Powerful for writing and collaboration, even if you don't code
+    - RStudio Visual Editor
+    - Quarto (.qmd) - interface with Python
+
+- **Naming things** (5 min) - Julie
+  - <https://rstats.wtf/how-to-name-files.html>
+  - 
+  - 
+- **Silent journaling** (5 min) – All
+  - **How do these coding strategies resonate with you / in your work?**
+  - ‎
+  -  
+  -   
+  -  
+  -   
+  - 
+  - **What could you do to better strengthen the consistency of your scientific workflow (quality, reproducibility, utility, collaboration)?**
+  - ‎
+  -  
+  -  
+  - 
+  -  
+  -    
+  -  
+  - **General reflections/reactions**
+  - ‎
+  - 
+  - 
+  - 
+- **Discussion** (10 min) – All
+  - ‎
+  -  
+  - 
+  -  

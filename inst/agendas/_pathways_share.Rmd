@@ -1,0 +1,73 @@
+---
+params: 
+  start_time: "12:00pm PT"
+  duration: 59
+---
+
+## Team Pathways "work in progress" • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+This is our favorite day! Hearing how you're identifying your trailhead and starting your pathways. The Openscapes team will kick us off with some things we've learned.
+
+**Each group has 5 minutes to share their pathway:** (3 min present + 2 min Qs) — Erin
+
+-   PathwayShare Folder
+
+**Team 1: Openscapes Team**
+
+-  ‎
+-
+- 
+
+**Team 2**
+
+-  ‎
+-
+- 
+
+**Team 3**
+
+-  ‎
+-
+- 
+
+**Team 4**
+
+-  ‎
+-
+- 
+
+**Discussion** (5 min) -- All
+
+-  ‎
+-
+- 
+
+**Team 5**
+
+-  ‎
+-
+- 
+
+**Team 6**
+
+-  ‎
+-
+- 
+
+**Team 7**
+
+-  ‎
+-
+- 
+
+**Team 8**
+
+-  ‎
+-
+- 
+
+**Discussion** (5 min) -- All
+
+-  ‎
+-
+- 

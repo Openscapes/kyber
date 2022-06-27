@@ -1,0 +1,19 @@
+---
+title: "Creating a GitHub Repository with Kyber"
+description: >
+  Learn how to create a GitHub repository with Kyber.
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Creating a GitHub Repository with Kyber}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Under Construction

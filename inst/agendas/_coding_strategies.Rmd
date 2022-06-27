@@ -1,0 +1,47 @@
+---
+params: 
+  start_time: "12:00pm PT"
+  duration: 35
+---
+
+## Coding strategies • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+- **Coding strategies for Future Us** ([slides](https://docs.google.com/presentation/d/1nTLJ782dpZqp3MEhQU9zNaFInrTaFUVQbj9OqsmxUYo/edit?usp=sharing)) (15 min) – Julie
+  - Type of tool needed:
+    - Programming language (R, python)
+    - Code editor (RStudio IDE, Jupyter)
+    - Version control software (git, GitHub/bitbucket)
+  - Workflow vs Product
+  - Project-oriented workflows:
+    - Save code to source files
+    - Use portable file paths
+    - Name things deliberately
+- **Silent journaling** (5 min) – All
+  - **How do these coding strategies resonate with you / in your work?**
+  - ‎
+  -  
+  -   
+  -  
+  -   
+  - 
+  - **What could you do to better strengthen the consistency of your scientific workflow (quality, reproducibility, utility, collaboration)?**
+  - ‎
+  -  
+  -  
+  - 
+  - 
+  -  **When someone new joins your group, how do standardized workflows, automated workflows, and code fit into the mix?**
+  - ‎
+  -  
+  -    
+  -  
+  - **General reflections/reactions**
+  - ‎
+  - 
+  - 
+  - 
+- **Discussion** (15 min) – All
+  - ‎
+  -  
+  - 
+  -  

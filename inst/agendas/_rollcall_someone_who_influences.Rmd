@@ -1,0 +1,19 @@
+---
+params: 
+  start_time: "12:00pm PT"
+  duration: 2
+---
+
+## Roll call • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+*Name / pronouns / share someone or something that influences your work*
+
+- Julie Lowndes / she,her / Gabriela de Queiroz, founder of RLadies
+-   
+-  
+- 
+-  
+-  
+-  
+- 
+-  

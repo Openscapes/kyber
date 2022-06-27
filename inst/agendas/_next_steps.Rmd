@@ -1,0 +1,26 @@
+---
+params: 
+  start_time: "12:00pm PT"
+  duration: 10
+---
+
+## Next steps • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+One of the things we want to do is represent your needs to leadership. Let’s Google Doc and get your thoughts out: The objective isn’t to get a poll, it's about your ideas, needs, and also how you feel about it all.
+
+- **Silent journaling and +1s** (3 min) - Julie
+
+  -  ‎
+  -  
+  -   
+  - 
+  -  
+  
+
+-   **Discussion** (7 mins) -- All
+
+  -  ‎
+  -  
+  -   
+  - 
+  -  
