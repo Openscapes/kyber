@@ -1,13 +1,10 @@
-# kyber
+# kyber <a href="https://openscapes.github.io/kyber/"><img src="man/figures/logo.png" align="right" height="138" /></a>
 
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/Openscapes/kyber/workflows/R-CMD-check/badge.svg)](https://github.com/Openscapes/kyber/actions)
 
 <!-- badges: end -->
-
-Tools for setting up learning cohorts on GitHub, inspired by the
-Openscapes Champions Program.
 
 ## Installation
 
@@ -17,7 +14,52 @@ You can install Kyber using the `remotes` package:
 remotes::install_github("openscapes/kyber@main")
 ```
 
-## Example Workflow for Setting Up a Cohort
+## Overview
+
+Kyber contains tools for setting up learning cohorts on GitHub, purpose-built 
+for the [Openscapes Champions Program](https://www.openscapes.org/champions/).
+
+- `init_repo()` initializes a local git repository and new GitHub repository
+with a README.Rmd, a code of conduct, and a gitignore.
+- `create_github_clinic()` creates all of the files you need for teaching a
+GitHub clinic.
+- `create_team()` creates a new team on GitHub.
+- `add_team_members()` adds members to a team on GitHub based on their GitHub
+usernames.
+- `add_repo_to_team()` adds a GitHub repository to a team on GitHub.
+- `call_agenda()` creates agenda documents for each individual Cohort Call.
+
+## Quick Cohort Setup
+
+### Configuration
+
+Using Kyber requires more configuration than most R packages since Kyber
+functions automate processes on GitHub that you would normally do by hand.
+
+First, make sure that you have `googlesheets4` installed and that you have
+authorized your computer to read from Google Sheets. Run the following to 
+test your configuration settings:
+
+``` r
+library(googlesheets4)
+
+cohort_registry_url <- "https://docs.google.com/spreadsheets/d/1Oej46BMX_SLIc1cwoyLHzNWwGlT3szez8FDKc3b418w/"
+
+read_sheet(cohort_registry_url, sheet = "test-sheet")
+```
+
+``` r
+library(usethis)
+library(gitcreds)
+
+create_github_token(
+  scopes = c("repo", "user", "gist", "workflow", "admin:org")
+)
+
+gitcreds_set()
+```
+
+<!---
 
 This workflow often happens in 4 separate stages:
 
@@ -121,3 +163,5 @@ ky_add_repo_to_team(repo_name, team_name, org = "nasa-openscapes")
 devtools::load_all()
 library(kyber)
 ```
+
+--->
