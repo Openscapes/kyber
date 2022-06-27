@@ -7,7 +7,7 @@ output: github_document
 
 ```{r setup, message=FALSE, warning=FALSE, error=FALSE, echo=FALSE}
 library(knitr)
-db <- readme_setup(params)
+db <- kyber:::readme_setup(params)
 ```
 
 <a align="left" href="`r db$cr$github_repo`"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="35px"></a>
