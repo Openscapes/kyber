@@ -59,7 +59,7 @@ create_github_token(
 gitcreds_set()
 ```
 
-<!---
+## Example Workflow
 
 This workflow often happens in 4 separate stages:
 
@@ -157,11 +157,4 @@ ky_add_repo_to_team(repo_name, team_name, org = "nasa-openscapes")
         cohort_id = "2022-nasa-champions", 
         call_number = 3)
 
-### With Erin, April 25
-
-```{r}
-devtools::load_all()
-library(kyber)
-```
-
---->
+Then follow notes in https://github.com/Openscapes/kyber/issues/9
