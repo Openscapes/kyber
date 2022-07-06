@@ -157,4 +157,4 @@ ky_add_repo_to_team(repo_name, team_name, org = "nasa-openscapes")
         cohort_id = "2022-nasa-champions", 
         call_number = 3)
 
-Then follow notes in https://github.com/Openscapes/kyber/issues/9
+Then, to move this to a Google Doc and fine-tune formatting, follow notes in https://github.com/Openscapes/kyber/issues/9
