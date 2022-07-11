@@ -1,6 +1,6 @@
 ---
 params:
-  start_time: "12:00pm PT"
+  start_time: "1:00pm ET"
   duration: 13
   files: ["screenshot-gdoc-zoom-setup.png", "wheel_of_power_duckworth.jpg"]
 ---

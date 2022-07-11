@@ -6,7 +6,7 @@ params:
 
 ## Welcome • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-- **Welcome to Openscapes! 👋** (1 min) – Julie
+- **Welcome to Openscapes! 👋** (2 min) – Julie
   - <font color="red">We are now recording this meeting.</font> 
   - <font color="red">Live transcriptions are available.</font>
   - CoC Reminder ([full version](https://www.openscapes.org/code-of-conduct/))
@@ -26,7 +26,7 @@ params:
 
 
 - **Followups** (1 min) – Julie
-  - <!--- Call 2: Overwhelm is real. We’re all showing up to start thinking about collaborating in a different way together, and it’s hard. We’re all working on being empathetic teachers and learners with each other so we can help each other and do the work we need to do together. --->
+  - <!--- Call 2: Overwhelm is real. We’re all showing up to start thinking about collaborating in a different way together, and it’s hard. We’re all working on being empathetic teachers and learners with each other so we can help each other and do the work we need to do together. Review Pathways. Potentially increase 5 mins here. --->
   - <!--- Call 3: GROUP PHOTO! --->
   - 
 

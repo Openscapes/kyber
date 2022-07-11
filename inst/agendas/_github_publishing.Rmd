@@ -1,12 +1,12 @@
 ---
 params:
   start_time: "12:00pm PT"
-  duration: 37
+  duration: 40
 ---
 
 ## Growth Mindset & GitHub for Publishing • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-* **Intro to GitHub, edits & publishing** ([slides](https://docs.google.com/presentation/d/1PzGAbEpNhT6CDPe1DCHf5-eVAjy-2R2D3VMHz7dY774/edit?usp=sharing) 1-12) (17 min) – Julie
+* **Intro to GitHub, edits & publishing** ([slides](https://docs.google.com/presentation/d/1PzGAbEpNhT6CDPe1DCHf5-eVAjy-2R2D3VMHz7dY774/edit?usp=sharing) 1-16) (20 min) – Julie
   -  ‎
   -
   - 
@@ -23,7 +23,7 @@ params:
   - ‎
   -
   -
-* **Regroup, collaborating and publishing** ([slides](https://docs.google.com/presentation/d/1PzGAbEpNhT6CDPe1DCHf5-eVAjy-2R2D3VMHz7dY774/edit?usp=sharing) 14-15) (5 min) – Julie screenshare
+* **Regroup, collaborating and publishing** ([slides](https://docs.google.com/presentation/d/1PzGAbEpNhT6CDPe1DCHf5-eVAjy-2R2D3VMHz7dY774/edit?usp=sharing) 17-18) (4 min) – Julie screenshare
   - ‎
   -
 * **Discussion and screenshares** (5 min)

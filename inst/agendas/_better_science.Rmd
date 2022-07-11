@@ -1,6 +1,6 @@
 ---
 params:
-  start_time: "12:00pm PT"
+  start_time: "1:55pm ET"
   duration: 30
 ---
 
