@@ -9,7 +9,7 @@ params:
   - Mac: Cmd-Option-Shift-V
   - PC: Control + Shift + V (in some applications)
   - Prevents this: 
-  - <font size="20" color="green">Psychological safety</font>
+  - <font size="20" color="green">GitHub Clinic</font>
   - I’ll demo: 
 - **“redoing” formatting** 
   - Mac: Command-Y
