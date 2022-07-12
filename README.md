@@ -105,7 +105,7 @@ render(path(repo_path, "README.Rmd"))
 
 ### GitHub Clinic
 
-Clone the Cohort Repo to RStudio, then run this:
+Clone the Cohort Repo to RStudio, then run the following code. Detailed instructions of what this looks like:
 
 1. Open RStudio, and create a new script (temporary, you'll deleted it but it's a nicer place to work)
 1. Copy the following into the script, then delete the example "first, last, Erin, Julie".
