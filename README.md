@@ -105,7 +105,13 @@ render(path(repo_path, "README.Rmd"))
 
 ### GitHub Clinic
 
-Clone then run this in the cohort's repo:
+Clone the Cohort Repo to RStudio, then run this:
+
+1. Open RStudio, and create a new script (temporary, you'll deleted it but it's a nicer place to work)
+1. Copy the following into the script, then delete the example "first, last, Erin, Julie".
+2. Go to the ParticipantsList, and copy the 2 first and last columns
+3. Back in RStudio, put your cursor inside the "tribble" parentheses, then, in the Addin menu in the top of RStudio, select "Paste as Tribble"!
+
 
 ```
     library(stringr)
@@ -114,7 +120,6 @@ Clone then run this in the cohort's repo:
     library(here)
 
     ## use `datapasta` addin to vector_tribble these names formatted from the spreadsheet!
-    You will copy this into the R console, then delete the example "first, last, Erin, Julie", then go to the ParticipantsList and copy the 2 first and last columns, then go to the Addin menu in the top of RStudio and select "Paste as Tribble"!
     cohort <- c(tibble::tribble(
                          ~first,             ~last,
                          "Erin",        "Robinson",
