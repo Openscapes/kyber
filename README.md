@@ -132,6 +132,9 @@ kyber::short_names(cohort$first, cohort$last) |>
    create_github_clinic(here())
 ```
 
+You'll now have .md files for each participant in the cohort! Any duplicate names with have a `_LastInitial`. Now push to GitHub.com!
+
+
 ### Create GitHub team, add usernames
 
 ``` r
