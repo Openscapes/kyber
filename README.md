@@ -107,12 +107,14 @@ render(path(repo_path, "README.Rmd"))
 
 Clone then run this in the cohort's repo:
 
+```
     library(stringr)
     library(datapasta) # install.packages("datapasta")
     library(kyber) ## remotes::install_github("openscapes/kyber")
     library(here)
 
     ## use `datapasta` addin to vector_tribble these names formatted from the spreadsheet!
+    You will copy this into the R console, then delete the example "first, last, Erin, Julie", then go to the ParticipantsList and copy the 2 first and last columns, then go to the Addin menu in the top of RStudio and select "Paste as Tribble"!
     cohort <- c(tibble::tribble(
                          ~first,             ~last,
                          "Erin",        "Robinson",
@@ -122,6 +124,7 @@ Clone then run this in the cohort's repo:
 
     short_names(cohort$first, cohort$last) |>
       create_github_clinic(here())
+```
 
 ### Create GitHub team, add usernames
 
