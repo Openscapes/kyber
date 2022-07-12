@@ -147,7 +147,7 @@
 <span><span class="va">repo_name</span> <span class="op">&lt;-</span> <span class="st">"2021-ilm-rotj"</span></span>
 <span></span>
 <span><span class="co"># This will open a README.Rmd for you to edit</span></span>
-<span><span class="va">repo_path</span> <span class="op">&lt;-</span> <span class="fu">ky_create_repo</span><span class="op">(</span><span class="va">repo_name</span><span class="op">)</span></span>
+<span><span class="va">repo_path</span> <span class="op">&lt;-</span> <span class="fu">create_repo</span><span class="op">(</span><span class="va">repo_name</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Then render the README.Rmd to README.md</span></span>
 <span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">render</a></span><span class="op">(</span><span class="fu"><a href="https://fs.r-lib.org/reference/path.html" class="external-link">path</a></span><span class="op">(</span><span class="va">repo_path</span>, <span class="st">"README.Rmd"</span><span class="op">)</span><span class="op">)</span></span>
@@ -167,17 +167,18 @@
 <div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(datapasta) <span class="co"># install.packages("datapasta")</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kyber) <span class="do">## remotes::install_github("openscapes/kyber")</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="do">## use `datapasta` addin to vector_paste these names formatted from the spreadsheet!</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>cohort <span class="ot">&lt;-</span><span class="fu">c</span>(tibble<span class="sc">::</span><span class="fu">tribble</span>(</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                     <span class="sc">~</span>first,             <span class="sc">~</span>last,</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"Erin"</span>,        <span class="st">"Robinson"</span>,</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Julie"</span>,         <span class="st">"Lowndes"</span>,</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>              )</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="fu">ky_short_names</span>(cohort<span class="sc">$</span>first, cohort<span class="sc">$</span>last) <span class="sc">|</span><span class="er">&gt;</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ky_create_github_clinic</span>(<span class="fu">here</span>())</span></code></pre></div>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="do">## use `datapasta` addin to vector_paste these names formatted from the spreadsheet!</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>cohort <span class="ot">&lt;-</span><span class="fu">c</span>(tibble<span class="sc">::</span><span class="fu">tribble</span>(</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>                     <span class="sc">~</span>first,             <span class="sc">~</span>last,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"Erin"</span>,        <span class="st">"Robinson"</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Julie"</span>,         <span class="st">"Lowndes"</span>,</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>              )</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="fu">short_names</span>(cohort<span class="sc">$</span>first, cohort<span class="sc">$</span>last) <span class="sc">|</span><span class="er">&gt;</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">create_github_clinic</span>(<span class="fu">here</span>())</span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="create-github-team-add-usernames">Create GitHub team, add usernames<a class="anchor" aria-label="anchor" href="#create-github-team-add-usernames"></a>
@@ -203,9 +204,9 @@
 <span><span class="va">repo_name</span> <span class="op">&lt;-</span> <span class="st">"2022-nasa-champions"</span></span>
 <span><span class="va">team_name</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">repo_name</span>, <span class="st">"-cohort"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">ky_create_team</span><span class="op">(</span><span class="va">team_name</span>, maintainers <span class="op">=</span> <span class="st">"jules32"</span>, org <span class="op">=</span> <span class="st">"nasa-openscapes"</span><span class="op">)</span></span>
-<span><span class="fu">ky_add_team_members</span><span class="op">(</span><span class="va">team_name</span>, members <span class="op">=</span> <span class="va">members</span><span class="op">$</span><span class="va">username</span>, org <span class="op">=</span> <span class="st">"nasa-openscapes"</span><span class="op">)</span></span>
-<span><span class="fu">ky_add_repo_to_team</span><span class="op">(</span><span class="va">repo_name</span>, <span class="va">team_name</span>, org <span class="op">=</span> <span class="st">"nasa-openscapes"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="reference/create_team.html">create_team</a></span><span class="op">(</span><span class="va">team_name</span>, maintainers <span class="op">=</span> <span class="st">"jules32"</span>, org <span class="op">=</span> <span class="st">"nasa-openscapes"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/add_team_members.html">add_team_members</a></span><span class="op">(</span><span class="va">team_name</span>, members <span class="op">=</span> <span class="va">members</span><span class="op">$</span><span class="va">username</span>, org <span class="op">=</span> <span class="st">"nasa-openscapes"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/add_repo_to_team.html">add_repo_to_team</a></span><span class="op">(</span><span class="va">repo_name</span>, <span class="va">team_name</span>, org <span class="op">=</span> <span class="st">"nasa-openscapes"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="agendas">Agendas<a class="anchor" aria-label="anchor" href="#agendas"></a>
