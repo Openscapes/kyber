@@ -164,21 +164,22 @@
 <h3 id="github-clinic">GitHub Clinic<a class="anchor" aria-label="anchor" href="#github-clinic"></a>
 </h3>
 <p>Clone then run this in the cohort’s repo:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(datapasta) <span class="co"># install.packages("datapasta")</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kyber) <span class="do">## remotes::install_github("openscapes/kyber")</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="do">## use `datapasta` addin to vector_tribble these names formatted from the spreadsheet!</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>cohort <span class="ot">&lt;-</span> <span class="fu">c</span>(tibble<span class="sc">::</span><span class="fu">tribble</span>(</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>                     <span class="sc">~</span>first,             <span class="sc">~</span>last,</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"Erin"</span>,        <span class="st">"Robinson"</span>,</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Julie"</span>,         <span class="st">"Lowndes"</span>,</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>              )</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="fu">short_names</span>(cohort<span class="sc">$</span>first, cohort<span class="sc">$</span>last) <span class="sc">|</span><span class="er">&gt;</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">create_github_clinic</span>(<span class="fu">here</span>())</span></code></pre></div>
+<pre><code>    library(stringr)
+    library(datapasta) # install.packages("datapasta")
+    library(kyber) ## remotes::install_github("openscapes/kyber")
+    library(here)
+
+    ## use `datapasta` addin to vector_tribble these names formatted from the spreadsheet!
+    You will copy this into the R console, then delete the example "first, last, Erin, Julie", then go to the ParticipantsList and copy the 2 first and last columns, then go to the Addin menu in the top of RStudio and select "Paste as Tribble"!
+    cohort &lt;- c(tibble::tribble(
+                         ~first,             ~last,
+                         "Erin",        "Robinson",
+                        "Julie",         "Lowndes",
+                  )
+    )
+
+    short_names(cohort$first, cohort$last) |&gt;
+      create_github_clinic(here())</code></pre>
 </div>
 <div class="section level3">
 <h3 id="create-github-team-add-usernames">Create GitHub team, add usernames<a class="anchor" aria-label="anchor" href="#create-github-team-add-usernames"></a>
