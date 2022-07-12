@@ -103,7 +103,7 @@ render(path(repo_path, "README.Rmd"))
 # 3. Git add, commit, and push in this repository.
 ```
 
-### GitHub Clinic
+### GitHub Clinic - Generate Markdown Files for Each Participant
 
 Clone the Cohort Repo to RStudio, then run the following code. Detailed instructions of what this looks like:
 
@@ -132,7 +132,7 @@ kyber::short_names(cohort$first, cohort$last) |>
    create_github_clinic(here())
 ```
 
-You'll now have .md files for each participant in the cohort! Any duplicate names with have a `_LastInitial`. Now push to GitHub.com!
+You'll now have .md files for each participant in the cohort! Any duplicate names with have a `_LastInitial`. Now commit and push the Markdown files to to GitHub.com. Don't push the .gitignore or .rproj since they're not relevant for the Clinic. (You can do Command-A to select all files and then unclick those 2 you don't want).
 
 
 ### Create GitHub team, add usernames
