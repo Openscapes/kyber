@@ -169,6 +169,8 @@
 <li>Copy the following into the script, then delete the example “first, last, Erin, Julie”.</li>
 <li>Go to the ParticipantsList, and copy the 2 first and last columns</li>
 <li>Back in RStudio, put your cursor inside the “tribble” parentheses, then, in the Addin menu in the top of RStudio, select “Paste as Tribble”!</li>
+<li>Then, double-check the column headers - they are likely not <code>first</code> and <code>last</code> as is written in the <code><a href="reference/short_names.html">kyber::short_names</a></code> call. The easiest thing is to update the column names in the <code><a href="reference/short_names.html">kyber::short_names</a></code> code before running (for example: <code>kyber::short_names(cohort$First.Name, cohort$Last.Name)</code>
+</li>
 </ol>
 <pre><code><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://stringr.tidyverse.org" class="external-link">stringr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/milesmcbain/datapasta" class="external-link">datapasta</a></span><span class="op">)</span> <span class="co"># install.packages("datapasta")</span></span>
