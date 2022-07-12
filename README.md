@@ -112,7 +112,7 @@ Clone then run this in the cohort's repo:
     library(kyber) ## remotes::install_github("openscapes/kyber")
     library(here)
 
-    ## use `datapasta` addin to vector_paste these names formatted from the spreadsheet!
+    ## use `datapasta` addin to vector_tribble these names formatted from the spreadsheet!
     cohort <-c(tibble::tribble(
                          ~first,             ~last,
                          "Erin",        "Robinson",
