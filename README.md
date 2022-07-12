@@ -89,7 +89,7 @@ library(fs)
 repo_name <- "2021-ilm-rotj"
 
 # This will open a README.Rmd for you to edit
-repo_path <- ky_create_repo(repo_name)
+repo_path <- create_repo(repo_name)
 
 # Then render the README.Rmd to README.md
 render(path(repo_path, "README.Rmd"))
@@ -110,6 +110,7 @@ Clone then run this in the cohort's repo:
     library(stringr)
     library(datapasta) # install.packages("datapasta")
     library(kyber) ## remotes::install_github("openscapes/kyber")
+    library(here)
 
     ## use `datapasta` addin to vector_paste these names formatted from the spreadsheet!
     cohort <-c(tibble::tribble(
@@ -119,8 +120,8 @@ Clone then run this in the cohort's repo:
                   )
     )
 
-    ky_short_names(cohort$first, cohort$last) |>
-      ky_create_github_clinic(here())
+    short_names(cohort$first, cohort$last) |>
+      create_github_clinic(here())
 
 ### Create GitHub team, add usernames
 
@@ -145,9 +146,9 @@ members <- tibble::tribble(
 repo_name <- "2022-nasa-champions"
 team_name <- paste0(repo_name, "-cohort")
 
-ky_create_team(team_name, maintainers = "jules32", org = "nasa-openscapes")
-ky_add_team_members(team_name, members = members$username, org = "nasa-openscapes")
-ky_add_repo_to_team(repo_name, team_name, org = "nasa-openscapes")
+create_team(team_name, maintainers = "jules32", org = "nasa-openscapes")
+add_team_members(team_name, members = members$username, org = "nasa-openscapes")
+add_repo_to_team(repo_name, team_name, org = "nasa-openscapes")
 ```
 
 ### Agendas
