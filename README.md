@@ -114,21 +114,21 @@ Clone the Cohort Repo to RStudio, then run this:
 
 
 ```
-    library(stringr)
-    library(datapasta) # install.packages("datapasta")
-    library(kyber) ## remotes::install_github("openscapes/kyber")
-    library(here)
+library(stringr)
+library(datapasta) # install.packages("datapasta")
+library(kyber) ## remotes::install_github("openscapes/kyber")
+library(here)
 
-    ## use `datapasta` addin to vector_tribble these names formatted from the spreadsheet!
-    cohort <- c(tibble::tribble(
-                         ~first,             ~last,
-                         "Erin",        "Robinson",
-                        "Julie",         "Lowndes",
-                  )
-    )
+## use `datapasta` addin to vector_tribble these names formatted from the spreadsheet!
+cohort <- c(tibble::tribble(
+                      ~first,             ~last,
+                      "Erin",        "Robinson",
+                      "Julie",         "Lowndes",
+               )
+)
 
-    short_names(cohort$first, cohort$last) |>
-      create_github_clinic(here())
+kyber::short_names(cohort$first, cohort$last) |>
+   create_github_clinic(here())
 ```
 
 ### Create GitHub team, add usernames
