@@ -111,6 +111,7 @@ Clone the Cohort Repo to RStudio, then run this:
 1. Copy the following into the script, then delete the example "first, last, Erin, Julie".
 2. Go to the ParticipantsList, and copy the 2 first and last columns
 3. Back in RStudio, put your cursor inside the "tribble" parentheses, then, in the Addin menu in the top of RStudio, select "Paste as Tribble"!
+4. Then, double-check the column headers - they are likely not `first` and `last` as is written in the `kyber::short_names` call. The easiest thing is to update the column names in the `kyber::short_names` code before running (for example: `kyber::short_names(cohort$First.Name, cohort$Last.Name)`
 
 
 ```
