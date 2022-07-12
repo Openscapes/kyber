@@ -170,21 +170,21 @@
 <li>Go to the ParticipantsList, and copy the 2 first and last columns</li>
 <li>Back in RStudio, put your cursor inside the “tribble” parentheses, then, in the Addin menu in the top of RStudio, select “Paste as Tribble”!</li>
 </ol>
-<pre><code><span>    <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://stringr.tidyverse.org" class="external-link">stringr</a></span><span class="op">)</span></span>
-<span>    <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/milesmcbain/datapasta" class="external-link">datapasta</a></span><span class="op">)</span> <span class="co"># install.packages("datapasta")</span></span>
-<span>    <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://openscapes.github.io/kyber/">kyber</a></span><span class="op">)</span> <span class="co">## remotes::install_github("openscapes/kyber")</span></span>
-<span>    <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://here.r-lib.org/" class="external-link">here</a></span><span class="op">)</span></span>
+<pre><code><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://stringr.tidyverse.org" class="external-link">stringr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/milesmcbain/datapasta" class="external-link">datapasta</a></span><span class="op">)</span> <span class="co"># install.packages("datapasta")</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://openscapes.github.io/kyber/">kyber</a></span><span class="op">)</span> <span class="co">## remotes::install_github("openscapes/kyber")</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://here.r-lib.org/" class="external-link">here</a></span><span class="op">)</span></span>
 <span></span>
-<span>    <span class="co">## use `datapasta` addin to vector_tribble these names formatted from the spreadsheet!</span></span>
-<span>    <span class="va">cohort</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html" class="external-link">tribble</a></span><span class="op">(</span></span>
-<span>                         <span class="op">~</span><span class="va">first</span>,             <span class="op">~</span><span class="va">last</span>,</span>
-<span>                         <span class="st">"Erin"</span>,        <span class="st">"Robinson"</span>,</span>
-<span>                        <span class="st">"Julie"</span>,         <span class="st">"Lowndes"</span>,</span>
-<span>                  <span class="op">)</span></span>
-<span>    <span class="op">)</span></span>
+<span><span class="co">## use `datapasta` addin to vector_tribble these names formatted from the spreadsheet!</span></span>
+<span><span class="va">cohort</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html" class="external-link">tribble</a></span><span class="op">(</span></span>
+<span>                      <span class="op">~</span><span class="va">first</span>,             <span class="op">~</span><span class="va">last</span>,</span>
+<span>                      <span class="st">"Erin"</span>,        <span class="st">"Robinson"</span>,</span>
+<span>                      <span class="st">"Julie"</span>,         <span class="st">"Lowndes"</span>,</span>
+<span>               <span class="op">)</span></span>
+<span><span class="op">)</span></span>
 <span></span>
-<span>    <span class="fu"><a href="reference/short_names.html">short_names</a></span><span class="op">(</span><span class="va">cohort</span><span class="op">$</span><span class="va">first</span>, <span class="va">cohort</span><span class="op">$</span><span class="va">last</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>      <span class="fu"><a href="reference/create_github_clinic.html">create_github_clinic</a></span><span class="op">(</span><span class="fu">here</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+<span><span class="fu">kyber</span><span class="fu">::</span><span class="fu"><a href="reference/short_names.html">short_names</a></span><span class="op">(</span><span class="va">cohort</span><span class="op">$</span><span class="va">first</span>, <span class="va">cohort</span><span class="op">$</span><span class="va">last</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>   <span class="fu"><a href="reference/create_github_clinic.html">create_github_clinic</a></span><span class="op">(</span><span class="fu">here</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="section level3">
 <h3 id="create-github-team-add-usernames">Create GitHub team, add usernames<a class="anchor" aria-label="anchor" href="#create-github-team-add-usernames"></a>
