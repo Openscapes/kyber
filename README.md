@@ -137,11 +137,17 @@ You'll now have .md files for each participant in the cohort! Any duplicate name
 
 ### Create GitHub team, add usernames
 
+1. Open RStudio, and create a new script (temporary, you'll deleted it but it's a nicer place to work)
+1. Paste the following in it and review the code. You may already have a GitHub PAT set; there is more information at the top of the README about it. 
+1. Run this code first as-is with the example usernames in the `members` variable to check -
+1. Check that the example usernames were added in the Cohort GitHub: go to github.com/openscapes/cohort-name > Settings > Collaborators and Teams 
+1. If all looks good, use `datapasta` as in the previous GitHub setup to copy the github usernames into the `members` variable.
+1. Run the code again and check that everyone was added!
+
 ``` r
-# First make sure to set your GitHub PAT
-usethis::create_github_token()
-## use their defaults plus `admin:org`
-Sys.setenv(GITHUB_PAT = "ghp_0id4zkO4GqSuEsC6Zs22wf34Y0u3270") # must do this each R session
+## First make sure you have a GitHub PAT set. If you need one, here's what you'd do:
+# usethis::create_github_token() ## use their defaults plus `admin:org`
+# Sys.setenv(GITHUB_PAT = "ghp_0id4zkO4GqSuEsC6Zs22wf34Y0u3270") 
 
 library(kyber) 
 library(rmarkdown)
@@ -149,18 +155,16 @@ library(tibble)
 library(fs)
 
 members <- tibble::tribble(
-          ~username,
-     "jules32",
-       "erinmr"
+     ~username,
+     "eeholmes",
   )
-
 
 repo_name <- "2022-nasa-champions"
 team_name <- paste0(repo_name, "-cohort")
 
-create_team(team_name, maintainers = "jules32", org = "nasa-openscapes")
-add_team_members(team_name, members = members$username, org = "nasa-openscapes")
-add_repo_to_team(repo_name, team_name, org = "nasa-openscapes")
+create_team(team_name, maintainers = "jules32", org = "openscapes")
+add_team_members(team_name, members = members$username, org = "openscapes")
+add_repo_to_team(repo_name, team_name, org = "openscapes")
 ```
 
 ### Agendas
