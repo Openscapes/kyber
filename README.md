@@ -164,13 +164,12 @@ repo_name <- "2022-nasa-champions"
 team_name <- paste0(repo_name, "-cohort")
 create_team(team_name, maintainers = "jules32", org = "openscapes")
 
-## create member variable - this is where you'll use datapasta and rerun everything below after you test with this example username
+## create member variable - do this twice (first as test!)
+## this is where you'll use datapasta and run everything below
 members <- tibble::tribble(
      ~username,
      "eeholmes",
   )
-
-
 
 add_team_members(team_name, members = members$username, org = "openscapes")
 add_repo_to_team(repo_name, team_name, org = "openscapes")
