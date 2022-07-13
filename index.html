@@ -197,8 +197,12 @@
 <li>Paste the following in it and review the code. You may already have a GitHub PAT set; there is more information at the top of the README about it.</li>
 <li>Run this code first as-is with the example usernames in the <code>members</code> variable to check -</li>
 <li>Check that the example usernames were added in the Cohort GitHub: go to github.com/openscapes/cohort-name &gt; Settings &gt; Collaborators and Teams</li>
-<li>If all looks good, use <code>datapasta</code> as in the previous GitHub setup to copy the github usernames into the <code>members</code> variable.</li>
-<li>Run the code again and check that everyone was added!</li>
+<li>If the team was created with the username and appears in the repo, woohoo!</li>
+<li>Open the ParticipantsList and copy the GitHub username column, including the header.</li>
+<li>In RStudio, put your cursor after <code>members &lt;-</code> and use the <code>datapasta</code> Addin &gt; Paste As Tribble to paste the usernames into the <code>members</code> variable, deleting the previous example user.</li>
+<li>After pasting in the R script, rename the header as “username” (no spaces or asterices)</li>
+<li>Run the following code again and check that everyone was added!</li>
+<li>Finally, in the ParticipantList, highlight all usernames we’ve added in green. This helps us know who else to add during the live clinic session.</li>
 </ol>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## First make sure you have a GitHub PAT set. If you need one, here's what you'd do:</span></span>
@@ -209,18 +213,24 @@
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rstudio/rmarkdown" class="external-link">rmarkdown</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tibble.tidyverse.org/" class="external-link">tibble</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://fs.r-lib.org" class="external-link">fs</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/milesmcbain/datapasta" class="external-link">datapasta</a></span><span class="op">)</span></span>
 <span></span>
+<span><span class="co">## create naming for GitHub - do this once!</span></span>
+<span><span class="va">repo_name</span> <span class="op">&lt;-</span> <span class="st">"2022-nasa-champions"</span></span>
+<span><span class="va">team_name</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">repo_name</span>, <span class="st">"-cohort"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/create_team.html">create_team</a></span><span class="op">(</span><span class="va">team_name</span>, maintainers <span class="op">=</span> <span class="st">"jules32"</span>, org <span class="op">=</span> <span class="st">"openscapes"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## create member variable - this is where you'll use datapasta and rerun everything below after you test with this example username</span></span>
 <span><span class="va">members</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html" class="external-link">tribble</a></span><span class="op">(</span></span>
 <span>     <span class="op">~</span><span class="va">username</span>,</span>
 <span>     <span class="st">"eeholmes"</span>,</span>
 <span>  <span class="op">)</span></span>
 <span></span>
-<span><span class="va">repo_name</span> <span class="op">&lt;-</span> <span class="st">"2022-nasa-champions"</span></span>
-<span><span class="va">team_name</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">repo_name</span>, <span class="st">"-cohort"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu"><a href="reference/create_team.html">create_team</a></span><span class="op">(</span><span class="va">team_name</span>, maintainers <span class="op">=</span> <span class="st">"jules32"</span>, org <span class="op">=</span> <span class="st">"openscapes"</span><span class="op">)</span></span>
+<span></span>
 <span><span class="fu"><a href="reference/add_team_members.html">add_team_members</a></span><span class="op">(</span><span class="va">team_name</span>, members <span class="op">=</span> <span class="va">members</span><span class="op">$</span><span class="va">username</span>, org <span class="op">=</span> <span class="st">"openscapes"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/add_repo_to_team.html">add_repo_to_team</a></span><span class="op">(</span><span class="va">repo_name</span>, <span class="va">team_name</span>, org <span class="op">=</span> <span class="st">"openscapes"</span><span class="op">)</span></span></code></pre></div>
+<p>Yay! Now all to do is to highlight the usernames in green in the ParticpantList for our bookkeeping!</p>
 </div>
 <div class="section level3">
 <h3 id="agendas">Agendas<a class="anchor" aria-label="anchor" href="#agendas"></a>
