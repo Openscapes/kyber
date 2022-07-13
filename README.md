@@ -141,8 +141,12 @@ You'll now have .md files for each participant in the cohort! Any duplicate name
 1. Paste the following in it and review the code. You may already have a GitHub PAT set; there is more information at the top of the README about it. 
 1. Run this code first as-is with the example usernames in the `members` variable to check -
 1. Check that the example usernames were added in the Cohort GitHub: go to github.com/openscapes/cohort-name > Settings > Collaborators and Teams 
-1. If all looks good, use `datapasta` as in the previous GitHub setup to copy the github usernames into the `members` variable.
-1. Run the code again and check that everyone was added!
+1. If the team was created with the username and appears in the repo, woohoo! 
+1. Open the ParticipantsList and copy the GitHub username column, including the header. 
+3. In RStudio, put your cursor after `members <-` and use the `datapasta` Addin > Paste As Tribble to paste the usernames into the `members` variable, deleting the previous example user. 
+2. After pasting in the R script, rename the header as "username" (no spaces or asterices)
+5. Run the following code again and check that everyone was added!
+6. Finally, in the ParticipantList, highlight all usernames we've added in green. This helps us know who else to add during the live clinic session.
 
 ``` r
 ## First make sure you have a GitHub PAT set. If you need one, here's what you'd do:
@@ -153,19 +157,27 @@ library(kyber)
 library(rmarkdown)
 library(tibble)
 library(fs)
+library(datapasta)
 
+## create naming for GitHub - do this once!
+repo_name <- "2022-nasa-champions"
+team_name <- paste0(repo_name, "-cohort")
+create_team(team_name, maintainers = "jules32", org = "openscapes")
+
+## create member variable - this is where you'll use datapasta and rerun everything below after you test with this example username
 members <- tibble::tribble(
      ~username,
      "eeholmes",
   )
 
-repo_name <- "2022-nasa-champions"
-team_name <- paste0(repo_name, "-cohort")
 
-create_team(team_name, maintainers = "jules32", org = "openscapes")
+
 add_team_members(team_name, members = members$username, org = "openscapes")
 add_repo_to_team(repo_name, team_name, org = "openscapes")
 ```
+
+Yay! Now all to do is to highlight the usernames in green in the ParticpantList for our bookkeeping!
+
 
 ### Agendas
 
