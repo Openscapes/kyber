@@ -185,4 +185,17 @@ Yay! Now all to do is to highlight the usernames in green in the ParticpantList 
         cohort_id = "2022-nasa-champions", 
         call_number = 3)
 
-Then, to move this to a Google Doc and fine-tune formatting, follow notes in https://github.com/Openscapes/kyber/issues/9
+Then, to move this to a Google Doc and fine-tune formatting, follow these notes (as of July 14, 2022): 
+- Knit the `.md` in RStudio and copy-paste the result into a Google Doc (example: 03_CallAgenda [ 2022-noaa-afsc ]. You might need to to expand the knitted preview into the browser to get it to copy/paste correctly into Google Docs
+- (specific to Call 3 Agenda:) Make "_opening.Rmd" part 9 point font 
+- Made Header 1 font 18, bold ; update heading 1 to match (see screenshot below)
+- Made Header 2 font 14, bold; update heading 2 to match
+- Select all (cmd-a), then: 
+  - "add space" then "remove space **after** paragraph" throughout to make spacing a little more cozy (yes seems odd to do and undo, but it works)
+  - "add space" then "remove space **before** paragraph" throughout to make spacing a little more cozy
+- Review doc and fix any further font weirdness
+- Add page numbers 
+
+**How to "update heading 1 to match"**: In Google Doc, to update a text style (headings, normal text, with font type, size etc), highlight a section with the style you want, click the styles dropdown shown in the screenshot, and select e.g. "Update Heading 1 to match". Double check the doc because we've noticed it missed some in an agenda.
+
+![Screen Shot 2022-07-14 at 5 50 28 PM](https://user-images.githubusercontent.com/11927811/179125336-ec2fc1e5-792e-495d-8a29-c1ed3ec3cdc4.png)
