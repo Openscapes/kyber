@@ -189,9 +189,9 @@ Then, to move this to a Google Doc and fine-tune formatting, follow these notes 
 - In RStudio, Knit (or PreviewHTML) the resulting `agenda.md` and copy-paste the result into a Google Doc (example: 03_CallAgenda [ 2022-noaa-afsc ]. You might need to to expand the knitted preview into the browser to get it to copy/paste correctly into Google Docs
 - Move Google Doc to Openscapes Workspace folder Openscapes_CohortCalls [ year-cohort-name ].
 - Select all (cmd-A) and change font to Open Sans
-- (specific to Call 3 Agenda:) Make "_opening.Rmd" part 9 point font 
-- Made Header 1 font 18, bold; update heading 1 to match (see screenshot below)
-- Made Header 2 font 14, bold; update heading 2 to match
+- Make p1 opening text 9 point font (the text above horizontal line & Call title)
+- Make Header 1 font 18, bold; update heading 1 to match (see screenshot below)
+- Make Header 2 font 14, bold; update heading 2 to match
 - Select all (cmd-A), then: 
   - "add space" then "remove space **after** paragraph" throughout to make spacing a little more cozy (yes seems odd to do and undo, but it works)
   - "add space" then "remove space **before** paragraph" throughout to make spacing a little more cozy
