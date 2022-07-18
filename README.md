@@ -187,6 +187,7 @@ Yay! Now all to do is to highlight the usernames in green in the ParticpantList 
 
 Then, to move this to a Google Doc and fine-tune formatting, follow these notes (as of July 14, 2022): 
 - In RStudio, Knit (or PreviewHTML) the resulting `agenda.md` and copy-paste the result into a Google Doc (example: 03_CallAgenda [ 2022-noaa-afsc ]. You might need to to expand the knitted preview into the browser to get it to copy/paste correctly into Google Docs
+- Move Google Doc to Openscapes Workspace folder Openscapes_CohortCalls [ year-cohort-name ].
 - Select all (cmd-A) and change font to Open Sans
 - (specific to Call 3 Agenda:) Make "_opening.Rmd" part 9 point font 
 - Made Header 1 font 18, bold; update heading 1 to match (see screenshot below)
