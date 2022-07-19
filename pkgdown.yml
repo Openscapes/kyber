@@ -1,10 +1,10 @@
 pandoc: 2.14.2
-pkgdown: 2.0.5
+pkgdown: 2.0.6
 pkgdown_sha: ~
 articles:
   github-repo: github-repo.html
   kyber: kyber.html
-last_built: 2022-07-18T18:39Z
+last_built: 2022-07-19T17:12Z
 urls:
   reference: https://openscapes.github.io/kyber/reference
   article: https://openscapes.github.io/kyber/articles
