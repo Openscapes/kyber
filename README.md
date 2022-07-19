@@ -43,7 +43,7 @@ test your configuration settings:
 ``` r
 library(googlesheets4)
 
-cohort_registry_url <- "https://docs.google.com/spreadsheets/d/1Oej46BMX_SLIc1cwoyLHzNWwGlT3szez8FDKc3b418w/"
+cohort_registry_url <- "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/"
 
 read_sheet(cohort_registry_url, sheet = "test-sheet")
 ```
@@ -181,7 +181,7 @@ Yay! Now all to do is to highlight the usernames in green in the ParticpantList 
 ### Agendas
 
     kyber::call_agenda(
-        registry_url = "https://docs.google.com/spreadsheets/d/1Oej46BMX_SLIc1cwoyLHzNWwGlT3szez8FDKc3b418w/edit#gid=942365997", 
+        registry_url = "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/edit#gid=942365997", 
         cohort_id = "2022-nasa-champions", 
         call_number = 3)
 
