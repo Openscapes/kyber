@@ -1,0 +1,8 @@
+---
+duration: 0 minutes
+---
+
+- **Efficiency Tip of the Day ** (2 min) – Julie
+  - Keyboard shortcuts to move between tabs in your internet browser: 
+    - **Mac:** hold Shift + Command, use left/right arrow key
+    - **PC:** hold Shift + Control, use left/right arrow key

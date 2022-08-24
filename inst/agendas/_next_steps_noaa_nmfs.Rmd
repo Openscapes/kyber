@@ -1,0 +1,155 @@
+---
+params: 
+  start_time: "12:00pm PT"
+  duration: 10
+---
+
+## Next steps • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+One of the things we want to do is represent your needs to leadership. Let's Google Doc and get your thoughts out: The objective isn't to get a poll, it's about your ideas, needs, and also how you feel about it all.
+
+-   **Intro framing (3 min) - Eli**
+
+    -   Want to share with leadership for more training in short term (4 Cohorts in the Fall!); also proposing a 3-year NMFS-Openscapes Mentor Framework (like [NASA-Openscapes](https://nasa-openscapes.github.io))
+
+    -   Your answers below and to the end-of-training survey will help guide that planning. 
+
+    -   **There is a growing NMFS R learning community**
+
+    -   The nmfs-openscapes users group is an informal meeting space for any open science users from across NMFS! You are welcome here. 
+
+        -   NMFS Open Science: <https://nmfs-opensci.github.io/ResourceBook/> 
+
+        -   NMFS Openscapes: [https://nmfs-openscapes.github.io](https://nmfs-openscapes.github.io/),
+
+        -   NMFS R Users Group:  [https://nmfs-openscapes.github.io/NMFS-R-UG](https://nmfs-openscapes.github.io/NMFS-R-UG/): Platform/org for communication and place for shared tutorial repos, resources. 
+
+            -   [NMFS R UG Calendar](https://calendar.google.com/calendar/u/0?cid=bm9hYS5nb3ZfNjByZm43bWw5cnBjaGw2M3ZzNGFmOW4wMThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) - to add the group calendar to your personal work calendar.
+
+            -   [Video recordings of past meetings](https://drive.google.com/drive/folders/18aigqwzSzzq_VFRGCN2trfQzgQ8B_L_G?usp=sharing)
+
+            -   [Meeting notes](https://docs.google.com/document/d/1mrgtrSXVtPCTxrpBa_0ZbxEsnK9vcQzs6RIV3f-OTPw/edit?usp=sharing) 
+
+            -   [JOIN the google space and github groups!](https://docs.google.com/spreadsheets/d/1WwiGAf7Lmrx3sdrif3R-IhIJiXUIFBHydloixY6fWuo/edit?usp=sharing) (You REALLY are welcome here!)
+
+        -   NMFS-level RStudio Connect
+
+    -   **There are external trainings to learn R/GitHub/etc**
+
+        -   Courses like Udemy/Coursera where you have paid team accounts so you can go through together and see where each other are
+
+        -   Courses like [R for Excel Users](https://rstudio-conf-2020.github.io/r-for-excel/) where it\'s 2 full days with live teacher
+
+        -   Self-paced learning like [Big Book of R](https://www.bigbookofr.com/)
+
+        -   Self-paced interactive learning like [Swirl](https://swirlstats.com/) 
+
+-   **Silent journaling and +1s** (5 min) - Julie
+
+-   **Upon completing Openscapes, how do you feel about your needs and how you are supported to meet those needs?**
+
+    -   ‎
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+-   **Upon completing Openscapes, what are your ideas and needs for your team\'s future progress?**
+
+    -    
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+-   **Poll (add +1\'s) What else would you like to see? What technical skills would benefit you most? (Please add other items below that would be helpful!)**
+
+    -   **General R courses**
+
+        -   Udemy/Coursera (team accounts so you can go through together and see where each other are): 
+
+        -   R for Excel (2+ full days with a live teacher): 
+
+        -   Other:
+
+        -   
+
+    -   **Specific technical R skills**
+
+        -   R Markdown / Quarto: 
+
+        -   R Shiny:
+
+        -   R Studio Connect server:
+
+        -   
+
+        -   
+
+        -   
+
+        -   
+
+    -   **GitHub**
+
+        -   Dealing with confidential data: 
+
+        -   Project management best practices:
+
+        -   Branching and Merge Conflicts:
+
+        -   Collaborative Writing: 
+
+        -   
+
+        -   
+
+        -   
+
+    -    **Team building facilitation/collaboration (\"soft\") skills**
+
+        -    
+
+        -   
+
+        -   
+
+    -   **Other**
+
+        -    
+
+        -   
+
+-   **Discussion** (3 mins) -- All
