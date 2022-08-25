@@ -101,7 +101,7 @@ call_agenda <- function(registry_url, cohort_id, call_number,
   
   if(length(files) > 0) {
     file.copy(
-      system.file("inst", "agendas", files, package = "kyber"),
+      system.file("agendas", files, package = "kyber"),
       dirname(output_file)
     )
   }
