@@ -7,7 +7,7 @@ params:
 
 ## Closing --- Better science for future us • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-**Thank you for being a part of Openscapes** - Julie - We hope you feel more a bit more confident about what's possible with open data science with your teams and colleagues. - This is the very beginning, finding your trailhead.
+**Thank you for being a part of Openscapes** - Julie - We hope you feel a bit more confident about what's possible with open data science with your teams and colleagues. - This is the very beginning, finding your trailhead.
 
 ![](openscapes_champions_landscape.png)
 
