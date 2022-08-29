@@ -1,7 +1,7 @@
 ---
 params: 
   start_time: "12:00pm PT"
-  duration: 37
+  duration: 35
 ---
 
 ## Data strategies • `r kyber:::fmt_duration(params$start_time, params$duration)`
@@ -35,7 +35,7 @@ params:
   - 
   - 
   - 
-- **Discussion** (15 min) – All
+- **Discussion** (10 min) – All
   - ‎
   -  
   - 

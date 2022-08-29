@@ -1,0 +1,45 @@
+---
+params: 
+  start_time: "12:00pm PT"
+  duration: 19
+---
+
+## Reflections • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+1 rapid round of breakout groups. We'll do reflections a bit differently today: with Jamboards. 
+
+-   **Overview & Demo** (3 min) - Stef screenshares
+
+  -   This is an activity to get you warmed up and help you think about your Pathways. 
+
+  -   I'll give you a prompt and we'll use a Google Jamboard to collect our ideas on sticky notes. The goal is the activity itself, not the end product. In the first part, let your ideas flow and don\'t worry what others are writing. We'll have a chance to review and discuss
+
+  -   **Prompt:** You are living in your ideal world. Your workflow feels good and is exactly where you want to be in your Openscapes Pathway. Now consider the things that got you here. Try to see the spaces that opened up or things that helped you get past barriers. These could be big things or they could be small. No one will hold you to this so don\'t overthink it.
+
+  -   **Demo**: 
+  -   create a sticky note; change color; add another sticky
+  -   add +1 to a note
+  -   move notes
+  -   4 Jamboard Frames: a Guide, and 3 Breakout Groups
+
+
+-   **Breakout groups Jamboards** (10 min) (random groups of 10) -- Stef, Eli, Julie in each breakout, Ady in main room (to welcome people and participate)
+
+  -   **The activity**:
+  -   In [our Jamboard](https://jamboard.google.com/d/1cdjNsX92M2ialHKerCpihBxatJ0PYfi4YdJmzjoBrzs/) - find the Frame for your breakout group
+
+        -   5 mins to add your ideas (try for 3 ideas; open a sticky note and start typing; one idea per sticky)
+
+        -   2 mins to read, add +1's to others' stickies (double click a sticky to edit)
+
+        -   2 mins to group stickies with related ideas and notice any themes (click and drag a sticky to move; everyone is allowed to move stickies)
+
+  -  ‎
+  -  ‎
+
+- **Discussion / Share-outs** (6 min) -- Julie record!
+
+  -  ‎
+  -  ‎
+  -   
+  -   
