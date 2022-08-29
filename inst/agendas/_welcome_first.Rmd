@@ -15,8 +15,10 @@ params:
     - Our team here on this call: 
       - ...
   - I am grateful I am for the land where I am here in Santa Barbara California and I want to honor the Chumash peoples who have been and continue to be stewards of the lands and waters here.
+  - ‎
 
 - **Today’s goals** – Julie
+  - ‎
   - 
 - **You are all welcome here** (3 min) – Julie
   - This is a positive learning space where everyone is welcome to ask questions and participate.
@@ -45,12 +47,12 @@ params:
   - Better science for future us
 
 - **Cohort Calls - logistics & norms** (3 min) – Julie
-  - Our 5 Cohort Calls - Cohort website: `r params$website` TODO
-    - 1. Openscapes mindset, Better science in less time
-    - 2. GitHub Clinic
-    - 3. Data strategies; Team culture
-    - 4. Coding strategies; Open communities
-    - 5. Pathways share
+  - Our 5 Cohort Calls - Cohort website: `r params$website`
+    - Call 1: Openscapes mindset, Better science in less time
+    - Call 2: GitHub Clinic
+    - Call 3: Data strategies; Team culture
+    - Call 4: Coding strategies; Open communities
+    - Call 5: Pathways share
 
  - Zoom & Google Docs – I put mine side-by-side (windows narrowed)
 <center>![](screenshot-gdoc-zoom-setup.png)</center>

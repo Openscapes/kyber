@@ -16,7 +16,7 @@ params:
   - ‎
   -
   -
-- Discussion (10 min) - All
+- **Discussion** (10 min) - All
   - ‎
   -
   -
