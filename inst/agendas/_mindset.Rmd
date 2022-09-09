@@ -15,7 +15,7 @@ params:
 - **Silent journaling** (5 min) – All
 - *Respond to the prompts below. Then, read others responses and add +1’s or comments*
     - **What are you already doing that aligns with the Openscapes Mindset?**
-        - **How does your work fit into open data science? *- *-  **
+        - **How does your work fit into open data science?**
         - **How does your work fit into diversity, equity, & inclusion?**
     - 
     - 

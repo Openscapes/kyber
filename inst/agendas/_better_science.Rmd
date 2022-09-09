@@ -1,7 +1,7 @@
 ---
 params:
   start_time: "1:55pm ET"
-  duration: 30
+  duration: 25
 ---
 
 ## Better science in less time • `r kyber:::fmt_duration(params$start_time, params$duration)`
@@ -9,7 +9,7 @@ params:
 - Ocean Health Index ([slides](https://docs.google.com/presentation/d/162tpUZEFkpTUI4K3Yl_mF6HLxsgwO_d7bvF5F4igxfk/edit?usp=sharing)) (5 min) - Julie
   - ‎
   - 
-- **Breakout groups** (15 min) (teams) - Megsie
+- **Breakout groups** (10 min) (teams) - Megsie
   - **Prompts: Discuss your space and place.** 
   - Space: Have you planned your Seaside Chats; are they something you already do? Anyone else who should be included? 
   - Place: where do your shared things live? Is everyone included as they need to be (skills/permissions/etc)?

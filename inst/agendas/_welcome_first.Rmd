@@ -1,7 +1,7 @@
 ---
 params:
   start_time: "1:00pm ET"
-  duration: 13
+  duration: 18
   files: ["screenshot-gdoc-zoom-setup.png", "wheel_of_power_duckworth.jpg"]
 ---
 
@@ -16,7 +16,9 @@ params:
       - ...
   - I am grateful I am for the land where I am here in Santa Barbara California and I want to honor the Chumash peoples who have been and continue to be stewards of the lands and waters here.
   - ‎
-
+- **Organizer Welcome** (3 min) – co-lead
+  - ‎
+  - 
 - **Today’s goals** – Julie
   - ‎
   - 
