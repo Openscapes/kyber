@@ -108,7 +108,7 @@ render(path(repo_path, "README.Rmd"))
 Clone the Cohort Repo to RStudio, then run the following code. Detailed instructions of what this looks like:
 
 1. Open RStudio, and create a new script (temporary, you'll deleted it but it's a nicer place to work)
-1. Copy the following into the script, then delete the example "first, last, Erin, Julie".
+1. Copy the following into the script, then delete the examples "Erin, Julie". You'll keep the `_demo.md`, which is what you'll demo live
 2. Go to the ParticipantsList, and copy the 2 first and last columns
 3. Back in RStudio, put your cursor inside the "tribble" parentheses, then, in the Addin menu in the top of RStudio, select "Paste as Tribble"!
 4. Then, double-check the column headers - they are likely not `first` and `last` as is written in the `kyber::short_names` call. The easiest thing is to update the column names in the `kyber::short_names` code before running (for example: `kyber::short_names(cohort$First.Name, cohort$Last.Name)`
@@ -123,6 +123,7 @@ library(here)
 ## use `datapasta` addin to vector_tribble these names formatted from the spreadsheet!
 cohort <- c(tibble::tribble(
                       ~first,             ~last,
+                      "_demo",       "",                      
                       "Erin",        "Robinson",
                       "Julie",         "Lowndes",
                )
