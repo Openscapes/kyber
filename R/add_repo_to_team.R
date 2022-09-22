@@ -14,7 +14,7 @@ add_repo_to_team <- function(repository, team, org = "openscapes"){
   check_gh_pat()
   
   response <- gh("PUT /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}",
-                 org = "openscapes", team_slug = team, 
-                 owner = "openscapes", repo = repository, permission = "push")
+                 org, team_slug = team, 
+                 owner = org, repo = repository, permission = "push")
   invisible(response)
 }
