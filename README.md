@@ -125,7 +125,7 @@ cohort <- c(tibble::tribble(
                       ~first,             ~last,
                       "_demo",       "",                      
                       "Erin",        "Robinson",
-                      "Julie",         "Lowndes",
+                      "Julie",         "Lowndes"
                )
 )
 
@@ -169,7 +169,7 @@ create_team(team_name, maintainers = "jules32", org = "openscapes")
 ## this is where you'll use datapasta and run everything below
 members <- tibble::tribble(
      ~username,
-     "eeholmes",
+     "eeholmes"
   )
 
 add_team_members(team_name, members = members$username, org = "openscapes")
