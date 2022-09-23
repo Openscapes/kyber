@@ -119,6 +119,7 @@ library(stringr)
 library(datapasta) # install.packages("datapasta")
 library(kyber) ## remotes::install_github("openscapes/kyber")
 library(here)
+library(fs)
 
 ## use `datapasta` addin to vector_tribble these names formatted from the spreadsheet!
 cohort <- c(tibble::tribble(
@@ -129,8 +130,14 @@ cohort <- c(tibble::tribble(
                )
 )
 
+## create .md files for each Champion
 kyber::short_names(cohort$first, cohort$last) |>
    create_github_clinic(here())
+   
+## copy trailhead image into parent folder
+trailhead_png <- system.file("kyber-templates", 
+                               "github_clinic_md_text.md", package = "kyber")
+fs::file_copy(trailhead_png, here())  
 ```
 
 You'll now have .md files for each participant in the cohort! Any duplicate names with have a `_LastInitial`. Now commit and push the Markdown files to to GitHub.com. Don't push the .gitignore or .rproj since they're not relevant for the Clinic. (You can do Command-A to select all files and then unclick those 2 you don't want).
