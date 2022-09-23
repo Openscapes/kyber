@@ -136,7 +136,7 @@ kyber::short_names(cohort$first, cohort$last) |>
    
 ## copy trailhead image into parent folder
 trailhead_png <- system.file("kyber-templates", 
-                               "github_clinic_md_text.md", package = "kyber")
+                               "horst-champions-trailhead.png", package = "kyber")
 fs::file_copy(trailhead_png, here())  
 ```
 
