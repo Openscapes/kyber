@@ -108,7 +108,7 @@ render(path(repo_path, "README.Rmd"))
 Clone the Cohort Repo to RStudio, then run the following code. Detailed instructions of what this looks like:
 
 1. Open RStudio, and create a new script (temporary, you'll deleted it but it's a nicer place to work)
-1. Copy the following into the script, then delete the examples "Erin, Julie". You'll keep the `_demo.md`, which is what you'll demo live
+1. Copy the following into the script, then delete the examples "Erin, Julie". You'll keep the `_demo.md`, which is what you'll demo live. 
 2. Go to the ParticipantsList, and copy the 2 first and last columns
 3. Back in RStudio, put your cursor inside the "tribble" parentheses, then, in the Addin menu in the top of RStudio, select "Paste as Tribble"!
 4. Then, double-check the column headers - they are likely not `first` and `last` as is written in the `kyber::short_names` call. The easiest thing is to update the column names in the `kyber::short_names` code before running (for example: `kyber::short_names(cohort$First.Name, cohort$Last.Name)`
@@ -140,7 +140,9 @@ trailhead_png <- system.file("kyber-templates",
 fs::file_copy(trailhead_png, here())  
 ```
 
-You'll now have .md files for each participant in the cohort! Any duplicate names with have a `_LastInitial`. Now commit and push the Markdown files to to GitHub.com. Don't push the .gitignore or .rproj since they're not relevant for the Clinic. (You can do Command-A to select all files and then unclick those 2 you don't want).
+You'll now have .md files for each participant in the cohort! Any duplicate names with have a `_LastInitial`. Check by clicking into the `github-clinic` folder and opening a file. 
+
+**Now**, commit and push the Markdown files in the `github-clinic` folder plus the `horst-champions-trailhead.png in the top-level folder to GitHub.com. Don't push the .gitignore or .rproj since they're not relevant for the Clinic. (You can do Command-A to select all files and then unclick those 2 you don't want).
 
 
 ### Create GitHub team, add usernames
