@@ -77,7 +77,11 @@ call_agenda <- function(registry_url, cohort_id, call_number,
   params_registry$github_repo <- cohort_registry %>% 
     filter(cohort_name == cohort_id) %>% 
     pull("github_repo")
-  
+
+  params_registry$cohort_website <- cohort_registry %>% 
+    filter(cohort_name == cohort_id) %>% 
+    pull("cohort_website")
+    
   params_registry$title <- call_registry %>% 
     filter(call == call_number) %>% 
     pull("title")

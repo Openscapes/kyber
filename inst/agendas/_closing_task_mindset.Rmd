@@ -31,11 +31,12 @@ params:
 
 -   **Task for next time** (2 min) -- All
     -   **Have a Seaside Chat & start your Pathway**
-    -   Create a copy of [Pathways Sheet](https://drive.google.com/open?id=1X_-qPdWDCpw2F3nZr6vZnq87guyUIGLvekm0XV2H-A8) (File > Make a copy > in our shared folder)
-        -   Start discussing your trailhead ("now" column). Are there rows to add?
+    - Start discussing your trailhead: where are you now?    
+    - To structure your thoughts, you can use the Pathways Sheet
+        -    Create a copy of [Pathways Sheet](https://docs.google.com/spreadsheets/d/1rmhOly87OYrPOUqTzmccYbPrTlGmXGsN06GI1FKzxag/edit#gid=0) (File > Make a copy > in our shared folder). Focus on the "now" column. Are there rows to add?
     -   **Create GitHub usernames**
         -   Optional advice: <https://happygitwithr.com/github-acct.html>
-        -   Share your GitHub username before next time in our OpenscapesParticipantsList (linked from the top of this doc)
+        -   Share your GitHub username before next time in our ParticipantsList (in our Cohort Folder, linked from the top of this doc)
     - **Join Slack** (we'll invite you to our Openscapes org)
         -   Introduce yourself and tag your team
             -   Private channel for our cohort as you get comfortable

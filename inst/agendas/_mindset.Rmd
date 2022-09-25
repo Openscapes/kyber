@@ -7,12 +7,12 @@ params:
 ## Openscapes mindset • `r kyber:::fmt_duration(params$start_time, params$duration)`
 *All Champions program slides are also linked from <https://openscapes.org/series>* 
 
-- **Openscapes mindset** ([slides](https://docs.google.com/presentation/d/1giEW0EIYVnxneGpOBSJnEqg-1CVBUGrbH8Z5gawdeBc/edit?usp=sharing) 6-19) (15 min) – Julie
-  - Examples are R-heavy; concepts are broad. Showing what’s possible.
+- **Openscapes mindset** ([slides](https://docs.google.com/presentation/d/1giEW0EIYVnxneGpOBSJnEqg-1CVBUGrbH8Z5gawdeBc/edit?usp=sharing) 7-18) (15 min) – Julie
+  - ‎
   -  
   -  
   - 
-- **Silent journaling** (5 min) – All
+- **Silent journaling** (4 min) – All
 - *Respond to the prompts below. Then, read others responses and add +1’s or comments*
     - **What are you already doing that aligns with the Openscapes Mindset?**
         - **How does your work fit into open data science?**
@@ -37,7 +37,7 @@ params:
     -  
     -  
     -  
-- **Discussion **(5 min) – Julie
+- **Discussion **(6 min) – Julie
     -  ‎
     -  
     -  
