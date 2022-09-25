@@ -26,9 +26,9 @@ params:
 - **Followups** (3 min) – Julie
 - Overwhelm is real, we’re all making progress
     - Providing some structure (space & place) for you to explore new ideas and habits
-      - Seaside Chats - time to be intentional to develop goals and habits with your teams or broader groups       
-      - Co-working - a social way to do work you’re doing anyhow
-      - Pathways Sheets - an intentional way to reflect on workflows. Developed in our shared folder - look at other people’s
+    - Seaside Chats - time to be intentional to develop goals and habits with your teams or broader groups       
+    - Co-working - a social way to do work you’re doing anyhow
+    - Pathways Sheets - an intentional way to reflect on workflows. Developed in our shared folder - look at other people’s
   - ‎
   - 
 
