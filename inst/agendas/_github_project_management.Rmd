@@ -6,7 +6,7 @@ params:
 
 ## GitHub for Project Management • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-- **GitHub Clinic: Issues** ([slides](https://docs.google.com/presentation/d/1PzGAbEpNhT6CDPe1DCHf5-eVAjy-2R2D3VMHz7dY774/edit?usp=sharing) 19-23) (10 min) – Julie
+- **GitHub Clinic: Issues** ([slides](https://docs.google.com/presentation/d/1PzGAbEpNhT6CDPe1DCHf5-eVAjy-2R2D3VMHz7dY774/edit?usp=sharing) 17-20) (10 min) – Julie
   - ‎
   - 
   - 
@@ -20,7 +20,7 @@ params:
   - 
 - **Discussion and screenshares** (15 min)
   - How did that go? 
-  - Project Boards, Organizations ([slides](https://docs.google.com/presentation/d/1PzGAbEpNhT6CDPe1DCHf5-eVAjy-2R2D3VMHz7dY774/edit#slide=id.gef700acc1e_0_43) 24-26
+  - Project Boards, Organizations ([slides](https://docs.google.com/presentation/d/1PzGAbEpNhT6CDPe1DCHf5-eVAjy-2R2D3VMHz7dY774/edit#slide=id.gef700acc1e_0_43) 21-23)
   - 
   - 
   - 

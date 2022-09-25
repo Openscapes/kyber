@@ -1,7 +1,7 @@
 ---
 params: 
   start_time: "12:00pm PT"
-  duration: 7
+  duration: 6
 ---
 
 ## Welcome • `r kyber:::fmt_duration(params$start_time, params$duration)`
@@ -11,13 +11,11 @@ params:
   - <font color="red">Live transcriptions are available.</font>
   - CoC Reminder ([full version](https://www.openscapes.org/code-of-conduct/))
     - Be respectful and value each other’s ideas, styles and viewpoints.
-    - Be direct but professional; we cannot withhold hard truths.
-    - Be inclusive and help new perspectives be heard.
-    - Be open to learning from others.
     - Lead by example and match your actions with your words.
    - Openscapes team here on this call: 
-    - Julie Lowndes, Openscapes
-    - Erin Robinson, Openscapes
+    - Julie Lowndes
+    - Stefanie Butland
+    - Ileana Fenwick
   - I am grateful I am for the land where I am here in Santa Barbara California and I want to honor the Chumash peoples who have been and continue to be stewards of the lands and waters here.
   
 - **Today’s goals** (1 min) – Julie
@@ -25,10 +23,11 @@ params:
   -
 
 
-- **Followups** (4 min) – Julie
+- **Followups** (3 min) – Julie
 - Overwhelm is real, we’re all making progress
     - Providing some structure (space & place) for you to explore new ideas and habits
-      - Seaside Chats - time to be intentional to develop goals and habits       - Co-working - a different way to do work you’re doing anyhow
+      - Seaside Chats - time to be intentional to develop goals and habits with your teams or broader groups       
+      - Co-working - a social way to do work you’re doing anyhow
       - Pathways Sheets - an intentional way to reflect on workflows. Developed in our shared folder - look at other people’s
   - ‎
   - 
