@@ -201,7 +201,7 @@ Then, to move this to a Google Doc and fine-tune formatting, follow these notes 
 - Move Google Doc to Openscapes Workspace folder Openscapes_CohortCalls [ year-cohort-name ].
 - Select all (cmd-A) and change font to Open Sans
 - Make p1 opening text 9 point font (the text above horizontal line & Call title)
-- Make Header 1 font 18, bold; update heading 1 to match (see screenshot below)
+- Make Header 1 font 18, bold; update heading 1 to match (see screenshot below; Stef notes "update heading to match" has not been working in these docs)
 - Make Header 2 font 14, bold; update heading 2 to match
 - Select all (cmd-A), then: 
   - "add space" then "remove space **after** paragraph" throughout to make spacing a little more cozy (yes seems odd to do and undo, but it works)
@@ -209,6 +209,6 @@ Then, to move this to a Google Doc and fine-tune formatting, follow these notes 
 - Review doc and fix any further font weirdness
 - Add page numbers 
 
-**How to "update heading 1 to match"**: In Google Doc, to update a text style (headings, normal text, with font type, size etc), highlight a section with the style you want, click the styles dropdown shown in the screenshot, and select e.g. "Update Heading 1 to match". Double check the doc because we've noticed it missed some in an agenda.
+**How to "update heading 1 to match"**: (Stef notes this has not been working in these docs) In Google Doc, to update a text style (headings, normal text, with font type, size etc), highlight a section with the style you want, click the styles dropdown shown in the screenshot, and select e.g. "Update Heading 1 to match". Double check the doc because we've noticed it missed some in an agenda.
 
 ![Screen Shot 2022-07-14 at 5 50 28 PM](https://user-images.githubusercontent.com/11927811/179125336-ec2fc1e5-792e-495d-8a29-c1ed3ec3cdc4.png)
