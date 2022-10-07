@@ -4,10 +4,9 @@ params:
   duration: 25
 ---
 
-## Better science in less time • `r kyber:::fmt_duration(params$start_time, params$duration)`
+## Better science for future us • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-- Story, Seaside Chats, Pathways,   ([slides](https://docs.google.com/presentation/d/162tpUZEFkpTUI4K3Yl_mF6HLxsgwO_d7bvF5F4igxfk/edit?usp=sharing)) (10 min) - Julie
-  - Ocean Health Index 
+- Seaside Chats, Pathways ([slides](https://docs.google.com/presentation/d/162tpUZEFkpTUI4K3Yl_mF6HLxsgwO_d7bvF5F4igxfk/edit?usp=sharing)) (10 min) - Julie
   - ‎
   - 
 - **Breakout groups** (10 min) (random) - Stef
