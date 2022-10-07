@@ -10,9 +10,8 @@ params:
 - **Welcome to Openscapes!** 👋 (2 min) – Julie
   - <font color="red">We are now recording this meeting.</font> 
   - <font color="red">Live transcriptions are available.</font>
-  - Excited to work with you. And thank you!
-  - I’m Julie Lowndes, Openscapes founder, marine open data scientist
-    - Our team here on this call: 
+  - We are so excited to work with you! Thank you to organizers and coordinators and everyone here.
+  - Openscapes team here on this call: 
       - ...
   - I am grateful I am for the land where I am here in Santa Barbara California and I want to honor the Chumash peoples who have been and continue to be stewards of the lands and waters here.
   - ‎
@@ -32,13 +31,8 @@ params:
     - Lead by example and match your actions with your words.
     - If you have issues, please direct them to:
       - Julie - [julie@openscapes.org](mailto:julie@openscapes.org)
-  - Let’s be aware of [positionality](https://indigenousinitiatives.ctlt.ubc.ca/classroom-climate/positionality-and-intersectionality/) & power dynamics - how differences in social position and power shape identities and access in society. 
-  - [Wheel of Power/Privilege](https://www.instagram.com/p/CEFiUShhpUT/?hl=en):
-  
-  ![](wheel_of_power_duckworth.jpg)
-
-  - We want to be mindful of how hierarchy can get in the way of our learning. Here, we’ll work to flatten that hierarchy.
-  - We know there is a range of technical experience – by design! We are all here because we want to improve our work around data-intensive science, get a sense of new software and approaches, reduce friction when collaborating with others, promote diversity, equity, and inclusion in our work and communities, and develop leadership skills.
+  - Let’s be aware of [positionality](https://indigenousinitiatives.ctlt.ubc.ca/classroom-climate/positionality-and-intersectionality/) & power dynamics - how differences in social position and power shape identities and access in society. We want to be mindful of how hierarchy can get in the way of our learning. Here, we’ll work to flatten that hierarchy.
+  - We know there is a range of technical experience – by design! We are all here because we want to improve our work around data-intensive science, get a sense of new software and approaches, reduce friction when collaborating with others, promote inclusion, and develop leadership skills.
   - We’re all imperfect and learning together – Openscapes included
     - We're all accountable to each other
     - Vulnerability: yes! Shame: no.
@@ -72,8 +66,7 @@ params:
       - Comments / emojis / gifs / +1s to say “me too” are welcome! 🤓
         - Insert > Emoji: 🦑 🎉
     - Breakout groups – to help you reflect on your work and get to know each other
-      - Mix of random, teams, so you have different opportunities to meet and network. 
-      - We're trying to be mindful of which conversations make more sense.
+
 - **Questions** before we get started?
     -  
     - 
