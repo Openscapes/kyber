@@ -6,38 +6,33 @@ params:
 
 ## Closing • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-- **Openscapes Recap** (5 min) – Julie
-- We've covered a lot today; we'll explore these ideas more deeply together
+-   **Champions Program [POP](https://suzannehawkes.com/2010/04/09/pop-everything/)** (5 min) -- Julie
 
-  - **Champions Program [POP](https://suzannehawkes.com/2010/04/09/pop-everything/):**
-  - **Purpose**
-    - Reimagine data analysis and stewardship through exploring open tools and practices
-    - Develop modern skills and habits that are of immediate value to you, including confidence and agency as leaders 
-    - Cultivate collaborative and inclusive research communities: Future Us, starting with your team 
-  - **Outcomes**
-    - Different for everybody - this is about changing habits to improve your work and teamwork so you shape where you invest based on what you need.
-    - A practice of talking and collaborating about data workflows with your team and community 
-    - A pathway you’ve identified with your team to help prioritize next steps - You’ll share your work-in-progress on our last Cohort Call 
-  - **Process**
-    - Cohort Calls: Twice-monthly with full Cohort; discussion-based and requires active engagement
-    - Seaside Chats: Alternating weeks with your research group; we'll provide task suggestions but main purpose is to build the habit of strengthening shared workflows with your broader group. Team leads optional.
-    - Co-working: Alternating weeks (optional); come to focus on something workflow related - could be quiet work, requests for feedback or questions, or screensharing to problem solve.
-    - Slack: asynchronous way to ask questions, get help, and get to know other Openscapes folks
-    -   Twitter: asynchronous way to connect with broader open science community - check out [#rstats](https://twitter.com/search?q=%23rstats&src=typed_query), [#openscience](https://twitter.com/search?q=%23openscience&src=typed_query&f=top), [\@openscapes](https://twitter.com/openscapes) 
-- **Resources**
--   Please reuse resources & approaches (e.g. leading meetings, Google Docing)
-    -   Champions lesson series: [https://openscapes.github.io/series](https://openscapes.github.io/series/) 
-    -   Cohort website: `r params$website` TODO
+- We've covered a lot today; we'll explore these ideas more deeply together
+  -   **Purpose**
+    -   Reimagine data analysis and stewardship, develop modern skills and habits that are of immediate value to you, cultivate collaborative and inclusive research communities
+  -   **Outcomes**
+    -   Different for everybody - this is about reflecting on what you need and developing a practice and allies to help you make progress
+    -   You\'ll share your work-in-progress Pathway on our last Cohort Call
+  -   **Process**
+    -   Opportunities for connecting and support within and across our Cohort. There is so much experience and expertise here
+    -   Cohort Calls: Twice-monthly with full Cohort
+    -   Seaside Chats: we\'ll provide task suggestions but main purpose is to build the habit of strengthening shared workflows with your broader group.
+    -   Co-working: (optional); come to focus on something workflow related - could be quiet work, feedback/questions/problem-solving.
+    -   Google Space: asynchronous within Cohort
+    -   Slack: asynchronous across Cohorts (present and past)
+    - Twitter: asynchronous across open science ([#rstats](https://twitter.com/search?q=%23rstats&src=typed_query), [\@openscapes](https://twitter.com/openscapes))
 
 -   **Task for next time** (2 min) -- All
+
     -   **Have a Seaside Chat & start your Pathway**
-    - Start discussing your trailhead: where are you now?    
-    - To structure your thoughts, you can use the Pathways Sheet
-        -    Create a copy of [Pathways Sheet](https://docs.google.com/spreadsheets/d/1rmhOly87OYrPOUqTzmccYbPrTlGmXGsN06GI1FKzxag/edit#gid=0) (File > Make a copy > in our shared folder). Focus on the "now" column. Are there rows to add?
+    -   Start discussing your trailhead: where are you now?\
+    -   To structure your thoughts, you can use the Pathways Sheet
+        -   Create a copy of [Pathways Sheet](https://docs.google.com/spreadsheets/d/1rmhOly87OYrPOUqTzmccYbPrTlGmXGsN06GI1FKzxag/edit#gid=0) (File \> Make a copy \> in our shared folder). Focus on the "now" column. Are there rows to add?
     -   **Create GitHub usernames**
         -   Optional advice: <https://happygitwithr.com/github-acct.html>
         -   Share your GitHub username before next time in our ParticipantsList (in our Cohort Folder, linked from the top of this doc)
-    - **Join Slack** (we'll invite you to our Openscapes org)
+    -   **Join Slack** (we'll invite you to our Openscapes org)
         -   Introduce yourself and tag your team
             -   Private channel for our cohort as you get comfortable
             -   New to Slack? [quickstart doc](https://zenodo.org/record/3763730#.YIxK6-tlDUI)
