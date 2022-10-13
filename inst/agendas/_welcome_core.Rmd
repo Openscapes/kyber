@@ -16,9 +16,9 @@ params:
     - Be open to learning from others.
     - Lead by example and match your actions with your words.
    - Openscapes team here on this call: 
-    - Julie Lowndes, Openscapes
-    - Erin Robinson, Openscapes
-  - I am grateful I am for the land where I am here in Santa Barbara California and I want to honor the Chumash peoples who have been and continue to be stewards of the lands and waters here.
+      - Julie Lowndes, Openscapes
+      - ‎
+  - Land Acknowledgement: I am grateful I am for the land where I am here in Santa Barbara California and I want to honor the Chumash peoples who have been and continue to be stewards of the lands and waters here.
   
 - **Today’s goals** (1 min) – Julie
   - ‎

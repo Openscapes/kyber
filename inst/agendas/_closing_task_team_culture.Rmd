@@ -6,11 +6,7 @@ params:
 
 ## Closing • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-- **Task: Have a Seaside Chat and work on your pathway** (2 min) – All 
-  - 1) Have a Seaside Chat with your broader research group 
-  - 2) Continue your Pathway - shifting to "Next Steps", think about onboarding/offboarding
+- **Task: Have a Seaside Chat and work on your pathway** (2 min) – Stef 
+  - **Have a Seaside Chat with your broader research group** 
+  - **Continue your Pathway - shifting to "Next Steps"**, think about onboarding/offboarding
       - [Pathways](https://drive.google.com/open?id=1X_-qPdWDCpw2F3nZr6vZnq87guyUIGLvekm0XV2H-A8) spreadsheet > Make a copy in the PathwayShare Folder 
-      - Consider adopting (or creating) a Code of Conduct for your research group, posting publicly (on your website, on GitHub, etc) 
-  - 3) Summarize your Seaside Chat in a GitHub Issue!
-      - https://github.com/Openscapes/2021-noaa-nmfs/issues 
-      
