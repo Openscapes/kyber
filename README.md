@@ -105,7 +105,7 @@ render(path(repo_path, "README.Rmd"))
 
 ### GitHub Clinic - Generate Markdown Files for Each Participant
 
-Clone the Cohort Repo to RStudio, then run the following code. Detailed instructions of what this looks like:
+Clone the Cohort Repo to RStudio (File > New Project > Version Control > Git) , then run the following code. Detailed instructions of what this looks like:
 
 1. Open RStudio, and create a new script (temporary, you'll deleted it but it's a nicer place to work)
 1. Copy the following into the script, then delete the examples "Erin, Julie". You'll keep the `_demo.md`, which is what you'll demo live. 
