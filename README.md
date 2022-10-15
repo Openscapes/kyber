@@ -89,7 +89,7 @@ library(fs)
 repo_name <- "2021-ilm-rotj"
 
 # This will open a README.Rmd for you to edit
-repo_path <- create_repo(repo_name)
+repo_path <- init_repo(repo_name)
 
 # Then render the README.Rmd to README.md
 render(path(repo_path, "README.Rmd"))
