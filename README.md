@@ -190,10 +190,12 @@ Yay! Now all to do is to highlight the usernames in green in the ParticpantList 
 
 ### Agendas
 
-    kyber::call_agenda(
-        registry_url = "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/edit#gid=942365997", 
-        cohort_id = "2022-nasa-champions", 
-        call_number = 3)
+```
+kyber::call_agenda(
+    registry_url = "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/edit#gid=942365997", 
+    cohort_id = "2022-nasa-champions", 
+    call_number = 3)
+```
 
 Then, to move this to a Google Doc and fine-tune formatting, follow these notes (as of July 14, 2022): 
 
