@@ -217,7 +217,7 @@ Then, to move this to a Google Doc and fine-tune formatting, follow these notes 
 
 ## R package developer notes
 
-Steps to edit `kbyer` locally and review those edits: 
+Steps to edit `kyber` locally and review those edits: 
 
 1. In RStudio, open `kyber` project, pull main branch 
 1. Uninstall `kyber` package. I do this by doing to the Packages tab (bottom-right RStudio pane for me, Files is the default tab presented)
