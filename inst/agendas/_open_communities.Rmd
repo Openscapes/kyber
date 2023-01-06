@@ -1,7 +1,7 @@
 ---
 params: 
   start_time: "12:00pm PT"
-  duration: 32
+  duration: 30
 ---
 
 ## Open communities • `r kyber:::fmt_duration(params$start_time, params$duration)`
@@ -14,7 +14,7 @@ params:
   -  
   -  
   - 
-- **Breakout groups** (15 min) – All (groups of 3-4, same as reflections)
+- **Breakout groups** (12 min) – All (groups of 3-4, same as reflections)
   - **Prompt: Explore communities resources & tutorials relevant for your next Seaside Chat**
   - Explore a few communities of interest / from the slides
   - What communities are you already a part of?
@@ -24,7 +24,7 @@ params:
   -  
   -   
   - 
-- **Share outs** (7 min) – All
+- **Share outs** (4 min) – All
   - ‎
   - 
   -  

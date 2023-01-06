@@ -1,12 +1,20 @@
 ---
-duration: 8 minutes
+params: 
+  start_time: "12:00pm PT"
+  duration: 14
 ---
 
-## Reflections • 
+## Reflections • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-**Silent journaling** (4 min) - Erin
+- **"Am I doing Openscapes right?"** (5 min) - Julie screenshare
+  - Yes: you’re reflecting, asking questions, noticing, connecting, planning, and doing in a way that works for you now. 
+  - Let’s look at an example of Pathways from colleagues (in Pathways folder)  
+    - Recording (3 min) from SEFSC Summer FATES team (Fisheries, Assessment, Technology, and Engineering Support) - Garner, Ostrowski, Barnett - watch together
+    - Slides - review together - also note pathways slide 5
+  - Other examples - Seaside Chats & Coworking - Christine Stawitz’ group (2022-noaa-nwfsc-fall), and Ady Rios’ group (2022-noaa-sefsc-fall): "we have a standing GitHub project management meeting that is on the shared calendar and sometimes people pop in and watch to learn."
 
-- **How was your Seaside Chat?**
+- **Silent journaling - incremental progress** (5 min) - All
+- **If you had 2 hours a week to prioritize learning/implementing something you’ve seen through Openscapes, how would you spend those 2 hours?**
   -  ‎
   -   
   -  
@@ -14,7 +22,7 @@ duration: 8 minutes
   -   
   - 
   -  
-- **Share anything you learned, or how you might use GitHub**
+- **Strategies for creating time / advocating for time**
   -  ‎
   -  
   -  
@@ -22,7 +30,7 @@ duration: 8 minutes
   - 
   -  
   - 
-- **Discussion** (4 min) - All
+- **Summary** (2 min) - Julie
   - ‎
   -  
   -  
