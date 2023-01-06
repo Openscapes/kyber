@@ -190,10 +190,12 @@ Yay! Now all to do is to highlight the usernames in green in the ParticpantList 
 
 ### Agendas
 
-    kyber::call_agenda(
-        registry_url = "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/edit#gid=942365997", 
-        cohort_id = "2022-nasa-champions", 
-        call_number = 3)
+```
+kyber::call_agenda(
+    registry_url = "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/edit#gid=942365997", 
+    cohort_id = "2022-nasa-champions", 
+    call_number = 3)
+```
 
 Then, to move this to a Google Doc and fine-tune formatting, follow these notes (as of July 14, 2022): 
 
@@ -212,3 +214,25 @@ Then, to move this to a Google Doc and fine-tune formatting, follow these notes 
 **How to "update heading 1 to match"**: (Stef notes this has not been working in these docs) In Google Doc, to update a text style (headings, normal text, with font type, size etc), highlight a section with the style you want, click the styles dropdown shown in the screenshot, and select e.g. "Update Heading 1 to match". Double check the doc because we've noticed it missed some in an agenda.
 
 ![Screen Shot 2022-07-14 at 5 50 28 PM](https://user-images.githubusercontent.com/11927811/179125336-ec2fc1e5-792e-495d-8a29-c1ed3ec3cdc4.png)
+
+## R package developer notes
+
+Steps to edit `kyber` locally and review those edits: 
+
+1. In RStudio, open `kyber` project, pull main branch 
+1. Uninstall `kyber` package. I do this by doing to the Packages tab (bottom-right RStudio pane for me, Files is the default tab presented)
+1. Make edits to files (for example `inst/agendas/team_culture.Rmd`)
+1. In R console: `devtools::load_all()` to load local edits for `kyber`
+1. In R console, test whatever you edited. For example, to create the call agenda: 
+
+```
+kyber::call_agenda(
+    registry_url = "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/edit#gid=942365997", 
+    cohort_id = "2022-noaa-afsc-fall", 
+    call_number = 4)
+```    
+
+1. To review the call agenda, open `agenda.md`, click Preview, and view it in the Viewer Tab. 
+
+
+Then repeat the last 3 steps whenever you make edits you want to review!
