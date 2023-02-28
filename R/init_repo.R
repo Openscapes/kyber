@@ -22,37 +22,52 @@ init_repo <- function(name, org = "openscapes", path = getwd(),
                            template = "openscapes-cohort-readme", edit = TRUE){
   check_gh_pat()
   
-  repo_names <- gh("GET /orgs/{org}/repos", org = org) %>% map_chr(~.x$"name")
+  page <- 1
+  rn_growing <- TRUE
+  repo_names <- gh("GET /orgs/{org}/repos", org = org, per_page = 100, page = page) %>% 
+    map_chr(~.x$"name")
+  
+  while (length(repo_names) >= 100 && rn_growing) {
+    page <- page + 1
+    old_rnl <- length(repo_names)
+    repo_names <- gh("GET /orgs/{org}/repos", org = org, per_page = 100, page = page) %>% 
+      map_chr(~.x$"name") %>% c(repo_names)
+    if(old_rnl == length(repo_names)){
+      rn_growing <- FALSE
+    }
+  }
+  
   if(name %in% repo_names){
     stop("A GitHub repository named ", name,
          " already exists for the ", org, " organization.", call. = FALSE)
   }
   
-  response <- gh("POST /orgs/{org}/repos", org = org, name = name)
-  repo_initialized <- tryCatch(gert::git_find(path), error = function(e) FALSE)
+  repo_path <- path(path, name)
   
-  if(repo_initialized) {
+  repo_initialized <- tryCatch(gert::git_find(repo_path), error = function(e) FALSE)
+  if(!isFALSE(repo_initialized)) {
     stop("A local Git repository has already been initialized at ", path,
-         " therefore no further Git actions will be taken. ",
-         "A GitHub repository was created at ", org, "/", name, ".", 
+         " therefore no further Git actions will be taken.",
          call. = FALSE)
   }
   
-  git_init(path = path)
-  coc_path <- add_code_of_conduct(path = path)
-  ignore_path <- add_gitignore(path = path)
-  git_add(basename(c(coc_path, ignore_path)), repo = path)
-  git_commit(message = "first commit by kyber", repo = path)
-  branch_name <- git_branch(repo = path)
+  response <- gh("POST /orgs/{org}/repos", org = org, name = name)
+  
+  git_init(path = repo_path)
+  coc_path <- add_code_of_conduct(path = repo_path)
+  ignore_path <- add_gitignore(path = repo_path)
+  git_add(basename(c(coc_path, ignore_path)), repo = repo_path)
+  git_commit(message = "first commit by kyber", repo = repo_path)
+  branch_name <- git_branch(repo = repo_path)
   if(branch_name != "main"){
-    git_branch_move(branch_name, "main", repo = path)
+    git_branch_move(branch_name, "main", repo = repo_path)
   }
-  git_remote_add(response$"clone_url", repo = path)
-  git_push(remote = "origin", set_upstream = TRUE, repo = path)
+  git_remote_add(response$"clone_url", repo = repo_path)
+  git_push(remote = "origin", set_upstream = TRUE, repo = repo_path)
   
   if(!isFALSE(template)) {
     create_readme(
-      fs::path(path, "README.Rmd"),
+      fs::path(repo_path, "README.Rmd"),
       template,
       edit = edit
     )
