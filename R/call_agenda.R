@@ -15,6 +15,7 @@
 #' @importFrom dplyr filter pull
 #' @importFrom parsermd parse_rmd as_tibble as_document
 #' @importFrom rmarkdown render yaml_front_matter
+#' @importFrom lubridate as_date dweeks
 #' @export
 call_agenda <- function(registry_url, cohort_id, call_number,
                         cohort_sheet = "cohort_metadata", 
@@ -63,6 +64,15 @@ call_agenda <- function(registry_url, cohort_id, call_number,
     pull(date_start) %>% 
     usa_date_to_iso8601() %>% 
     as.character()
+  
+  cohort_type_months <- cohort_registry %>% 
+    filter(cohort_name == cohort_id) %>% 
+    pull(cohort_type_months)
+  
+  if (cohort_type_months == "2-month") {
+    params_registry$date <- (as_date(params_registry$date) + lubridate::dweeks(call_number - 1)) %>% 
+      as.character()
+  }
   
   params_registry$call_start_time <- cohort_registry %>% 
     filter(cohort_name == cohort_id) %>% 
