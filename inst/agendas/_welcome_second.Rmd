@@ -1,0 +1,37 @@
+---
+params: 
+  start_time: "12:00pm PT"
+  duration: 6
+---
+
+## Welcome • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+- **Welcome to Openscapes! 👋** (2 min) – Julie
+  - <font color="red">We are now recording this meeting.</font> 
+  - <font color="red">Live transcriptions are available.</font>
+  - CoC Reminder ([full version](https://www.openscapes.org/code-of-conduct/))
+    - Be respectful and value each other’s ideas, styles and viewpoints.
+    - Lead by example and match your actions with your words.
+   - Openscapes team here on this call: 
+    - Julie Lowndes
+    - Stefanie Butland
+    - Ileana Fenwick
+  - I am grateful I am for the land where I am here in Santa Barbara California and I want to honor the Chumash peoples who have been and continue to be stewards of the lands and waters here.
+  
+- **Today’s goals** (1 min) – Julie
+  - ‎
+  -
+
+
+- **Followups** (3 min) – Julie
+- Overwhelm is real, we’re all making progress
+    - Providing some structure (space & place) for you to explore new ideas and habits
+    - Seaside Chats - time to be intentional to develop goals and habits with your teams or broader groups       
+    - Co-working - a social way to do work you’re doing anyhow
+    - Pathways Sheets - an intentional way to reflect on workflows. Developed in our shared folder - look at other people’s
+  - ‎
+  - 
+
+- **Questions** before we get started?
+  - ‎
+  - 

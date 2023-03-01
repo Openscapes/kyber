@@ -1,22 +1,22 @@
 ---
 params:
-  start_time: "12:00pm PT"
-  duration: 30
+  start_time: "1:55pm ET"
+  duration: 25
 ---
 
-## Better science in less time • `r kyber:::fmt_duration(params$start_time, params$duration)`
+## Better science for future us • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-- Ocean Health Index ([slides](https://docs.google.com/presentation/d/162tpUZEFkpTUI4K3Yl_mF6HLxsgwO_d7bvF5F4igxfk/edit?usp=sharing)) (5 min) - Julie
+- Seaside Chats, Pathways ([slides](https://docs.google.com/presentation/d/162tpUZEFkpTUI4K3Yl_mF6HLxsgwO_d7bvF5F4igxfk/edit?usp=sharing)) (10 min) - Julie
   - ‎
   - 
-- **Breakout groups** (15 min) (teams) - Megsie
+- **Breakout groups** (10 min) (random) - Stef
   - **Prompts: Discuss your space and place.** 
-  - Space: Have you planned your Seaside Chats; are they something you already do? Anyone else who should be included? 
-  - Place: where do your shared things live? Is everyone included as they need to be (skills/permissions/etc)?
+  - Space: Are Seaside Chats something you already do? Anyone else who should be included? 
+  - Place: Where are your places to collaborate on files/data? Is everyone included as they need to be (skills/permissions/etc)?
   - ‎
   -
   -
-- Discussion (10 min) - All
+- **Discussion** (5 min) - All
   - ‎
   -
   -

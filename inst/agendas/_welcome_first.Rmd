@@ -1,7 +1,7 @@
 ---
 params:
-  start_time: "12:00pm PT"
-  duration: 13
+  start_time: "1:00pm ET"
+  duration: 18
   files: ["screenshot-gdoc-zoom-setup.png", "wheel_of_power_duckworth.jpg"]
 ---
 
@@ -10,13 +10,16 @@ params:
 - **Welcome to Openscapes!** 👋 (2 min) – Julie
   - <font color="red">We are now recording this meeting.</font> 
   - <font color="red">Live transcriptions are available.</font>
-  - Excited to work with you. And thank you!
-  - I’m Julie Lowndes, Openscapes founder, marine open data scientist
-    - Our team here on this call: 
+  - We are so excited to work with you! Thank you to organizers and coordinators and everyone here.
+  - Openscapes team here on this call: 
       - ...
   - I am grateful I am for the land where I am here in Santa Barbara California and I want to honor the Chumash peoples who have been and continue to be stewards of the lands and waters here.
-
+  - ‎
+- **Organizer Welcome** (3 min) – co-lead
+  - ‎
+  - 
 - **Today’s goals** – Julie
+  - ‎
   - 
 - **You are all welcome here** (3 min) – Julie
   - This is a positive learning space where everyone is welcome to ask questions and participate.
@@ -28,31 +31,20 @@ params:
     - Lead by example and match your actions with your words.
     - If you have issues, please direct them to:
       - Julie - [julie@openscapes.org](mailto:julie@openscapes.org)
-  - Let’s be aware of [positionality](https://indigenousinitiatives.ctlt.ubc.ca/classroom-climate/positionality-and-intersectionality/) & power dynamics - how differences in social position and power shape identities and access in society. 
-  - [Wheel of Power/Privilege](https://www.instagram.com/p/CEFiUShhpUT/?hl=en):
-  
-  ![](wheel_of_power_duckworth.jpg)
-
-  - Science is hierarchical, through titles, degrees, institutions… We want to be mindful of how hierarchy can get in the way of our learning. Here, we’ll work to flatten that hierarchy.
-  - We know there is a range of technical experience – by design! We are all here because we want to improve our work around data-intensive science, get a sense of new software and approaches, reduce friction when collaborating with others, promote diversity, equity, and inclusion in our work and communities, and develop leadership skills.
+  - Let’s be aware of [positionality](https://indigenousinitiatives.ctlt.ubc.ca/classroom-climate/positionality-and-intersectionality/) & power dynamics - how differences in social position and power shape identities and access in society. We want to be mindful of how hierarchy can get in the way of our learning. Here, we’ll work to flatten that hierarchy.
+  - We know there is a range of technical experience – by design! We are all here because we want to improve our work around data-intensive science, get a sense of new software and approaches, reduce friction when collaborating with others, promote inclusion, and develop leadership skills.
   - We’re all imperfect and learning together – Openscapes included
     - We're all accountable to each other
     - Vulnerability: yes! Shame: no.
     - If something doesn’t feel right, let’s talk about it
   - The pandemic 
 
-- **Openscapes mindset** ([slides](https://docs.google.com/presentation/d/1giEW0EIYVnxneGpOBSJnEqg-1CVBUGrbH8Z5gawdeBc/edit#slide=id.p) 1-5) (5 min) – Julie
+- **Openscapes mindset** ([slides](https://docs.google.com/presentation/d/1giEW0EIYVnxneGpOBSJnEqg-1CVBUGrbH8Z5gawdeBc/edit#slide=id.p) 1-6) (5 min) – Julie screenshare
   - Better science for future us
 
-- **Cohort Calls - logistics & norms** (3 min) – Julie
-  - Our 5 Cohort Calls - Cohort website: `r params$website` TODO
-    - 1. Openscapes mindset, Better science in less time
-    - 2. GitHub Clinic
-    - 3. Data strategies; Team culture
-    - 4. Coding strategies; Open communities
-    - 5. Pathways share
-
- - Zoom & Google Docs – I put mine side-by-side (windows narrowed)
+- **Cohort Calls - logistics** (3 min) – Julie screenshare
+  - Our 5 Cohort Calls - Cohort website: `r params_registry$cohort_website`
+  - Zoom & Google Docs – I put mine side-by-side (windows narrowed)
 <center>![](screenshot-gdoc-zoom-setup.png)</center>
     - Zoom Gallery View: button at top right
       - Also: Settings > Video > Display up to 49 participants
@@ -61,7 +53,7 @@ params:
     - Save our Cohort Google Drive folder to My Drive
       - Click icon at top left by the doc’s title to organize
       - (Otherwise you’ll find this doc only in “Shared with me”)
-  - Our Cohort norms
+- **Cohort Calls - norms** (2 min) – Julie screenshare
     - Videos on (“faces on”) – but okay if this is not possible for any reason 
     - Mute liberally/quickly – but please unmute to speak up at any point
     - Docs – our shared responsibility to contribute & record. Main place for nonverbal contribution, side conversations, reinforce ideas.
@@ -72,12 +64,9 @@ params:
         - Mac: Shift - Command - 8
         - PC: Shift - Control - 8
       - Comments / emojis / gifs / +1s to say “me too” are welcome! 🤓
-        - Shortcut to insert emoji:
-          - Mac: Control - Command - Space bar 🦑 
-          - PC: Windows - Period OR Windows - Semicolon ; 🦖
+        - Insert > Emoji: 🦑 🎉
     - Breakout groups – to help you reflect on your work and get to know each other
-      - Mix of random, teams, leads, so you have different opportunities to meet and network. 
-      - We're trying to be mindful of which conversations make more sense.
+
 - **Questions** before we get started?
     -  
     - 

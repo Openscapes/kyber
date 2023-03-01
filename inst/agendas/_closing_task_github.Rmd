@@ -1,17 +1,17 @@
 ---
 params:
   start_time: "12:00pm PT"
-  duration: 3
+  duration: 5
 ---
 
 ## Closing • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 - **Task for next time: Have a Seaside Chat about GitHub** (3 min) – All 
-  - 1) Have a Seaside Chat with your research group to explore/practice GitHub. Options:
-    - Update your team’s information to the README: [https://github.com/Openscapes/2022-noaa-afsc#participating-teams](https://github.com/Openscapes/2022-noaa-afsc#participating-teams) 
-    - Use GitHub Clinic slides to teach your broader team
-    - Discuss whether you should create a GitHub Organization for your research group and help everyone get more comfortable. 
-      - Inspiration:
-      - [https://github.com/Openscapes/how_we_work](https://github.com/Openscapes/how_we_work)
-      - [https://pinsky.marine.rutgers.edu/fishbowl-chat-1/](https://pinsky.marine.rutgers.edu/fishbowl-chat-1/) 
-  - 2) Share updates in the _Openscapes AFSC 2022 Cohort_ Google Space or as a GitHub Issue in our cohort repo!
+- Have a Seaside Chat with your research group to explore/practice GitHub. Ideas:
+    - Update your team’s information to our cohort repo's README: <`r params_registry$github_repo`>
+    - Use GitHub Clinic slides to teach your broader research group
+    - Discuss strategies for using GitHub with your broader research group 
+      - [NMFS-OpenSci Project boards](https://nmfs-opensci.github.io/ResourceBook/content/project_management/github_project_boards.html)
+      - [Pinsky Lab Fishbowl Chat ](https://pinsky.marine.rutgers.edu/fishbowl-chat-1/) 
+      - [Other Champions Examples](https://github.com/Openscapes/how_we_work)
+- Share updates on Slack or as a GitHub Issue in our cohort repo!

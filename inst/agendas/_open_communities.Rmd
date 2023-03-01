@@ -1,7 +1,7 @@
 ---
 params: 
   start_time: "12:00pm PT"
-  duration: 33
+  duration: 32
 ---
 
 ## Open communities • `r kyber:::fmt_duration(params$start_time, params$duration)`
@@ -24,7 +24,7 @@ params:
   -  
   -   
   - 
-- **Share outs** (8 min) – All
+- **Share outs** (7 min) – All
   - ‎
   - 
   -  
