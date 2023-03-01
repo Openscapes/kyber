@@ -70,7 +70,7 @@ call_agenda <- function(registry_url, cohort_id, call_number,
     pull(cohort_type_months)
   
   if (cohort_type_months == "2-month") {
-    params_registry$date <- (as_date(params_registry$date) + lubridate::dweeks(call_number - 1)) %>% 
+    params_registry$date <- (as_date(params_registry$date) + lubridate::dweeks(seq(0, 10, 2)[call_number])) %>% 
       as.character()
   }
   
