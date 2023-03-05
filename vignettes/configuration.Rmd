@@ -1,0 +1,73 @@
+---
+title: "Configuring Google Sheets and GitHub for Kyber"
+description: >
+  Learn how to configure Google Sheets and GitHub for Kyber.
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Configuring Google Sheets and GitHub for Kyber}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Introduction
+
+The main purpose of Kyber is to automate common tasks that need to be done
+before the start of an Openscapes Champions Cohort. This level of automation 
+requires that you authorize your computer with Google Sheets and with GitHub.
+
+# Configuring Google Sheets
+
+Kyber interacts with Google Sheets via the `googlesheets4` package. This
+package makes it easy to authorize your computer so that Kyber can access Google
+Sheets programmatically. Run the following code to configure `googlesheets4`:
+
+```{r, eval=FALSE}
+library(googlesheets4)
+
+gs4_auth()
+```
+
+This function should redirect you to a web browser where you can log in with
+your Google account. After you have authorized `googlesheets4`, you can
+confirm that it is configured correctly by running the following:
+
+```{r, eval=FALSE}
+gs4_user()
+#> Logged in to googlesheets4 as your-name@email.com.
+```
+
+For more detail information, see the
+[`gs4_auth()` documentation](https://googlesheets4.tidyverse.org/reference/gs4_auth.html) 
+and the `googlesheets4` authorization 
+[troubleshooting documentation](https://googlesheets4.tidyverse.org/articles/auth.html).
+
+# Configuring GitHub
+
+One of the main purposes of Kyber is to automate processes that people would
+normally do "by hand." By authorizing Kyber with your GitHub account, you are
+allowing Kyber to act "as you" on GitHub. The following code will 
+
+```{r}
+library(usethis)
+
+
+create_github_token(
+  scopes = c("repo", "user", "gist", "workflow", "admin:org"), 
+  description = paste0("kyber-", Sys.Date())
+)
+```
+
+```
+
+library(gitcreds)
+gitcreds_set()
+```
+
+
