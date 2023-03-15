@@ -33,7 +33,8 @@ Imports:
     rstudioapi,
     stringr
 Suggests: 
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    usethis
 Config/testthat/edition: 3
 URL: https://openscapes.github.io/kyber/
 VignetteBuilder: knitr

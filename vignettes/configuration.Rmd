@@ -43,16 +43,75 @@ gs4_user()
 #> Logged in to googlesheets4 as your-name@email.com.
 ```
 
-For more detail information, see the
+For more detailed information, see the
 [`gs4_auth()` documentation](https://googlesheets4.tidyverse.org/reference/gs4_auth.html) 
 and the `googlesheets4` authorization 
 [troubleshooting documentation](https://googlesheets4.tidyverse.org/articles/auth.html).
+
+## Troubelshooting Google Sheets
+
+If you have not authorized your computer to use `googlesheets4` in a while you
+may see the following error:
+
+```
+The googlesheets4 package is requesting access to your Google account.
+Select a pre-authorised account or enter '0' to obtain a new token.
+Press Esc/Ctrl + C to cancel.
+
+1: username@email.com
+
+Selection: 1
+Auto-refreshing stale OAuth token.
+Error in `gargle_abort_request_failed()`:
+! Client error: (403) PERMISSION_DENIED
+...
+```
+
+We have had success troubleshooting this error with the following method. First,
+try reading a Google Sheet into R:
+
+```{r, eval=FALSE}
+library(googlesheets4)
+
+cohort_registry_url <- "https://docs.google.com/spreadsheets/sheet-url..."
+
+read_sheet(cohort_registry_url)
+```
+
+You should see the following prompt:
+
+```
+Selection: 
+```
+
+Enter `0` then press the Enter key. You computer's browser should launch and
+load Google's authorization page. Reauthorize your account via the web browser
+and you should see the following message in the R console:
+
+```
+Waiting for authentication in browser...
+Press Esc/Ctrl + C to abort
+Authentication complete.
+```
 
 # Configuring GitHub
 
 One of the main purposes of Kyber is to automate processes that people would
 normally do "by hand." By authorizing Kyber with your GitHub account, you are
-allowing Kyber to act "as you" on GitHub. The following code will 
+allowing Kyber to act "as you" on GitHub. 
+
+🚨 A word of caution: take care in using Kyber functions that interact with GitHub. Kyber is designed so that you cannot delete things on GitHub with Kyber, 
+however if you are determined you could use Kyber to make a big mess. If you
+are going to write your own code or functions that use Kyber, try to avoid
+using Kyber within any code that is designed to iterate or execute multiple
+commands. This includes `for` and `while` loops, and mapping functions like
+`sapply()` and `purrr::map()`.
+
+To get started configuring GitHub, first make sure that you have a 
+[GitHub](https://github.com/) account and that you are logged in.
+
+
+The following code will 
 
 ```{r}
 library(usethis)
