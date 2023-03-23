@@ -94,28 +94,63 @@ Press Esc/Ctrl + C to abort
 Authentication complete.
 ```
 
-# Configuring GitHub
+# Configuring Git and GitHub
 
 One of the main purposes of Kyber is to automate processes that people would
 normally do "by hand." By authorizing Kyber with your GitHub account, you are
 allowing Kyber to act "as you" on GitHub. 
 
-🚨 A word of caution: take care in using Kyber functions that interact with GitHub. Kyber is designed so that you cannot delete things on GitHub with Kyber, 
+🚨 A word of caution: take care in using Kyber functions that interact with 
+GitHub. Kyber is designed so that you cannot delete things on GitHub with Kyber, 
 however if you are determined you could use Kyber to make a big mess. If you
 are going to write your own code or functions that use Kyber, try to avoid
 using Kyber within any code that is designed to iterate or execute multiple
 commands. This includes `for` and `while` loops, and mapping functions like
 `sapply()` and `purrr::map()`.
 
+## Configuring Git
+
+Make sure that you have Git installed on your computer. If you need to install
+Git you can find instructions specific to your operating system from the online
+[Git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+or from this [GitHub guide](https://github.com/git-guides/install-git).
+
+## Configuring GitHub
+
 To get started configuring GitHub, first make sure that you have a 
-[GitHub](https://github.com/) account and that you are logged in.
+[GitHub](https://github.com/) account and that you are logged in. Take note of
+the GitHub username that you choose and the email address that you use to sign
+up for GitHub.
 
+After installing Git, make sure to install the Gert package, which Kyber uses
+to interact with Git. If you have freshly installed Git, you should use Gert to
+set your GitHub username and email address locally with the following code:
 
-The following code will 
+```{r, eval=FALSE}
+library(gert)
+
+git_config_global_set("user.name", "[your GitHub username]")
+git_config_global_set("user.email", "[the email you used to sign up for GitHub]")
+```
+
+Confirm your configuration was set correctly by running:
+
+```{r, eval=FALSE}
+git_config_global()
+```
+
+Now that you have configured your GitHub username and email address with Git,
+you need to use GitHub to generate a token that Kyber will use to connect to
+your GitHub account. Keeping this token private is extremely important, since
+anyone with this token can act as you on GitHub. There's no need to save this
+token however, you just need to copy and paste it into the R console once.
+Run the code below, which will open up your web browser to a page on GitHub 
+with the appropriate settings for this token already selected. After you execute
+the code below, scroll to the bottom of the page and click the green "Generate
+token" button.
 
 ```{r}
 library(usethis)
-
 
 create_github_token(
   scopes = c("repo", "user", "gist", "workflow", "admin:org"), 
@@ -123,10 +158,40 @@ create_github_token(
 )
 ```
 
-```
+The token should appear as a string with about 40 random alphanumeric characters
+that start with `ghp_`. Copy the string from GitHub before running the code 
+below. You will be prompted to enter the token into the R console:
 
+```{r, eval=FALSE}
 library(gitcreds)
+
 gitcreds_set()
 ```
 
+```
+? Enter password or token: 
+```
 
+Paste your token into the R console and press Enter, then you should see:
+
+```
+-> Adding new credentials...
+-> Removing credentials from cache...
+-> Done.
+```
+
+You can check to make sure that you credentials are set up by running:
+
+```{r, eval=FALSE}
+gitcreds_get()
+```
+
+```
+<gitcreds>
+  protocol: https
+  host    : github.com
+  username: PersonalAccessToken
+  password: <-- hidden -->
+```
+
+Everything should now be configured for you to start using Kyber.
