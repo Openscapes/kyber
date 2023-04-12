@@ -6,7 +6,7 @@ params:
 
 ## Open communities • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-- **Open communities** ([slides](https://docs.google.com/presentation/d/17HSNmBYvPw-7Prioys7WIhL9QGVb3s3bJCLaAJVaChc/edit?usp=sharing)) (10 min) – Julie
+- **Open communities** ([slides](https://docs.google.com/presentation/d/1u6AjCCKniDsuX10M-qAU2O1HLJqupDYhWWKZYfeCpK4/)) (10 min) – Stef
   -  ‎
   -  
   -  
