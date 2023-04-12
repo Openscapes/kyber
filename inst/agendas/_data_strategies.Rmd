@@ -6,7 +6,7 @@ params:
 
 ## Data strategies • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-- **Data strategies for Future Us** ([slides](https://docs.google.com/presentation/d/1rv-JfJeuYhogxV6Dpn_hNDm09nfKnOMtmZpgcciI_98/edit?usp=sharing)) (20 min) – Julie
+- **Data strategies for Future Us** ([slides](https://docs.google.com/presentation/d/1WJzVMg1Ps2cHG0G6D5kpnL-OCJ-wVBILMqtmzDQxEgU/)) (20 min) – Julie
   - Data organization in spreadsheets ([Broman & Woo 2018](https://peerj.com/preprints/3183/))
   - Spreadsheet drama ([Parker, Peng & Bryan 2016](https://nssdeviations.com/episode-9-spreadsheet-drama))
   - Good enough practices for scientific computing ([Wilson et al. 2017](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510))
