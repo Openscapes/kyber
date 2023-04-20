@@ -220,10 +220,10 @@ Then, to move this to a Google Doc and fine-tune formatting, follow these notes 
 Steps to edit `kyber` locally and review those edits: 
 
 1. In RStudio, open `kyber` project, pull main branch 
-1. Uninstall `kyber` package. I do this by doing to the Packages tab (bottom-right RStudio pane for me, Files is the default tab presented)
-1. Make edits to files (for example `inst/agendas/team_culture.Rmd`)
-1. In R console: `devtools::load_all()` to load local edits for `kyber`
-1. In R console, test whatever you edited. For example, to create the call agenda: 
+2. If you've been working in RStudio, restart your R session.
+3. Make edits to files (for example `inst/agendas/team_culture.Rmd`)
+4. In R console: `devtools::load_all()` to load local edits for `kyber`
+5. In R console, test whatever you edited. For example, to create the call agenda: 
 
 ```
 kyber::call_agenda(
@@ -234,5 +234,4 @@ kyber::call_agenda(
 
 1. To review the call agenda, open `agenda.md`, click Preview, and view it in the Viewer Tab. 
 
-
-Then repeat the last 3 steps whenever you make edits you want to review!
+Usually you can repeat steps 3-5 whenever you make edits you want to review, however if there are problems try restarting you R session.
