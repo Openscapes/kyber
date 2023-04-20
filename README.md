@@ -26,7 +26,7 @@ GitHub clinic.
 - `create_team()` creates a new team on GitHub.
 - `add_team_members()` adds members to a team on GitHub based on their GitHub
 usernames.
-- `add_repo_to_team()` adds a GitHub repository to a team on GitHub.
+- `add_team_to_repo()` adds a team to a GitHub repository.
 - `call_agenda()` creates agenda documents for each individual Cohort Call.
 
 ## Quick Cohort Setup

@@ -1,0 +1,197 @@
+---
+title: "Configuring Google Sheets and GitHub for Kyber"
+description: >
+  Learn how to configure Google Sheets and GitHub for Kyber.
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Configuring Google Sheets and GitHub for Kyber}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Introduction
+
+The main purpose of Kyber is to automate common tasks that need to be done
+before the start of an Openscapes Champions Cohort. This level of automation 
+requires that you authorize your computer with Google Sheets and with GitHub.
+
+# Configuring Google Sheets
+
+Kyber interacts with Google Sheets via the `googlesheets4` package. This
+package makes it easy to authorize your computer so that Kyber can access Google
+Sheets programmatically. Run the following code to configure `googlesheets4`:
+
+```{r, eval=FALSE}
+library(googlesheets4)
+
+gs4_auth()
+```
+
+This function should redirect you to a web browser where you can log in with
+your Google account. After you have authorized `googlesheets4`, you can
+confirm that it is configured correctly by running the following:
+
+```{r, eval=FALSE}
+gs4_user()
+#> Logged in to googlesheets4 as your-name@email.com.
+```
+
+For more detailed information, see the
+[`gs4_auth()` documentation](https://googlesheets4.tidyverse.org/reference/gs4_auth.html) 
+and the `googlesheets4` authorization 
+[troubleshooting documentation](https://googlesheets4.tidyverse.org/articles/auth.html).
+
+## Troubelshooting Google Sheets
+
+If you have not authorized your computer to use `googlesheets4` in a while you
+may see the following error:
+
+```
+The googlesheets4 package is requesting access to your Google account.
+Select a pre-authorised account or enter '0' to obtain a new token.
+Press Esc/Ctrl + C to cancel.
+
+1: username@email.com
+
+Selection: 1
+Auto-refreshing stale OAuth token.
+Error in `gargle_abort_request_failed()`:
+! Client error: (403) PERMISSION_DENIED
+...
+```
+
+We have had success troubleshooting this error with the following method. First,
+try reading a Google Sheet into R:
+
+```{r, eval=FALSE}
+library(googlesheets4)
+
+cohort_registry_url <- "https://docs.google.com/spreadsheets/sheet-url..."
+
+read_sheet(cohort_registry_url)
+```
+
+You should see the following prompt:
+
+```
+Selection: 
+```
+
+Enter `0` then press the Enter key. You computer's browser should launch and
+load Google's authorization page. Reauthorize your account via the web browser
+and you should see the following message in the R console:
+
+```
+Waiting for authentication in browser...
+Press Esc/Ctrl + C to abort
+Authentication complete.
+```
+
+# Configuring Git and GitHub
+
+One of the main purposes of Kyber is to automate processes that people would
+normally do "by hand." By authorizing Kyber with your GitHub account, you are
+allowing Kyber to act "as you" on GitHub. 
+
+🚨 A word of caution: take care in using Kyber functions that interact with 
+GitHub. Kyber is designed so that you cannot delete things on GitHub with Kyber, 
+however if you are determined you could use Kyber to make a big mess. If you
+are going to write your own code or functions that use Kyber, try to avoid
+using Kyber within any code that is designed to iterate or execute multiple
+commands. This includes `for` and `while` loops, and mapping functions like
+`sapply()` and `purrr::map()`.
+
+## Configuring Git
+
+Make sure that you have Git installed on your computer. If you need to install
+Git you can find instructions specific to your operating system from the online
+[Git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+or from this [GitHub guide](https://github.com/git-guides/install-git).
+
+## Configuring GitHub
+
+To get started configuring GitHub, first make sure that you have a 
+[GitHub](https://github.com/) account and that you are logged in. Take note of
+the GitHub username that you choose and the email address that you use to sign
+up for GitHub.
+
+After installing Git, make sure to install the Gert package, which Kyber uses
+to interact with Git. If you have freshly installed Git, you should use Gert to
+set your GitHub username and email address locally with the following code:
+
+```{r, eval=FALSE}
+library(gert)
+
+git_config_global_set("user.name", "[your GitHub username]")
+git_config_global_set("user.email", "[the email you used to sign up for GitHub]")
+```
+
+Confirm your configuration was set correctly by running:
+
+```{r, eval=FALSE}
+git_config_global()
+```
+
+Now that you have configured your GitHub username and email address with Git,
+you need to use GitHub to generate a token that Kyber will use to connect to
+your GitHub account. Keeping this token private is extremely important, since
+anyone with this token can act as you on GitHub. There's no need to save this
+token however, you just need to copy and paste it into the R console once.
+Run the code below, which will open up your web browser to a page on GitHub 
+with the appropriate settings for this token already selected. After you execute
+the code below, scroll to the bottom of the page and click the green "Generate
+token" button.
+
+```{r}
+library(usethis)
+
+create_github_token(
+  scopes = c("repo", "user", "gist", "workflow", "admin:org"), 
+  description = paste0("kyber-", Sys.Date())
+)
+```
+
+The token should appear as a string with about 40 random alphanumeric characters
+that start with `ghp_`. Copy the string from GitHub before running the code 
+below. You will be prompted to enter the token into the R console:
+
+```{r, eval=FALSE}
+library(gitcreds)
+
+gitcreds_set()
+```
+
+```
+? Enter password or token: 
+```
+
+Paste your token into the R console and press Enter, then you should see:
+
+```
+-> Adding new credentials...
+-> Removing credentials from cache...
+-> Done.
+```
+
+You can check to make sure that you credentials are set up by running:
+
+```{r, eval=FALSE}
+gitcreds_get()
+```
+
+```
+<gitcreds>
+  protocol: https
+  host    : github.com
+  username: PersonalAccessToken
+  password: <-- hidden -->
+```
+
+Everything should now be configured for you to start using Kyber.
