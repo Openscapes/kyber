@@ -2,8 +2,7 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/Openscapes/kyber/workflows/R-CMD-check/badge.svg)](https://github.com/Openscapes/kyber/actions)
-
+[![R-CMD-check](https://github.com/Openscapes/kyber/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Openscapes/kyber/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Installation
