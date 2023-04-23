@@ -73,5 +73,5 @@ init_repo <- function(name, org = "openscapes", path = getwd(),
     )
   }
   
-  invisible(path)
+  invisible(repo_path)
 }
