@@ -1,7 +1,7 @@
 ---
 params:
   cohort_name: "Cohort"
-  cohort_registry: "https://docs.google.com/spreadsheets/d/1Oej46BMX_SLIc1cwoyLHzNWwGlT3szez8FDKc3b418w/"
+  cohort_registry: "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/"
 output: github_document
 ---
 
