@@ -30,8 +30,13 @@ call_agenda <- function(registry_url, cohort_id, call_number,
                           call = call_number)
   cohort_name <- date_start <- type <- NULL
   
+  cohort_type_ <- cohort_registry %>% 
+    filter(cohort_name == cohort_id) %>% 
+    pull(cohort_type)
+  
   template_files <- call_registry %>% 
     filter(call == call_number) %>% 
+    filter(cohort_type == cohort_type_) %>% 
     as.character() %>% 
     keep(~nzchar(file_ext(.x)))
   
@@ -149,12 +154,14 @@ call_agenda <- function(registry_url, cohort_id, call_number,
   result <- FALSE
   if(output_format$type == "md"){
     result <- output_file
-    output_md_paths %>% 
+    lines_ <- output_md_paths %>% 
       map(parse_rmd) %>% 
       map_dfr(as_tibble) %>% 
       filter(type != "rmd_yaml_list") %>% 
-      as_document() %>% 
-      writeLines(result)
+      as_document()
+    lines_[grep("\\\\\\[", lines_)] <- gsub("\\\\\\[", "[", lines_[grep("\\\\\\[", lines_)])
+    lines_[grep("\\\\\\[", lines_)] <- gsub("\\\\\\]", "]", lines_[grep("\\\\\\[", lines_)])
+    writeLines(lines_, result)
   } else {
     stop("Agenda output format not supported.")
   }
