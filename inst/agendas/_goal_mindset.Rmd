@@ -8,6 +8,6 @@ params:
 ---
 
 # Call `r params$call`: `r params$title`
-`r format(as.Date(params$date), format="%B %d, %Y")`. `r kyber:::fmt_duration(params$call_start_time, params$total_duration)`.
+`r format(as.Date(params$date), format="%B %d, %Y")`. `r kyber:::fmt_duration(params$call_start_time, params$total_duration, long_tz = TRUE)`.
 
 **Today's Goals:** We'll start working towards a common understanding of the Openscapes mindset and what your pathway forward looks like for your team. 

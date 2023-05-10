@@ -35,12 +35,17 @@ tz_long <- function(x) {
 }
 
 #' @importFrom lubridate parse_date_time minutes
-fmt_duration <- function(start, duration) {
+fmt_duration <- function(start, duration, long_tz = FALSE) {
   start_time <- parse_date_time(start, orders = "%I:%M%p")
   end_time <- start_time + minutes(duration)
-  start_time <- fmt_time(start_time)
+  start_time <- sub("am|pm", "", fmt_time(start_time))
   end_time <- fmt_time(end_time)
-  paste(start_time, "-", end_time, tz_long(start))
+  if (long_tz) {
+    tz_ <- tz_long(start)
+  } else {
+    tz_ <- tz(start)
+  }
+  paste(start_time, "-", end_time, tz_)
 }
 
 fmt_time <- function(x) {

@@ -11,7 +11,7 @@
 #' @param output_file The name of the output file with no file extension.
 #' @importFrom googlesheets4 read_sheet
 #' @importFrom tools file_ext
-#' @importFrom purrr keep map_lgl map map_chr map_dfr map_dbl discard
+#' @importFrom purrr keep map_lgl map map_chr map_dfr map_dbl discard list_flatten
 #' @importFrom dplyr filter pull
 #' @importFrom parsermd parse_rmd as_tibble as_document
 #' @importFrom rmarkdown render yaml_front_matter
@@ -156,6 +156,8 @@ call_agenda <- function(registry_url, cohort_id, call_number,
     result <- output_file
     lines_ <- output_md_paths %>% 
       map(parse_rmd) %>% 
+      map(~list(.x, parse_rmd("\n"))) %>% 
+      list_flatten() %>% 
       map_dfr(as_tibble) %>% 
       filter(type != "rmd_yaml_list") %>% 
       as_document()
