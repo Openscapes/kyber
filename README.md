@@ -63,10 +63,10 @@ gitcreds_set()
 This workflow often happens in 4 separate stages:
 
 1.  create the repo and readme (pre-cohort)
-2.  create `github-clinic` files (days before GitHub Clinic in Call 2)
+2.  create agenda documents before each Cohort Call
 3.  create github team and add usernames (day before Clinic, when we
     have all usernames)
-4.  create agenda documents before each Cohort Call
+4.  create `github-clinic` files (days before GitHub Clinic in Call 2)
 
 For creating the GitHub Team and adding usernames, Kyber requires you to
 set up a GitHub Personal Access Token with scopes for **repo** and
