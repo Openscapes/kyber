@@ -40,6 +40,8 @@ fmt_duration <- function(start, duration, long_tz = FALSE) {
   end_time <- start_time + minutes(duration)
   start_time <- sub("am|pm", "", fmt_time(start_time))
   end_time <- fmt_time(end_time)
+  end_time <- sub("am", " am", end_time)
+  end_time <- sub("pm", " pm", end_time)
   if (long_tz) {
     tz_ <- tz_long(start)
   } else {
