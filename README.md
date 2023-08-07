@@ -218,7 +218,7 @@ members <- tibble::tribble(
   )
 
 add_team_members(team_name, members = members$username, org = "openscapes")
-add_repo_to_team(repo_name, team_name, org = "openscapes")
+add_team_to_repo(repo_name, team_name, org = "openscapes")
 ```
 
 Yay! Now all to do is to highlight the usernames in green in the ParticipantList for our bookkeeping!
