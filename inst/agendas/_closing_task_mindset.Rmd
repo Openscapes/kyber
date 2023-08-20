@@ -5,25 +5,12 @@ params:
 ---
 
 ## Closing • `r kyber:::fmt_duration(params$start_time, params$duration)`
+*We've covered a lot today; we'll explore these ideas more deeply together in the next weeks.*
 
--   **Champions Program [POP](https://suzannehawkes.com/2010/04/09/pop-everything/)** (5 min) -- Julie
-
-- We've covered a lot today; we'll explore these ideas more deeply together
-  -   **Purpose**
-    -   Reimagine data analysis and stewardship, develop modern skills and habits that are of immediate value to you, cultivate collaborative and inclusive research communities
-  -   **Outcomes**
-    -   Different for everybody - this is about reflecting on what you need and developing a practice and allies to help you make progress
-    -   You\'ll share your work-in-progress Pathway on our last Cohort Call
-  -   **Process**
-    -   Opportunities for connecting and support within and across our Cohort. There is so much experience and expertise here
-    -   Cohort Calls: Twice-monthly with full Cohort
-    -   Seaside Chats: we\'ll provide task suggestions but main purpose is to build the habit of strengthening shared workflows with your broader group.
-    -   Co-working: (optional); come to focus on something workflow related - could be quiet work, feedback/questions/problem-solving.
-    -   Google Space: asynchronous within Cohort
-    -   Slack: asynchronous across Cohorts (present and past)
-    - Twitter: asynchronous across open science ([#rstats](https://twitter.com/search?q=%23rstats&src=typed_query), [\@openscapes](https://twitter.com/openscapes))
-
--   **Task for next time** (2 min) -- All
+- **Pathways Document & Seaside Chats** (4 min) -- Julie (screenshare)
+    - [Pathways Sheet](https://docs.google.com/spreadsheets/d/1rmhOly87OYrPOUqTzmccYbPrTlGmXGsN06GI1FKzxag/edit#gid=0)
+    - Pathways details and examples: <https://openscapes.github.io/series/core-lessons/pathways>
+-   **Task for next time** (3 min) -- Julie
 
     -   **Have a Seaside Chat & start your Pathway**
     -   Start discussing your trailhead: where are you now?\
