@@ -14,7 +14,7 @@ params:
 
 # `r params$cohort_name_long` Openscapes Champions Cohort
 
-Welcome to the `r params$cohort_name_long` Openscapes Champions Cohort! <!---This is a Cohort for TODO FILL IN BY HAND.---> Learn more about Openscapes and the Champions Program: <https://openscapes.org>. 
+Welcome to the `r params$cohort_name_long` Openscapes Champions Cohort! <!---This is a Cohort for TODO FILL IN BY HAND.---> To learn more about what to expect (the purpose, outcomes, and process of our Cohort), please read the homepage of the [Champions Program Lesson Series](https://openscapes.github.io/series). 
 
 <img align="right" src="horst-champions-trailhead.png" width="450">  
 
