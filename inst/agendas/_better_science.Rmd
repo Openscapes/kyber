@@ -10,7 +10,7 @@ params:
   - ‎
   - 
 - **Breakout groups** (8 min) (random) - Stef
-  - **Prompts: How does this story resonate for you?** 
+  - **Prompt: How does this story resonate for you?** 
   - ‎
   -
   -
