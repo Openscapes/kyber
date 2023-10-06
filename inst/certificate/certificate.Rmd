@@ -1,0 +1,29 @@
+---
+params:
+  cohort_name: "2023 Fred Hutch"
+  particpant_name: "Patty Galipeau"
+  start_date: "August 29"
+  end_date: "October 24"
+  year: "2023"
+  cohort_website: "https://openscapes.github.io/2023-fred-hutch/"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Openscapes Champions Program
+Certificate of Completion: `r params$cohort_name` Cohort
+
+Dates: `r params$start_date` to `r params$end_date`, `r params$year`
+
+This certifies that `r params$particpant_name` has completed the Openscapes Champions Program, open data science mentorship program for science teams. It is a multi-month program that is designed to ignite incremental and sustainable change within research teams and beyond. It helps teams get their own work done, while building skills and community within the realities of scientists’ busy schedules, varying expertise and needs. Learn more at openscapes.org/initiatives.
+
+`r params$cohort_website`
+
+DOI of Series
+
+Openscapses logo here openscapes_hex.png 
+
