@@ -15,7 +15,7 @@ library(tidyverse)
 
 # adapted from https://bookdown.org/yihui/rmarkdown/params-knit.html
 render_certificate = function(cohort_name, 
-                              particpant_name, 
+                              # participant_name, 
                               start_date, 
                               end_date, 
                               year, 
@@ -23,14 +23,15 @@ render_certificate = function(cohort_name,
 rmarkdown::render(
     "inst/certificate/certificate.Rmd", params = list(
       cohort_name = cohort_name, 
-      particpant_name = particpant_name, 
+      # participant_name = participant_name, 
       start_date = start_date, 
       end_date = end_date, 
       year = year, 
       cohort_website = cohort_website
     ),
 #    output_format = "pdf_document",
-    output_file = paste0("certificate-", particpant_name, "-", cohort_name, ".html")
+#    output_file = paste0("certificate-", participant_name, "-", cohort_name, ".html")
+output_file = paste0("certificate-marcel-marceau-", cohort_name, ".html")
   )
 }
 
@@ -47,7 +48,7 @@ rmarkdown::render(
 # get values from Google Sheets OpenscapesChampionsCohortRegistry & OpenscapesParticipantsMainList
 # something like this
 # render_certificate(cohort_name = certificate_csv$cohort_name,
-#                    particpant_name = certificate_csv$particpant_name,
+#                    participant_name = certificate_csv$participant_name,
 #                    start_date = certificate_csv$start_date,
 #                    end_date = certificate_csv$end_date,
 #                    year = certificate_csv$year,
@@ -62,8 +63,10 @@ participants <- read_sheet("https://docs.google.com/spreadsheets/d/10ub0NKrPa1ph
 registry_cohort <-filter(registry, cohort_name=="2023-fred-hutch")
 participants_cohort <-filter(participants, cohort=="2023-fred-hutch")
 
-render_certificate(cohort_name = registry_cohort$cohort_name_long,
-                   particpant_name = participants_cohort$first,
+# testing with registry data only
+# add back `participant_name = participants_cohort$first,` after
+
+render_certificate(cohort_name = registry_cohort$cohort_name,
                    start_date = registry_cohort$date_start,
                    end_date = registry_cohort$date_end,
                    cohort_website = registry_cohort$cohort_website)
@@ -71,23 +74,15 @@ render_certificate(cohort_name = registry_cohort$cohort_name_long,
 
 
 
-
+# Ideas for my original approach before Nick Tierney's help 
 
 # kyber::call_agenda(
 #   registry_url = "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/edit#gid=942365997", 
 #   cohort_id = "2022-nasa-champions", 
 #   call_number = 3)
 
-library(kyber) 
-library(rmarkdown)
-library(tibble)
-library(fs)
-# library(datapasta)
-# library(here)
-
 # kyber_function(registry, ParticpantsList) %>%
-
-kyber::create_certificate <- function(registry, ParticpantsList) %>%
+# kyber::create_certificate <- function(registry, ParticpantsList) %>%
 
 # 1. Read cohort_metadata from OpenscapesChampionsCohortRegistry gsheet
 # Get values of these variables about the Cohort
@@ -122,9 +117,3 @@ kyber::create_certificate <- function(registry, ParticpantsList) %>%
 # Upload pdfs to Cohort Folder 
 
 # In Closing of Final Cohort Call, add "get your certificate" and point to folder location
-
-
-kyber::create_certificate(
-  registry_url = "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/edit#gid=695033382", 
-  cohort_id = "2023-fred-hutch",
-  particpants_url = ??)
