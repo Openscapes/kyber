@@ -1,5 +1,5 @@
 library(googlesheets4)
-library(here)
+# library(here)
 library(tidyverse)
 
 # copied from https://bookdown.org/yihui/rmarkdown/params-knit.html
@@ -18,7 +18,7 @@ render_certificate = function(cohort_name,
                               # participant_name, 
                               start_date, 
                               end_date, 
-                              year, 
+                              # year, 
                               cohort_website) {
 rmarkdown::render(
     "inst/certificate/certificate.Rmd", params = list(
@@ -26,7 +26,7 @@ rmarkdown::render(
       # participant_name = participant_name, 
       start_date = start_date, 
       end_date = end_date, 
-      year = year, 
+      # year = year, 
       cohort_website = cohort_website
     ),
 #    output_format = "pdf_document",
@@ -63,13 +63,15 @@ participants <- read_sheet("https://docs.google.com/spreadsheets/d/10ub0NKrPa1ph
 registry_cohort <-filter(registry, cohort_name=="2023-fred-hutch")
 participants_cohort <-filter(participants, cohort=="2023-fred-hutch")
 
-# testing with registry data only
-# add back `participant_name = participants_cohort$first,` after
+# testing with registry data only works!
+# Now add back `participant_name = participants_cohort$first,` below and throughout this file and `certificate.Rmd`
+# How do I create certificate for all names in a cohort? Is it automatic?
 
 render_certificate(cohort_name = registry_cohort$cohort_name,
                    start_date = registry_cohort$date_start,
                    end_date = registry_cohort$date_end,
-                   cohort_website = registry_cohort$cohort_website)
+                   cohort_website = registry_cohort$cohort_website
+                   )
 
 
 
