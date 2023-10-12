@@ -15,23 +15,21 @@ library(tidyverse)
 
 # adapted from https://bookdown.org/yihui/rmarkdown/params-knit.html
 render_certificate = function(cohort_name, 
-                              # participant_name, 
+                              participant_name, 
                               start_date, 
-                              end_date, 
-                              # year, 
+                              end_date,
                               cohort_website) {
 rmarkdown::render(
     "inst/certificate/certificate.Rmd", params = list(
       cohort_name = cohort_name, 
-      # participant_name = participant_name, 
+      participant_name = participant_name, 
       start_date = start_date, 
       end_date = end_date, 
-      # year = year, 
       cohort_website = cohort_website
     ),
 #    output_format = "pdf_document",
-#    output_file = paste0("certificate-", participant_name, "-", cohort_name, ".html")
-output_file = paste0("certificate-marcel-marceau-", cohort_name, ".html")
+    output_file = paste0("certificate-", participant_name, "-", cohort_name, ".html")
+# output_file = paste0("certificate-marcel-marceau-", cohort_name, ".html")
   )
 }
 
@@ -70,7 +68,8 @@ participants_cohort <-filter(participants, cohort=="2023-fred-hutch")
 render_certificate(cohort_name = registry_cohort$cohort_name,
                    start_date = registry_cohort$date_start,
                    end_date = registry_cohort$date_end,
-                   cohort_website = registry_cohort$cohort_website
+                   cohort_website = registry_cohort$cohort_website,
+                   participant_name = participants_cohort$first
                    )
 
 
