@@ -1,3 +1,7 @@
+library(googlesheets4)
+library(here)
+library(tidyverse)
+
 # copied from https://bookdown.org/yihui/rmarkdown/params-knit.html
 # render_report = function(region, year) {
 #   rmarkdown::render(
@@ -16,7 +20,7 @@ render_certificate = function(cohort_name,
                               end_date, 
                               year, 
                               cohort_website) {
-  rmarkdown::render(
+rmarkdown::render(
     "inst/certificate/certificate.Rmd", params = list(
       cohort_name = cohort_name, 
       particpant_name = particpant_name, 
@@ -30,17 +34,18 @@ render_certificate = function(cohort_name,
   )
 }
 
-render_certificate(cohort_name = "2023-fred-hutch",
-                   particpant_name = "patty",
-                   start_date = "Sep 19",
-                   end_date = "Oct 19",
-                   year = "2023",
-                   cohort_website = "https://openscapes.github.io/2023-fred-hutch/")
+# fixed values we used to test rendering a certificate:
+# render_certificate(cohort_name = "2023-fred-hutch",
+#                    participant_name = "patty",
+#                    start_date = "Sep 19",
+#                    end_date = "Oct 19",
+#                    year = "2023",
+#                    cohort_website = "https://openscapes.github.io/2023-fred-hutch/")
 
 
 # next steps
-# certificate_csv <- read_csv("google-drive-link-thingy")
-# 
+# get values from Google Sheets OpenscapesChampionsCohortRegistry & OpenscapesParticipantsMainList
+# something like this
 # render_certificate(cohort_name = certificate_csv$cohort_name,
 #                    particpant_name = certificate_csv$particpant_name,
 #                    start_date = certificate_csv$start_date,
@@ -48,8 +53,20 @@ render_certificate(cohort_name = "2023-fred-hutch",
 #                    year = certificate_csv$year,
 #                    cohort_website = certificate_csv$cohort_website)
 
+# successfully uses googlesheets4 pkg to get data frames from these two sheets
+registry <- read_sheet("https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc")
+participants <- read_sheet("https://docs.google.com/spreadsheets/d/10ub0NKrPa1phUa_X-Jxg8KYH57WGLaZzBN-vQT4e10o")
 
+# take subset of `registry` and `participants` where Cohort is 2023-fred-hutch
 
+registry_cohort <-filter(registry, cohort_name=="2023-fred-hutch")
+participants_cohort <-filter(participants, cohort=="2023-fred-hutch")
+
+render_certificate(cohort_name = registry_cohort$cohort_name_long,
+                   particpant_name = participants_cohort$first,
+                   start_date = registry_cohort$date_start,
+                   end_date = registry_cohort$date_end,
+                   cohort_website = registry_cohort$cohort_website)
 
 
 
@@ -105,8 +122,6 @@ kyber::create_certificate <- function(registry, ParticpantsList) %>%
 # Upload pdfs to Cohort Folder 
 
 # In Closing of Final Cohort Call, add "get your certificate" and point to folder location
-
-
 
 
 kyber::create_certificate(
