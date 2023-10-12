@@ -62,8 +62,8 @@ registry_cohort <-filter(registry, cohort_name=="2023-fred-hutch")
 participants_cohort <-filter(participants, cohort=="2023-fred-hutch")
 
 # testing with registry data only works!
-# Now add back `participant_name = participants_cohort$first,` below and throughout this file and `certificate.Rmd`
-# How do I create certificate for all names in a cohort? Is it automatic?
+# added back `participant_name = participants_cohort$first,` below and throughout this file and `certificate.Rmd`
+# How do I create certificate for all names in a cohort? 
 
 render_certificate(cohort_name = registry_cohort$cohort_name,
                    start_date = registry_cohort$date_start,
