@@ -2,7 +2,7 @@
 params: 
   start_time: "12:00pm PT"
   duration: 5
-  files: ["openscapes_champions_landscape.png", "khora-laptop-sleep.png"]
+  files: ["openscapes_champions_landscape.png", "khora-laptop-sleep.jpg"]
 ---
 
 ## Closing --- Better science for future us • `r kyber:::fmt_duration(params$start_time, params$duration)`
@@ -22,7 +22,7 @@ params:
   -   You can put it on your website, like the [Wood Lab](https://chelsealwood.com/research/) and the [Fay Lab](https://thefaylab.github.io/lab-manual/index.html)!
  -   **Please share a mailingan address for your team so we can send stickers!**
 
-![](khora-laptop-sleep.png)
+![](khora-laptop-sleep.jpg)
 
 **Continued learning**
 
