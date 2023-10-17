@@ -19,7 +19,8 @@ render_certificate = function(cohort_name,
                               start_date, 
                               end_date,
                               cohort_website) {
-rmarkdown::render(
+  
+  rmarkdown::render(
     "inst/certificate/certificate.Rmd", params = list(
       cohort_name = cohort_name, 
       participant_name = participant_name, 
@@ -27,52 +28,39 @@ rmarkdown::render(
       end_date = end_date, 
       cohort_website = cohort_website
     ),
-#    output_format = "pdf_document",
-    output_file = paste0("certificate-", participant_name, "-", cohort_name, ".html")
-# output_file = paste0("certificate-marcel-marceau-", cohort_name, ".html")
+    #    output_format = "pdf_document",
+    output_file = paste0("Certificate-", participant_name, "-", cohort_name, ".html")
   )
 }
 
 # fixed values we used to test rendering a certificate:
-# render_certificate(cohort_name = "2023-fred-hutch",
-#                    participant_name = "patty",
-#                    start_date = "Sep 19",
-#                    end_date = "Oct 19",
-#                    year = "2023",
-#                    cohort_website = "https://openscapes.github.io/2023-fred-hutch/")
+render_certificate(cohort_name = "2023-fred-hutch",
+                   participant_name = "patty",
+                   start_date = "Sep 19",
+                   end_date = "Oct 19",
+                   cohort_website = "https://openscapes.github.io/2023-fred-hutch/")
 
 
-# next steps
-# get values from Google Sheets OpenscapesChampionsCohortRegistry & OpenscapesParticipantsMainList
-# something like this
-# render_certificate(cohort_name = certificate_csv$cohort_name,
-#                    participant_name = certificate_csv$participant_name,
-#                    start_date = certificate_csv$start_date,
-#                    end_date = certificate_csv$end_date,
-#                    year = certificate_csv$year,
-#                    cohort_website = certificate_csv$cohort_website)
-
-# successfully uses googlesheets4 pkg to get data frames from these two sheets
+## successfully uses googlesheets4 pkg to get data frames from these two sheets
 registry <- read_sheet("https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc")
 participants <- read_sheet("https://docs.google.com/spreadsheets/d/10ub0NKrPa1phUa_X-Jxg8KYH57WGLaZzBN-vQT4e10o")
 
-# take subset of `registry` and `participants` where Cohort is 2023-fred-hutch
-
+## take subset of `registry` and `participants` where Cohort is 2023-fred-hutch
 registry_cohort <-filter(registry, cohort_name=="2023-fred-hutch")
 participants_cohort <-filter(participants, cohort=="2023-fred-hutch")
 
-# testing with registry data only works!
-# added back `participant_name = participants_cohort$first,` below and throughout this file and `certificate.Rmd`
-# How do I create certificate for all names in a cohort? 
+## Loop throught each participant in list and create certificate for each
+participant_name <- participants_cohort$last
 
-render_certificate(cohort_name = registry_cohort$cohort_name,
-                   start_date = registry_cohort$date_start,
-                   end_date = registry_cohort$date_end,
-                   cohort_website = registry_cohort$cohort_website,
-                   participant_name = participants_cohort$first
-                   )
+for (p_name in participant_name) {
 
-
+  render_certificate(cohort_name = registry_cohort$cohort_name,
+                     start_date = registry_cohort$date_start,
+                     end_date = registry_cohort$date_end,
+                     cohort_website = registry_cohort$cohort_website,
+                     participant_name = p_name)
+  
+}
 
 
 # Ideas for my original approach before Nick Tierney's help 
