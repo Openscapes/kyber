@@ -10,6 +10,7 @@ params:
   files: ["openscapes_hex.png"]
 
 output: html_document
+# output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
