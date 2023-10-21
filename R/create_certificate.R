@@ -1,7 +1,8 @@
+## create_certificate.R
+
 ## load libraries ----
 
 library(googlesheets4)
-# library(here)
 library(tidyverse)
 library(lubridate)
 
@@ -26,8 +27,8 @@ render_certificate = function(cohort_name,
       end_date = end_date, 
       cohort_website = cohort_website
     ),
-    #    output_format = "pdf_document",
-    output_file = paste0("OpenscapesCertificate", "_", cohort_name, "_", participant_name, ".html")
+    output_format = "pdf_document",
+    output_file = paste0("OpenscapesCertificate", "_", cohort_name, "_", participant_name, ".pdf")
   )
 }
 
