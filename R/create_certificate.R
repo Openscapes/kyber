@@ -1,23 +1,19 @@
+## load libraries ----
+
 library(googlesheets4)
 # library(here)
 library(tidyverse)
 library(lubridate)
 
-# copied from https://bookdown.org/yihui/rmarkdown/params-knit.html
-# render_report = function(region, year) {
-#   rmarkdown::render(
-#     "MyDocument.Rmd", params = list(
-#       region = region,
-#       year = year
-#     ),
-#     output_file = paste0("Report-", region, "-", year, ".pdf")
-#   )
-# }
+## load data ----
+## successfully uses googlesheets4 pkg to get data frames from these two sheets
+registry <- read_sheet("https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc")
+participants <- read_sheet("https://docs.google.com/spreadsheets/d/10ub0NKrPa1phUa_X-Jxg8KYH57WGLaZzBN-vQT4e10o")
 
+## define function ----
 # adapted from https://bookdown.org/yihui/rmarkdown/params-knit.html
 render_certificate = function(cohort_name, 
-                              participant_name_first,
-                              participant_name_last,
+                              participant_name,
                               start_date, 
                               end_date,
                               cohort_website) {
@@ -25,15 +21,13 @@ render_certificate = function(cohort_name,
   rmarkdown::render(
     "inst/certificate/certificate.Rmd", params = list(
       cohort_name = cohort_name, 
-      participant_name_first = participant_name_first, 
-      participant_name_last = participant_name_last, 
-      participant_name = participant_name,
+      participant_name = participant_name, 
       start_date = start_date, 
       end_date = end_date, 
       cohort_website = cohort_website
     ),
     #    output_format = "pdf_document",
-    output_file = paste0("OpenscapesCertificate", "_", cohort_name, "_", participant_name_first, "_", participant_name_last, ".html")
+    output_file = paste0("OpenscapesCertificate", "_", cohort_name, "_", participant_name, ".html")
   )
 }
 
@@ -41,32 +35,21 @@ render_certificate = function(cohort_name,
 ## code with fixed values we used to test rendering a certificate using participant_name_first and participant_name_last
 ## comment out when doing the real thing
 # render_certificate(cohort_name = "2023-fred-hutch",
-#                    participant_name_first = "Test",
-#                    participant_name_last = "Name",
+#                    participant_name = "Name",
 #                    start_date = "Sep 19",
 #                    end_date = "Oct 19",
 #                    cohort_website = "https://openscapes.github.io/2023-fred-hutch/")
 # 
 
-## successfully uses googlesheets4 pkg to get data frames from these two sheets
-registry <- read_sheet("https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc")
-participants <- read_sheet("https://docs.google.com/spreadsheets/d/10ub0NKrPa1phUa_X-Jxg8KYH57WGLaZzBN-vQT4e10o")
 
-## take subset of `registry` and `participants` where Cohort is 2023-fred-hutch
+## call function ----
+
+## subset data: `registry` and `participants` where Cohort is 2023-fred-hutch
 registry_cohort <-filter(registry, cohort_name=="2023-fred-hutch")
 participants_cohort <-filter(participants, cohort=="2023-fred-hutch")
 
 ## Loop through each participant in list and create certificate for each
-
-## was trying to concatenate first + last name; not completed testing this
-# participant_name <- stringr::str_c(participants_cohort$last, " ", participants_cohort$last)
-## decided not to concatenate; instead call first and last names separately
-
 participant_name <- participants_cohort$last
-
-## for-loop now gives the following error after I tried adding first and last names. 
-## "Error in render_certificate(cohort_name = registry_cohort$cohort_name,  : 
-## unused argument (participant_name = p_name)"
 
 for (p_name in participant_name) {
 
@@ -74,11 +57,8 @@ for (p_name in participant_name) {
                      start_date = registry_cohort$date_start,
                      end_date = registry_cohort$date_end,
                      cohort_website = registry_cohort$cohort_website,
-                     participant_name_first = participants_cohort$first,
-                     participant_name_last = participants_cohort$last,
                      participant_name = p_name
                      )
-  
 }
 
 

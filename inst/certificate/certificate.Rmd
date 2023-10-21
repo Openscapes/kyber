@@ -1,9 +1,7 @@
 ---
 params:
   cohort_name: "2023 Fred Hutch"
-  participant_name: "Test Name"
-  participant_name_first: "Firstname"
-  participant_name_last: "Lastname"
+  participant_name: "Lastname"
   start_date: "August 29"
   end_date: "October 24"
   cohort_website: "https://openscapes.github.io/2023-fred-hutch/"
