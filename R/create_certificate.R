@@ -1,10 +1,11 @@
 ## create_certificate.R
 
 ## load libraries ----
+## tinytex must be installed to create pdf, ?but does not have to be loaded like other libraries?
 
 library(googlesheets4)
 library(tidyverse)
-library(lubridate)
+# library(lubridate)
 
 ## load data ----
 ## successfully uses googlesheets4 pkg to get data frames from these two sheets
