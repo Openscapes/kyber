@@ -8,7 +8,7 @@ Let's edit this file by clicking the pencil icon at the top-right of the file.
 
 Next, make and edit to the text in this file. One idea is to fix this tpyo. 
 
-Finally, we will commit these edits to GitHub. To do this, scroll down to the bottom of this webpage to where it says "Commit Changes". Committing changes has two steps: write a human-readable commit message, and press the green button to commit changes. 
+Finally, we will commit these edits to GitHub. To do this, click the green "Commit Changes" button. Committing changes has two steps: write a human-readable commit message, and press the green button to commit changes. 
 
 Note: In the browser, GitHub will suggest "Update file.md" as the commit message. But you can be more descriptive - practice writing commit messages that help you remember detail about what you changed.
 
@@ -22,7 +22,7 @@ We can make words **bold** or *italic*.
 
 ### We can make headers.
 
-We can make lists – *note that lists need a carriage return before list items!*
+We can make lists – *note that lists need an empty line before list items!*
 
 1. bananas
 2. tamales
@@ -42,3 +42,7 @@ We can include an image with the same `[]()` pattern, but note the preceding exc
 *Note that this image lives in the folder one level above our `github-clinic` folder, and we indicate that with the two periods `..`* 
 
 Your turn! Change or add something in Markdown and make another commit: write a human-readable commit message, and press the green button to commit changes. 
+
+## NOTES
+
+It's a lot to get people familiar with markdown if they haven't used it previously!
