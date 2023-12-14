@@ -10,15 +10,15 @@ params:
   - 
   - 
   - 
-- **Breakout groups: practice using Issues ** (10 min) – (breakouts as teams) - Julie
+- **Breakout groups: practice using Issues ** (10 min) (<font color="red">pause recording</font>) – (breakouts as teams) - Julie
 - *This second breakout group is more collaborative: tag others and screenshare*
 
   - Create an issue with your group, write in it, practice Markdown
   - Contribute to other groups’ discussions
   - Learn anything cool? Share!  
   - 
-  - 
-  - Project Boards, Organizations ([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/edit#slide=id.g20695b6755c_0_185) 21-23) (2 min) - Stef
+  - (<font color="red">resume recording</font>)
+  - Project Boards, Organizations ([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/edit#slide=id.g20695b6755c_0_185) 21-22) (2 min) - Stef
   - ‎
   - 
   - 

@@ -13,7 +13,7 @@ params:
   -    
   -  
   -  
-  - 
+- (<font color="red">pause recording</font>)
 - **Breakout groups** (12 min) – All (groups of 3-4, same as reflections)
   - **Prompt: Explore communities resources & tutorials relevant for your next Seaside Chat**
   - Explore a few communities of interest / from the slides
@@ -23,7 +23,7 @@ params:
   - 
   -  
   -   
-  - 
+- (<font color="red">resume recording</font>)
 - **Share outs** (4 min) – All
   - ‎
   - 
