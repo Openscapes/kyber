@@ -10,7 +10,7 @@ params:
   -  ‎
   -
   - 
-* **Breakout groups: practice editing & committing** (10 min) –  Erin (breakout random groups of 3)
+* **Breakout groups: practice editing & committing** (10 min) (<font color="red">pause recording</font>) –  Erin (breakout random groups of 3)
 * *This first breakout group can be less collaborative and more co-working...but please chat and screenshare!*
 
   - Our cohort repo: <`r params_registry$github_repo`>
@@ -22,7 +22,7 @@ params:
   - Learn anything cool? Share!  
   - ‎
   -
-  -
+  - (<font color="red">resume recording</font>)
 * **Regroup, collaborating and publishing** ([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/) 15-16) (5 min) – Julie screenshare
   - ‎
   -
