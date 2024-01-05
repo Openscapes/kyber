@@ -32,9 +32,9 @@ usernames.
 
 ### The Big Picture
 
-The chronological steps for creating Openscapes repos and materials using Kyber are detailed in the ReadMe. See this flow chart for understanding how these steps fit together, including the requirements to complete each step. ([Kyber flow chart pdf](kyberflow_20230711.pdf))
+The chronological steps for creating Openscapes repos and materials using Kyber are detailed in the ReadMe. See this flow chart for understanding how these steps fit together, including the requirements to complete each step. ([Kyber flow chart pdf](../man/figures/kyberflow_20230711.pdf))
 
-![](kyberflow_20230711.png)
+![](man/figures/kyberflow_20230711.png)
 
 ### Configuration
 
