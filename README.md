@@ -30,6 +30,12 @@ usernames.
 
 ## Quick Cohort Setup
 
+### The Big Picture
+
+The chronological steps for creating Openscapes repos and materials using Kyber are detailed in the ReadMe. See this flow chart for understanding how these steps fit together, including the requirements to complete each step. ([Kyber flow chart pdf](kyberflow_20230711.pdf))
+
+![](kyberflow_20230711.png)
+
 ### Configuration
 
 Using Kyber requires more configuration than most R packages since Kyber
@@ -63,10 +69,10 @@ gitcreds_set()
 This workflow often happens in 4 separate stages:
 
 1.  create the repo and readme (pre-cohort)
-2.  create `github-clinic` files (days before GitHub Clinic in Call 2)
-3.  create github team and add usernames (day before Clinic, when we
+2.  create agenda documents before each Cohort Call
+3.  create `github-clinic` files (days before GitHub Clinic in Call 2)
+4.  create github team and add usernames (day before Clinic, when we
     have all usernames)
-4.  create agenda documents before each Cohort Call
 
 For creating the GitHub Team and adding usernames, Kyber requires you to
 set up a GitHub Personal Access Token with scopes for **repo** and
@@ -77,7 +83,7 @@ Please make sure
 that you do not share your PAT or commit it to a Git repository, since
 anyone with your PAT can act as you on GitHub.
 
-### Create GitHub repo
+### 1. Create GitHub repo
 
 ``` r
 library(kyber) 
@@ -87,8 +93,8 @@ library(fs)
 
 repo_name <- "2021-ilm-rotj"
 
-# This will open a README.Rmd for you to edit
-repo_path <- create_repo(repo_name)
+# This will open a README.Rmd for you to edit 
+repo_path <- init_repo(repo_name)
 
 # Then render the README.Rmd to README.md
 render(path(repo_path, "README.Rmd"))
@@ -102,11 +108,42 @@ render(path(repo_path, "README.Rmd"))
 # 3. Git add, commit, and push in this repository.
 ```
 
-### GitHub Clinic - Generate Markdown Files for Each Participant
+### 2. Agendas
 
-Clone the Cohort Repo to RStudio, then run the following code. Detailed instructions of what this looks like:
+```
+kyber::call_agenda(
+    registry_url = "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/edit#gid=942365997", 
+    cohort_id = "2022-nasa-champions", 
+    call_number = 3)
+```
 
-1. Open RStudio, and create a new script (temporary, you'll deleted it but it's a nicer place to work)
+The following suggestions aid next steps as of July 14, 2022:
+
+**2.1 Move agenda to Google Docs**
+
+- In RStudio, Knit (or PreviewHTML) the resulting `agenda.md` created from the code above and copy-paste the result into a Google Doc (example: 03_CallAgenda [ 2022-noaa-afsc ]. You might need to to expand the knitted preview into the browser to get it to copy/paste correctly into Google Docs.
+- Move Google Doc to Openscapes Workspace folder Openscapes_CohortCalls [ year-cohort-name ].
+
+**2.2 Formatting your agenda**
+
+- Select all (cmd-A) and change font to Open Sans
+- Make p1 opening text 9 point font (the text above horizontal line & Call title)
+- Make Header 1 font 18, bold; update heading 1 to match (see screenshot below; Stef notes "update heading to match" has not been working in these docs)
+- Make Header 2 font 14, bold; update heading 2 to match
+- Select all (cmd-A), then: 
+  - "add space" then "remove space **after** paragraph" throughout to make spacing a little more cozy (yes seems odd to do and undo, but it works)
+  - "add space" then "remove space **before** paragraph" throughout to make spacing a little more cozy
+- Review doc and fix any further font weirdness
+- Add page numbers 
+
+**How to "update heading 1 to match"**: (Stef notes this has not been working in these docs) In Google Doc, to update a text style (headings, normal text, with font type, size etc), highlight a section with the style you want, click the styles dropdown shown in the screenshot, and select e.g. "Update Heading 1 to match". Double check the doc because we've noticed it missed some in an agenda.
+
+
+### 3. GitHub Clinic - Generate Markdown Files for Each Participant
+
+If you haven't already, clone the Cohort Repo to RStudio (File > New Project > Version Control > Git) , then run the following code. Detailed instructions of what this looks like:
+
+1. Open the cohort repo as a project in RStudio and create a new script (temporary, you'll deleted it but it's a nicer place to work)
 1. Copy the following into the script, then delete the examples "Erin, Julie". You'll keep the `_demo.md`, which is what you'll demo live. 
 2. Go to the ParticipantsList, and copy the 2 first and last columns
 3. Back in RStudio, put your cursor inside the "tribble" parentheses, then, in the Addin menu in the top of RStudio, select "Paste as Tribble"!
@@ -144,14 +181,14 @@ You'll now have .md files for each participant in the cohort! Any duplicate name
 **Now**, commit and push the Markdown files in the `github-clinic` folder plus the `horst-champions-trailhead.png in the top-level folder to GitHub.com. Don't push the .gitignore or .rproj since they're not relevant for the Clinic. (You can do Command-A to select all files and then unclick those 2 you don't want).
 
 
-### Create GitHub team, add usernames
+### 4. Create GitHub team, add usernames
 
 1. Open RStudio, and create a new script (temporary, you'll deleted it but it's a nicer place to work)
 1. Paste the following in it and review the code. You may already have a GitHub PAT set; there is more information at the top of the README about it. 
 1. Run this code first as-is with the example usernames in the `members` variable to check -
 1. Check that the example usernames were added in the Cohort GitHub: go to github.com/openscapes/cohort-name > Settings > Collaborators and Teams 
 1. If the team was created with the username and appears in the repo, woohoo! 
-1. Open the ParticipantsList and copy the GitHub username column, including the header. 
+1. Open the ParticipantList and copy the GitHub username column, including the header. 
 3. In RStudio, put your cursor after `members <-` and use the `datapasta` Addin > Paste As Tribble to paste the usernames into the `members` variable, deleting the previous example user. 
 2. After pasting in the R script, rename the header as "username" (no spaces or asterices)
 5. Run the following code again and check that everyone was added!
@@ -181,33 +218,30 @@ members <- tibble::tribble(
   )
 
 add_team_members(team_name, members = members$username, org = "openscapes")
-add_repo_to_team(repo_name, team_name, org = "openscapes")
+add_team_to_repo(repo_name, team_name, org = "openscapes")
 ```
 
-Yay! Now all to do is to highlight the usernames in green in the ParticpantList for our bookkeeping!
+Yay! Now all to do is to highlight the usernames in green in the ParticipantList for our bookkeeping!
 
 
-### Agendas
+## R package developer notes
 
-    kyber::call_agenda(
-        registry_url = "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/edit#gid=942365997", 
-        cohort_id = "2022-nasa-champions", 
-        call_number = 3)
+Steps to edit `kyber` locally and review those edits: 
 
-Then, to move this to a Google Doc and fine-tune formatting, follow these notes (as of July 14, 2022): 
+1. In RStudio, open `kyber` project, pull main branch 
+2. If you've been working in RStudio, restart your R session.
+3. Make edits to files (for example `inst/agendas/team_culture.Rmd`)
+4. In R console: `devtools::load_all()` to load local edits for `kyber`
+5. In R console, test whatever you edited. For example, to create the call agenda: 
 
-- In RStudio, Knit (or PreviewHTML) the resulting `agenda.md` and copy-paste the result into a Google Doc (example: 03_CallAgenda [ 2022-noaa-afsc ]. You might need to to expand the knitted preview into the browser to get it to copy/paste correctly into Google Docs
-- Move Google Doc to Openscapes Workspace folder Openscapes_CohortCalls [ year-cohort-name ].
-- Select all (cmd-A) and change font to Open Sans
-- Make p1 opening text 9 point font (the text above horizontal line & Call title)
-- Make Header 1 font 18, bold; update heading 1 to match (see screenshot below; Stef notes "update heading to match" has not been working in these docs)
-- Make Header 2 font 14, bold; update heading 2 to match
-- Select all (cmd-A), then: 
-  - "add space" then "remove space **after** paragraph" throughout to make spacing a little more cozy (yes seems odd to do and undo, but it works)
-  - "add space" then "remove space **before** paragraph" throughout to make spacing a little more cozy
-- Review doc and fix any further font weirdness
-- Add page numbers 
+```
+kyber::call_agenda(
+    registry_url = "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/edit#gid=942365997", 
+    cohort_id = "2022-noaa-afsc-fall", 
+    call_number = 4)
+```    
 
-**How to "update heading 1 to match"**: (Stef notes this has not been working in these docs) In Google Doc, to update a text style (headings, normal text, with font type, size etc), highlight a section with the style you want, click the styles dropdown shown in the screenshot, and select e.g. "Update Heading 1 to match". Double check the doc because we've noticed it missed some in an agenda.
+1. To review the call agenda, open `agenda.md`, click Preview, and view it in the Viewer Tab. 
 
-![Screen Shot 2022-07-14 at 5 50 28 PM](https://user-images.githubusercontent.com/11927811/179125336-ec2fc1e5-792e-495d-8a29-c1ed3ec3cdc4.png)
+Usually you can repeat steps 3-5 whenever you make edits you want to review, however if there are problems try restarting you R session.
+

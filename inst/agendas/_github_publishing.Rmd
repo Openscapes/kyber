@@ -6,11 +6,11 @@ params:
 
 ## Growth Mindset & GitHub for Publishing • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-* **Intro to GitHub, edits & publishing** ([slides](https://docs.google.com/presentation/d/1PzGAbEpNhT6CDPe1DCHf5-eVAjy-2R2D3VMHz7dY774/edit?usp=sharing) 1-14) (20 min) – Julie
+* **Intro to GitHub, edits & publishing** ([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/) 1-13) (16 min) – Julie
   -  ‎
   -
   - 
-* **Breakout groups: practice editing & committing** (10 min) –  Erin (breakout random groups of 3)
+* **Breakout groups: practice editing & committing** (10 min) (<font color="red">pause recording</font>) –  Stef (breakout random groups of 3)
 * *This first breakout group can be less collaborative and more co-working...but please chat and screenshare!*
 
   - Our cohort repo: <`r params_registry$github_repo`>
@@ -22,11 +22,11 @@ params:
   - Learn anything cool? Share!  
   - ‎
   -
-  -
-* **Regroup, collaborating and publishing** ([slides](https://docs.google.com/presentation/d/1PzGAbEpNhT6CDPe1DCHf5-eVAjy-2R2D3VMHz7dY774/edit?usp=sharing) 15-16) (5 min) – Julie screenshare
+  - (<font color="red">resume recording</font>)
+* **Regroup, collaborating and publishing** ([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/) 14-16) (5 min) – Julie screenshare
   - ‎
   -
-* **Discussion and screenshares** (7 min)
+* **Discussion and screenshares** (10 min)
   - ‎
   -
   -

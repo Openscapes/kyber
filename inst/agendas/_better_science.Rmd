@@ -6,17 +6,15 @@ params:
 
 ## Better science for future us • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-- Seaside Chats, Pathways ([slides](https://docs.google.com/presentation/d/162tpUZEFkpTUI4K3Yl_mF6HLxsgwO_d7bvF5F4igxfk/edit?usp=sharing)) (10 min) - Julie
+- Real-life stories ([slides](https://docs.google.com/presentation/d/1tE3pQ2ObNU68iG4uTIlMuSN4dguvn-cOvwtoM-c9L-w/)) (15 min) - Julie
   - ‎
   - 
-- **Breakout groups** (10 min) (random) - Stef
-  - **Prompts: Discuss your space and place.** 
-  - Space: Are Seaside Chats something you already do? Anyone else who should be included? 
-  - Place: Where are your places to collaborate on files/data? Is everyone included as they need to be (skills/permissions/etc)?
+- **Breakout groups** (8 min) (random) - Stef (<font color="red">pause recording</font>)
+  - **Prompt: How does this story resonate for you?** 
   - ‎
   -
   -
-- **Discussion** (5 min) - All
+- **Share-outs** (2 min) - Julie (<font color="red">start recording</font>)
   - ‎
   -
   -

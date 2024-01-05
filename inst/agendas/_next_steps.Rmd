@@ -1,7 +1,7 @@
 ---
 params: 
   start_time: "12:00pm PT"
-  duration: 10
+  duration: 15
 ---
 
 ## Next steps • `r kyber:::fmt_duration(params$start_time, params$duration)`

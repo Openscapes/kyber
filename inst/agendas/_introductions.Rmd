@@ -1,7 +1,7 @@
 ---
 params:
   start_time: "12:00pm PT"
-  duration: 10
+  duration: 15
 ---
 
 ## Introductions • `r kyber:::fmt_duration(params$start_time, params$duration)`
@@ -14,13 +14,13 @@ One rapid round of breakout groups to meet your colleagues.
 
 **Prompt: Share your name, team, one thing about your data workflow**
 
-- **Breakout groups** (6 min) (groups of 3) - All
+- **Breakout groups** (10 min) (groups of 3) - Stef  (<font color="red">pause recording</font>)
   - ‎
   - 
   - 
   - 
   -
-- **Share-outs** (4 min) – Julie
+- **Share-outs** (5 min) – Julie  (<font color="red">start recording</font>)
   - Write or say something you heard from someone you talked with
   -  
   -  

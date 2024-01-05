@@ -1,20 +1,20 @@
 ---
 params: 
   start_time: "12:00pm PT"
-  duration: 32
+  duration: 30
 ---
 
 ## Open communities • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-- **Open communities** ([slides](https://docs.google.com/presentation/d/17HSNmBYvPw-7Prioys7WIhL9QGVb3s3bJCLaAJVaChc/edit?usp=sharing)) (10 min) – Julie
+- **Open communities** ([slides](https://docs.google.com/presentation/d/1u6AjCCKniDsuX10M-qAU2O1HLJqupDYhWWKZYfeCpK4/)) (10 min) – Stef
   -  ‎
   -  
   -  
   -    
   -  
   -  
-  - 
-- **Breakout groups** (15 min) – All (groups of 3-4, same as reflections)
+- (<font color="red">pause recording</font>)
+- **Breakout groups** (12 min) – All (groups of 3-4, same as reflections)
   - **Prompt: Explore communities resources & tutorials relevant for your next Seaside Chat**
   - Explore a few communities of interest / from the slides
   - What communities are you already a part of?
@@ -23,8 +23,8 @@ params:
   - 
   -  
   -   
-  - 
-- **Share outs** (7 min) – All
+- (<font color="red">resume recording</font>)
+- **Share outs** (4 min) – All
   - ‎
   - 
   -  
