@@ -1,0 +1,38 @@
+---
+params:
+  cohort_name: '[Cohort Name]'
+  google_drive_folder: '[Google Drive Folder]'
+  website: '[Website]'
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+**Openscapes Champions Cohort Series [ `r params$cohort_name` ]**
+
+-   Quick Links: [Cohort SharePoint
+    folder](%60r%20params$google_drive_folder%60),
+    <font color="purple">Zoom:</font> ,including Pathways folder, Cohort
+    teams & Slide decks
+-   Microsoft teams meeting link
+-   [Openscapes home page](https://www.openscapes.org/)
+-   [Water Boards Openscapes
+    Webpage](https://cawaterboarddatacenter.github.io/swrcb-openscapes/)
+-   Cohort Web Page: `r params$website`
+-   <!--- Cohort GitHub Repo: `r params$repo` --->
+
+**Quick introduction:**
+
+-   Welcome, thank you for being here!
+-   We’ll be using Microsoft Teams for video calls & Sharepoint for
+    notes
+    -   Everything you share in this doc is available to everyone else
+        on the call
+    -   Comments / emojis / gifs / +1s to say “me too” are welcome! 🎉🤓
+-   As you join each session, please:
+    -   Turn on your camera
+    -   Close your email
+    -   Set up your monitor(s) for maximum and easy engagement
+    -   Add your name to the Roll Call below
+
+------------------------------------------------------------------------
