@@ -1,0 +1,36 @@
+---
+params:
+  start_time: "12:00pm PT"
+  duration: 2
+---
+
+## Roll call • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+*Name / team / share something you’re good at*
+
+- Julie Lowndes / Openscapes / packing (bags, cars)
+-    
+-   
+-  
+- 
+-  
+-  
+-  
+- 
+-  
+-   
+-  
+- 
+-  
+-  
+-  
+- 
+- 
+-   
+-  
+- 
+-  
+-  
+-  
+- 
+- 

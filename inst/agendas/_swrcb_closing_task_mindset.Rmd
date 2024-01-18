@@ -1,0 +1,25 @@
+---
+params:
+  start_time: "12:00pm PT"
+  duration: 10
+---
+
+## Closing • `r kyber:::fmt_duration(params$start_time, params$duration)`
+*We've covered a lot today; we'll explore these ideas more deeply together in the next weeks.*
+
+- **Pathways Document & Seaside Chats** (4 min) -- Julie (screenshare)
+    - [Pathways Sheet](https://docs.google.com/spreadsheets/d/1rmhOly87OYrPOUqTzmccYbPrTlGmXGsN06GI1FKzxag/edit#gid=0)
+    - Pathways details and examples: <https://openscapes.github.io/series/core-lessons/pathways>
+-   **Task for next time** (3 min) -- Julie
+
+    -   **Have a Seaside Chat & start your Pathway**
+    -   Start discussing your trailhead: where are you now?\
+    -   To structure your thoughts, you can use the Pathways Sheet
+        -   Create a copy of [Pathways Sheet](https://docs.google.com/spreadsheets/d/1rmhOly87OYrPOUqTzmccYbPrTlGmXGsN06GI1FKzxag/edit#gid=0) (File \> Make a copy \> in our shared folder). Focus on the "now" column. Are there rows to add?
+    -   **Create GitHub usernames**
+        -   Optional advice: <https://happygitwithr.com/github-acct.html>
+        -   Share your GitHub username before next time in our ParticipantsList (in our Cohort Folder, linked from the top of this doc)
+    -   **Join Slack** (we'll invite you to our Openscapes org)
+        -   Introduce yourself and tag your team
+            -   Private channel for our cohort as you get comfortable
+            -   New to Slack? [quickstart doc](https://zenodo.org/record/3763730#.YIxK6-tlDUI)

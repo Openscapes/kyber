@@ -1,0 +1,11 @@
+---
+params:
+  start_time: "12:00pm PT"
+  duration: 0
+---
+
+- **Efficiency Tip of the Day ** (2 min) – Julie
+- Keyboard Shortcuts Part 1: Useful for any application (docs, email, code)
+    - **Mac:** Arrow keys + option, + command, + shift, & in combination
+    - **PC:** Arrow keys + Ctrl + Fn + shift, & in combination
+    - Here is some sample text for our demo. What a great sentence.

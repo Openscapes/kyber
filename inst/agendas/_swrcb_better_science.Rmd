@@ -1,0 +1,20 @@
+---
+params:
+  start_time: "1:55pm ET"
+  duration: 25
+---
+
+## Better science for future us • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+- Real-life stories ([slides](https://docs.google.com/presentation/d/1tE3pQ2ObNU68iG4uTIlMuSN4dguvn-cOvwtoM-c9L-w/)) (15 min) - Julie
+  - ‎
+  - 
+- **Breakout groups** (8 min) (random) - Stef (<font color="red">pause recording</font>)
+  - **Prompt: How does this story resonate for you?** 
+  - ‎
+  -
+  -
+- **Share-outs** (2 min) - Julie (<font color="red">start recording</font>)
+  - ‎
+  -
+  -
