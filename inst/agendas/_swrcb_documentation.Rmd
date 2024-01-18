@@ -1,0 +1,36 @@
+---
+params: 
+  start_time: "12:00pm PT"
+  duration: 35
+---
+
+## Documentation • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+- **Documentation** ([slides](https://docs.google.com/presentation/d/1CSet5VUaXMF48dLPlT3n1OpJ4Iat0LAIKEdTGqIqaDk/edit?usp=sharing)) (15 min) – Corey
+  - info:
+    - more info
+  - info
+- **Silent journaling** (5 min) – All
+  - **prompt 1**
+  - ‎
+  -  
+  -   
+  -  
+  -   
+  - 
+  - **prompt 2**
+  - ‎
+  -  
+  -  
+  - 
+  - 
+  - **General reflections/reactions**
+  - ‎
+  - 
+  - 
+  - 
+- **Discussion** (15 min) – All
+  - ‎
+  -  
+  - 
+  -  
