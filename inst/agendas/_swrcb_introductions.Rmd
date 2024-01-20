@@ -1,30 +1,41 @@
 ---
 params:
-  start_time: "12:00pm PT"
-  duration: 15
+  start_time: "1:30pm PT"
+  duration: 30
 ---
 
 ## Introductions • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 One rapid round of breakout groups to meet your colleagues.
 
-*Need Zoom help? Come to the Main Room; We will be there.*  
-*We’ll get a 60-sec notification before breakout rooms close.*
+*Need help? Come to the Main Room; We will be there.*\
+*You’ll get a 60-sec notification before breakout rooms close.*
 
+**Breakout groups** (5 min) - Random groups of \~3 [9-10 Rooms] - [ Mentor Name ] (<font color="red">pause recording</font>)
 
-**Prompt: Share your name, team, one thing about your data workflow**
+-   **Prompt: Share your name, team, one thing about your data workflow**
+    -   Feel free to write below the next two bulletpoints as well!
+    -   Common themes from breakout groups:
+        -   
+        -   
+        -   
+        -   
+        -   
+    -   Other mentioned topics:
+        -   
 
-- **Breakout groups** (10 min) (groups of 3) - Stef  (<font color="red">pause recording</font>)
-  - ‎
-  - 
-  - 
-  - 
-  -
-- **Share-outs** (5 min) – Julie  (<font color="red">start recording</font>)
-  - Write or say something you heard from someone you talked with
-  -  
-  -  
-  - 
-  -   
-  - 
+        -   
 
+        -   
+
+        -   
+
+        -   
+-   **All voices share-out** (20 min) – Anna (<font color="red">start recording</font>)
+    -   All raise hands in Teams. As you speak, put your hand down. Verbally pass to another person with a hand up!
+    -   Write or say something you heard that resonated with you from someone you spoke with
+        -   
+        -   
+        -   
+        -   
+        -   
