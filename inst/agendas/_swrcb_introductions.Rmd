@@ -11,9 +11,9 @@ One rapid round of breakout groups to meet your colleagues.
 *Need help? Come to the Main Room; We will be there.*\
 *You’ll get a 60-sec notification before breakout rooms close.*
 
-**Breakout groups** (5 min) - Random groups of \~3 [9-10 Rooms] - [ Mentor Name ] (<font color="red">pause recording</font>)
+**Breakout groups** (5 min) - Random groups of \~3 [9-10 Rooms] - [ Mentor Name ]
 
--   **Prompt: Share your name, team, one thing about your data workflow**
+-   **Prompt: Share your name, team, one thing about your data workflow** (<font color="red">pause recording</font>)
 
     -   Feel free to write below the next two bulletpoints as well!
 

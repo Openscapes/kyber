@@ -1,0 +1,28 @@
+---
+params: 
+  start_time: "1:30pm PT"
+  duration: 5
+---
+
+## Closing • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+-   **Task for next to complete before next time** (5 min) – Anna
+    -   **Have a Seaside Chat & continue working on your Pathway**
+
+    -   *Focus on where your team is “Now” - Think about where you are now in your workflow(s)*
+
+        -   Pathways Sheet (File \> Make a copy)
+        -   Upload to the PathwayShare folder before Call 5
+        -   [Pathways details & examples](https://openscapes.github.io/series/core-lessons/pathways)
+
+    -   **Accept our invite to join a team within the Openscapes Organization**
+
+        -   You will receive an email from GitHub asking you to join our cohort GitHub in the Openscapes GitHub organization. Make sure you accept before the next Cohort Call!
+
+    -   **What questions do you have?**
+
+        -   
+
+        -   
+
+        -   

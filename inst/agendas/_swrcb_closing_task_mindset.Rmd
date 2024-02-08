@@ -19,7 +19,7 @@ params:
         -   Upload to the PathwayShare folder before Call 5
         -   [Pathways details & examples](https://openscapes.github.io/series/core-lessons/pathways)\
 
-        ## **What questions do you have?**
+    -   **What questions do you have?**
 
         -   
 
