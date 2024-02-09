@@ -1,0 +1,14 @@
+---
+params: 
+  start_time: "1:30pm PT"
+  duration: 0
+---
+
+-   **Efficiency / Anti-Loneliness Tip of the Day** (1 min) – Anna
+    -   **Tap into the growing Openscapes Community!**
+
+    -   Use our MS Teams channel or we can get you added to the larger Openscapes Slack
+
+    -   Use the space to ask questions, share solutions/ideas/tips so we aren’t re-creating wheels in silos. Someone might be able to share a solution in 10 min and save you days of googling or banging your head against the proverbial wall. 
+
+    -   Also see this list of [Water Data Communities](https://www.waterboards.ca.gov/resources/oima/cowi/data_communities.html) for other spaces that might be a good fit!

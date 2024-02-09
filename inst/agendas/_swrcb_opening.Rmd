@@ -1,0 +1,38 @@
+---
+params:
+  cohort_name: '[Cohort Name]'
+  google_drive_folder: '[Google Drive Folder]'
+  website: '[Website]'
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+**Openscapes Champions Cohort Series [ `r params$cohort_name` ]**
+
+-   Quick Links: [Cohort OneDrive
+    folder](%60r%20params$google_drive_folder%60),
+    <font color="purple">Zoom:</font> ,including Pathways folder, Cohort
+    teams & Slide decks
+-   [Microsoft teams meeting
+    link](https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZGJhOTgwZjAtMTg2NS00OTQ4LWFiY2EtM2JiZDkyNWM1MDJl%40thread.v2/0?context=%7b%22Tid%22%3a%22fe186a25-7d49-41e6-9941-05d2281d36c1%22%2c%22Oid%22%3a%22b80729e4-c1b6-4598-b868-8c4da13c5db8%22%7d)
+-   [Openscapes home page](https://www.openscapes.org/)
+-   [Water Boards Openscapes
+    Webpage](https://cawaterboarddatacenter.github.io/swrcb-openscapes/)
+-   Cohort Web Page: `r params$website`
+-   <!--- Cohort GitHub Repo: `r params$repo` --->
+
+**Quick introduction:**
+
+-   Welcome, thank you for being here!
+-   We’ll be using Microsoft Teams for video calls & OneDrive for notes
+    -   Everything you share in this doc is available to everyone else
+        on the call
+    -   Comments / emojis / gifs / +1s to say “me too” are welcome! 🎉🤓
+-   As you join each session, please:
+    -   Turn on your camera
+    -   Close your email
+    -   Set up your monitor(s) for maximum and easy engagement
+    -   Add your name to the Roll Call below
+
+------------------------------------------------------------------------

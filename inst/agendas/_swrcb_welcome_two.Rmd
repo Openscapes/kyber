@@ -1,0 +1,36 @@
+---
+params: 
+  start_time: "1:30pm PT"
+  duration: 4
+---
+
+## Welcome • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+-   **Welcome to Openscapes! 👋** (2 min) – Anna
+    -   <font color="red">We are now recording this meeting.</font>
+    -   <font color="red">To turn on closed captions, click More / Language and Speech / Turn on live captions.</font>
+    -   CoC Reminder ([full version](https://www.openscapes.org/code-of-conduct/))
+        -   Be respectful and value each other’s ideas, styles and viewpoints.
+        -   Be direct but professional; we cannot withhold hard truths.
+        -   Be inclusive and help new perspectives be heard.
+        -   Be open to learning from others.
+        -   Lead by example and match your actions with your words.
+    -   If you have issues, please direct them to:
+        -   Anna - [anna.holder\@waterboards.ca.gov](mailto:anna.holder@waterboards.ca.gov)
+        -   All Cohort calls are subject to Equal Employment Opportunity (EEO) reporting requirements, and facilitators may be obligated to report instances of past or current racial discrimination at the Water Boards. If you choose to share your experiences, consider not including identifying information (e.g., names, titles, office, department, division, agency, etc.), and be aware that the EEO Office may be obligated to investigate and follow up.
+        -   Employees who believe they have experienced discrimination may file a complaint through the [Water Boards discrimination complaint process](http://waternet/eeo/discrimination/index.shtml).
+    -   **Openscapes Team here on this call**:
+        -   Anna Holder, Environmental Scientist and Tribal Coordinator in OIMA (Lead Instructor)
+        -   [insert other instructors and mentors ...]
+    -   **Land Acknowledgment**
+        -   Nearly 200 tribal nations are located within the modern borders of California - more than any other state in the United States. The CalEPA building - and the hub of our agency - is located in a place we call Sacramento. Sacramento was, and still is, a gathering place for many local Tribes who have lived throughout the central valley and the foothills for generations and were the original stewards of this land. These people include the Nisenan, Maidu, and Miwok Peoples, and the Patwin and Wintun Nations. We want to honor the peoples who have remained committed to the stewardship of these lands and waters over many centuries.
+            -   Here’s a place you can go to learn more about the land you're on: <https://native-land.ca/>
+-   **Today’s goals** (1 min) – Anna
+    -   ‎‎We’ll discuss team culture and go through a deeper description of the Pathway spreadsheet and process. 
+-   **Followups** (1 min) – Anna
+    -   
+    -   
+-   **Heads up - next time (Call 3) - we're going to take a GROUP PHOTO!** ‎😁
+-   **Questions** before we get started?
+    -   ‎
+    -   

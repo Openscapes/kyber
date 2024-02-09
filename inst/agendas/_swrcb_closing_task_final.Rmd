@@ -1,0 +1,40 @@
+---
+params: 
+  start_time: "1:30pm PT"
+  duration: 5
+  files: ["openscapes_champions_landscape.png"]
+---
+
+## Closing --- Better Science for Future Us • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+**Thank you for being a part of Openscapes** - Anna
+
+We hope you feel a bit more confident about what's possible with open data science with your teams and colleagues! This process has been a lot - but it’s only the very beginning, finding your trailhead.
+
+![](openscapes_champions_landscape.png)
+
+-   **Thank you Mentors!!!** 🤩
+
+-   **Your Seaside Chats are a way to continue learning together**
+
+    -   Broaden them to your broader groups, if useful following [10-week plan to supercharge your research](https://www.nature.com/articles/d41586-019-03335-4) (Lowndes et al. 2019)
+
+    -   Thinking about data analysis as a collaborative effort
+
+    -   Identifying and addressing shared needs
+
+    -   Thinking ahead for future us
+
+-   **Continue to use your Pathway as a resource!**
+
+    -   Review regularly to help continue tracking progress and documenting needs
+
+    -   It's normal for the Pathway to evolve as Future Us develops
+
+    -   You'll be surprised how useful it can be 1+ years from now!
+
+-   **"Graduating" gift: Openscapes badges by Allison Horst!**
+
+    -   Download from here: [openscapes_hex_badge.png](https://github.com/Openscapes/how_we_work/blob/main/openscapes_hex_badge.png)
+
+    -   You can put it on your website, like the [Wood Lab](https://chelsealwood.com/research/) and the [Fay Lab](https://thefaylab.github.io/lab-manual/index.html) - or [Openscapes at the Water Boards](https://cawaterboarddatacenter.github.io/swrcb-openscapes/)!

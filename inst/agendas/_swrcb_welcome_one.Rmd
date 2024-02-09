@@ -1,0 +1,115 @@
+---
+params:
+  start_time: "1:30pm PT"
+  duration: 12
+  files: ["screenshot-gdoc-zoom-setup.png", "wheel_of_power_duckworth.jpg"]
+---
+
+## Welcome • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+**Welcome to Openscapes!** 👋 (2 min) – Anna
+
+-   <font color="red">We are recording this meeting.</font>
+-   <font color="red">To turn on closed captions, click More / Language and Speech / Turn on live captions.</font>
+-   We’re so excited to go through the Openscapes process with you over the next 10 weeks - Let's dive in!
+-   **Openscapes Team here on this call**:
+    -   Anna Holder, Environmental Scientist and Tribal Coordinator in OIMA (Lead Instructor)
+    -   [insert other instructors and mentors ...]
+    -   We’re all here to lead the calls and support with behind the scene logistics - if you have questions at any time, feel free to reach out to any one of us!
+-   **Land Acknowledgment**
+    -   Nearly 200 tribal nations are located within the modern borders of California - more than any other state in the United States. The CalEPA building - and the hub of our agency - is located in a place we call Sacramento. Sacramento was, and still is, a gathering place for many local Tribes who have lived throughout the central valley and the foothills for generations and were the original stewards of this land. These people include the Nisenan, Maidu, and Miwok Peoples, and the Patwin and Wintun Nations. We want to honor the peoples who have remained committed to the stewardship of these lands and waters over many centuries.
+        -   Here’s a place you can go to learn more about the land you're on: <https://native-land.ca/>
+-   **Cohort goals**
+    -   To strengthen team culture and habits for immediate benefit that will help create long-lasting resilience in teams and workflows.
+-   **Today’s goals**
+    -   ‎We'll start working towards a common understanding of the Openscapes mindset and what your pathway forward looks like for your team
+-   **You are all welcome here** (3 min) – Anna
+    -   This is a positive learning space where everyone is welcome to ask questions and participate.
+    -   We’re adopting the Openscapes Code of Conduct ([full version](https://www.openscapes.org/code-of-conduct/))
+        -   Be respectful and value each other’s ideas, styles and viewpoints.
+        -   Be direct but professional; we cannot withhold hard truths.
+        -   Be inclusive and help new perspectives be heard.
+        -   Be open to learning from others.
+        -   Lead by example and match your actions with your words.
+        -   Aligns with [Water Boards Racial Equity Resolution](https://www.waterboards.ca.gov/racial_equity/resolution-and-actions.html) & general expectations as Water Boards employees to treat each other with respect and professionalism.
+        -   If you have issues, please direct them to:
+            -   Anna - [anna.holder\@waterboards.ca.gov](mailto:anna.holder@waterboards.ca.gov)
+            -   All Cohort calls are subject to Equal Employment Opportunity (EEO) reporting requirements, and facilitators may be obligated to report instances of past or current racial discrimination at the Water Boards. If you choose to share your experiences, consider not including identifying information (e.g., names, titles, office, department, division, agency, etc.), and be aware that the EEO Office may be obligated to investigate and follow up.
+            -   Employees who believe they have experienced discrimination may file a complaint through the [Water Boards discrimination complaint process](http://waternet/eeo/discrimination/index.shtml).
+    -   We are all responsible for being aware of [positionality](https://indigenousinitiatives.ctlt.ubc.ca/classroom-climate/positionality-and-intersectionality/), privilege & power dynamics - how differences in social position and power shape identities and access in society. We want to be mindful of how hierarchy can get in the way of our learning. Here, we’ll work to flatten that hierarchy.
+        -   Anna has given a couple of talks that include more information on privilege & power - you can check out the recordings at:
+            -   Joint Aquatic Sciences Meeting's Open Science for Collaborative Management of Aquatic Ecosystems Session (May 16, 2022): [Operationalizing Open Science and Equity in California’s Surface Water Ambient Monitoring Programs](https://youtu.be/80HWwyELmMk) (26 min)
+
+            -   California Water Data Consortium Data for Lunch Series (April 5, 2022): [Using intentional engagement to advance equity, inclusion, and belonging in the water data community](https://youtu.be/9QE_C95xvyM) (1.5 hrs)
+    -   We know there is a range of technical experience – by design! We are all here because we want to improve something about our work around data-intensive science. We all bring value in our experiences, questions, and skills.
+    -   We’re all imperfect and learning together – Openscapes included
+        -   We're all accountable to each other
+        -   Vulnerability: yes! Shame: no.
+        -   If something doesn’t feel right, let’s talk about it
+
+‎
+
+**Openscapes Overview** (5 min) – Anna
+
+-   In the open data science landscape, there are many paths forward. Through the Champions program we will help you explore and navigate pathways with your team – and help the whole cohort become champions and stewards as you become more familiar, confident, and work together.
+
+    <center>![](openscapes_champions_landscape.png)</center>
+
+-   **Champions Program [POP](https://suzannehawkes.com/2010/04/09/pop-everything/)**
+
+    -   **Purpose**
+
+        -   Strengthen teamwork for yourself and others
+
+        -   Reimagine data workflows and stewardship through exploring open tools and practices
+
+        -   Develop modern skills and habits that are of immediate value to you, including confidence and agency as leaders 
+
+        -   Cultivate collaborative and inclusive teams and communities 
+
+    -   **Outcomes**
+
+        -   Develop a practice of talking and collaborating about data workflows with your team and community
+
+        -   Create a pathway you’ve identified with your team to help prioritize next steps
+
+            -   You’ll share your progress to the Cohort in our last call
+
+    -   **Process**
+
+        -   Our Cohort Calls are discussion-based, build on each other, and *require active engagement*
+
+-   **How We Work (Tech & Cultural Norms)** (2 min) – Anna
+
+    -   Our 5 Cohort Calls - Cohort website: `r params_registry$cohort_website`
+
+    -   Microsoft Teams & OneDrive Docs – For one monitor - recommend side-by-side (windows narrowed)
+
+        <center>![](screenshot-gdoc-zoom-setup.png)</center>
+
+        -   OneDrive Docs: Use the Outline view on the left to navigate (View \> Navigation)
+        -   Save our [Cohort OneDrive folder](%60r%20params$google_drive_folder%60) to your bookmarks/favorites
+        -   Some Cultural Norms
+            -   Videos on – but okay if this is not possible for any reason 
+            -   Mute liberally/quickly – but please unmute to speak up at any point
+            -   **Please contribute to the agenda doc throughout the call & help capture Cohort wisdom:**
+                -   It's our shared responsibility to contribute & record.
+                -   This is the main place for nonverbal contribution, side conversations, and to reinforce ideas.
+                -   Everyone should have acces to direct editing
+                    -   Create a new bullet by hitting return
+                    -   Shortcut to create new bullet:
+                        -   Mac: Shift - Command - 8
+                        -   PC: Shift - Control - 8
+                -   Comments / emojis / gifs / +1s to say “me too” are welcome! 🤓
+                    -   Shortcut to insert emoji:
+                        -   Mac: Control - Command - Space bar 🦑🐙🦀
+
+                        -   PC: Windows - Period OR Windows - Semicolon ; 🦖
+            -   Breakout groups – to help you reflect on your work and get to know each other
+                -   Mix of random and teams so you have different opportunities to meet and network. 
+
+-   **Questions** before we get started?
+
+    -   
+
+    -   
