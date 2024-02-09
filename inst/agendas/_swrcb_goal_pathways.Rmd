@@ -1,8 +1,8 @@
 ---
 params:
   title: "Title"
-  date: "2024-03-28"
-  call: 1
+  date: "2024-05-23"
+  call: 5
   call_start_time: "1:30pm PT"
   total_duration: 120
 ---
@@ -11,4 +11,4 @@ params:
 
 `r format(as.Date(params$date), format="%B %d, %Y")`. `r kyber:::fmt_duration(params$call_start_time, params$total_duration, long_tz = TRUE)`.
 
-**Today's Goals:** We'll start working towards a common understanding of the Openscapes mindset and what your pathway forward looks like for your team.
+**Today's Goals:** Each team will share their Pathways and we'll discuss next steps.

@@ -1,0 +1,110 @@
+---
+params: 
+  start_time: "1:30pm PT"
+  duration: 25
+---
+
+## Next steps • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+One of the things we want to do is represent your needs to leadership. Let’s get your thoughts out: The objective isn’t to get a poll, it's about your ideas, needs, and also how you feel about it all.
+
+-   **Silent journaling and +1s** (3 min) - Anna
+
+    -   *Respond to the prompts below. Then, read others responses and add +1’s or comments*
+
+    -   **Upon completing Openscapes, how do you feel about your needs and how you are supported to meet those needs?**
+
+        What do YOU need from management to help put our Pathways into action?
+
+        -   ‎
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+
+-   **Discussion** (7 mins) -- All
+
+    -   ‎
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+```{=html}
+<!-- -->
+```
+-   **Fill out the [cohort survey](https://forms.gle/Jj8GvqKkXFEP9D2V6) (5 min) – All**
+
+    -   5 minutes of silent time to provide formal feedback (anonymous or named).
+
+```{=html}
+<!-- -->
+```
+-   **Openscapes Champions Cohort 2-month Follow-up Reminder (2 min) - Anna**
+
+    -   Thu., Jul 18, 1:30 pm - 2:30 pm
+
+-   **Want to be a mentor in a future cohort? (8 min) - Anna + Mentors**
+
+    -   We want to grow Openscapes at the Water Boards - we want to reach more teams and share what we’re learning with more folks! …but we need help to grow! 
+
+    -   Mentors provide critical support for the Openscapes process with logistics (e.g. note taking, breakout rooms) - and they get to:
+
+        -   Continue to learn about Openscapes principles, tools, and lessons without having to complete a Pathway with a team.
+
+        -   Connect with and learn from the broader Openscapes mentors community
+
+    -   Mentor Share Outs
+
+**Estimated Mentor Time Commitment**
+
+Aggregate Time Commitment during cohort months \~ 1-3 hours/week
+
++--------------------------------+---------------+----------------------------------------------------------+
+| **Activity**                   | **Time**      | **Frequency**                                            |
++--------------------------------+---------------+----------------------------------------------------------+
+| Seaside Chats                  | 1 hr/chat     | Every other week (starts 1-2 months before Cohort Calls) |
+|                                |               |                                                          |
+| (pre-cohort)                   | 4 total       |                                                          |
++--------------------------------+---------------+----------------------------------------------------------+
+| Cohort Calls                   | 2 hrs/call    | Every other week (alternating with Seaside chats)        |
+|                                |               |                                                          |
+|                                | 5 total       |                                                          |
++--------------------------------+---------------+----------------------------------------------------------+
+| Cohort Digests                 | \~1 hr/Digest | Every other week, a day or so after each Cohort Call     |
+|                                |               |                                                          |
+|                                | 4 total       |                                                          |
++--------------------------------+---------------+----------------------------------------------------------+
+| Seaside Chats                  | 1 hour/call   | Every other week (alternating with Cohort Calls)         |
+|                                |               |                                                          |
+| (during & post-cohort)         | 6 total       |                                                          |
++--------------------------------+---------------+----------------------------------------------------------+
+| Co-working Sessions (optional) | 1 hr/session  | Every other week (alternating with Cohort Calls)         |
+|                                |               |                                                          |
+|                                | 4 total       |                                                          |
++--------------------------------+---------------+----------------------------------------------------------+
+
+Also see [Am I ready to be an Openscapes Mentor?](https://cawaterboarddatacenter.github.io/swrcb-openscapes/about_at_swrcb/mentor_guidance.html)
+
+**If you’re interested in becoming a mentor or want to discuss further - please let Anna know (via email, chat, etc.)!**

@@ -1,7 +1,7 @@
 ---
 params: 
   start_time: "1:30pm PT"
-  duration: 12
+  duration: 14
 ---
 
 ## Reflections • `r kyber:::fmt_duration(params$start_time, params$duration)`
@@ -11,9 +11,9 @@ One rapid round of breakout groups. This is your time. Reflect on what you’ve 
 *Need help? Come to the Main Room; We will be there.*\
 *You’ll get a 60-sec notification before breakout rooms close.*
 
-**Breakout groups** (7 min) - Random groups of \~3 [9-10 Rooms] - [ Mentor Name ] (<font color="red">pause recording</font>)
+**Breakout groups** (9 min) - Random groups of \~3 [9-10 Rooms] - [ Mentor Name ] (<font color="red">pause recording</font>)
 
--   **Prompt**: Share about your Seaside Chat – Are there questions you have or ideas you want to follow up on or learn?
+-   **Prompt**: **Share about your recent Seaside Chats** – Are there questions you have or ideas you want to follow up on or learn?
 
     -   ‎
     -   
@@ -26,8 +26,6 @@ One rapid round of breakout groups. This is your time. Reflect on what you’ve 
 (<font color="red">start recording</font>)
 
 -   **Discussion / Share-outs** (5 min) – Anna
-
-    Note: Seaside Chats & the Pathway have a basic structure, but the time & space is for your team to adapt these tools for your best/most needed use. We don’t want you to make a Pathway for Openscapes; rather, we want you to make a Pathway that best suits your team's needs (i.e. Future YOU!).
 
     **Write or say something you heard that resonated with you during the breakout!**
 
