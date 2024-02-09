@@ -1,0 +1,89 @@
+---
+params:
+  start_time: "1:30pm PT"
+  duration: 50
+---
+
+## Documentation • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+-   **Documentation** (slides) (25 min) – Devan
+
+    -   ‎
+    -   
+    -   
+    -   
+    -   
+    -   
+
+-   **Silent journaling** (5 min) – All
+
+-   *Respond to the prompts below. Then, read others responses and add +1’s or comments*
+
+    -   **How do these documentation topics resonate with you?**
+
+        -   ‎
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+
+    -   **Do you have any documentation goals that you hope to implement, good examples of documentation to share, or further ideas about documentation for you and/or your Openscapes team?**
+
+        -   ‎
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+
+-   **Breakout groups** (10 min) - Random groups of \~3 [9-10 Rooms; same as before] - [ Mentor Name ] (<font color="red">pause recording</font>)
+
+    -   **Prompt: Debrief from silent journaling & explore project management topics relevant for your next Seaside Chat**
+
+        Explore a few documentation materials from your organization / from the slides
+
+        Which processes are already well-documented? Which are not?
+
+        What would you like to learn with your group? How does this fit with your Pathway?
+
+    -   
+    -   ‎
+    -   
+    -   ‎
+    -   
+    -   
+
+    (<font color="red">resume recording</font>)
+
+-   **Discussion** (10 min) – All
+
+    -   ‎
+    -   
+    -   
+    -   
+    -   
+    -   
+    -   
+    -   
+    -   
+    -   
+    -   
