@@ -7,7 +7,9 @@ params:
 ## Closing • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 -   **Cohort Photo!** 😁
--   **Task for next to complete before next time** (5 min) – Anna
+
+-   **Task to complete before next time** (5 min) – Anna
+
     -   **Have a Seaside Chat about how GitHub might support your workflows -** continue exploring/practicing!
 
         -   **Update your team’s information to our Cohort GitHub Repo README: \<`r params_registry$github_repo`\>** (add your names after your team name)
@@ -26,8 +28,8 @@ params:
         -   [Pinsky Lab Fishbowl Chat](https://pinsky.marine.rutgers.edu/fishbowl-chat-1/)
 
     -   Share updates on Openscapes MS Team Channels or as a GitHub Issue in our cohort repo!
+
 -   **What questions do you have?**
-    -   
 
     -   
 

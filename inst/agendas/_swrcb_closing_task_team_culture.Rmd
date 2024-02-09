@@ -6,7 +6,7 @@ params:
 
 ## Closing • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
--   **Task for next to complete before next time** (5 min) – Anna
+-   **Task to complete before next time** (5 min) – Anna
     -   **Have a Seaside Chat & continue working on your Pathway**
 
     -   *Focus on where your team is “Now” - Think about where you are now in your workflow(s)*

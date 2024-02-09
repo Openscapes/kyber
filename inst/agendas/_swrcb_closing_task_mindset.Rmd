@@ -8,7 +8,7 @@ params:
 
 *We've covered a lot today; we'll explore these ideas more deeply together in the coming weeks.*
 
--   **Task for next to complete before next time** (3 min) – Anna
+-   **Task to complete before next time** (3 min) – Anna
 
     -   **Have a Seaside Chat & start your Pathway**
 
