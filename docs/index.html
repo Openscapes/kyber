@@ -133,7 +133,7 @@
 </div>
 </div>
 <div class="section level2">
-<h2 id="example-workflow">Example Workflow<a class="anchor" aria-label="anchor" href="#example-workflow"></a>
+<h2 id="example-workflow---champions-cohorts">Example Workflow - Champions Cohorts<a class="anchor" aria-label="anchor" href="#example-workflow---champions-cohorts"></a>
 </h2>
 <p>This workflow often happens in 4 separate stages:</p>
 <ol style="list-style-type: decimal">
@@ -277,6 +277,37 @@
 <span><span class="fu"><a href="reference/add_team_members.html">add_team_members</a></span><span class="op">(</span><span class="va">team_name</span>, members <span class="op">=</span> <span class="va">members</span><span class="op">$</span><span class="va">username</span>, org <span class="op">=</span> <span class="st">"openscapes"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/add_team_to_repo.html">add_team_to_repo</a></span><span class="op">(</span><span class="va">repo_name</span>, <span class="va">team_name</span>, org <span class="op">=</span> <span class="st">"openscapes"</span><span class="op">)</span></span></code></pre></div>
 <p>Yay! Now all to do is to highlight the usernames in green in the ParticipantList for our bookkeeping!</p>
+</div>
+</div>
+<div class="section level2">
+<h2 id="example-workflow---nasa-openscapes-2i2c-jupyterhub-access">Example Workflow - NASA Openscapes 2i2c JupyterHub Access<a class="anchor" aria-label="anchor" href="#example-workflow---nasa-openscapes-2i2c-jupyterhub-access"></a>
+</h2>
+<p><strong>GitHub organization:</strong> <a href="https://github.com/nasa-openscapes-workshops" class="external-link uri">https://github.com/nasa-openscapes-workshops</a><br><strong>Teams:</strong> <a href="https://github.com/orgs/nasa-openscapes-workshops/teams" class="external-link uri">https://github.com/orgs/nasa-openscapes-workshops/teams</a></p>
+<div class="section level3">
+<h3 id="add-nasa-openscapes-mentor-to-adminteam">Add NASA Openscapes Mentor to AdminTeam<a class="anchor" aria-label="anchor" href="#add-nasa-openscapes-mentor-to-adminteam"></a>
+</h3>
+<p>NASA Openscapes Mentors are given GitHub permissions to administer access for participants in workshops. To do this they must have an <code>Owner</code> role in the <a href="https://github.com/orgs/nasa-openscapes-workshops/teams/adminteam" class="external-link"><code>AdminTeam</code></a>. To grant access to Mentor, an existing Owner of the GitHub Organization must add the Mentor’s GitHub username to the <code>AdminTeam</code>, then click on their name, which will take you to their page within the organization. Change their role to <code>Owner</code>, which is in a pulldown menu on left side of screen.</p>
+</div>
+<div class="section level3">
+<h3 id="add-users-to-nasa-openscapes-2i2c-jupyterhub-for-a-workshop">Add users to NASA Openscapes 2i2c JupyterHub for a workshop<a class="anchor" aria-label="anchor" href="#add-users-to-nasa-openscapes-2i2c-jupyterhub-for-a-workshop"></a>
+</h3>
+<p>Copy and run this code to give users access to the NASA Openscapes 2i2c JupyterHub by adding them to the relevant GitHub Team</p>
+<pre><code><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://openscapes.github.io/kyber/">kyber</a></span><span class="op">)</span> </span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rstudio/rmarkdown" class="external-link">rmarkdown</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tibble.tidyverse.org/" class="external-link">tibble</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://fs.r-lib.org" class="external-link">fs</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/milesmcbain/datapasta" class="external-link">datapasta</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">team_name</span> <span class="op">&lt;-</span> <span class="st">"WorkshopAccess-2i2c"</span></span>
+<span></span>
+<span><span class="co">## for a long list of usernames, we can use datapasta and run everything below</span></span>
+<span><span class="va">members</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html" class="external-link">tribble</a></span><span class="op">(</span></span>
+<span>  <span class="op">~</span><span class="va">username</span>,</span>
+<span>  <span class="st">"virdi"</span>,</span>
+<span>  <span class="st">"alexishunzinger"</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="reference/add_team_members.html">add_team_members</a></span><span class="op">(</span><span class="va">team_name</span>, members <span class="op">=</span> <span class="va">members</span><span class="op">$</span><span class="va">username</span>, org <span class="op">=</span> <span class="st">"nasa-openscapes-workshops"</span><span class="op">)</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
