@@ -64,7 +64,7 @@ create_github_token(
 gitcreds_set()
 ```
 
-## Example Workflow
+## Example Workflow - Champions Cohorts
 
 This workflow often happens in 4 separate stages:
 
@@ -222,6 +222,38 @@ add_team_to_repo(repo_name, team_name, org = "openscapes")
 ```
 
 Yay! Now all to do is to highlight the usernames in green in the ParticipantList for our bookkeeping!
+
+## Example Workflow - NASA Openscapes 2i2c JupyterHub Access
+
+**GitHub organization:** https://github.com/nasa-openscapes-workshops  
+**Teams:** https://github.com/orgs/nasa-openscapes-workshops/teams
+
+### Add NASA Openscapes Mentor to AdminTeam
+
+NASA Openscapes Mentors are given GitHub permissions to administer access for participants in workshops. To do this they must have an `Owner` role in the [`AdminTeam`](https://github.com/orgs/nasa-openscapes-workshops/teams/adminteam). To grant access to Mentor, an existing Owner of the GitHub Organization must add the Mentor's GitHub username to the `AdminTeam`, then click on their name, which will take you to their page within the organization. Change their role to `Owner`, which is in a pulldown menu on left side of screen.
+
+### Give access to NASA Openscapes 2i2c JupyterHub for a workshop
+
+Copy and run this code to give users access to the NASA Openscapes 2i2c JupyterHub by adding them to the relevant GitHub Team
+
+```
+library(kyber) 
+library(rmarkdown)
+library(tibble)
+library(fs)
+library(datapasta)
+
+team_name <- "WorkshopAccess-2i2c"
+
+## for a long list of usernames, we can use datapasta and run everything below
+members <- tibble::tribble(
+  ~username,
+  "virdi",
+  "alexishunzinger"
+)
+
+add_team_members(team_name, members = members$username, org = "nasa-openscapes-workshops")
+```
 
 
 ## R package developer notes
