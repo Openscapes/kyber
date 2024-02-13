@@ -245,7 +245,7 @@ library(datapasta)
 
 team_name <- "WorkshopAccess-2i2c"
 
-## for a long list of usernames, we can use datapasta and run everything below
+## for a long list of usernames, we can copy the list from a spreadsheet and use the datapasta Addin 'paste as tribble' and run everything below
 members <- tibble::tribble(
   ~username,
   "virdi",
