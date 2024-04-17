@@ -121,6 +121,7 @@
 <span><span class="va">cohort_registry_url</span> <span class="op">&lt;-</span> <span class="st">"https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/"</span></span>
 <span></span>
 <span><span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html" class="external-link">read_sheet</a></span><span class="op">(</span><span class="va">cohort_registry_url</span>, sheet <span class="op">=</span> <span class="st">"test-sheet"</span><span class="op">)</span></span></code></pre></div>
+<p>For creating the GitHub Team and adding usernames, Kyber requires you to set up a GitHub Personal Access Token with scopes for <strong>repo</strong> and <strong>admin:org</strong>. See the <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token" class="external-link">GitHub PAT documentation</a> for more information about how to generate your PAT. You can create your PAT with <code><a href="https://usethis.r-lib.org/reference/github-token.html" class="external-link">usethis::create_github_token()</a></code> with their defaults, plus <code>admin:org</code>. Please make sure that you do not share your PAT or commit it to a Git repository, since anyone with your PAT can act as you on GitHub.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://usethis.r-lib.org" class="external-link">usethis</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://gitcreds.r-lib.org/" class="external-link">gitcreds</a></span><span class="op">)</span></span>
@@ -142,7 +143,6 @@
 <li>create <code>github-clinic</code> files (days before GitHub Clinic in Call 2)</li>
 <li>create github team and add usernames (day before Clinic, when we have all usernames)</li>
 </ol>
-<p>For creating the GitHub Team and adding usernames, Kyber requires you to set up a GitHub Personal Access Token with scopes for <strong>repo</strong> and <strong>admin:org</strong>. See the <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token" class="external-link">GitHub PAT documentation</a> for more information about how to generate your PAT. You can create your PAT with <code><a href="https://usethis.r-lib.org/reference/github-token.html" class="external-link">usethis::create_github_token()</a></code> with their defaults, plus <code>admin:org</code>. Please make sure that you do not share your PAT or commit it to a Git repository, since anyone with your PAT can act as you on GitHub.</p>
 <div class="section level3">
 <h3 id="id_1-create-github-repo-with-readme">1. Create GitHub repo with README<a class="anchor" aria-label="anchor" href="#id_1-create-github-repo-with-readme"></a>
 </h3>
