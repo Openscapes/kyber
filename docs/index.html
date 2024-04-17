@@ -29,7 +29,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light" data-bs-theme="light"><div class="container">
     
     <a class="navbar-brand me-2" href="index.html">kyber</a>
 
@@ -144,7 +144,7 @@
 </ol>
 <p>For creating the GitHub Team and adding usernames, Kyber requires you to set up a GitHub Personal Access Token with scopes for <strong>repo</strong> and <strong>admin:org</strong>. See the <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token" class="external-link">GitHub PAT documentation</a> for more information about how to generate your PAT. You can create your PAT with <code><a href="https://usethis.r-lib.org/reference/github-token.html" class="external-link">usethis::create_github_token()</a></code> with their defaults, plus <code>admin:org</code>. Please make sure that you do not share your PAT or commit it to a Git repository, since anyone with your PAT can act as you on GitHub.</p>
 <div class="section level3">
-<h3 id="id_1-create-github-repo">1. Create GitHub repo<a class="anchor" aria-label="anchor" href="#id_1-create-github-repo"></a>
+<h3 id="id_1-create-github-repo-with-readme">1. Create GitHub repo with README<a class="anchor" aria-label="anchor" href="#id_1-create-github-repo-with-readme"></a>
 </h3>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://openscapes.github.io/kyber/">kyber</a></span><span class="op">)</span> </span>
@@ -169,9 +169,12 @@
 <span><span class="co"># 3. Git add, commit, and push in this repository.</span></span></code></pre></div>
 </div>
 <div class="section level3">
-<h3 id="id_2-agendas">2. Agendas<a class="anchor" aria-label="anchor" href="#id_2-agendas"></a>
+<h3 id="id_2-create-agendas">2. Create Agendas<a class="anchor" aria-label="anchor" href="#id_2-create-agendas"></a>
 </h3>
-<pre><code><span><span class="fu">kyber</span><span class="fu">::</span><span class="fu"><a href="reference/call_agenda.html">call_agenda</a></span><span class="op">(</span></span>
+<pre><code><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://openscapes.github.io/kyber/">kyber</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://googlesheets4.tidyverse.org" class="external-link">googlesheets4</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">kyber</span><span class="fu">::</span><span class="fu"><a href="reference/call_agenda.html">call_agenda</a></span><span class="op">(</span></span>
 <span>    registry_url <span class="op">=</span> <span class="st">"https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/edit#gid=942365997"</span>, </span>
 <span>    cohort_id <span class="op">=</span> <span class="st">"2022-nasa-champions"</span>, </span>
 <span>    call_number <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code></pre>
@@ -237,7 +240,7 @@
 <p><strong>Now</strong>, commit and push the Markdown files in the <code>github-clinic</code> folder plus the `horst-champions-trailhead.png in the top-level folder to GitHub.com. Don’t push the .gitignore or .rproj since they’re not relevant for the Clinic. (You can do Command-A to select all files and then unclick those 2 you don’t want).</p>
 </div>
 <div class="section level3">
-<h3 id="id_4-create-github-team-add-usernames">4. Create GitHub team, add usernames<a class="anchor" aria-label="anchor" href="#id_4-create-github-team-add-usernames"></a>
+<h3 id="id_4-github-clinic---create-github-team-add-usernames">4. GitHub Clinic - Create GitHub team, add usernames<a class="anchor" aria-label="anchor" href="#id_4-github-clinic---create-github-team-add-usernames"></a>
 </h3>
 <ol style="list-style-type: decimal">
 <li>Open RStudio, and create a new script (temporary, you’ll deleted it but it’s a nicer place to work)</li>
@@ -276,7 +279,7 @@
 <span></span>
 <span><span class="fu"><a href="reference/add_team_members.html">add_team_members</a></span><span class="op">(</span><span class="va">team_name</span>, members <span class="op">=</span> <span class="va">members</span><span class="op">$</span><span class="va">username</span>, org <span class="op">=</span> <span class="st">"openscapes"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/add_team_to_repo.html">add_team_to_repo</a></span><span class="op">(</span><span class="va">repo_name</span>, <span class="va">team_name</span>, org <span class="op">=</span> <span class="st">"openscapes"</span><span class="op">)</span></span></code></pre></div>
-<p>Yay! Now all to do is to highlight the usernames in green in the ParticipantList for our bookkeeping!</p>
+<p>Yay! Now highlight those usernames in green in the ParticipantList for our bookkeeping!</p>
 </div>
 </div>
 <div class="section level2">
@@ -331,6 +334,23 @@
 </ol>
 <p>Usually you can repeat steps 3-5 whenever you make edits you want to review, however if there are problems try restarting you R session.</p>
 </div>
+<div class="section level2">
+<h2 id="contributing-to-kyber">Contributing to Kyber<a class="anchor" aria-label="anchor" href="#contributing-to-kyber"></a>
+</h2>
+<p>To contribute to Kyber, fork the repo, unchecking the “Copy the main branch only” box. Start working from the <code>dev</code> branch, create a new branch like <code>new-branch dev</code>, and then submit Pull Requests to <code>dev</code>. If using Git on the command line the workflow would look like:</p>
+<ul>
+<li>clone your fork of kyber</li>
+<li><code>git checkout -b dev</code></li>
+<li><code>git pull origin dev</code></li>
+<li>to start working on a new branch off of dev: <code>git checkout -b new-branch dev</code>
+</li>
+<li>add and commit changes</li>
+<li>then <code>git push origin new-branch</code>
+</li>
+<li>keep adding, committing, and pushing, then when you’re ready open a PR</li>
+</ul>
+<p>We started using this workflow when the [California Water Boards Openscapes]((<a href="https://cawaterboarddatacenter.github.io/swrcb-openscapes/" class="external-link uri">https://cawaterboarddatacenter.github.io/swrcb-openscapes/</a>) team began using Kyber to create Agendas from some unique source Rmd files. For example, Water Boards Cohort Calls are 2 hours, not the default 1.5 hrs, their lesson order is different from Openscapes Core Lessons, and includes a new lesson on Documentation.</p>
+</div>
 </div>
   </main><aside class="col-md-3"><div class="license">
 <h2 data-toc-skip>License</h2>
@@ -374,7 +394,7 @@
 
 <div class="pkgdown-footer-right">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.8.</p>
 </div>
 
     </footer>
