@@ -84,6 +84,8 @@ This workflow often happens in 4 separate stages:
 
 ### 1. Create GitHub repo with README
 
+Creating a repo creates a local folder with README.Rmd
+
 ``` r
 library(kyber) 
 library(rmarkdown)
@@ -92,7 +94,8 @@ library(fs)
 
 repo_name <- "2021-ilm-rotj"
 
-# This will open a README.Rmd for you to edit 
+# This will open a README.Rmd for you to edit
+# In yaml of README.Rmd, `cohort_name: "Cohort"` replace "Cohort" with specific cohort name
 repo_path <- init_repo(repo_name)
 
 # Then render the README.Rmd to README.md
@@ -108,6 +111,8 @@ render(path(repo_path, "README.Rmd"))
 ```
 
 ### 2. Create Agendas
+
+Ensure `cohort_metadata` is complete in the Cohort Registry sheet, including cohort_website, google_drive_folder and cohort_name_long. These will appear in the Agendas.
 
 ```
 library(kyber)
