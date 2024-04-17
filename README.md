@@ -53,6 +53,14 @@ cohort_registry_url <- "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoC
 read_sheet(cohort_registry_url, sheet = "test-sheet")
 ```
 
+For creating the GitHub Team and adding usernames, Kyber requires you to
+set up a GitHub Personal Access Token with scopes for **repo** and
+**admin:org**. See the [GitHub PAT
+documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+for more information about how to generate your PAT. You can create your PAT with `usethis::create_github_token()` with their defaults, plus `admin:org`.
+Please make sure that you do not share your PAT or commit it to a Git repository, since
+anyone with your PAT can act as you on GitHub.
+
 ``` r
 library(usethis)
 library(gitcreds)
@@ -73,15 +81,6 @@ This workflow often happens in 4 separate stages:
 3.  create `github-clinic` files (days before GitHub Clinic in Call 2)
 4.  create github team and add usernames (day before Clinic, when we
     have all usernames)
-
-For creating the GitHub Team and adding usernames, Kyber requires you to
-set up a GitHub Personal Access Token with scopes for **repo** and
-**admin:org**. See the [GitHub PAT
-documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-for more information about how to generate your PAT. You can create your PAT with `usethis::create_github_token()` with their defaults, plus `admin:org`.
-Please make sure
-that you do not share your PAT or commit it to a Git repository, since
-anyone with your PAT can act as you on GitHub.
 
 ### 1. Create GitHub repo with README
 
