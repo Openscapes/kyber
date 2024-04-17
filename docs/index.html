@@ -146,6 +146,7 @@
 <div class="section level3">
 <h3 id="id_1-create-github-repo-with-readme">1. Create GitHub repo with README<a class="anchor" aria-label="anchor" href="#id_1-create-github-repo-with-readme"></a>
 </h3>
+<p>Creating a repo creates a local folder with README.Rmd</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://openscapes.github.io/kyber/">kyber</a></span><span class="op">)</span> </span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rstudio/rmarkdown" class="external-link">rmarkdown</a></span><span class="op">)</span></span>
@@ -154,7 +155,8 @@
 <span></span>
 <span><span class="va">repo_name</span> <span class="op">&lt;-</span> <span class="st">"2021-ilm-rotj"</span></span>
 <span></span>
-<span><span class="co"># This will open a README.Rmd for you to edit </span></span>
+<span><span class="co"># This will open a README.Rmd for you to edit</span></span>
+<span><span class="co"># In yaml of README.Rmd, `cohort_name: "Cohort"` replace "Cohort" with specific cohort name</span></span>
 <span><span class="va">repo_path</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/init_repo.html">init_repo</a></span><span class="op">(</span><span class="va">repo_name</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Then render the README.Rmd to README.md</span></span>
@@ -171,6 +173,7 @@
 <div class="section level3">
 <h3 id="id_2-create-agendas">2. Create Agendas<a class="anchor" aria-label="anchor" href="#id_2-create-agendas"></a>
 </h3>
+<p>Ensure <code>cohort_metadata</code> is complete in the Cohort Registry sheet, including cohort_website, google_drive_folder and cohort_name_long. These will appear in the Agendas.</p>
 <pre><code><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://openscapes.github.io/kyber/">kyber</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://googlesheets4.tidyverse.org" class="external-link">googlesheets4</a></span><span class="op">)</span></span>
 <span></span>
