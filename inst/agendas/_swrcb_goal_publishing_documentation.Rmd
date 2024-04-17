@@ -1,0 +1,14 @@
+---
+params:
+  title: "Title"
+  date: "2024-04-25"
+  call: 3
+  call_start_time: "1:30pm PT"
+  total_duration: 120
+---
+
+# Call `r params$call`: `r params$title`
+
+`r format(as.Date(params$date), format="%B %d, %Y")`. `r kyber:::fmt_duration(params$call_start_time, params$total_duration, long_tz = TRUE)`.
+
+**Today's Goals:** We’ll practice using GitHub from the browser to support publishing and documentation, to get hands-on experience and to experiment.

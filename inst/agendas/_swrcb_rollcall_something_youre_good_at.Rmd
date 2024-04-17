@@ -1,14 +1,14 @@
 ---
 params:
   start_time: "1:30pm PT"
-  duration: 2
+  duration: 3
 ---
 
 ## Roll call • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-*Name / GitHub name / share a song that pumps you up or gives you energy*
+*Name / Team / Share something you’re good at*
 
--   Anna Holder / AHolder1 / Anything by Janelle Monáe
+-   Anna Holder / Instruction Team / making jam
 -   
 -   
 -   
