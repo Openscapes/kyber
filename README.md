@@ -83,7 +83,7 @@ Please make sure
 that you do not share your PAT or commit it to a Git repository, since
 anyone with your PAT can act as you on GitHub.
 
-### 1. Create GitHub repo
+### 1. Create GitHub repo with README
 
 ``` r
 library(kyber) 
@@ -108,9 +108,12 @@ render(path(repo_path, "README.Rmd"))
 # 3. Git add, commit, and push in this repository.
 ```
 
-### 2. Agendas
+### 2. Create Agendas
 
 ```
+library(kyber)
+library(googlesheets4)
+
 kyber::call_agenda(
     registry_url = "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/edit#gid=942365997", 
     cohort_id = "2022-nasa-champions", 
@@ -181,7 +184,7 @@ You'll now have .md files for each participant in the cohort! Any duplicate name
 **Now**, commit and push the Markdown files in the `github-clinic` folder plus the `horst-champions-trailhead.png in the top-level folder to GitHub.com. Don't push the .gitignore or .rproj since they're not relevant for the Clinic. (You can do Command-A to select all files and then unclick those 2 you don't want).
 
 
-### 4. Create GitHub team, add usernames
+### 4. GitHub Clinic - Create GitHub team, add usernames
 
 1. Open RStudio, and create a new script (temporary, you'll deleted it but it's a nicer place to work)
 1. Paste the following in it and review the code. You may already have a GitHub PAT set; there is more information at the top of the README about it. 
@@ -221,7 +224,7 @@ add_team_members(team_name, members = members$username, org = "openscapes")
 add_team_to_repo(repo_name, team_name, org = "openscapes")
 ```
 
-Yay! Now all to do is to highlight the usernames in green in the ParticipantList for our bookkeeping!
+Yay! Now highlight those usernames in green in the ParticipantList for our bookkeeping!
 
 ## Example Workflow - NASA Openscapes 2i2c JupyterHub Access
 
@@ -276,4 +279,18 @@ kyber::call_agenda(
 1. To review the call agenda, open `agenda.md`, click Preview, and view it in the Viewer Tab. 
 
 Usually you can repeat steps 3-5 whenever you make edits you want to review, however if there are problems try restarting you R session.
+
+## Contributing to Kyber
+
+To contribute to Kyber, fork the repo, unchecking the "Copy the main branch only" box. Start working from the `dev` branch, create a new branch like `new-branch dev`, and then submit Pull Requests to `dev`. If using Git on the command line the workflow would look like:
+
+- clone your fork of kyber
+- `git checkout -b dev`
+- `git pull origin dev`
+- to start working on a new branch off of dev: `git checkout -b new-branch dev`
+- add and commit changes
+- then `git push origin new-branch`
+- keep adding, committing, and pushing, then when you're ready open a PR
+
+We started using this workflow when the [California Water Boards Openscapes]((https://cawaterboarddatacenter.github.io/swrcb-openscapes/) team began using Kyber to create Agendas from some unique source Rmd files. For example, Water Boards Cohort Calls are 2 hours, not the default 1.5 hrs, their lesson order is different from Openscapes Core Lessons, and includes a new lesson on Documentation.
 
