@@ -62,6 +62,4 @@ repo_name <- "2021-ilm-rotj"
 repo_path <- init_repo(repo_name)
 ```
 
-
-
 [cr]: https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/edit#gid=695033382

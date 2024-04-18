@@ -1,4 +1,10 @@
 url: "https://openscapes.github.io/kyber/"
 template:
   bootstrap: 5
-
+navbar:
+  left:
+    - text: "Quick Cohort Setup"
+      href: articles/quick-cohort-setup.html
+    - text: "Reference"
+      href: reference/index.html
+    
