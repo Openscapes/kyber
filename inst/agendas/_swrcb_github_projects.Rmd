@@ -1,0 +1,97 @@
+---
+params:
+  start_time: "1:30pm PT"
+  duration: 44
+---
+
+## Growth Mindset & GitHub for Publishing • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+-   **GitHub for Project Management** (slides) (20 min) – Anna
+
+    -   ‎
+    -   
+    -   
+    -   
+
+-   **Breakout groups** (slide 6, 7 min) - Random groups of \~3 [9-10 Rooms] - [ Mentor Name ] (<font color="red">pause recording</font>)
+
+-   **Prompt: practice creating & commenting on GitHub Issues**
+
+    -   *This breakout group can be less collaborative and more co-working...but please chat and screenshare!*
+    -   Go to our cohort repo: \<`r params_registry$github_repo`\>
+    -   Create an issue with your group, try:
+        -   Practicing Markdown to write a message
+        -   Creating/assigning a label and applying it
+        -   Tagging/Assigning people in your breakout group (ask their username)
+        -   Adding an emoji 
+        -   Closing an Issue
+    -   Browse existing issues, try:
+        -   Contribute to other groups’ discussions
+        -   Add a comment
+        -   tag people
+
+(<font color="red">resume recording</font>)
+
+-   **Silent journaling** (7 min) – All
+
+-   *Respond to the prompts below. Then, read others responses and add +1’s or comments*
+
+    -   **How do these topics resonate with you?**
+
+        -   ‎
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+
+    -   **Do you have any project management ideas that you hope to implement, good examples of project management to share, or further ideas for you and/or your Openscapes team?**
+
+        -   ‎
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+        -   
+
+-   **Discussion** (10 min) – All
+
+    What ideas/questions/topics from breakouts/silent journaling are resonating with you?
+
+    -   ‎
+    -   
+    -   
+    -   
+    -   
+    -   
+    -   
+    -   
+    -   
+    -   
+    -   
+    -   
+
+-   **Useful Resources:**
+
+    -   CA Waterboards data center <https://github.com/CAWaterBoardDataCenter> 
+    -   For info on GitHub Project Boards and “Agile” project development, see Eli Holmes’(NOAA Fisheries, Openscapes Champion) videos etc  
+        -   [Intro to Agile and Kanban with GitHub project boards](https://rverse-tutorials.github.io/RWorkflow-NWFSC-2022/week3.html) 
+        -   [Intro to Agile Part 2: Scrum with GitHub issues and project boards](https://rverse-tutorials.github.io/RWorkflow-NWFSC-2022/week4.html)
