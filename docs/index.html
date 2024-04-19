@@ -14,8 +14,8 @@
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Set Up Learning Cohorts on GitHub">
 <meta property="og:description" content="What the package does (one paragraph).">
@@ -29,7 +29,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light" data-bs-theme="light"><div class="container">
     
     <a class="navbar-brand me-2" href="index.html">kyber</a>
 
@@ -75,7 +75,6 @@
 </div>
 <!-- badges: start -->
 
-<!-- badges: end -->
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -106,6 +105,12 @@
 <h2 id="quick-cohort-setup">Quick Cohort Setup<a class="anchor" aria-label="anchor" href="#quick-cohort-setup"></a>
 </h2>
 <div class="section level3">
+<h3 id="the-big-picture">The Big Picture<a class="anchor" aria-label="anchor" href="#the-big-picture"></a>
+</h3>
+<p>The chronological steps for creating Openscapes repos and materials using Kyber are detailed in the ReadMe. See this flow chart for understanding how these steps fit together, including the requirements to complete each step. (<a href="../man/figures/kyberflow_20230711.pdf">Kyber flow chart pdf</a>)</p>
+<p><img src="reference/figures/kyberflow_20230711.png"></p>
+</div>
+<div class="section level3">
 <h3 id="configuration">Configuration<a class="anchor" aria-label="anchor" href="#configuration"></a>
 </h3>
 <p>Using Kyber requires more configuration than most R packages since Kyber functions automate processes on GitHub that you would normally do by hand.</p>
@@ -116,6 +121,7 @@
 <span><span class="va">cohort_registry_url</span> <span class="op">&lt;-</span> <span class="st">"https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/"</span></span>
 <span></span>
 <span><span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html" class="external-link">read_sheet</a></span><span class="op">(</span><span class="va">cohort_registry_url</span>, sheet <span class="op">=</span> <span class="st">"test-sheet"</span><span class="op">)</span></span></code></pre></div>
+<p>For creating the GitHub Team and adding usernames, Kyber requires you to set up a GitHub Personal Access Token with scopes for <strong>repo</strong> and <strong>admin:org</strong>. See the <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token" class="external-link">GitHub PAT documentation</a> for more information about how to generate your PAT. You can create your PAT with <code><a href="https://usethis.r-lib.org/reference/github-token.html" class="external-link">usethis::create_github_token()</a></code> with their defaults, plus <code>admin:org</code>. Please make sure that you do not share your PAT or commit it to a Git repository, since anyone with your PAT can act as you on GitHub.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://usethis.r-lib.org" class="external-link">usethis</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://gitcreds.r-lib.org/" class="external-link">gitcreds</a></span><span class="op">)</span></span>
@@ -128,19 +134,19 @@
 </div>
 </div>
 <div class="section level2">
-<h2 id="example-workflow">Example Workflow<a class="anchor" aria-label="anchor" href="#example-workflow"></a>
+<h2 id="example-workflow---champions-cohorts">Example Workflow - Champions Cohorts<a class="anchor" aria-label="anchor" href="#example-workflow---champions-cohorts"></a>
 </h2>
 <p>This workflow often happens in 4 separate stages:</p>
 <ol style="list-style-type: decimal">
 <li>create the repo and readme (pre-cohort)</li>
+<li>create agenda documents before each Cohort Call</li>
 <li>create <code>github-clinic</code> files (days before GitHub Clinic in Call 2)</li>
 <li>create github team and add usernames (day before Clinic, when we have all usernames)</li>
-<li>create agenda documents before each Cohort Call</li>
 </ol>
-<p>For creating the GitHub Team and adding usernames, Kyber requires you to set up a GitHub Personal Access Token with scopes for <strong>repo</strong> and <strong>admin:org</strong>. See the <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token" class="external-link">GitHub PAT documentation</a> for more information about how to generate your PAT. You can create your PAT with <code><a href="https://usethis.r-lib.org/reference/github-token.html" class="external-link">usethis::create_github_token()</a></code> with their defaults, plus <code>admin:org</code>. Please make sure that you do not share your PAT or commit it to a Git repository, since anyone with your PAT can act as you on GitHub.</p>
 <div class="section level3">
-<h3 id="create-github-repo">Create GitHub repo<a class="anchor" aria-label="anchor" href="#create-github-repo"></a>
+<h3 id="id_1-create-github-repo-with-readme">1. Create GitHub repo with README<a class="anchor" aria-label="anchor" href="#id_1-create-github-repo-with-readme"></a>
 </h3>
+<p>Creating a repo creates a local folder with README.Rmd</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://openscapes.github.io/kyber/">kyber</a></span><span class="op">)</span> </span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rstudio/rmarkdown" class="external-link">rmarkdown</a></span><span class="op">)</span></span>
@@ -150,7 +156,8 @@
 <span><span class="va">repo_name</span> <span class="op">&lt;-</span> <span class="st">"2021-ilm-rotj"</span></span>
 <span></span>
 <span><span class="co"># This will open a README.Rmd for you to edit</span></span>
-<span><span class="va">repo_path</span> <span class="op">&lt;-</span> <span class="fu">create_repo</span><span class="op">(</span><span class="va">repo_name</span><span class="op">)</span></span>
+<span><span class="co"># In yaml of README.Rmd, `cohort_name: "Cohort"` replace "Cohort" with specific cohort name</span></span>
+<span><span class="va">repo_path</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/init_repo.html">init_repo</a></span><span class="op">(</span><span class="va">repo_name</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Then render the README.Rmd to README.md</span></span>
 <span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">render</a></span><span class="op">(</span><span class="fu"><a href="https://fs.r-lib.org/reference/path.html" class="external-link">path</a></span><span class="op">(</span><span class="va">repo_path</span>, <span class="st">"README.Rmd"</span><span class="op">)</span><span class="op">)</span></span>
@@ -164,11 +171,45 @@
 <span><span class="co"># 3. Git add, commit, and push in this repository.</span></span></code></pre></div>
 </div>
 <div class="section level3">
-<h3 id="github-clinic---generate-markdown-files-for-each-participant">GitHub Clinic - Generate Markdown Files for Each Participant<a class="anchor" aria-label="anchor" href="#github-clinic---generate-markdown-files-for-each-participant"></a>
+<h3 id="id_2-create-agendas">2. Create Agendas<a class="anchor" aria-label="anchor" href="#id_2-create-agendas"></a>
 </h3>
-<p>Clone the Cohort Repo to RStudio, then run the following code. Detailed instructions of what this looks like:</p>
+<p>Ensure <code>cohort_metadata</code> is complete in the Cohort Registry sheet, including cohort_website, google_drive_folder and cohort_name_long. These will appear in the Agendas.</p>
+<pre><code><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://openscapes.github.io/kyber/">kyber</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://googlesheets4.tidyverse.org" class="external-link">googlesheets4</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">kyber</span><span class="fu">::</span><span class="fu"><a href="reference/call_agenda.html">call_agenda</a></span><span class="op">(</span></span>
+<span>    registry_url <span class="op">=</span> <span class="st">"https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/edit#gid=942365997"</span>, </span>
+<span>    cohort_id <span class="op">=</span> <span class="st">"2022-nasa-champions"</span>, </span>
+<span>    call_number <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code></pre>
+<p>The following suggestions aid next steps as of July 14, 2022:</p>
+<p><strong>2.1 Move agenda to Google Docs</strong></p>
+<ul>
+<li>In RStudio, Knit (or PreviewHTML) the resulting <code>agenda.md</code> created from the code above and copy-paste the result into a Google Doc (example: 03_CallAgenda [ 2022-noaa-afsc ]. You might need to to expand the knitted preview into the browser to get it to copy/paste correctly into Google Docs.</li>
+<li>Move Google Doc to Openscapes Workspace folder Openscapes_CohortCalls [ year-cohort-name ].</li>
+</ul>
+<p><strong>2.2 Formatting your agenda</strong></p>
+<ul>
+<li>Select all (cmd-A) and change font to Open Sans</li>
+<li>Make p1 opening text 9 point font (the text above horizontal line &amp; Call title)</li>
+<li>Make Header 1 font 18, bold; update heading 1 to match (see screenshot below; Stef notes “update heading to match” has not been working in these docs)</li>
+<li>Make Header 2 font 14, bold; update heading 2 to match</li>
+<li>Select all (cmd-A), then:
+<ul>
+<li>“add space” then “remove space <strong>after</strong> paragraph” throughout to make spacing a little more cozy (yes seems odd to do and undo, but it works)</li>
+<li>“add space” then “remove space <strong>before</strong> paragraph” throughout to make spacing a little more cozy</li>
+</ul>
+</li>
+<li>Review doc and fix any further font weirdness</li>
+<li>Add page numbers</li>
+</ul>
+<p><strong>How to “update heading 1 to match”</strong>: (Stef notes this has not been working in these docs) In Google Doc, to update a text style (headings, normal text, with font type, size etc), highlight a section with the style you want, click the styles dropdown shown in the screenshot, and select e.g. “Update Heading 1 to match”. Double check the doc because we’ve noticed it missed some in an agenda.</p>
+</div>
+<div class="section level3">
+<h3 id="id_3-github-clinic---generate-markdown-files-for-each-participant">3. GitHub Clinic - Generate Markdown Files for Each Participant<a class="anchor" aria-label="anchor" href="#id_3-github-clinic---generate-markdown-files-for-each-participant"></a>
+</h3>
+<p>If you haven’t already, clone the Cohort Repo to RStudio (File &gt; New Project &gt; Version Control &gt; Git) , then run the following code. Detailed instructions of what this looks like:</p>
 <ol style="list-style-type: decimal">
-<li>Open RStudio, and create a new script (temporary, you’ll deleted it but it’s a nicer place to work)</li>
+<li>Open the cohort repo as a project in RStudio and create a new script (temporary, you’ll deleted it but it’s a nicer place to work)</li>
 <li>Copy the following into the script, then delete the examples “Erin, Julie”. You’ll keep the <code>_demo.md</code>, which is what you’ll demo live.</li>
 <li>Go to the ParticipantsList, and copy the 2 first and last columns</li>
 <li>Back in RStudio, put your cursor inside the “tribble” parentheses, then, in the Addin menu in the top of RStudio, select “Paste as Tribble”!</li>
@@ -192,17 +233,17 @@
 <span></span>
 <span><span class="co">## create .md files for each Champion</span></span>
 <span><span class="fu">kyber</span><span class="fu">::</span><span class="fu"><a href="reference/short_names.html">short_names</a></span><span class="op">(</span><span class="va">cohort</span><span class="op">$</span><span class="va">first</span>, <span class="va">cohort</span><span class="op">$</span><span class="va">last</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>   <span class="fu"><a href="reference/create_github_clinic.html">create_github_clinic</a></span><span class="op">(</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html" class="external-link">here</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span>   <span class="fu"><a href="reference/create_github_clinic.html">create_github_clinic</a></span><span class="op">(</span><span class="fu">here</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
 <span>   </span>
 <span><span class="co">## copy trailhead image into parent folder</span></span>
 <span><span class="va">trailhead_png</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"kyber-templates"</span>, </span>
 <span>                               <span class="st">"horst-champions-trailhead.png"</span>, package <span class="op">=</span> <span class="st">"kyber"</span><span class="op">)</span></span>
-<span><span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/copy.html" class="external-link">file_copy</a></span><span class="op">(</span><span class="va">trailhead_png</span>, <span class="fu"><a href="https://here.r-lib.org//reference/here.html" class="external-link">here</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>  </span></code></pre>
+<span><span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/copy.html" class="external-link">file_copy</a></span><span class="op">(</span><span class="va">trailhead_png</span>, <span class="fu">here</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>  </span></code></pre>
 <p>You’ll now have .md files for each participant in the cohort! Any duplicate names with have a <code>_LastInitial</code>. Check by clicking into the <code>github-clinic</code> folder and opening a file.</p>
 <p><strong>Now</strong>, commit and push the Markdown files in the <code>github-clinic</code> folder plus the `horst-champions-trailhead.png in the top-level folder to GitHub.com. Don’t push the .gitignore or .rproj since they’re not relevant for the Clinic. (You can do Command-A to select all files and then unclick those 2 you don’t want).</p>
 </div>
 <div class="section level3">
-<h3 id="create-github-team-add-usernames">Create GitHub team, add usernames<a class="anchor" aria-label="anchor" href="#create-github-team-add-usernames"></a>
+<h3 id="id_4-github-clinic---create-github-team-add-usernames">4. GitHub Clinic - Create GitHub team, add usernames<a class="anchor" aria-label="anchor" href="#id_4-github-clinic---create-github-team-add-usernames"></a>
 </h3>
 <ol style="list-style-type: decimal">
 <li>Open RStudio, and create a new script (temporary, you’ll deleted it but it’s a nicer place to work)</li>
@@ -210,13 +251,13 @@
 <li>Run this code first as-is with the example usernames in the <code>members</code> variable to check -</li>
 <li>Check that the example usernames were added in the Cohort GitHub: go to github.com/openscapes/cohort-name &gt; Settings &gt; Collaborators and Teams</li>
 <li>If the team was created with the username and appears in the repo, woohoo!</li>
-<li>Open the ParticipantsList and copy the GitHub username column, including the header.</li>
+<li>Open the ParticipantList and copy the GitHub username column, including the header.</li>
 <li>In RStudio, put your cursor after <code>members &lt;-</code> and use the <code>datapasta</code> Addin &gt; Paste As Tribble to paste the usernames into the <code>members</code> variable, deleting the previous example user.</li>
 <li>After pasting in the R script, rename the header as “username” (no spaces or asterices)</li>
 <li>Run the following code again and check that everyone was added!</li>
 <li>Finally, in the ParticipantList, highlight all usernames we’ve added in green. This helps us know who else to add during the live clinic session.</li>
 </ol>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## First make sure you have a GitHub PAT set. If you need one, here's what you'd do:</span></span>
 <span><span class="co"># usethis::create_github_token() ## use their defaults plus `admin:org`</span></span>
 <span><span class="co"># Sys.setenv(GITHUB_PAT = "ghp_0id4zkO4GqSuEsC6Zs22wf34Y0u3270") </span></span>
@@ -240,38 +281,78 @@
 <span>  <span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="reference/add_team_members.html">add_team_members</a></span><span class="op">(</span><span class="va">team_name</span>, members <span class="op">=</span> <span class="va">members</span><span class="op">$</span><span class="va">username</span>, org <span class="op">=</span> <span class="st">"openscapes"</span><span class="op">)</span></span>
-<span><span class="fu">add_repo_to_team</span><span class="op">(</span><span class="va">repo_name</span>, <span class="va">team_name</span>, org <span class="op">=</span> <span class="st">"openscapes"</span><span class="op">)</span></span></code></pre></div>
-<p>Yay! Now all to do is to highlight the usernames in green in the ParticpantList for our bookkeeping!</p>
+<span><span class="fu"><a href="reference/add_team_to_repo.html">add_team_to_repo</a></span><span class="op">(</span><span class="va">repo_name</span>, <span class="va">team_name</span>, org <span class="op">=</span> <span class="st">"openscapes"</span><span class="op">)</span></span></code></pre></div>
+<p>Yay! Now highlight those usernames in green in the ParticipantList for our bookkeeping!</p>
+</div>
+</div>
+<div class="section level2">
+<h2 id="example-workflow---nasa-openscapes-2i2c-jupyterhub-access">Example Workflow - NASA Openscapes 2i2c JupyterHub Access<a class="anchor" aria-label="anchor" href="#example-workflow---nasa-openscapes-2i2c-jupyterhub-access"></a>
+</h2>
+<p><strong>GitHub organization:</strong> <a href="https://github.com/nasa-openscapes-workshops" class="external-link uri">https://github.com/nasa-openscapes-workshops</a><br><strong>Teams:</strong> <a href="https://github.com/orgs/nasa-openscapes-workshops/teams" class="external-link uri">https://github.com/orgs/nasa-openscapes-workshops/teams</a></p>
+<div class="section level3">
+<h3 id="add-nasa-openscapes-mentor-to-adminteam">Add NASA Openscapes Mentor to AdminTeam<a class="anchor" aria-label="anchor" href="#add-nasa-openscapes-mentor-to-adminteam"></a>
+</h3>
+<p>NASA Openscapes Mentors are given GitHub permissions to administer access for participants in workshops. To do this they must have an <code>Owner</code> role in the <a href="https://github.com/orgs/nasa-openscapes-workshops/teams/adminteam" class="external-link"><code>AdminTeam</code></a>. To grant access to Mentor, an existing Owner of the GitHub Organization must add the Mentor’s GitHub username to the <code>AdminTeam</code>, then click on their name, which will take you to their page within the organization. Change their role to <code>Owner</code>, which is in a pulldown menu on left side of screen.</p>
 </div>
 <div class="section level3">
-<h3 id="agendas">Agendas<a class="anchor" aria-label="anchor" href="#agendas"></a>
+<h3 id="add-users-to-nasa-openscapes-2i2c-jupyterhub-for-a-workshop">Add users to NASA Openscapes 2i2c JupyterHub for a workshop<a class="anchor" aria-label="anchor" href="#add-users-to-nasa-openscapes-2i2c-jupyterhub-for-a-workshop"></a>
 </h3>
-<div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>kyber<span class="sc">::</span><span class="fu">call_agenda</span>(</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">registry_url =</span> <span class="st">"https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/edit#gid=942365997"</span>, </span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">cohort_id =</span> <span class="st">"2022-nasa-champions"</span>, </span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">call_number =</span> <span class="dv">3</span>)</span></code></pre></div>
-<p>Then, to move this to a Google Doc and fine-tune formatting, follow these notes (as of July 14, 2022):</p>
-<ul>
-<li>In RStudio, Knit (or PreviewHTML) the resulting <code>agenda.md</code> and copy-paste the result into a Google Doc (example: 03_CallAgenda [ 2022-noaa-afsc ]. You might need to to expand the knitted preview into the browser to get it to copy/paste correctly into Google Docs</li>
-<li>Move Google Doc to Openscapes Workspace folder Openscapes_CohortCalls [ year-cohort-name ].</li>
-<li>Select all (cmd-A) and change font to Open Sans</li>
-<li>Make p1 opening text 9 point font (the text above horizontal line &amp; Call title)</li>
-<li>Make Header 1 font 18, bold; update heading 1 to match (see screenshot below; Stef notes “update heading to match” has not been working in these docs)</li>
-<li>Make Header 2 font 14, bold; update heading 2 to match</li>
-<li>Select all (cmd-A), then:
-<ul>
-<li>“add space” then “remove space <strong>after</strong> paragraph” throughout to make spacing a little more cozy (yes seems odd to do and undo, but it works)</li>
-<li>“add space” then “remove space <strong>before</strong> paragraph” throughout to make spacing a little more cozy</li>
-</ul>
+<p>Copy and run this code to give users access to the NASA Openscapes 2i2c JupyterHub by adding them to the relevant GitHub Team</p>
+<pre><code><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://openscapes.github.io/kyber/">kyber</a></span><span class="op">)</span> </span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rstudio/rmarkdown" class="external-link">rmarkdown</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tibble.tidyverse.org/" class="external-link">tibble</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://fs.r-lib.org" class="external-link">fs</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/milesmcbain/datapasta" class="external-link">datapasta</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">team_name</span> <span class="op">&lt;-</span> <span class="st">"WorkshopAccess-2i2c"</span></span>
+<span></span>
+<span><span class="co">## for a long list of usernames, we can copy the list from a spreadsheet and use the datapasta Addin 'paste as tribble' and run everything below</span></span>
+<span><span class="va">members</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html" class="external-link">tribble</a></span><span class="op">(</span></span>
+<span>  <span class="op">~</span><span class="va">username</span>,</span>
+<span>  <span class="st">"virdi"</span>,</span>
+<span>  <span class="st">"alexishunzinger"</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="reference/add_team_members.html">add_team_members</a></span><span class="op">(</span><span class="va">team_name</span>, members <span class="op">=</span> <span class="va">members</span><span class="op">$</span><span class="va">username</span>, org <span class="op">=</span> <span class="st">"nasa-openscapes-workshops"</span><span class="op">)</span></span></code></pre>
+</div>
+</div>
+<div class="section level2">
+<h2 id="r-package-developer-notes">R package developer notes<a class="anchor" aria-label="anchor" href="#r-package-developer-notes"></a>
+</h2>
+<p>Steps to edit <code>kyber</code> locally and review those edits:</p>
+<ol style="list-style-type: decimal">
+<li>In RStudio, open <code>kyber</code> project, pull main branch</li>
+<li>If you’ve been working in RStudio, restart your R session.</li>
+<li>Make edits to files (for example <code>inst/agendas/team_culture.Rmd</code>)</li>
+<li>In R console: <code><a href="https://devtools.r-lib.org/reference/load_all.html" class="external-link">devtools::load_all()</a></code> to load local edits for <code>kyber</code>
 </li>
-<li>Review doc and fix any further font weirdness</li>
-<li>Add page numbers</li>
+<li>In R console, test whatever you edited. For example, to create the call agenda:</li>
+</ol>
+<pre><code><span><span class="fu">kyber</span><span class="fu">::</span><span class="fu"><a href="reference/call_agenda.html">call_agenda</a></span><span class="op">(</span></span>
+<span>    registry_url <span class="op">=</span> <span class="st">"https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/edit#gid=942365997"</span>, </span>
+<span>    cohort_id <span class="op">=</span> <span class="st">"2022-noaa-afsc-fall"</span>, </span>
+<span>    call_number <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span></code></pre>
+<ol style="list-style-type: decimal">
+<li>To review the call agenda, open <code>agenda.md</code>, click Preview, and view it in the Viewer Tab.</li>
+</ol>
+<p>Usually you can repeat steps 3-5 whenever you make edits you want to review, however if there are problems try restarting you R session.</p>
+</div>
+<div class="section level2">
+<h2 id="contributing-to-kyber">Contributing to Kyber<a class="anchor" aria-label="anchor" href="#contributing-to-kyber"></a>
+</h2>
+<p>To contribute to Kyber, fork the repo, unchecking the “Copy the main branch only” box. Start working from the <code>dev</code> branch, create a new branch like <code>new-branch dev</code>, and then submit Pull Requests to <code>dev</code>. If using Git on the command line the workflow would look like:</p>
+<ul>
+<li>clone your fork of kyber</li>
+<li><code>git checkout -b dev</code></li>
+<li><code>git pull origin dev</code></li>
+<li>to start working on a new branch off of dev: <code>git checkout -b new-branch dev</code>
+</li>
+<li>add and commit changes</li>
+<li>then <code>git push origin new-branch</code>
+</li>
+<li>keep adding, committing, and pushing, then when you’re ready open a PR</li>
 </ul>
-<p><strong>How to “update heading 1 to match”</strong>: (Stef notes this has not been working in these docs) In Google Doc, to update a text style (headings, normal text, with font type, size etc), highlight a section with the style you want, click the styles dropdown shown in the screenshot, and select e.g. “Update Heading 1 to match”. Double check the doc because we’ve noticed it missed some in an agenda.</p>
-<div class="figure">
-<img src="https://user-images.githubusercontent.com/11927811/179125336-ec2fc1e5-792e-495d-8a29-c1ed3ec3cdc4.png" alt=""><p class="caption">Screen Shot 2022-07-14 at 5 50 28 PM</p>
-</div>
-</div>
+<p>We started using this workflow when the [California Water Boards Openscapes]((<a href="https://cawaterboarddatacenter.github.io/swrcb-openscapes/" class="external-link uri">https://cawaterboarddatacenter.github.io/swrcb-openscapes/</a>) team began using Kyber to create Agendas from some unique source Rmd files. For example, Water Boards Cohort Calls are 2 hours, not the default 1.5 hrs, their lesson order is different from Openscapes Core Lessons, and includes a new lesson on Documentation.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="license">
@@ -301,7 +382,7 @@
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/Openscapes/kyber/actions" class="external-link"><img src="https://github.com/Openscapes/kyber/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://github.com/Openscapes/kyber/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/Openscapes/kyber/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
 </ul>
 </div>
 
@@ -316,7 +397,7 @@
 
 <div class="pkgdown-footer-right">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.8.</p>
 </div>
 
     </footer>
