@@ -233,12 +233,12 @@
 <span></span>
 <span><span class="co">## create .md files for each Champion</span></span>
 <span><span class="fu">kyber</span><span class="fu">::</span><span class="fu"><a href="reference/short_names.html">short_names</a></span><span class="op">(</span><span class="va">cohort</span><span class="op">$</span><span class="va">first</span>, <span class="va">cohort</span><span class="op">$</span><span class="va">last</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>   <span class="fu"><a href="reference/create_github_clinic.html">create_github_clinic</a></span><span class="op">(</span><span class="fu">here</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span>   <span class="fu"><a href="reference/create_github_clinic.html">create_github_clinic</a></span><span class="op">(</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html" class="external-link">here</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
 <span>   </span>
 <span><span class="co">## copy trailhead image into parent folder</span></span>
 <span><span class="va">trailhead_png</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"kyber-templates"</span>, </span>
 <span>                               <span class="st">"horst-champions-trailhead.png"</span>, package <span class="op">=</span> <span class="st">"kyber"</span><span class="op">)</span></span>
-<span><span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/copy.html" class="external-link">file_copy</a></span><span class="op">(</span><span class="va">trailhead_png</span>, <span class="fu">here</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>  </span></code></pre>
+<span><span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/copy.html" class="external-link">file_copy</a></span><span class="op">(</span><span class="va">trailhead_png</span>, <span class="fu"><a href="https://here.r-lib.org//reference/here.html" class="external-link">here</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>  </span></code></pre>
 <p>You’ll now have .md files for each participant in the cohort! Any duplicate names with have a <code>_LastInitial</code>. Check by clicking into the <code>github-clinic</code> folder and opening a file.</p>
 <p><strong>Now</strong>, commit and push the Markdown files in the <code>github-clinic</code> folder plus the `horst-champions-trailhead.png in the top-level folder to GitHub.com. Don’t push the .gitignore or .rproj since they’re not relevant for the Clinic. (You can do Command-A to select all files and then unclick those 2 you don’t want).</p>
 </div>

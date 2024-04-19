@@ -1,14 +1,14 @@
 ---
-params:
+params: 
   start_time: "1:30pm PT"
   duration: 2
 ---
 
 ## Roll call • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-*Name / GitHub name / share a song that pumps you up or gives you energy*
+*Name / pronouns / share a place that's meaningful to you*
 
--   Anna Holder / AHolder1 / Anything by Janelle Monáe
+-   Anna Holder / she,her / Brisbane, Australia
 -   
 -   
 -   
