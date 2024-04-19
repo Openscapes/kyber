@@ -1,0 +1,36 @@
+---
+params: 
+  start_time: "1:30pm PT"
+  duration: 2
+---
+
+## Roll call • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
+*Name / Team Name / something that you did/learned/saw that resonated to you this week*
+
+-   Anna Holder / Instruction Team /
+-   
+-   
+-   
+-   
+-   
+-   
+-   
+-   
+-   
+-   
+-   
+-   
+-   
+-   
+-   
+-   
+-   
+-   
+-   
+-   
+-   
+-   
+-   
+-   
+-   

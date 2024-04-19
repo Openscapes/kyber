@@ -1,0 +1,7 @@
+---
+duration: 0 minutes
+---
+
+-   **Inclusion Tip of the Day** (1 min) – Anna
+    -   Striving for gender-inclusive language in the workplace -- e.g., opening a meeting with “welcome all/everyone/team” instead of “hi guys!” - [Idealist.org](https://www.idealist.org/en/careers/inclusive-language-workplace)
+    -   Suggest replacing "mom" or "grandpa" with dentist: a gender neutral term for someone we see as capable whose knowledge is simply outside the tech domain.
