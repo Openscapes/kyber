@@ -2,6 +2,7 @@
 params: 
   start_time: "12:00pm PT"
   duration: 0
+  files: ["carousel-applications.jpg"]
 ---
 
 - **Efficiency Tip of the Day ** (2 min) – Stef
