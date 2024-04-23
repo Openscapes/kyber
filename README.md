@@ -32,9 +32,9 @@ usernames.
 
 ### The Big Picture
 
-The chronological steps for creating Openscapes repos and materials using Kyber are detailed in the ReadMe. See this flow chart for understanding how these steps fit together, including the requirements to complete each step. ([Kyber flow chart pdf](kyberflow_20230711.pdf))
+The chronological steps for creating Openscapes repos and materials using Kyber are detailed in the ReadMe. See this flow chart for understanding how these steps fit together, including the requirements to complete each step. ([Kyber flow chart pdf](../man/figures/kyberflow_20230711.pdf))
 
-![](kyberflow_20230711.png)
+![](man/figures/kyberflow_20230711.png)
 
 ### Configuration
 
@@ -53,6 +53,14 @@ cohort_registry_url <- "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoC
 read_sheet(cohort_registry_url, sheet = "test-sheet")
 ```
 
+For creating the GitHub Team and adding usernames, Kyber requires you to
+set up a GitHub Personal Access Token with scopes for **repo** and
+**admin:org**. See the [GitHub PAT
+documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+for more information about how to generate your PAT. You can create your PAT with `usethis::create_github_token()` with their defaults, plus `admin:org`.
+Please make sure that you do not share your PAT or commit it to a Git repository, since
+anyone with your PAT can act as you on GitHub.
+
 ``` r
 library(usethis)
 library(gitcreds)
@@ -64,7 +72,7 @@ create_github_token(
 gitcreds_set()
 ```
 
-## Example Workflow
+## Example Workflow - Champions Cohorts
 
 This workflow often happens in 4 separate stages:
 
@@ -74,16 +82,9 @@ This workflow often happens in 4 separate stages:
 4.  create github team and add usernames (day before Clinic, when we
     have all usernames)
 
-For creating the GitHub Team and adding usernames, Kyber requires you to
-set up a GitHub Personal Access Token with scopes for **repo** and
-**admin:org**. See the [GitHub PAT
-documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-for more information about how to generate your PAT. You can create your PAT with `usethis::create_github_token()` with their defaults, plus `admin:org`.
-Please make sure
-that you do not share your PAT or commit it to a Git repository, since
-anyone with your PAT can act as you on GitHub.
+### 1. Create GitHub repo with README
 
-### 1. Create GitHub repo
+Creating a repo creates a local folder with README.Rmd
 
 ``` r
 library(kyber) 
@@ -93,7 +94,8 @@ library(fs)
 
 repo_name <- "2021-ilm-rotj"
 
-# This will open a README.Rmd for you to edit 
+# This will open a README.Rmd for you to edit
+# In yaml of README.Rmd, `cohort_name: "Cohort"` replace "Cohort" with specific cohort name
 repo_path <- init_repo(repo_name)
 
 # Then render the README.Rmd to README.md
@@ -108,9 +110,14 @@ render(path(repo_path, "README.Rmd"))
 # 3. Git add, commit, and push in this repository.
 ```
 
-### 2. Agendas
+### 2. Create Agendas
+
+Ensure `cohort_metadata` is complete in the Cohort Registry sheet, including cohort_website, google_drive_folder and cohort_name_long. These will appear in the Agendas.
 
 ```
+library(kyber)
+library(googlesheets4)
+
 kyber::call_agenda(
     registry_url = "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/edit#gid=942365997", 
     cohort_id = "2022-nasa-champions", 
@@ -181,7 +188,7 @@ You'll now have .md files for each participant in the cohort! Any duplicate name
 **Now**, commit and push the Markdown files in the `github-clinic` folder plus the `horst-champions-trailhead.png in the top-level folder to GitHub.com. Don't push the .gitignore or .rproj since they're not relevant for the Clinic. (You can do Command-A to select all files and then unclick those 2 you don't want).
 
 
-### 4. Create GitHub team, add usernames
+### 4. GitHub Clinic - Create GitHub team, add usernames
 
 1. Open RStudio, and create a new script (temporary, you'll deleted it but it's a nicer place to work)
 1. Paste the following in it and review the code. You may already have a GitHub PAT set; there is more information at the top of the README about it. 
@@ -221,7 +228,39 @@ add_team_members(team_name, members = members$username, org = "openscapes")
 add_team_to_repo(repo_name, team_name, org = "openscapes")
 ```
 
-Yay! Now all to do is to highlight the usernames in green in the ParticipantList for our bookkeeping!
+Yay! Now highlight those usernames in green in the ParticipantList for our bookkeeping!
+
+## Example Workflow - NASA Openscapes 2i2c JupyterHub Access
+
+**GitHub organization:** https://github.com/nasa-openscapes-workshops  
+**Teams:** https://github.com/orgs/nasa-openscapes-workshops/teams
+
+### Add NASA Openscapes Mentor to AdminTeam
+
+NASA Openscapes Mentors are given GitHub permissions to administer access for participants in workshops. To do this they must have an `Owner` role in the [`AdminTeam`](https://github.com/orgs/nasa-openscapes-workshops/teams/adminteam). To grant access to Mentor, an existing Owner of the GitHub Organization must add the Mentor's GitHub username to the `AdminTeam`, then click on their name, which will take you to their page within the organization. Change their role to `Owner`, which is in a pulldown menu on left side of screen.
+
+### Add users to NASA Openscapes 2i2c JupyterHub for a workshop
+
+Copy and run this code to give users access to the NASA Openscapes 2i2c JupyterHub by adding them to the relevant GitHub Team
+
+```
+library(kyber) 
+library(rmarkdown)
+library(tibble)
+library(fs)
+library(datapasta)
+
+team_name <- "WorkshopAccess-2i2c"
+
+## for a long list of usernames, we can copy the list from a spreadsheet and use the datapasta Addin 'paste as tribble' and run everything below
+members <- tibble::tribble(
+  ~username,
+  "virdi",
+  "alexishunzinger"
+)
+
+add_team_members(team_name, members = members$username, org = "nasa-openscapes-workshops")
+```
 
 
 ## R package developer notes
@@ -244,4 +283,18 @@ kyber::call_agenda(
 1. To review the call agenda, open `agenda.md`, click Preview, and view it in the Viewer Tab. 
 
 Usually you can repeat steps 3-5 whenever you make edits you want to review, however if there are problems try restarting you R session.
+
+## Contributing to Kyber
+
+To contribute to Kyber, fork the repo, unchecking the "Copy the main branch only" box. Start working from the `dev` branch, create a new branch like `new-branch dev`, and then submit Pull Requests to `dev`. If using Git on the command line the workflow would look like:
+
+- clone your fork of kyber
+- `git checkout -b dev`
+- `git pull origin dev`
+- to start working on a new branch off of dev: `git checkout -b new-branch dev`
+- add and commit changes
+- then `git push origin new-branch`
+- keep adding, committing, and pushing, then when you're ready open a PR
+
+We started using this workflow when the [California Water Boards Openscapes]((https://cawaterboarddatacenter.github.io/swrcb-openscapes/) team began using Kyber to create Agendas from some unique source Rmd files. For example, Water Boards Cohort Calls are 2 hours, not the default 1.5 hrs, their lesson order is different from Openscapes Core Lessons, and includes a new lesson on Documentation.
 

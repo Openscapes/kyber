@@ -13,14 +13,14 @@ params:
   -    
   -  
   -  
-  - 
+(<font color="red">pause recording</font>) 
 - **Breakout groups** (12 min) – All (groups of 3-4, leads separate)
   - **Prompt: What is something that you or someone has done on a team to make it psychologically safe to speak up with a wildly creative idea or a problem that no one else saw?**
   - ‎
   - 
   -  
   -   
-  - 
+(<font color="red">resume recording</font>)
 - **Share outs** (9 min) – All
   - ‎
   - 

@@ -98,6 +98,7 @@ call_agenda <- function(registry_url, cohort_id, call_number,
     pull("cohort_website")
     
   params_registry$title <- call_registry %>% 
+    filter(cohort_type == cohort_type_) %>% 
     filter(call == call_number) %>% 
     pull("title")
   

@@ -6,19 +6,19 @@ params:
 
 ## GitHub for Project Management • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-- **GitHub Clinic: Issues** ([slides](https://docs.google.com/presentation/d/1PzGAbEpNhT6CDPe1DCHf5-eVAjy-2R2D3VMHz7dY774/edit?usp=sharing) 17-20) (10 min) – Julie
-  - ‎
+- **GitHub Clinic: Issues** ([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/edit#slide=id.g20695b6755c_0_148) 17-20) (10 min) – Stef
   - 
   - 
-- **Breakout groups: practice using Issues ** (10 min) – (breakouts as teams) - Erin
+  - 
+- **Breakout groups: practice using Issues ** (10 min) (<font color="red">pause recording</font>) – (breakouts as teams) - Julie
 - *This second breakout group is more collaborative: tag others and screenshare*
 
   - Create an issue with your group, write in it, practice Markdown
   - Contribute to other groups’ discussions
   - Learn anything cool? Share!  
   - 
-  - 
-  - Project Boards, Organizations ([slides](https://docs.google.com/presentation/d/1PzGAbEpNhT6CDPe1DCHf5-eVAjy-2R2D3VMHz7dY774/edit#slide=id.gef700acc1e_0_43) 21-23) (2 min) - Julie
+  - (<font color="red">resume recording</font>)
+  - Project Boards, Organizations ([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/edit#slide=id.g20695b6755c_0_185) 21-22) (2 min) - Stef
   - ‎
   - 
   - 

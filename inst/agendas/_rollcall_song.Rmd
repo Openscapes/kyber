@@ -6,7 +6,7 @@ params:
 
 ## Roll call • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-*Name / pronouns / share a song that pumps you up or gives you energy*
+*Name / pronouns / share a song that pumps you up or gives you energy – we'll add it to the Openscapes Spotify community pump-up [playlist](https://open.spotify.com/playlist/7rAl8ORlMJbqa9IylFhSwd?si=5042f14a9b8c4dcc&nd=1)*
 
 - 
 -    
@@ -18,3 +18,19 @@ params:
 -  
 - 
 -  
+-   
+-  
+- 
+-  
+-  
+-  
+- 
+- 
+-   
+-  
+- 
+-  
+-  
+-  
+- 
+- 

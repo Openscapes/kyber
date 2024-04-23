@@ -20,7 +20,7 @@ params:
   -   **Openscapes badges by Allison Horst!**
   -   Download from here: [openscapes_hex_badge.png](https://github.com/Openscapes/how_we_work/blob/main/openscapes_hex_badge.png)
   -   You can put it on your website, like the [Wood Lab](https://chelsealwood.com/research/) and the [Fay Lab](https://thefaylab.github.io/lab-manual/index.html)!
- -   **Please share a mailingan address for your team so we can send stickers!**
+ -   **Please share a mailing address for your team so we can send stickers!**
 
 ![](khora-laptop-sleep.jpg)
 
