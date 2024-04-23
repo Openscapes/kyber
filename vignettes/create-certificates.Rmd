@@ -14,6 +14,8 @@ library(googlesheets4)
 library(dplyr)
 ```
 
+## Create a single certificate
+
 For a single certificate, you can supply all of the values manually:
 
 ```{r}
@@ -28,7 +30,7 @@ render_certificate(
 )
 ```
 
-Create a batch of certificates for a cohort
+## Create a batch of certificates for a cohort
 
 First load data from a cohort google sheet:
 
@@ -39,7 +41,7 @@ registry <- read_sheet("https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoC
 participants <- read_sheet("https://docs.google.com/spreadsheets/d/10ub0NKrPa1phUa_X-Jxg8KYH57WGLaZzBN-vQT4e10o")
 ```
 
-Subset data: create `registry` and `participants` where Cohort is 2023-fred-hutch
+Then subset the data: create `registry` and `participants` where Cohort is 2023-fred-hutch.
 
 ```{r}
 #| eval: false
