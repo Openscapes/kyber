@@ -34,11 +34,11 @@ returns the path to the file
 Render certificates of completion for a participant in a cohort
 }
 \examples{
-
+\dontrun{
 render_certificate(cohort_name = "2023-fred-hutch",
                    participant_name = "Name",
                    start_date = "Sep 19",
                    end_date = "Oct 19",
                    cohort_website = "https://openscapes.github.io/2023-fred-hutch/")
-
+}
 }
