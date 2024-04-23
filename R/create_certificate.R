@@ -7,7 +7,7 @@ render_certificate <- function(cohort_name,
                               cohort_website) {
   
   rmarkdown::render(
-    "inst/certificate/certificate.Rmd", 
+    System.file("certificate/certificate.Rmd",package = "kyber"), 
     params = list(
       cohort_name = cohort_name, 
       participant_name = participant_name, 
