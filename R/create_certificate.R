@@ -1,27 +1,14 @@
-## create_certificate.R
 
-## load libraries ----
-## tinytex must be installed to create pdf, ?but does not have to be loaded like other libraries?
-
-library(googlesheets4)
-library(tidyverse)
-# library(lubridate)
-
-## load data ----
-## successfully uses googlesheets4 pkg to get data frames from these two sheets
-registry <- read_sheet("https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc")
-participants <- read_sheet("https://docs.google.com/spreadsheets/d/10ub0NKrPa1phUa_X-Jxg8KYH57WGLaZzBN-vQT4e10o")
-
-## define function ----
-# adapted from https://bookdown.org/yihui/rmarkdown/params-knit.html
-render_certificate = function(cohort_name, 
+render_certificate <- function(cohort_name, 
+  # adapted from https://bookdown.org/yihui/rmarkdown/params-knit.html
                               participant_name,
                               start_date, 
                               end_date,
                               cohort_website) {
   
   rmarkdown::render(
-    "inst/certificate/certificate.Rmd", params = list(
+    "inst/certificate/certificate.Rmd", 
+    params = list(
       cohort_name = cohort_name, 
       participant_name = participant_name, 
       start_date = start_date, 
@@ -31,36 +18,6 @@ render_certificate = function(cohort_name,
     output_format = "pdf_document",
     output_file = paste0("OpenscapesCertificate", "_", cohort_name, "_", participant_name, ".pdf")
   )
-}
-
-
-## code with fixed values we used to test rendering a certificate using participant_name_first and participant_name_last
-## comment out when doing the real thing
-# render_certificate(cohort_name = "2023-fred-hutch",
-#                    participant_name = "Name",
-#                    start_date = "Sep 19",
-#                    end_date = "Oct 19",
-#                    cohort_website = "https://openscapes.github.io/2023-fred-hutch/")
-# 
-
-
-## call function ----
-
-## subset data: `registry` and `participants` where Cohort is 2023-fred-hutch
-registry_cohort <-filter(registry, cohort_name=="2023-fred-hutch")
-participants_cohort <-filter(participants, cohort=="2023-fred-hutch")
-
-## Loop through each participant in list and create certificate for each
-participant_name <- participants_cohort$last
-
-for (p_name in participant_name) {
-
-  render_certificate(cohort_name = registry_cohort$cohort_name,
-                     start_date = registry_cohort$date_start,
-                     end_date = registry_cohort$date_end,
-                     cohort_website = registry_cohort$cohort_website,
-                     participant_name = p_name
-                     )
 }
 
 

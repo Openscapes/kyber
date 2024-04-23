@@ -1,0 +1,60 @@
+---
+title: "create-certificates"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{create-certificates}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(kyber)
+library(googlesheets4)
+library(dplyr)
+```
+
+```{r}
+
+## load data ----
+## successfully uses googlesheets4 pkg to get data frames from these two sheets
+registry <- read_sheet("https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc")
+participants <- read_sheet("https://docs.google.com/spreadsheets/d/10ub0NKrPa1phUa_X-Jxg8KYH57WGLaZzBN-vQT4e10o")
+
+
+## code with fixed values we used to test rendering a certificate using participant_name_first and participant_name_last
+## comment out when doing the real thing
+# render_certificate(cohort_name = "2023-fred-hutch",
+#                    participant_name = "Name",
+#                    start_date = "Sep 19",
+#                    end_date = "Oct 19",
+#                    cohort_website = "https://openscapes.github.io/2023-fred-hutch/")
+# 
+
+
+## call function ----
+
+## subset data: `registry` and `participants` where Cohort is 2023-fred-hutch
+registry_cohort <- filter(registry, cohort_name=="2023-fred-hutch")
+participants_cohort <-filter(participants, cohort=="2023-fred-hutch")
+
+## Loop through each participant in list and create certificate for each
+participant_name <- participants_cohort$last
+
+for (p_name in participant_name) {
+
+  render_certificate(cohort_name = registry_cohort$cohort_name,
+                     start_date = registry_cohort$date_start,
+                     end_date = registry_cohort$date_end,
+                     cohort_website = registry_cohort$cohort_website,
+                     participant_name = p_name
+                     )
+}
+
+```
