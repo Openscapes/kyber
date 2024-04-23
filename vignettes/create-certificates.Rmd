@@ -1,46 +1,49 @@
 ---
-title: "create-certificates"
+title: "Create Cohort Certificates"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{create-certificates}
+  %\VignetteIndexEntry{Create Cohort Certificates}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
-
 ```{r setup}
+#| eval: false
 library(kyber)
 library(googlesheets4)
 library(dplyr)
 ```
 
-```{r}
+For a single certificate, you can supply all of the values manually:
 
-## load data ----
-## successfully uses googlesheets4 pkg to get data frames from these two sheets
+```{r}
+#| eval: false
+
+render_certificate(
+  cohort_name = "2023-fred-hutch",
+  participant_name = "Name",
+  start_date = "Sep 19",
+  end_date = "Oct 19",
+  cohort_website = "https://openscapes.github.io/2023-fred-hutch/"
+)
+```
+
+Create a batch of certificates for a cohort
+
+First load data from a cohort google sheet:
+
+```{r}
+#| eval: false
+
 registry <- read_sheet("https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc")
 participants <- read_sheet("https://docs.google.com/spreadsheets/d/10ub0NKrPa1phUa_X-Jxg8KYH57WGLaZzBN-vQT4e10o")
+```
 
+Subset data: create `registry` and `participants` where Cohort is 2023-fred-hutch
 
-## code with fixed values we used to test rendering a certificate using participant_name_first and participant_name_last
-## comment out when doing the real thing
-# render_certificate(cohort_name = "2023-fred-hutch",
-#                    participant_name = "Name",
-#                    start_date = "Sep 19",
-#                    end_date = "Oct 19",
-#                    cohort_website = "https://openscapes.github.io/2023-fred-hutch/")
-# 
+```{r}
+#| eval: false
 
-
-## call function ----
-
-## subset data: `registry` and `participants` where Cohort is 2023-fred-hutch
 registry_cohort <- filter(registry, cohort_name=="2023-fred-hutch")
 participants_cohort <-filter(participants, cohort=="2023-fred-hutch")
 
@@ -48,13 +51,14 @@ participants_cohort <-filter(participants, cohort=="2023-fred-hutch")
 participant_name <- participants_cohort$last
 
 for (p_name in participant_name) {
-
-  render_certificate(cohort_name = registry_cohort$cohort_name,
-                     start_date = registry_cohort$date_start,
-                     end_date = registry_cohort$date_end,
-                     cohort_website = registry_cohort$cohort_website,
-                     participant_name = p_name
-                     )
+  render_certificate(
+    cohort_name = registry_cohort$cohort_name,
+    start_date = registry_cohort$date_start,
+    end_date = registry_cohort$date_end,
+    cohort_website = registry_cohort$cohort_website,
+    participant_name = p_name,
+    output_dir = "~/Desktop"            
+  )
 }
 
 ```
