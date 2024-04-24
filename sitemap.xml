@@ -10,6 +10,9 @@
     <loc>https://openscapes.github.io/kyber/articles/configuration.html</loc>
   </url>
   <url>
+    <loc>https://openscapes.github.io/kyber/articles/create-certificates.html</loc>
+  </url>
+  <url>
     <loc>https://openscapes.github.io/kyber/articles/github-repo.html</loc>
   </url>
   <url>
@@ -62,6 +65,9 @@
   </url>
   <url>
     <loc>https://openscapes.github.io/kyber/reference/pipe.html</loc>
+  </url>
+  <url>
+    <loc>https://openscapes.github.io/kyber/reference/render_certificate.html</loc>
   </url>
   <url>
     <loc>https://openscapes.github.io/kyber/reference/short_names.html</loc>
