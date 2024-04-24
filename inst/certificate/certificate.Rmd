@@ -1,0 +1,32 @@
+---
+params:
+  cohort_name: "2023 Fred Hutch"
+  participant_name: "Lastname"
+  start_date: "August 29"
+  end_date: "October 24"
+  cohort_website: "https://openscapes.github.io/2023-fred-hutch/"
+  files: ["openscapes_hex.png"]
+
+output: html_document
+# output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Openscapes Champions Program Certificate of Completion
+Certificate of Completion: `r params$cohort_name` Cohort  
+`r params$cohort_website`
+
+Dates: `r params$start_date` to `r params$end_date`
+
+This certifies that `r params$participant_name` <!---`r params$participant_name_first` `r params$participant_name_last`---> has completed the Openscapes Champions Program, an open data science mentorship program for science teams. It is a multi-month program that is designed to ignite incremental and sustainable change within research teams and beyond. It helps teams get their own work done and participate in open science, while building skills and community within the realities of scientists’ busy schedules, varying expertise and needs. Learn more at [openscapes.org/initiatives](https://openscapes.org/initiatives).
+
+
+<https://doi.org/10.5281/zenodo.7407247>
+
+<img src="openscapes_hex.png" width="100">
+
+
