@@ -38,7 +38,7 @@ First load data from a cohort google sheet:
 #| eval: false
 
 registry <- read_sheet("https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc")
-participants <- read_sheet("https://docs.google.com/spreadsheets/d/10ub0NKrPa1phUa_X-Jxg8KYH57WGLaZzBN-vQT4e10o")
+participants <- read_sheet("url for OpenscapesParticipantsMainList")
 ```
 
 Then subset the data: create `registry` and `participants` where Cohort is 2023-fred-hutch.
