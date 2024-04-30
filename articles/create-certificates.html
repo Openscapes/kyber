@@ -106,7 +106,7 @@ manually:</p>
 <p>First load data from a cohort google sheet:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">registry</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html" class="external-link">read_sheet</a></span><span class="op">(</span><span class="st">"https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc"</span><span class="op">)</span></span>
-<span><span class="va">participants</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html" class="external-link">read_sheet</a></span><span class="op">(</span><span class="st">"https://docs.google.com/spreadsheets/d/10ub0NKrPa1phUa_X-Jxg8KYH57WGLaZzBN-vQT4e10o"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">participants</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html" class="external-link">read_sheet</a></span><span class="op">(</span><span class="st">"url for OpenscapesParticipantsMainList"</span><span class="op">)</span></span></code></pre></div>
 <p>Then subset the data: create <code>registry</code> and
 <code>participants</code> where Cohort is 2023-fred-hutch.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
