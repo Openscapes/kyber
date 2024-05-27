@@ -51,6 +51,70 @@ render_certificate <- function(cohort_name,
     output_dir = output_dir
   )
 }
+
+#' Render a batch of certificates for a Champions Cohort
+#' 
+#' Given a data.frame of Champions participants and a Cohort registry, 
+#' create a certificate for each participant
+#'
+#' @param registry `data.frame` from Google Sheet of Champions registry 
+#'        (`"OpenscapesChampionsCohortRegistry"`)
+#' @param participants `data.frame` from Google Sheet of Champions participants
+#'        (`"OpenscapesParticipantsMainList"`)
+#' @param cohort_name Name of the cohort as it appears in `registry` and 
+#'        `participants`
+#' @inheritParams render_certificate
+#'
+#' @return path to the directory containing the certificates
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' registry <- read_sheet("path-to-registry")
+#' participants <- read_sheet("path-to-participants")
+#' 
+#' render_batch_certificates(
+#'   registry,
+#'   particpants,
+#'   "2023-fred-hutch", 
+#'   "~/Desktop/fred-hutch-certificates"
+#' )
+#' }
+render_batch_certificates <- function(registry,
+                                      participants,
+                                      cohort_name,
+                                      output_dir = ".") {
+  
+  if (!cohort_name %in% registry$cohort_name) {
+    stop("'cohort_name' is not a cohort in 'registry_sheet'", call. = FALSE)
+  }
+  
+  if (!cohort_name %in% participants$cohort) {
+    stop("'cohort_name' is not a cohort in 'participant_sheet'", call. = FALSE)
+  }
+  
+  registry_cohort <- dplyr::filter(registry, cohort_name == !!cohort_name)
+  participants_cohort <- dplyr::filter(participants, cohort == !!cohort_name)
+  
+  ## Loop through each participant in list and create certificate for each
+  
+  dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
+
+  for (row in seq_len(nrow(participants_cohort))) {
+    render_certificate(
+      cohort_name = registry_cohort$cohort_name,
+      first_name = participants_cohort$first[row],
+      last_name = participants_cohort$last[row],
+      start_date = registry_cohort$date_start,
+      end_date = registry_cohort$date_end,
+      cohort_website = registry_cohort$cohort_website,
+      output_dir = output_dir         
+    )
+    
+    output_dir
+  }
+  
+}
   
   
   # Ideas for my original approach before Nick Tierney's help 
