@@ -14,13 +14,13 @@
 #'
 #' @examples
 #' \dontrun{
-#' render_certificate(cohort_name = "2023-fred-hutch",
+#' create_certificate(cohort_name = "2023-fred-hutch",
 #'                    participant_name = "Name",
 #'                    start_date = "Sep 19",
 #'                    end_date = "Oct 19",
 #'                    cohort_website = "https://openscapes.github.io/2023-fred-hutch/")
 #' }
-render_certificate <- function(cohort_name, 
+create_certificate <- function(cohort_name, 
                                first_name,
                                last_name,
                                start_date, 
@@ -63,7 +63,7 @@ render_certificate <- function(cohort_name,
 #'        (`"OpenscapesParticipantsMainList"`)
 #' @param cohort_name Name of the cohort as it appears in `registry` and 
 #'        `participants`
-#' @inheritParams render_certificate
+#' @inheritParams create_certificate
 #'
 #' @return path to the directory containing the certificates
 #' @export
@@ -73,14 +73,14 @@ render_certificate <- function(cohort_name,
 #' registry <- read_sheet("path-to-registry")
 #' participants <- read_sheet("path-to-participants")
 #' 
-#' render_batch_certificates(
+#' create_batch_certificates(
 #'   registry,
 #'   particpants,
 #'   "2023-fred-hutch", 
 #'   "~/Desktop/fred-hutch-certificates"
 #' )
 #' }
-render_batch_certificates <- function(registry,
+create_batch_certificates <- function(registry,
                                       participants,
                                       cohort_name,
                                       output_dir = ".") {
@@ -108,7 +108,7 @@ render_batch_certificates <- function(registry,
   dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 
   for (row in seq_len(nrow(participants_cohort))) {
-    render_certificate(
+    create_certificate(
       cohort_name = registry_cohort$cohort_name,
       first_name = participants_cohort$first[row],
       last_name = participants_cohort$last[row],

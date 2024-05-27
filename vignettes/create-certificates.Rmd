@@ -21,7 +21,7 @@ For a single certificate, you can supply all of the values manually:
 ```{r}
 #| eval: false
 
-render_certificate(
+create_certificate(
   cohort_name = "2023-fred-hutch",
   first_name = "First Name",
   last_name = "Last Name",
@@ -42,12 +42,12 @@ registry <- read_sheet("https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoC
 participants <- read_sheet("URL to OpenscapesParticipantsMainList")
 ```
 
-Then call the `render_batch_certificates()` function to create the certificates:
+Then call the `create_batch_certificates()` function to create the certificates:
 
 ```{r}
 #| eval: false
 
-render_batch_certificates(
+create_batch_certificates(
   registry = registry,
   participants = participants,
   cohort_name = "2023-fred-hutch",

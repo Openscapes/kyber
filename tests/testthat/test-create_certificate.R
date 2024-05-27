@@ -1,7 +1,7 @@
-test_that("render_certificate works", {
+test_that("create_certificate works", {
   tdir <- withr::local_tempdir()
   
-  cert_path <- render_certificate(
+  cert_path <- create_certificate(
     "Test cohort",
     first_name = "Jane",
     last_name = "Doe",
