@@ -6,7 +6,8 @@
 \usage{
 render_certificate(
   cohort_name,
-  participant_name,
+  first_name,
+  last_name,
   start_date,
   end_date,
   cohort_website,
@@ -16,7 +17,9 @@ render_certificate(
 \arguments{
 \item{cohort_name}{The name of the cohort}
 
-\item{participant_name}{The name of the participant}
+\item{first_name}{First name of participant}
+
+\item{last_name}{Last name of participant}
 
 \item{start_date}{cohort start date}
 
