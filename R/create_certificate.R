@@ -93,8 +93,15 @@ render_batch_certificates <- function(registry,
     stop("'cohort_name' is not a cohort in 'participant_sheet'", call. = FALSE)
   }
   
-  registry_cohort <- dplyr::filter(registry, cohort_name == !!cohort_name)
-  participants_cohort <- dplyr::filter(participants, cohort == !!cohort_name)
+  registry_cohort <- dplyr::filter(
+    registry,
+    .data$cohort_name == !!cohort_name
+  )
+  
+  participants_cohort <- dplyr::filter(
+    participants,
+    .data$cohort == !!cohort_name
+  )
   
   ## Loop through each participant in list and create certificate for each
   
