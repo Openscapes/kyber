@@ -92,9 +92,10 @@
 <p>For a single certificate, you can supply all of the values
 manually:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/render_certificate.html">render_certificate</a></span><span class="op">(</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/create_certificate.html">create_certificate</a></span><span class="op">(</span></span>
 <span>  cohort_name <span class="op">=</span> <span class="st">"2023-fred-hutch"</span>,</span>
-<span>  participant_name <span class="op">=</span> <span class="st">"Name"</span>,</span>
+<span>  first_name <span class="op">=</span> <span class="st">"First Name"</span>,</span>
+<span>  last_name <span class="op">=</span> <span class="st">"Last Name"</span>,</span>
 <span>  start_date <span class="op">=</span> <span class="st">"Sep 19"</span>,</span>
 <span>  end_date <span class="op">=</span> <span class="st">"Oct 19"</span>,</span>
 <span>  cohort_website <span class="op">=</span> <span class="st">"https://openscapes.github.io/2023-fred-hutch/"</span></span>
@@ -105,27 +106,17 @@ manually:</p>
 </h2>
 <p>First load data from a cohort google sheet:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">registry</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html" class="external-link">read_sheet</a></span><span class="op">(</span><span class="st">"https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc"</span><span class="op">)</span></span>
-<span><span class="va">participants</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html" class="external-link">read_sheet</a></span><span class="op">(</span><span class="st">"url for OpenscapesParticipantsMainList"</span><span class="op">)</span></span></code></pre></div>
-<p>Then subset the data: create <code>registry</code> and
-<code>participants</code> where Cohort is 2023-fred-hutch.</p>
+<code class="sourceCode R"><span><span class="va">registry</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html" class="external-link">read_sheet</a></span><span class="op">(</span><span class="st">"https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc"</span><span class="op">)</span> <span class="co"># OpenscapesChampionsCohortRegistry</span></span>
+<span><span class="va">participants</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html" class="external-link">read_sheet</a></span><span class="op">(</span><span class="st">"URL to OpenscapesParticipantsMainList"</span><span class="op">)</span></span></code></pre></div>
+<p>Then call the <code><a href="../reference/create_batch_certificates.html">create_batch_certificates()</a></code> function to
+create the certificates:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">registry_cohort</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">registry</span>, <span class="va">cohort_name</span><span class="op">==</span><span class="st">"2023-fred-hutch"</span><span class="op">)</span></span>
-<span><span class="va">participants_cohort</span> <span class="op">&lt;-</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">participants</span>, <span class="va">cohort</span><span class="op">==</span><span class="st">"2023-fred-hutch"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## Loop through each participant in list and create certificate for each</span></span>
-<span><span class="va">participant_name</span> <span class="op">&lt;-</span> <span class="va">participants_cohort</span><span class="op">$</span><span class="va">last</span></span>
-<span></span>
-<span><span class="kw">for</span> <span class="op">(</span><span class="va">p_name</span> <span class="kw">in</span> <span class="va">participant_name</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu"><a href="../reference/render_certificate.html">render_certificate</a></span><span class="op">(</span></span>
-<span>    cohort_name <span class="op">=</span> <span class="va">registry_cohort</span><span class="op">$</span><span class="va">cohort_name</span>,</span>
-<span>    start_date <span class="op">=</span> <span class="va">registry_cohort</span><span class="op">$</span><span class="va">date_start</span>,</span>
-<span>    end_date <span class="op">=</span> <span class="va">registry_cohort</span><span class="op">$</span><span class="va">date_end</span>,</span>
-<span>    cohort_website <span class="op">=</span> <span class="va">registry_cohort</span><span class="op">$</span><span class="va">cohort_website</span>,</span>
-<span>    participant_name <span class="op">=</span> <span class="va">p_name</span>,</span>
-<span>    output_dir <span class="op">=</span> <span class="st">"~/Desktop"</span>            </span>
-<span>  <span class="op">)</span></span>
-<span><span class="op">}</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/create_batch_certificates.html">create_batch_certificates</a></span><span class="op">(</span></span>
+<span>  registry <span class="op">=</span> <span class="va">registry</span>,</span>
+<span>  participants <span class="op">=</span> <span class="va">participants</span>,</span>
+<span>  cohort_name <span class="op">=</span> <span class="st">"2023-fred-hutch"</span>,</span>
+<span>  output_dir <span class="op">=</span> <span class="st">"~/Desktop/fred-hutch-certificates"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
