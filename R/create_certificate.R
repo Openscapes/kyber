@@ -1,7 +1,8 @@
 #' Render certificates of completion for a participant in a cohort
 #'
 #' @param cohort_name The name of the cohort
-#' @param participant_name The name of the participant
+#' @param first_name First name of participant 
+#' @param last_name Last name of participant
 #' @param start_date cohort start date
 #' @param end_date cohort end date
 #' @param cohort_website cohort website
@@ -13,22 +14,24 @@
 #'
 #' @examples
 #' \dontrun{
-#' render_certificate(cohort_name = "2023-fred-hutch",
+#' create_certificate(cohort_name = "2023-fred-hutch",
 #'                    participant_name = "Name",
 #'                    start_date = "Sep 19",
 #'                    end_date = "Oct 19",
 #'                    cohort_website = "https://openscapes.github.io/2023-fred-hutch/")
 #' }
-render_certificate <- function(cohort_name, 
-                               participant_name,
+create_certificate <- function(cohort_name, 
+                               first_name,
+                               last_name,
                                start_date, 
                                end_date,
                                cohort_website, 
                                output_dir = ".") {
   # adapted from https://bookdown.org/yihui/rmarkdown/params-knit.html
     
+  participant_name <- paste(first_name, last_name)
   rmarkdown::render(
-    system.file("certificate/certificate.Rmd",package = "kyber"), 
+    system.file("certificate/certificate.Rmd",package = "kyber"),
     params = list(
       cohort_name = cohort_name, 
       participant_name = participant_name, 
@@ -40,13 +43,84 @@ render_certificate <- function(cohort_name,
     output_file = paste0(
       "OpenscapesCertificate",
       "_",
-      cohort_name,
+      gsub("\\s+", "-", cohort_name),
       "_",
-      participant_name,
+      gsub("\\s+", "-", participant_name),
       ".pdf"
     ),
     output_dir = output_dir
   )
+}
+
+#' Render a batch of certificates for a Champions Cohort
+#' 
+#' Given a data.frame of Champions participants and a Cohort registry, 
+#' create a certificate for each participant
+#'
+#' @param registry `data.frame` from Google Sheet of Champions registry 
+#'        (`"OpenscapesChampionsCohortRegistry"`)
+#' @param participants `data.frame` from Google Sheet of Champions participants
+#'        (`"OpenscapesParticipantsMainList"`)
+#' @param cohort_name Name of the cohort as it appears in `registry` and 
+#'        `participants`
+#' @inheritParams create_certificate
+#'
+#' @return path to the directory containing the certificates
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' registry <- read_sheet("path-to-registry")
+#' participants <- read_sheet("path-to-participants")
+#' 
+#' create_batch_certificates(
+#'   registry,
+#'   particpants,
+#'   "2023-fred-hutch", 
+#'   "~/Desktop/fred-hutch-certificates"
+#' )
+#' }
+create_batch_certificates <- function(registry,
+                                      participants,
+                                      cohort_name,
+                                      output_dir = ".") {
+  
+  if (!cohort_name %in% registry$cohort_name) {
+    stop("'cohort_name' is not a cohort in 'registry_sheet'", call. = FALSE)
+  }
+  
+  if (!cohort_name %in% participants$cohort) {
+    stop("'cohort_name' is not a cohort in 'participant_sheet'", call. = FALSE)
+  }
+  
+  registry_cohort <- dplyr::filter(
+    registry,
+    .data$cohort_name == !!cohort_name
+  )
+  
+  participants_cohort <- dplyr::filter(
+    participants,
+    .data$cohort == !!cohort_name
+  )
+  
+  ## Loop through each participant in list and create certificate for each
+  
+  dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
+
+  for (row in seq_len(nrow(participants_cohort))) {
+    create_certificate(
+      cohort_name = registry_cohort$cohort_name,
+      first_name = participants_cohort$first[row],
+      last_name = participants_cohort$last[row],
+      start_date = registry_cohort$date_start,
+      end_date = registry_cohort$date_end,
+      cohort_website = registry_cohort$cohort_website,
+      output_dir = output_dir         
+    )
+    
+    output_dir
+  }
+  
 }
   
   

@@ -35,7 +35,8 @@ Imports:
     stringr
 Suggests: 
     testthat (>= 3.0.0),
-    usethis
+    usethis,
+    withr
 Config/testthat/edition: 3
 URL: https://openscapes.github.io/kyber/
 VignetteBuilder: knitr

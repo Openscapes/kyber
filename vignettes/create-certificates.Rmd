@@ -21,9 +21,10 @@ For a single certificate, you can supply all of the values manually:
 ```{r}
 #| eval: false
 
-render_certificate(
+create_certificate(
   cohort_name = "2023-fred-hutch",
-  participant_name = "Name",
+  first_name = "First Name",
+  last_name = "Last Name",
   start_date = "Sep 19",
   end_date = "Oct 19",
   cohort_website = "https://openscapes.github.io/2023-fred-hutch/"
@@ -37,30 +38,20 @@ First load data from a cohort google sheet:
 ```{r}
 #| eval: false
 
-registry <- read_sheet("https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc")
-participants <- read_sheet("url for OpenscapesParticipantsMainList")
+registry <- read_sheet("https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc") # OpenscapesChampionsCohortRegistry
+participants <- read_sheet("URL to OpenscapesParticipantsMainList")
 ```
 
-Then subset the data: create `registry` and `participants` where Cohort is 2023-fred-hutch.
+Then call the `create_batch_certificates()` function to create the certificates:
 
 ```{r}
 #| eval: false
 
-registry_cohort <- filter(registry, cohort_name=="2023-fred-hutch")
-participants_cohort <-filter(participants, cohort=="2023-fred-hutch")
-
-## Loop through each participant in list and create certificate for each
-participant_name <- participants_cohort$last
-
-for (p_name in participant_name) {
-  render_certificate(
-    cohort_name = registry_cohort$cohort_name,
-    start_date = registry_cohort$date_start,
-    end_date = registry_cohort$date_end,
-    cohort_website = registry_cohort$cohort_website,
-    participant_name = p_name,
-    output_dir = "~/Desktop"            
-  )
-}
+create_batch_certificates(
+  registry = registry,
+  participants = participants,
+  cohort_name = "2023-fred-hutch",
+  output_dir = "~/Desktop/fred-hutch-certificates"
+)
 
 ```
