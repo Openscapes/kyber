@@ -1,7 +1,8 @@
 #' Render certificates of completion for a participant in a cohort
 #'
 #' @param cohort_name The name of the cohort
-#' @param participant_name The name of the participant
+#' @param first_name First name of participant 
+#' @param last_name Last name of participant
 #' @param start_date cohort start date
 #' @param end_date cohort end date
 #' @param cohort_website cohort website
@@ -20,15 +21,17 @@
 #'                    cohort_website = "https://openscapes.github.io/2023-fred-hutch/")
 #' }
 render_certificate <- function(cohort_name, 
-                               participant_name,
+                               first_name,
+                               last_name,
                                start_date, 
                                end_date,
                                cohort_website, 
                                output_dir = ".") {
   # adapted from https://bookdown.org/yihui/rmarkdown/params-knit.html
     
+  participant_name <- paste(first_name, last_name)
   rmarkdown::render(
-    system.file("certificate/certificate.Rmd",package = "kyber"), 
+    system.file("certificate/certificate.Rmd",package = "kyber"),
     params = list(
       cohort_name = cohort_name, 
       participant_name = participant_name, 
@@ -40,9 +43,9 @@ render_certificate <- function(cohort_name,
     output_file = paste0(
       "OpenscapesCertificate",
       "_",
-      cohort_name,
+      gsub("\\s+", "-", cohort_name),
       "_",
-      participant_name,
+      gsub("\\s+", "-", participant_name),
       ".pdf"
     ),
     output_dir = output_dir
