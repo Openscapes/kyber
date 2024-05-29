@@ -41,3 +41,34 @@ add_team_members <- function(team, members, org = "openscapes"){
   }
   invisible(responses)
 }
+
+list_team_members <- function(team, org = "openscapes", names_only = TRUE) {
+  check_gh_pat()
+
+  org_teams <- list_teams(org)
+
+  if (!team %in% org_teams) {
+    stop("'", team, "' is not part of the '", org, "' organization", 
+         call. = FALSE)
+  }
+
+  team_members <- gh(
+    "GET /orgs/{org}/teams/{team_slug}/members",
+    org = org,
+    team_slug = team
+  )
+
+  if (!names_only) return(team_members)
+    
+  vapply(team_members, `[[`, FUN.VALUE = character(1), "login")
+}
+  
+list_teams <- function(org = "openscapes", names_only = TRUE) {
+  check_gh_pat()
+    
+  teams <- gh("GET /orgs/{org}/teams", org = org)
+  
+  if (!names_only) return(teams)
+
+  vapply(teams, `[[`, FUN.VALUE = character(1), "name")
+}
