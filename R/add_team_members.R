@@ -3,7 +3,6 @@
 #' @param team The name of the team.
 #' @param members A vector of GitHub usernames.
 #' @param org The GitHub organization that owns the team and the repository.
-#' @importFrom gh gh
 #' @importFrom purrr map safely map_lgl
 #' @export
 #' @examples

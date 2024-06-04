@@ -3,7 +3,7 @@
 #' @param repository The name of the GitHub repository. 
 #' @param team The name of the team.
 #' @param org The GitHub organization that owns the team and the repository.
-#' @importFrom gh gh
+#'
 #' @export
 #' @examples
 #' \dontrun{

@@ -5,7 +5,6 @@
 #' @param org The GitHub organization that will own the team.
 #' @param visible Should the team be visible to every member of the organization?
 #' 
-#' @importFrom gh gh
 #' @export
 #' @examples
 #' \dontrun{
