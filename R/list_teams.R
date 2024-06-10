@@ -20,7 +20,6 @@ list_team_members <- function(team, org = "openscapes", names_only = TRUE, ...) 
   team <- tolower(team)
   org <- tolower(org)
   org_teams <- tolower(list_teams(org))
-  
 
   if (!team %in% org_teams) {
     stop("'", team, "' is not part of the '", org, "' organization", 
@@ -31,7 +30,8 @@ list_team_members <- function(team, org = "openscapes", names_only = TRUE, ...) 
     "GET /orgs/{org}/teams/{team_slug}/members",
     org = org,
     team_slug = team,
-    ...
+    ..., 
+    .limit = Inf
   )
 
   if (!names_only) return(team_members)
@@ -57,7 +57,7 @@ list_team_members <- function(team, org = "openscapes", names_only = TRUE, ...) 
 list_teams <- function(org = "openscapes", names_only = TRUE, ...) {
   check_gh_pat()
     
-  teams <- gh("GET /orgs/{org}/teams", org = org)
+  teams <- gh("GET /orgs/{org}/teams", org = org, ..., .limit = Inf)
   
   if (!names_only) return(teams)
 
