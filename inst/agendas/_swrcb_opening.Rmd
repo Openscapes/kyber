@@ -8,26 +8,32 @@ editor_options:
     wrap: 72
 ---
 
-**Openscapes Champions Cohort Series [ `r params$cohort_name` ]**
+# **Openscapes Champions Cohort Series [ `r params$cohort_name` ]**
 
--   Quick Links: [Cohort OneDrive
-    folder](%60r%20params$google_drive_folder%60),
-    <font color="purple">Zoom:</font> ,including Pathways folder, Cohort
-    teams & Slide decks
--   [Microsoft teams meeting
-    link](https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZGJhOTgwZjAtMTg2NS00OTQ4LWFiY2EtM2JiZDkyNWM1MDJl%40thread.v2/0?context=%7b%22Tid%22%3a%22fe186a25-7d49-41e6-9941-05d2281d36c1%22%2c%22Oid%22%3a%22b80729e4-c1b6-4598-b868-8c4da13c5db8%22%7d)
+## Quick Links
+
+-   [Cohort OneDrive
+    folder](https://cawaterboards-my.sharepoint.com/:f:/g/personal/anna_holder_waterboards_ca_gov/Esorcx6z_11IoHNirOJ6FnYB2xGixJbUhmFV8YvVaCJNdQ?email=Tina.Ures%40Waterboards.ca.gov&e=MS4Oh8),
+    including Pathways folder, Cohort teams & Slide decks
+-   [Microsoft Teams meeting
+    link](https://teams.microsoft.com/l/meetup-join/19%3ameeting_MmU4MDY0MWItYzI3Yi00NTg4LWJlNDItY2Q0ZjEzZDI1Nzgz%40thread.v2/0?context=%7b%22Tid%22%3a%22fe186a25-7d49-41e6-9941-05d2281d36c1%22%2c%22Oid%22%3a%22b80729e4-c1b6-4598-b868-8c4da13c5db8%22%7d)
 -   [Openscapes home page](https://www.openscapes.org/)
 -   [Water Boards Openscapes
     Webpage](https://cawaterboarddatacenter.github.io/swrcb-openscapes/)
--   Cohort Web Page: `r params$website`
--   <!--- Cohort GitHub Repo: `r params$repo` --->
+-   Cohort [GitHub Repo](https://github.com/Openscapes/2024-swrcb-fall)
+    \| [GitHub Web Page](https://openscapes.github.io/2024-swrcb-fall/)
 
-**Quick introduction:**
+## **Quick Introduction**
 
 -   Welcome, thank you for being here!
--   We’ll be using Microsoft Teams for video calls & OneDrive for notes
+-   We’ll be using Microsoft Teams for video calls & OneDrive for
+    storing meeting materials (agenda/notes, slides, recordings)
+-   We'll use this agenda/notes doc to guide our calls and capture
+    shared wisdom
     -   Everything you share in this doc is available to everyone else
         on the call
+    -   Everyone is encouraged to contribute to this doc throughout the
+        call
     -   Comments / emojis / gifs / +1s to say “me too” are welcome! 🎉🤓
 -   As you join each session, please:
     -   Turn on your camera

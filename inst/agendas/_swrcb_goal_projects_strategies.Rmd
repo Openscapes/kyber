@@ -1,9 +1,9 @@
 ---
 params:
   title: "Title"
-  date: "2024-05-09"
+  date: "2024-09-18"
   call: 4
-  call_start_time: "1:30pm PT"
+  call_start_time: "9:30am PT"
   total_duration: 120
 ---
 

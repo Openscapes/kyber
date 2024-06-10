@@ -1,22 +1,24 @@
 ---
 params: 
-  start_time: "1:30pm PT"
-  duration: 35
+  start_time: "9:30am PT"
+  duration: 45
 ---
 
 ## Intro to the Pathway & Seaside Chats • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 -   **Intro to the Pathway + Seaside Chats Prep** ([slides](https://docs.google.com/presentation/d/1TwCyf9xicLWBfPhW9HnYQH3-mHycEyVKTm38zSg4D3Q/edit#slide=id.p)) (20 min) – Anna
 
-    -   ‎Link to Pathway Template
+    -   ‎Link to Pathway Template `< add link >`
     -   
     -   
     -   
     -   
 
--   **Breakout groups** (5 min) - Teams [6 Rooms] - [ Mentor Name ] (<font color="red">pause recording</font>)
+-   **Breakout groups** (10 min) - Teams [6 Rooms] - [ Mentor Name ]
 
-    -   **Prompt: What is something that you or someone has done on a team to make it psychologically safe to speak up with a wildly creative idea or a problem that no one else saw?**
+    -   **Prompt: What is something that you are looking forward to thinking about in an upcoming Seaside Chats and/or documenting in your team’s Pathway?**
+    -   
+    -   
     -   **‎**
     -   
     -   ‎
@@ -26,7 +28,7 @@ params:
     -   ‎
     -   
 
--   **Discussion & Reflections** (10 min) - All (<font color="red">start recording</font>)
+-   **Discussion & Reflections** (15 min) - All
 
     -   ‎
     -   

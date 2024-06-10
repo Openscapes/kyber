@@ -1,25 +1,26 @@
 ---
 params: 
-  start_time: "1:30pm PT"
-  duration: 5
+  start_time: "9:30am PT"
+  duration: 9
 ---
 
 ## Closing • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 -   **Task to complete before next time** (5 min) – Anna
-
-    -   **Have TWO Seaside Chat with your team**
-
-    -   Prepare to present your Pathway work-in-progress on our final call
-
+    -   **Have TWO Seaside Chat with your team?** (One is required, the other is recommended - see below)
+    -   Seaside Chat #1: Fill in the "next steps" column of your Pathway
+        -   *Focus on the steps you will need to take to acheive your "Future You" goals.*
+            -   We recommend focusing on the "Next Steps" column and writing down the immediate next step(s) you can take to start working towards "Future You". Try to be as specific as possible. Don't focus on priorities right now - just write down what you think you need to do.
+            -   Hint: writing down "we need to figure out how to ..." or "we need to set time aside to think about ... more" totally counts! It's not about knowing/having all the answers/solutions - it's about documenting the immediate next step you need to take to find them!
+            -   [Pathways details & examples](https://openscapes.github.io/series/core-lessons/pathways)
+    -   Seaside Chat #2: Prepare to present your Pathway work-in-progress on our final call
         -   Each group has 10 minutes to share their pathway: (5 min present + 5 min Qs)
         -   You've been practicing this through the reflections breakout groups on earlier Calls
-        -   Presentations can be formal or informal - share with us in a way that feels right for you! 
+        -   Presentations can be formal or informal - share whatever you have with us in a way that feels right for you! 
         -   Team leads/supervisors are encouraged *not* to present!
-        -   See [Champions Series - Pathways Chapter](https://openscapes.github.io/series/core-lessons/pathways.html) for more details and examples
-        -   Share Pathway Doc in our PathwayShare folder `<add link>`
-
+        -   Share Pathway Doc in our PathwayShare folder, if you want
     -   **What questions do you have?**
+        -   
 
         -   
 

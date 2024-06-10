@@ -1,6 +1,6 @@
 ---
 params: 
-  start_time: "1:30pm PT"
+  start_time: "9:30am PT"
   duration: 55
 ---
 
@@ -9,22 +9,27 @@ params:
 -   **Data strategies for Future Us** ([slides](https://docs.google.com/presentation/d/1WJzVMg1Ps2cHG0G6D5kpnL-OCJ-wVBILMqtmzDQxEgU/)) (40 min) – GUEST INSTRUCTOR
 
     -   
-    -   
-    -   
-    -   
-    -   
+
     -   
 
--   **Silent journaling** (5 min) – All
+    -   
 
-    -   **How do these data strategies resonate with you / in your work?**
+    -   
+
+    -   
+
+    -   
+
+-   **Silent journaling** (4 min + 1 min for review / +1s) – All
+
+    -   **How do these data strategies resonate with you / your work?**
     -   ‎
     -   
     -   
     -   
     -   
     -   
-    -   **Do you collect/generate your own data? Other people’s data? What does it look like when you first see it? (formats, structure)**
+    -   **Do you collect/generate your own data? Other people’s data? What does it look like when you first see it? (formats, structure, etc.)**
     -   ‎
     -   
     -   
@@ -48,10 +53,8 @@ params:
     -   
     -   
     -   
+    -   
 
-```{=html}
-<!-- -->
-```
 -   **Useful Resources:**
 
     -   Data organization in spreadsheets ([Broman & Woo 2018](https://peerj.com/preprints/3183/))

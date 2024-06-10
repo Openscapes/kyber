@@ -1,11 +1,12 @@
 ---
 params: 
-  start_time: "1:30pm PT"
+  start_time: "9:30am PT"
   duration: 0
 ---
 
--   **Inclusion Tip of the Day** (1 min) – Anna
+-   **Inclusion Tip of the Day** (2 min) – Anna
     -   **Add alt text to images** (slides, tweets, reports)
     -   Alt text helps screen-reading tools describe images to visually impaired readers; it is written text that appears in place of an image on a webpage if the image fails to load on a user's screen.
         -   <https://silvia.rbind.io/blog/2021-curated-compilations/01-data-viz-a11y>
         -   <https://www.ssa.gov/accessibility/files/SSA_Alternative_Text_Guide.pdf>
+    -   BONUS: Check out the [SWAMP Accessible Report Template](https://drive.google.com/file/d/139gF37wVtcfOSiFkqK-INSwK7d3lfjuM/view) for additional guidance on how to make documents accessible. Hint: download the template and use it as the foundation for new docs! Delete parts you don't need and use the style settings already set up in the doc. Instructions on how to do this are on page 2.

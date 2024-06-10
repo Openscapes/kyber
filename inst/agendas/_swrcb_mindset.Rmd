@@ -1,6 +1,6 @@
 ---
 params:
-  start_time: "1:30pm PT"
+  start_time: "9:30am PT"
   duration: 30
 ---
 
@@ -13,7 +13,7 @@ params:
     -   
     -   
     -   
--   **Silent journaling** (5 min) – All
+-   **Silent journaling** (4 min + 1 min for review / +1s) – All
 -   *Respond to the prompts below. Then, read others responses and add +1’s or comments*
     -   **What are you already doing that aligns with the Openscapes Mindset?**
 
@@ -35,7 +35,7 @@ params:
         -   
         -   
         -   
-        -    
+        -   
 
     -   **What goals do you have for streamlining your data or collaboration workflows?**
 

@@ -1,6 +1,6 @@
 ---
 params:
-  start_time: "1:30pm PT"
+  start_time: "9:30am PT"
   duration: 30
 ---
 
@@ -13,9 +13,8 @@ One rapid round of breakout groups to meet your colleagues.
 
 **Breakout groups** (5 min) - Random groups of \~3 [9-10 Rooms] - [ Mentor Name ]
 
--   **Prompt: Share your name, team, one thing about your data workflow** (<font color="red">pause recording</font>)
-
-    -   Feel free to write below the next two bulletpoints as well!
+-   **Prompt: Share your name, team, one thing about your data workflow**
+    -   Feel free to write things you hear that resonate with you below!
 
         **Common themes from breakout groups:**
 
@@ -36,9 +35,7 @@ One rapid round of breakout groups to meet your colleagues.
         -   
 
         -   
-
--   **All voices share-out** (20 min) – Anna (<font color="red">start recording</font>)
-
+-   **All voices share-out** (20 min) – Anna
     -   All raise hands in Teams. As you speak, put your hand down. Verbally pass to another person with a hand up!
 
         **Write or say something you heard that resonated with you from someone you spoke with**
