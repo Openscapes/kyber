@@ -1,6 +1,6 @@
 ---
 params:
-  start_time: "1:30pm PT"
+  start_time: "9:30am PT"
   duration: 0
 ---
 

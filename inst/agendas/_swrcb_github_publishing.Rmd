@@ -1,7 +1,7 @@
 ---
 params:
-  start_time: "1:30pm PT"
-  duration: 45
+  start_time: "9:30am PT"
+  duration: 50
 ---
 
 ## Growth Mindset & GitHub for Publishing • `r kyber:::fmt_duration(params$start_time, params$duration)`
@@ -14,11 +14,11 @@ params:
 
 -   **Confirm GitHub access** - if anyone is having problems with access, let us know *before entering your breakout room*.
 
--   **Breakout groups** (15 min) - Random groups of \~3 [9-10 Rooms] - [ Mentor Name ] (<font color="red">pause recording</font>)
+-   **Breakout groups** (10 min) - Random groups of \~3 [9-10 Rooms] - [ Mentor Name ]
 
     -   **Prompt: practice editing & committing**
     -   *This breakout group can be less collaborative and more co-working...but please chat and screenshare!*
-    -   Our cohort repo: \<`r params_registry$github_repo`\>
+    -   Link to [our cohort repo](https://github.com/Openscapes/2024-swrcb-fall)
     -   Edit & commit your file, and talk with your breakout group!
         -   Go to our cohort repo, navigate \> github-clinic \> yourname.md
         -   Click on the pencil to edit your file
@@ -31,10 +31,9 @@ params:
     -   ‎
     -   
     -   
+    -   
 
-    (<font color="red">resume recording</font>)
-
--   **Regroup, discussion and screenshares** ([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/) 19-20) (5 min) – Anna screenshare
+-   **Regroup, discussion and screenshares** ([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/) 19-20) (15 min) – Anna screenshare
 
     -   *Learn anything cool? Share with us!*
     -   

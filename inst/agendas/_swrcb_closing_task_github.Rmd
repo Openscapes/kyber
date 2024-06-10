@@ -1,18 +1,16 @@
 ---
 params:
-  start_time: "1:30pm PT"
-  duration: 5
+  start_time: "9:30am PT"
+  duration: 13
 ---
 
 ## Closing • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
--   **Cohort Photo!** 😁
-
+-   **Cohort Photo!** 😁 (2 min) – ALL
 -   **Task to complete before next time** (5 min) – Anna
-
     -   **Have a Seaside Chat about how GitHub might support your workflows -** continue exploring/practicing!
 
-        -   **Update your team’s information to our Cohort GitHub Repo README: \<`r params_registry$github_repo`\>** (add your names after your team name)
+        -   **Update your team’s information to [our Cohort GitHub Repo](https://github.com/Openscapes/2024-swrcb-fall) README** (add your names next to your team and/or a description of your team's topic/focus!)
 
         -   Try to use this [issue](https://github.com/Openscapes/2023-swrcb/issues/3) to structure your next seaside chat re: GitHub
 
@@ -20,7 +18,7 @@ params:
 
         -   Discuss whether you should create a GitHub Organization for your group or create your own Repo within the [Water Boards GitHub Organization](https://github.com/CAWaterBoardDataCenter) and help everyone get more comfortable.
 
-            -   If you want to learn more about the Water Boards GitHub and how to create a Repo for your project/team, reach out to Jake Pasner ([jacob.pasner\@waterboards.ca.gov](mailto:jacob.pasner@waterboards.ca.gov)) or Andrew Hill ([andrew.hill\@waterboards.ca.gov](mailto:andrew.hill@waterboards.ca.gov))
+            -   If you want to learn more about the Water Boards GitHub and how to create a Repo for your project/team, reach out to the contacts listed on the [Water Boards GitHub ReadMe](https://github.com/CAWaterBoardDataCenter)
 
     -   Inspiration:
 
@@ -29,8 +27,13 @@ params:
 
     -   Share updates on Openscapes MS Team Channels or as a GitHub Issue in our cohort repo!
 
--   **What questions do you have?**
+    -   **Don't forget to keep working on your Pathway!**
 
+        -   *Focus on where you want to go! What would your teams/workflows look like if you had all the resources, time, and tech you needed?*
+
+            -   We recommend adding a "Future Us" column after the "Next Steps" column and writing down where you want "Future You" to be. Don't worry about how you'll get there just yet - just write down all of your goals/dreams without regard to how big or small they might be!
+            -   [Pathways details & examples](https://openscapes.github.io/series/core-lessons/pathways)
+-   **What questions do you have?**
     -   
 
     -   

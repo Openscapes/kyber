@@ -1,7 +1,11 @@
 ---
-duration: 0 minutes
+params: 
+  start_time: "9:30am PT"
+  duration: 0
 ---
 
--   **Inclusion Tip of the Day** (1 min) – Anna
-    -   Striving for gender-inclusive language in the workplace -- e.g., opening a meeting with “welcome all/everyone/team” instead of “hi guys!” - [Idealist.org](https://www.idealist.org/en/careers/inclusive-language-workplace)
-    -   Suggest replacing "mom" or "grandpa" with dentist: a gender neutral term for someone we see as capable whose knowledge is simply outside the tech domain.
+-   **Inclusion Tip of the Day** (2 min) – Anna
+    -   Strive for gender-inclusive language in the workplace
+    -   Examples:
+        -   Welcome people to meetings/events with gender-neutral/gender-inclusive language, like “Hi all/everyone/folks/team” instead of “Hi guys/ladies” - [Idealist.org](https://www.idealist.org/en/careers/inclusive-language-workplace)
+        -   When thinking about how to explain a techinical or complex concept in simple terms - replace thinking of explaining it to "mom" or "grandpa" with dentist or a different gender neutral term for someone we see as capable but whose knowledge is simply outside the tech domain.

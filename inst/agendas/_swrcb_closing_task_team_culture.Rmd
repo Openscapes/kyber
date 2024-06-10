@@ -1,21 +1,21 @@
 ---
 params: 
-  start_time: "1:30pm PT"
-  duration: 5
+  start_time: "9:30am PT"
+  duration: 9
 ---
 
 ## Closing • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
--   **Task to complete before next time** (5 min) – Anna
+-   **Task to complete before next time** (4 min) – Anna
     -   **Have a Seaside Chat & continue working on your Pathway**
 
-    -   *Focus on where your team is “Now” - Think about where you are now in your workflow(s)*
+    -   *Focus on your trailhead - Think about where you are NOW in your workflow(s)*
 
-        -   Pathways Sheet (File \> Make a copy)
-        -   Upload to the PathwayShare folder before Call 5
+        -   Create a copy of the Pathways Sheet (PathwayShare folder; File \> Make a copy)
+        -   For now, we recommend focusing on the "now" column - start writing down where you are now for each row.
         -   [Pathways details & examples](https://openscapes.github.io/series/core-lessons/pathways)
 
-    -   **Accept our invite to join a team within the Openscapes Organization**
+    -   **Accept our invite to join a team within the Openscapes GitHub Organization**
 
         -   You will receive an email from GitHub asking you to join our cohort GitHub in the Openscapes GitHub organization. Make sure you accept before the next Cohort Call!
 

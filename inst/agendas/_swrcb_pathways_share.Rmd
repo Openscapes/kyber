@@ -1,16 +1,20 @@
 ---
 params: 
-  start_time: "1:30pm PT"
+  start_time: "9:30am PT"
   duration: 70
 ---
 
 ## Team Pathways "work in progress" • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-This is our favorite day! Hearing how you're identifying your trailhead and starting your pathways.
+This is our favorite day! Hearing how you're identifying your trailhead and starting your Pathways.
 
-**Each group has 10 minutes to share their pathway:** (5 min presentation + 5 min Q&A) — Anna + [ Mentor Name ] keeping time
+**Each group has 10 minutes to share their Pathway** - (5 min) Anna + [ Mentor Name ] (keeping time)
 
--   PathwayShare Folder `<add link>`
+-   5 min presentation + 5 min Q&A
+-   Incomplete and imperfect work are welcome! 
+-   No need for a formal presentation - feel free to share screen and walk us through your Team’s Pathway! 
+-   Team leads/supervisors are encouraged not to present!
+-   PathwayShare Folder `<add link>` - share a copy here, if you want
 
 **Team 1:**
 
@@ -48,7 +52,7 @@ This is our favorite day! Hearing how you're identifying your trailhead and star
 -   
 -   
 
-**Discussion** (10 min) - All
+**Discussion** (5 min) - All
 
 -   ‎
 -   

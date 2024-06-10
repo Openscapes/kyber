@@ -1,21 +1,22 @@
 ---
 params:
-  start_time: "1:30pm PT"
+  start_time: "9:30am PT"
   duration: 12
   files: ["screenshot-gdoc-zoom-setup.png", "wheel_of_power_duckworth.jpg"]
 ---
 
 ## Welcome • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-**Welcome to Openscapes!** 👋 (2 min) – Anna
+**Welcome to Openscapes!** 👋 (5 min) – Anna
 
 -   <font color="red">We are recording this meeting.</font>
 -   <font color="red">To turn on closed captions, click More / Language and Speech / Turn on live captions.</font>
 -   We’re so excited to go through the Openscapes process with you over the next 10 weeks - Let's dive in!
 -   **Openscapes Team here on this call**:
-    -   Anna Holder, Environmental Scientist and Tribal Coordinator in OIMA (Lead Instructor)
-    -   [insert other instructors and mentors ...]
+    -   *Instruction Team*: Anna Holder (OIMA), Tina Ures (DWQ)
+    -   *Cohort Mentors*: [ insert mentors (RDO) ]
     -   We’re all here to lead the calls and support with behind the scene logistics - if you have questions at any time, feel free to reach out to any one of us!
+    -   *Guest Instructor*: [ TBD ]
 -   **Land Acknowledgment**
     -   Nearly 200 tribal nations are located within the modern borders of California - more than any other state in the United States. The CalEPA building - and the hub of our agency - is located in a place we call Sacramento. Sacramento was, and still is, a gathering place for many local Tribes who have lived throughout the central valley and the foothills for generations and were the original stewards of this land. These people include the Nisenan, Maidu, and Miwok Peoples, and the Patwin and Wintun Nations. We want to honor the peoples who have remained committed to the stewardship of these lands and waters over many centuries.
         -   Here’s a place you can go to learn more about the land you're on: <https://native-land.ca/>
@@ -23,7 +24,7 @@ params:
     -   To strengthen team culture and habits for immediate benefit that will help create long-lasting resilience in teams and workflows.
 -   **Today’s goals**
     -   ‎We'll start working towards a common understanding of the Openscapes mindset and what your pathway forward looks like for your team
--   **You are all welcome here** (3 min) – Anna
+-   **You are all welcome here**
     -   This is a positive learning space where everyone is welcome to ask questions and participate.
     -   We’re adopting the Openscapes Code of Conduct ([full version](https://www.openscapes.org/code-of-conduct/))
         -   Be respectful and value each other’s ideas, styles and viewpoints.
@@ -49,7 +50,7 @@ params:
 
 ‎
 
-**Openscapes Overview** (5 min) – Anna
+**Openscapes Overview** (7 min) – Anna
 
 -   In the open data science landscape, there are many paths forward. Through the Champions program we will help you explore and navigate pathways with your team – and help the whole cohort become champions and stewards as you become more familiar, confident, and work together.
 
@@ -71,15 +72,13 @@ params:
 
         -   Develop a practice of talking and collaborating about data workflows with your team and community
 
-        -   Create a pathway you’ve identified with your team to help prioritize next steps
-
-            -   You’ll share your progress to the Cohort in our last call
+        -   Create a Pathway you’ve identified with your team to help prioritize next steps - You’ll share progress on your team's Pathway with the Cohort in our last call
 
     -   **Process**
 
         -   Our Cohort Calls are discussion-based, build on each other, and *require active engagement*
 
--   **How We Work (Tech & Cultural Norms)** (2 min) – Anna
+-   **How We Work (Tech & Cultural Norms)**
 
     -   Our 5 Cohort Calls - Cohort website: `r params_registry$cohort_website`
 
@@ -87,15 +86,15 @@ params:
 
         <center>![](screenshot-gdoc-zoom-setup.png)</center>
 
-        -   OneDrive Docs: Use the Outline view on the left to navigate (View \> Navigation)
-        -   Save our [Cohort OneDrive folder](%60r%20params$google_drive_folder%60) to your bookmarks/favorites
+        -   Docs: Use the outline view on the left to navigate (View \> Navigation Pane)
+        -   Save our Cohort OneDrive folder to your bookmarks/favorites (see Quick Links at the top of this agenda)
         -   Some Cultural Norms
             -   Videos on – but okay if this is not possible for any reason 
             -   Mute liberally/quickly – but please unmute to speak up at any point
             -   **Please contribute to the agenda doc throughout the call & help capture Cohort wisdom:**
                 -   It's our shared responsibility to contribute & record.
                 -   This is the main place for nonverbal contribution, side conversations, and to reinforce ideas.
-                -   Everyone should have acces to direct editing
+                -   Everyone should have access to direct editing
                     -   Create a new bullet by hitting return
                     -   Shortcut to create new bullet:
                         -   Mac: Shift - Command - 8

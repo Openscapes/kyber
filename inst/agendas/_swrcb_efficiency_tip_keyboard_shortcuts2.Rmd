@@ -1,20 +1,28 @@
 ---
 params: 
-  start_time: "1:30pm PT"
+  start_time: "9:30am PT"
   duration: 0
 ---
 
--   **Efficiency Tip of the Day** (2 min) – Anna
+-   **Efficiency Tip of the Day** (3 min) – Anna
     -   **Keyboard shortcuts useful for any application** (docs, email, code)
         -   Windows:
             -   **Alt-tab** or **Windows-tab** for carouseling between applications/desktops - looks like this
 
-                <center>![](carousel-applications.jpg)</center>
+                <center>
+
+                ![](images/screenshot-windows-carousel.png)
+
+                <center>
 
             -   **Alt-tab** again or **Alt-shift-tab** to go backwards
 
             -   **Control page up / page down** for carouseling between tabs (browser)
         -   Mac:
-            -   **Command tab** for carouseling between applications
+            -   **Command tab** for carouseling between applications - looks like this
+
+                <center>![](carousel-applications.jpg)</center>
+
             -   **Command \`** for carouseling between applications
+
             -   **Command option arrow** for carouseling between tabs (browser)

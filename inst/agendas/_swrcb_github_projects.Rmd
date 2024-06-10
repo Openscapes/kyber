@@ -1,10 +1,10 @@
 ---
 params:
-  start_time: "1:30pm PT"
-  duration: 44
+  start_time: "9:30am PT"
+  duration: 50
 ---
 
-## Growth Mindset & GitHub for Publishing • `r kyber:::fmt_duration(params$start_time, params$duration)`
+## GitHub for Project Management • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
 -   **GitHub for Project Management** (slides) (20 min) – Anna
 
@@ -13,12 +13,12 @@ params:
     -   
     -   
 
--   **Breakout groups** (slide 6, 7 min) - Random groups of \~3 [9-10 Rooms] - [ Mentor Name ] (<font color="red">pause recording</font>)
+-   **Breakout groups** (slide 6, 10 min) - Random groups of \~3 [9-10 Rooms] - [ Mentor Name ]
 
 -   **Prompt: practice creating & commenting on GitHub Issues**
 
     -   *This breakout group can be less collaborative and more co-working...but please chat and screenshare!*
-    -   Go to our cohort repo: \<`r params_registry$github_repo`\>
+    -   Go to [our cohort repo](https://github.com/Openscapes/2024-swrcb-fall)
     -   Create an issue with your group, try:
         -   Practicing Markdown to write a message
         -   Creating/assigning a label and applying it
@@ -27,12 +27,12 @@ params:
         -   Closing an Issue
     -   Browse existing issues, try:
         -   Contribute to other groups’ discussions
+
         -   Add a comment
+
         -   tag people
 
-(<font color="red">resume recording</font>)
-
--   **Silent journaling** (7 min) – All
+-   **Silent journaling** (7 min + 3 min for review / +1s) – All
 
 -   *Respond to the prompts below. Then, read others responses and add +1’s or comments*
 

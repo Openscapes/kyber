@@ -1,6 +1,6 @@
 ---
 params: 
-  start_time: "1:30pm PT"
+  start_time: "9:30am PT"
   duration: 0
 ---
 
@@ -11,6 +11,8 @@ params:
     -   Prevents this:
     -   <font size="20" color="green">GitHub Clinic</font>
     -   I’ll demo:
+        -   Control + V (results in source formatting):
+        -   Control + Shift + V (matches current formatting):
 -   **“redoing” formatting**
     -   Mac: Command-Y
     -   PC: Control-Y

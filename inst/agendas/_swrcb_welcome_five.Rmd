@@ -1,7 +1,7 @@
 ---
 params: 
-  start_time: "1:30pm PT"
-  duration: 4
+  start_time: "9:30am PT"
+  duration: 6
 ---
 
 ## Welcome • `r kyber:::fmt_duration(params$start_time, params$duration)`
@@ -20,17 +20,38 @@ params:
         -   All Cohort calls are subject to Equal Employment Opportunity (EEO) reporting requirements, and facilitators may be obligated to report instances of past or current racial discrimination at the Water Boards. If you choose to share your experiences, consider not including identifying information (e.g., names, titles, office, department, division, agency, etc.), and be aware that the EEO Office may be obligated to investigate and follow up.
         -   Employees who believe they have experienced discrimination may file a complaint through the [Water Boards discrimination complaint process](http://waternet/eeo/discrimination/index.shtml).
     -   **Openscapes Team here on this call**:
-        -   Anna Holder, Environmental Scientist and Tribal Coordinator in OIMA (Lead Instructor)
-        -   [insert other instructors and mentors ...]
-    -   **Land Acknowledgment**
+        -   *Instruction Team*: Anna Holder (OIMA), Tina Ures (DWQ)
+        -   *Cohort Mentors*: [ insert mentors (RDO) ]
+        -   We’re all here to lead the calls and support with behind the scene logistics - if you have questions at any time, feel free to reach out to any one of us!
+        -   *Invited Guests*: [ Insert ]
+    -   **Land Acknowledgment - moment of silence & reflection** (3 min) – Anna
         -   Nearly 200 tribal nations are located within the modern borders of California - more than any other state in the United States. The CalEPA building - and the hub of our agency - is located in a place we call Sacramento. Sacramento was, and still is, a gathering place for many local Tribes who have lived throughout the central valley and the foothills for generations and were the original stewards of this land. These people include the Nisenan, Maidu, and Miwok Peoples, and the Patwin and Wintun Nations. We want to honor the peoples who have remained committed to the stewardship of these lands and waters over many centuries.
+
             -   Here’s a place you can go to learn more about the land you're on: <https://native-land.ca/>
+
+        -   An excerpt to help guide our moment of silence & reflection, from [Becoming Kin](https://daanis.ca/becoming-kin2/) by Patty Krawec, p. 39
+
+            > At its worst, the impulse to use land acknowledgments is akin to thinking that admitting you stole a TV set means it's OK to keep it. Such statements at the beginning of an event…can be empty and preformative. At best, land acknowledgments recognize relationships, the price that Indigenous people have paid for the existence of this place, and reflect on tangible things people can do...Land acknowledgments are a moment to pause and reflect on the relationship that exists between the current residents and those who were displaced. What does it mean to live on stolen land? You may not be guilty of the act of dispossession, but it is a relationship that you have inherited. Who lived in your area before colonization? Who still lives there?
+
+        -   A couple of free on-demand trainings available to Water Boards Staff
+
+            -   [Tribal Historical and Legal Foundations](https://waternet.waterboards.ca.gov/training/videos/tribal_training1.mp4) (Nov 2019, 2 hours - requires VPN/Remote Desktop)
+
+            -   [Tribal Cultural Resources](https://waternet.waterboards.ca.gov/training/videos/tribal_training2.mp4) (Nov 2019, 1.5 hours - requires VPN/Remote Desktop)
+
+            -   [Tribal Cultural Awareness and California Native American History](https://www.youtube.com/watch?v=PttFI1WvTTY) (Jul 2021, 2 hours)
+
+        -   Some books that Anna has found to be helpful and inspirational:
+
+            -   [Braiding Sweetgrass](https://www.robinwallkimmerer.com/books): Indigenous Wisdom, Scientific Knowledge and the Teachings of Plants, Robin Wall Kimmerer
+
+            -   [Restoring the Kinship Worldview](https://www.northatlanticbooks.com/shop/restoring-the-kinship-worldview/): Indigenous Voices Introduce 28 Precepts for Rebalancing Life on Planet Earth, Wahinkpe Topa (Four Arrows) and Darcia Narvaez
+
+            -   [Becoming Kin](https://daanis.ca/becoming-kin2/): An Indigenous Call to Unforgetting the Past and Reimagining Our Future, Patty Krawec
 -   **Today’s goals** (1 min) – Anna
-    -   ‎‎Review our team pathways! 
+    -   ‎‎Review our team Pathways! 
     -   Discuss next steps
 -   **Followups** (1 min) – Anna
-    -   
-    -   
 -   **Questions** before we get started?
     -   ‎
     -   

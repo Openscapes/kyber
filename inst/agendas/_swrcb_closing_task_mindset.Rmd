@@ -1,6 +1,6 @@
 ---
 params:
-  start_time: "1:30pm PT"
+  start_time: "9:30am PT"
   duration: 15
 ---
 
@@ -9,19 +9,17 @@ params:
 *We've covered a lot today; we'll explore these ideas more deeply together in the coming weeks.*
 
 -   **Task to complete before next time** (3 min) – Anna
-
     -   **Have a Seaside Chat & start your Pathway**
 
-    -   *Get familiar with the Pathway: Think about how to make it your own and start to focus on your trailhead (where are you now?).*
+    -   *Get familiar with the Pathway & think about how to make it your own*
 
-        -   Create a copy of the Pathways Sheet (File \> Make a copy)
-            -   For now, we recommend focusing on the "now" column. Are there rows to add?
-        -   Upload to the PathwayShare folder before Call 5
+        -   Create a copy of the Pathways Sheet (PathwayShare folder; File \> Make a copy)
+        -   For now, we recommend focusing on the overall structure. Are there rows/columns/tabs to add to make the Pathway more suited for your needs?
         -   [Pathways details & examples](https://openscapes.github.io/series/core-lessons/pathways)\
 
-    -   **What questions do you have?**
+    -   
 
-        -   
+        ## **What questions do you have?**
 
         -   
 

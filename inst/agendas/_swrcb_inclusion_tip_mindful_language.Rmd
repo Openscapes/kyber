@@ -1,10 +1,10 @@
 ---
 params:
-  start_time: "1:30pm PT"
+  start_time: "9:30am PT"
   duration: 0
 ---
 
--   **Inclusion Tip of the Day** (1 min) – Anna
+-   **Inclusion Tip of the Day** (2 min) – Anna
 -   Be mindful of words and idioms you use. Move away from language that is racist, sexist, violent, ableist, etc.
 -   Examples:
     -   Use “main” instead of “master” (GitHub branches, bedrooms)
