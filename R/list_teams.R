@@ -17,7 +17,10 @@
 list_team_members <- function(team, org = "openscapes", names_only = TRUE, ...) {
   check_gh_pat()
 
-  org_teams <- list_teams(org)
+  team <- tolower(team)
+  org <- tolower(org)
+  org_teams <- tolower(list_teams(org))
+  
 
   if (!team %in% org_teams) {
     stop("'", team, "' is not part of the '", org, "' organization", 
