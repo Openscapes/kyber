@@ -4,21 +4,30 @@
 \alias{list_team_members}
 \title{List members of a GitHub Team}
 \usage{
-list_team_members(team, org = "openscapes", names_only = TRUE, ...)
+list_team_members(
+  team,
+  org = "openscapes",
+  names_only = TRUE,
+  members = c("members", "invitations"),
+  ...
+)
 }
 \arguments{
 \item{team}{The name of the team.}
 
 \item{org}{The GitHub organization that owns the team and the repository.}
 
-\item{names_only}{Should only the team member names be returned (as a character vector; \code{TRUE}, the default),
-or should all of the team member metadata be returned?}
+\item{names_only}{Should only the team member names be returned (as a
+character vector; \code{TRUE}, the default), or should all of the team member
+metadata be returned?}
+
+\item{members}{Should current members (\code{"members"}) be returned, or pending
+invitations (\code{"invitations"}) invitations be returned? Default \code{"members"}.}
 
 \item{...}{passed on to \code{\link[gh:gh]{gh::gh()}}}
 }
 \value{
-a character vector of team member GitHub usernames if \code{names_only = TRUE}, otherwise
-a \code{gh_response} object containing team member information
+a character vector of team member GitHub usernames if \code{names_only = TRUE}, otherwise a \code{gh_response} object containing team member information
 }
 \description{
 List members of a GitHub Team
