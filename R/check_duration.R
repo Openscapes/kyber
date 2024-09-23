@@ -27,6 +27,4 @@ check_duration <- function(registry_url, cohort_id, call_number,
   total_duration <- template_params %>% 
     map_dbl(~ ifelse(is.null(.x$total_duration), NA, .x$total_duration))
     
-  
-  })
 }
