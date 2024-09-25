@@ -2,6 +2,7 @@
 #' 
 #' @inheritParams call_agenda
 #' @importFrom cli cli_alert_info
+#' @export
 check_duration <- function(registry_url, cohort_id, call_number,
                            cohort_sheet = "cohort_metadata", 
                            call_sheet = "call_metadata"){
