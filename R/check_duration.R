@@ -1,7 +1,7 @@
 #' Check the duration of call
 #' 
 #' @inheritParams call_agenda
-#' @importFrom cli cli_bullets
+#' @importFrom cli cli_alert_info
 check_duration <- function(registry_url, cohort_id, call_number,
                            cohort_sheet = "cohort_metadata", 
                            call_sheet = "call_metadata"){
@@ -26,5 +26,12 @@ check_duration <- function(registry_url, cohort_id, call_number,
   
   total_duration <- template_params %>% 
     map_dbl(~ ifelse(is.null(.x$total_duration), NA, .x$total_duration))
-    
+  
+  paste("Specified total duration:", 
+        (list_flatten(template_params))$total_duration, "minutes") %>%
+    cli_alert_info()
+  paste("Calculated total duration:", 
+        sum(durations, na.rm = TRUE), "minutes") %>%
+    cli_alert_info()
+  invisible()
 }
