@@ -1,90 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://openscapes.github.io/kyber/404.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/articles/configuration.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/articles/create-certificates.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/articles/github-repo.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/articles/kyber.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/index.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/reference/add_code_of_conduct.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/reference/add_gitignore.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/reference/add_team_members.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/reference/add_team_to_repo.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/reference/call_agenda.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/reference/create_batch_certificates.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/reference/create_certificate.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/reference/create_github_clinic.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/reference/create_readme.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/reference/create_team.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/reference/init_repo.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/reference/kyber-package.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/reference/kyber_file.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/reference/list_team_members.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/reference/list_teams.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/reference/md_agenda.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/reference/pipe.html</loc>
-  </url>
-  <url>
-    <loc>https://openscapes.github.io/kyber/reference/short_names.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://openscapes.github.io/kyber/404.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/LICENSE-text.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/LICENSE.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/articles/configuration.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/articles/create-certificates.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/articles/github-repo.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/articles/index.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/articles/kyber.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/authors.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/index.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/reference/add_code_of_conduct.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/reference/add_gitignore.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/reference/add_team_members.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/reference/add_team_to_repo.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/reference/call_agenda.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/reference/create_batch_certificates.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/reference/create_certificate.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/reference/create_github_clinic.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/reference/create_readme.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/reference/create_team.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/reference/index.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/reference/init_repo.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/reference/kyber-package.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/reference/kyber_file.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/reference/list_team_members.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/reference/list_teams.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/reference/md_agenda.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/reference/pipe.html</loc></url>
+<url><loc>https://openscapes.github.io/kyber/reference/short_names.html</loc></url>
 </urlset>
+
