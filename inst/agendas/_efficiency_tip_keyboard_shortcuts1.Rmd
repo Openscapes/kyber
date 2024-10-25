@@ -4,8 +4,11 @@ params:
   duration: 0
 ---
 
-- **Efficiency Tip of the Day ** (2 min) – Julie
-- Keyboard Shortcuts Part 1: Useful for any application (docs, email, code)
-    - **Mac:** Arrow keys + option, + command, + shift, & in combination
-    - **PC:** Arrow keys + Ctrl + Fn + shift, & in combination
-    - Here is some sample text for our demo. What a great sentence.
+-   **Efficiency Tip of the Day** (2 min) – Julie
+-   Keyboard Shortcuts Part 1: Useful for any application (docs, email, code)
+    -   **Mac:** Arrow keys + option, + command, + shift, & in combination
+        -   option + arrow moves cursor to next word
+        -   shift + option + arrow highlights next word
+    -   **PC:** Arrow keys + Ctrl + Fn + shift, & in combination
+        -   On keyboards made for Windows PCs, use the Alt key instead of Option, and the Ctrl key or Windows logo key instead of Command.
+    -   Here is some sample text for our demo. What a great sentence.
