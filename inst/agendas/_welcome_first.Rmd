@@ -14,7 +14,7 @@ params:
   - **Cohort goals**
     - To strengthen habits for immediate benefit that will help create long-lasting resilience in teams and workflows. Focus on open science. 
   - **Today’s goals**
-    - Start working towards a common understanding of the Openscapes mindset and what pathways forward can look like for you / your team.
+    -  ‎ 
   - **Our team here on this call:** 
     - Julie Lowndes / Openscapes
     - Stefanie Butland / Openscapes
@@ -25,9 +25,9 @@ params:
   - **Land Acknowledgment** (Julie): I am grateful for the land where I am here in Santa Barbara California and I want to honor the Chumash peoples who have been and continue to be stewards of the lands and waters here.
   - Here’s a place you can go to learn more about where you are: https://native-land.ca. 
 
-
+  ‎
 - **Organizer Welcome** (2 min) – co-lead
-  - 
+  -  ‎ 
   - 
 
 - **You are all welcome here** (3 min) – Julie
