@@ -5,6 +5,7 @@ params:
 ---
 
 ## Openscapes mindset • `r kyber:::fmt_duration(params$start_time, params$duration)`
+
 *All Champions program slides are also linked from <https://openscapes.org/series>* 
 
 - **Openscapes mindset** ([slides](https://docs.google.com/presentation/d/1fXgrWU5AMrZwgvpjs2J0dRT9x1Tc-IZyQIn8yPZSGM8/edit) 4-13) (15 min) – Julie
@@ -12,12 +13,10 @@ params:
   -  
   -  
   - 
-- **Silent journaling** (4 min) – All
+- **Silent journaling** (4 min) – Julie
 - *Respond to the prompts below. Then, read others responses and add +1’s or comments*
-    - **What are you already doing that aligns with the Openscapes Mindset?**
-        - **How does your work align with open data science?**
-        - **How does your work align with inclusion?**
-    - 
+    - **What are your reactions? What are you already doing that aligns with the Openscapes Mindset?**
+    - ‎ 
     - 
     -  
     -  
