@@ -6,7 +6,7 @@ params:
 
 ## Growth Mindset & GitHub for Publishing • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-* **Intro to GitHub, edits & publishing** ([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/) 1-13) (16 min) – Julie
+* **Intro to GitHub, edits & publishing** ([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/) 1-14 and demo) (16 min) – Julie
   -  ‎
   -
   - 
@@ -23,7 +23,7 @@ params:
   - ‎
   -
   - (<font color="red">resume recording</font>)
-* **Regroup, collaborating and publishing** ([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/) 14-16) (5 min) – Julie screenshare
+* **Regroup, collaborating and publishing** ([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/) 15-16) (5 min) – Julie screenshare
   - ‎
   -
 * **Discussion and screenshares** (10 min)
