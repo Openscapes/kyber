@@ -6,7 +6,7 @@ params:
 
 ## GitHub for Project Management • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
--   **GitHub Clinic: Issues** ([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/edit#slide=id.g20695b6755c_0_148) 14-17 and demo) (10 min) – Stef
+-   **GitHub Clinic: Issues** ([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/edit#slide=id.g20695b6755c_0_148) 17-20 and demo) (10 min) – Stef
 
     -   
 
@@ -32,16 +32,22 @@ params:
     -   
     -   
 
--   **Regroup & unwatch ‎repository** ‎([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/edit#slide=id.g20695b6755c_0_185) 18) (2 min) - Stef
+-   **Regroup & unwatch ‎repository** ‎([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/edit#slide=id.g20695b6755c_0_185) 21) (2 min) - Stef
 
     -   
 
 -   **Discussion and screenshares** (11 min) (<font color="red">resume recording</font>)
 
     -   
+
     -   
+
     -   
+
     -   
+
     -   
+
     -   
+
     -   
