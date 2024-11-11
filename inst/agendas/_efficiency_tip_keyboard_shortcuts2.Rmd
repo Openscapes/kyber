@@ -10,7 +10,7 @@ params:
     - Mac:
         - **Command tab** for carouseling between applications - looks like this
         <center>![](carousel-applications.jpg)</center>
-        - **Command `**  for carouseling between applications
+        - **Command `**  for carouseling between windows in an application e.g. browser, RStudio
         - **Command option arrow** for carouseling between tabs (browser)
     - Windows:
         - **Alt-tab** or **Windows-tab**
