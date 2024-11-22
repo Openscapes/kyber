@@ -26,10 +26,10 @@ list_team_members <- function(team, org = "openscapes", names_only = TRUE,
 
   team <- tolower(team)
   org <- tolower(org)
-  org_teams <- tolower(list_teams(org))
+  org_teams <- list_teams(org, names_only = FALSE)
   members <- match.arg(members)
 
-  if (!team %in% org_teams) {
+  if (!team %in% org_teams$slug) {
     stop("'", team, "' is not part of the '", org, "' organization", 
          call. = FALSE)
   }
@@ -68,7 +68,7 @@ list_teams <- function(org = "openscapes", names_only = TRUE, ...) {
     
   teams <- gh("GET /orgs/{org}/teams", org = org, ..., .limit = Inf)
   
-  if (!names_only) return(teams)
+  if (!names_only) return(dplyr::bind_rows(teams))
 
   vapply(teams, `[[`, FUN.VALUE = character(1), "name")
 }
