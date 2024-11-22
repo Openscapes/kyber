@@ -19,7 +19,7 @@ list_team_members(
 
 \item{names_only}{Should only the team member names be returned (as a
 character vector; \code{TRUE}, the default), or should all of the team member
-metadata be returned?}
+metadata be returned as a data.frame?}
 
 \item{members}{Should current members (\code{"members"}) be returned, or pending
 invitations (\code{"invitations"}) invitations be returned? Default \code{"members"}.}
