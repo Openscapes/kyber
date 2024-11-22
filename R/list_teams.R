@@ -52,7 +52,7 @@ list_team_members <- function(team, org = "openscapes", names_only = TRUE,
 #'
 #' @inheritParams list_team_members
 #' @param names_only Should only the team names be returned (as a character vector; `TRUE`, the default),
-#'     or should all of the team metadata be returned?
+#'     or should all of the team metadata be returned as a data frame?
 #'
 #' @return a character vector of team names if `names_only = TRUE`, otherwise
 #'    a `gh_response` object containing team information
