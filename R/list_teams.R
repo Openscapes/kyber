@@ -3,7 +3,7 @@
 #' @inheritParams add_team_members
 #' @param names_only Should only the team member names be returned (as a
 #'   character vector; `TRUE`, the default), or should all of the team member
-#'   metadata be returned?
+#'   metadata be returned as a data.frame?
 #' @param members Should current members (`"members"`) be returned, or pending
 #'   invitations (`"invitations"`) invitations be returned? Default `"members"`.
 #' @param ... passed on to [gh::gh()]
@@ -43,7 +43,7 @@ list_team_members <- function(team, org = "openscapes", names_only = TRUE,
     .limit = Inf
   )
 
-  if (!names_only) return(team_members)
+  if (!names_only) return(dplyr::bind_rows(team_members))
     
   vapply(team_members, `[[`, FUN.VALUE = character(1), "login")
 }
