@@ -66,7 +66,13 @@ list_team_members <- function(team, org = "openscapes", names_only = TRUE,
 list_teams <- function(org = "openscapes", names_only = TRUE, ...) {
   check_gh_pat()
     
-  teams <- gh("GET /orgs/{org}/teams", org = org, ..., .limit = Inf)
+  teams <- gh("GET /orgs/{org}/teams", org = org, ..., .limit = Inf) %>%
+    purrr::map(function(x) {
+      if(!is.null(x[["parent"]])) {
+        x[["parent"]] <- x[["parent"]][["name"]]
+      }
+      x
+    })
   
   if (!names_only) return(dplyr::bind_rows(teams))
 
