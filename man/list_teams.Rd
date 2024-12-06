@@ -10,7 +10,7 @@ list_teams(org = "openscapes", names_only = TRUE, ...)
 \item{org}{The GitHub organization that owns the team and the repository.}
 
 \item{names_only}{Should only the team names be returned (as a character vector; \code{TRUE}, the default),
-or should all of the team metadata be returned?}
+or should all of the team metadata be returned as a data frame?}
 
 \item{...}{passed on to \code{\link[gh:gh]{gh::gh()}}}
 }
