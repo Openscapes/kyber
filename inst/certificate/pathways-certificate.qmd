@@ -1,0 +1,26 @@
+---
+params:
+  participant_name: "Ileana Fenwick"
+  start_date: "January 25"
+  end_date: "February 29, 2024"
+  cohort_name: "Pathways to Open Science"
+  cohort_website: "https://openscapes.github.io/pathways-to-open-science/"
+---
+
+<!-- 
+Note: cohort_name and cohort_website are not currently used in the 
+certificate, but are included for compatibility with the `create_certificate()`
+funtion 
+-->
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Openscapes Pathways to Open Science Program Certificate
+Dates: `r params$start_date` to `r params$end_date`
+
+This certifies that `r params$participant_name` participated in the Pathways to Open Science program from Openscapes. Pathways to Open Science is a remote event series for Black environmental & marine researchers to build community for the future of data intensive science. Through a series of community calls and coworking sessions, participants gained practical data science skills and developed a mindset for Open Data Science: the tools and practices enabling reproducible, transparent, and inclusive practices for data intensive science. Learn more at <https://openscapes.github.io/pathways-to-open-science/>.
+
+<https://doi.org/10.5281/zenodo.7662699>
