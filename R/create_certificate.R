@@ -6,7 +6,11 @@
 #' @param start_date cohort start date
 #' @param end_date cohort end date
 #' @param cohort_website cohort website
+#' @param cohort_type `"standard"` or `"nmfs"` cohort
 #' @param output_dir output directory for certificates. Default `"."`
+#' @param quiet Suppress quarto warnings and other messages. Default `TRUE`
+#' @param ... Other parameters passed on to [quarto::quarto_render()]
+#' 
 #'
 #' @return Saves the file to your current working directory, and 
 #'   returns the path to the file
@@ -14,41 +18,71 @@
 #'
 #' @examples
 #' \dontrun{
-#' create_certificate(cohort_name = "2023-fred-hutch",
-#'                    participant_name = "Name",
-#'                    start_date = "Sep 19",
-#'                    end_date = "Oct 19",
-#'                    cohort_website = "https://openscapes.github.io/2023-fred-hutch/")
+#' create_certificate(
+#'   cohort_name = "2023-fred-hutch",
+#'   first_name = "FirstName",
+#'   last_name = "LastName"
+#'   start_date = "Sep 19",
+#'   end_date = "Oct 19",
+#'   cohort_website = "https://openscapes.github.io/2023-fred-hutch/",
+#'   cohort_type = "standard"
+#' )
 #' }
-create_certificate <- function(cohort_name, 
-                               first_name,
-                               last_name,
-                               start_date, 
-                               end_date,
-                               cohort_website, 
-                               output_dir = ".") {
+create_certificate <- function(
+  cohort_name, 
+  first_name,
+  last_name,
+  start_date, 
+  end_date,
+  cohort_website, 
+  cohort_type = c("standard", "nmfs"),
+  output_dir = ".", 
+  quiet = TRUE,
+  ...
+) {
   # adapted from https://bookdown.org/yihui/rmarkdown/params-knit.html
+
+  cohort_type <- match.arg(cohort_type)
+
+  template <- switch (cohort_type,
+    standard = system.file("certificate/certificate.qmd", package = "kyber"),
+    nmfs = system.file("certificate/nmfs-certificate.qmd", package = "kyber")
+  )
     
   participant_name <- paste(first_name, last_name)
-  rmarkdown::render(
-    system.file("certificate/certificate.Rmd",package = "kyber"),
-    params = list(
+
+  outfile <- paste0(
+    intersect(cohort_type, "nmfs"),
+    "OpenscapesCertificate",
+    "_",
+    gsub("\\s+", "-", cohort_name),
+    "_",
+    gsub("\\s+", "-", participant_name),
+    ".pdf"
+  )
+  
+  quarto::quarto_render(
+    template,
+    output_format = "typst",
+    execute_params = list(
       cohort_name = cohort_name, 
       participant_name = participant_name, 
       start_date = start_date, 
       end_date = end_date, 
       cohort_website = cohort_website
     ),
-    output_format = "pdf_document",
-    output_file = paste0(
-      "OpenscapesCertificate",
-      "_",
-      gsub("\\s+", "-", cohort_name),
-      "_",
-      gsub("\\s+", "-", participant_name),
-      ".pdf"
-    ),
-    output_dir = output_dir
+    output_file = outfile,
+    quiet = quiet,
+    ...
+  )
+
+  if (output_dir != ".") {
+    fs::dir_create(output_dir)
+    fs::file_move(outfile, output_dir)
+  }
+
+  cli::cli_inform(
+    c("v" = "File written to {.path {fs::path(output_dir, outfile)}}")
   )
 }
 
@@ -83,6 +117,7 @@ create_certificate <- function(cohort_name,
 create_batch_certificates <- function(registry,
                                       participants,
                                       cohort_name,
+                                      cohort_type,
                                       output_dir = ".") {
   
   if (!cohort_name %in% registry$cohort_name) {
