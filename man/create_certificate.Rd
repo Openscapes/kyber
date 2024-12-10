@@ -24,23 +24,28 @@ create_certificate(
 
 \item{last_name}{Last name of participant}
 
-\item{start_date}{cohort start date}
+\item{start_date}{cohort start date. \code{Date} or character in a standard format
+(eg., YYYY-MM-DD)}
 
-\item{end_date}{cohort end date}
+\item{end_date}{cohort end date. \code{Date} or character in a standard format
+(eg., YYYY-MM-DD)}
 
 \item{cohort_website}{cohort website}
 
-\item{cohort_type}{\code{"standard"} or \code{"nmfs"} cohort}
+\item{cohort_type}{What kind of cohort are the certificates for? This will
+choose the appropriate certificate template: \code{"standard"} (default) or
+\code{"nmfs"}.}
 
 \item{output_dir}{output directory for certificates. Default \code{"."}}
 
-\item{quiet}{Suppress quarto warnings and other messages. Default \code{TRUE}}
+\item{quiet}{Suppress quarto warnings and other messages. Default \code{TRUE}.
+Set to \code{FALSE} to help debug if any errors occur.}
 
 \item{...}{Other parameters passed on to \code{\link[quarto:quarto_render]{quarto::quarto_render()}}}
 }
 \value{
-Saves the file to your current working directory, and
-returns the path to the file
+Saves the file to the specified directory, and returns the path to
+the file
 }
 \description{
 Render certificates of completion for a participant in a cohort
@@ -51,8 +56,8 @@ create_certificate(
   cohort_name = "2023-fred-hutch",
   first_name = "FirstName",
   last_name = "LastName",
-  start_date = "Sep 19",
-  end_date = "Oct 19",
+  start_date = "2023-09-19",
+  end_date = "2023-10-19",
   cohort_website = "https://openscapes.github.io/2023-fred-hutch/",
   cohort_type = "standard"
 )

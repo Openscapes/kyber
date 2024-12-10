@@ -3,17 +3,21 @@
 #' @param cohort_name The name of the cohort
 #' @param first_name First name of participant 
 #' @param last_name Last name of participant
-#' @param start_date cohort start date
-#' @param end_date cohort end date
+#' @param start_date cohort start date. `Date` or character in a standard format 
+#'     (eg., YYYY-MM-DD)
+#' @param end_date cohort end date. `Date` or character in a standard format 
+#'     (eg., YYYY-MM-DD)
 #' @param cohort_website cohort website
-#' @param cohort_type `"standard"` or `"nmfs"` cohort
+#' @param cohort_type What kind of cohort are the certificates for? This will
+#'     choose the appropriate certificate template: `"standard"` (default) or 
+#'     `"nmfs"`.
 #' @param output_dir output directory for certificates. Default `"."`
-#' @param quiet Suppress quarto warnings and other messages. Default `TRUE`
+#' @param quiet Suppress quarto warnings and other messages. Default `TRUE`.
+#'     Set to `FALSE` to help debug if any errors occur.
 #' @param ... Other parameters passed on to [quarto::quarto_render()]
-#' 
 #'
-#' @return Saves the file to your current working directory, and 
-#'   returns the path to the file
+#' @return Saves the file to the specified directory, and returns the path to 
+#'     the file
 #' @export
 #'
 #' @examples
@@ -22,8 +26,8 @@
 #'   cohort_name = "2023-fred-hutch",
 #'   first_name = "FirstName",
 #'   last_name = "LastName",
-#'   start_date = "Sep 19",
-#'   end_date = "Oct 19",
+#'   start_date = "2023-09-19",
+#'   end_date = "2023-10-19",
 #'   cohort_website = "https://openscapes.github.io/2023-fred-hutch/",
 #'   cohort_type = "standard"
 #' )
