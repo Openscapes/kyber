@@ -11,7 +11,10 @@ create_certificate(
   start_date,
   end_date,
   cohort_website,
-  output_dir = "."
+  cohort_type = c("standard", "nmfs"),
+  output_dir = ".",
+  quiet = TRUE,
+  ...
 )
 }
 \arguments{
@@ -27,7 +30,13 @@ create_certificate(
 
 \item{cohort_website}{cohort website}
 
+\item{cohort_type}{\code{"standard"} or \code{"nmfs"} cohort}
+
 \item{output_dir}{output directory for certificates. Default \code{"."}}
+
+\item{quiet}{Suppress quarto warnings and other messages. Default \code{TRUE}}
+
+\item{...}{Other parameters passed on to \code{\link[quarto:quarto_render]{quarto::quarto_render()}}}
 }
 \value{
 Saves the file to your current working directory, and
@@ -38,10 +47,14 @@ Render certificates of completion for a participant in a cohort
 }
 \examples{
 \dontrun{
-create_certificate(cohort_name = "2023-fred-hutch",
-                   participant_name = "Name",
-                   start_date = "Sep 19",
-                   end_date = "Oct 19",
-                   cohort_website = "https://openscapes.github.io/2023-fred-hutch/")
+create_certificate(
+  cohort_name = "2023-fred-hutch",
+  first_name = "FirstName",
+  last_name = "LastName"
+  start_date = "Sep 19",
+  end_date = "Oct 19",
+  cohort_website = "https://openscapes.github.io/2023-fred-hutch/",
+  cohort_type = "standard"
+)
 }
 }

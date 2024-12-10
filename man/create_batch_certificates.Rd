@@ -8,6 +8,7 @@ create_batch_certificates(
   registry,
   participants,
   cohort_name,
+  cohort_type,
   output_dir = "."
 )
 }
@@ -20,6 +21,8 @@ create_batch_certificates(
 
 \item{cohort_name}{Name of the cohort as it appears in \code{registry} and
 \code{participants}}
+
+\item{cohort_type}{\code{"standard"} or \code{"nmfs"} cohort}
 
 \item{output_dir}{output directory for certificates. Default \code{"."}}
 }
