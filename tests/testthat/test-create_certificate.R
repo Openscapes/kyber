@@ -38,7 +38,7 @@ test_that("create_certificate works with nmfs", {
 test_that("create_batch_certificates works", {
   tdir <- withr::local_tempdir()
 
-  participants <- tibble::tibble(
+  participants <- dplyr::tibble(
       cohort = c(
         "2024-nmfs-champions-a",
         "2024-nmfs-champions-a",
@@ -49,7 +49,7 @@ test_that("create_batch_certificates works", {
       last = c("Green", "White", "Brown", "Blue")
     )
   
-  registry <- tibble::tibble(
+  registry <- dplyr::tibble(
     cohort_name = c(
       "2024-nmfs-champions-a",
       "2024-nmfs-champions-b",
