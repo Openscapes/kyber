@@ -50,7 +50,7 @@ Render certificates of completion for a participant in a cohort
 create_certificate(
   cohort_name = "2023-fred-hutch",
   first_name = "FirstName",
-  last_name = "LastName"
+  last_name = "LastName",
   start_date = "Sep 19",
   end_date = "Oct 19",
   cohort_website = "https://openscapes.github.io/2023-fred-hutch/",
