@@ -3,52 +3,97 @@
 #' @param cohort_name The name of the cohort
 #' @param first_name First name of participant 
 #' @param last_name Last name of participant
-#' @param start_date cohort start date
-#' @param end_date cohort end date
+#' @param start_date cohort start date. `Date` or character in a standard format 
+#'     (eg., YYYY-MM-DD)
+#' @param end_date cohort end date. `Date` or character in a standard format 
+#'     (eg., YYYY-MM-DD)
 #' @param cohort_website cohort website
+#' @param cohort_type What kind of cohort are the certificates for? This will
+#'     choose the appropriate certificate template: `"standard"` (default) or 
+#'     `"nmfs"`.
 #' @param output_dir output directory for certificates. Default `"."`
+#' @param quiet Suppress quarto warnings and other messages. Default `TRUE`.
+#'     Set to `FALSE` to help debug if any errors occur.
+#' @param ... Other parameters passed on to [quarto::quarto_render()]
 #'
-#' @return Saves the file to your current working directory, and 
-#'   returns the path to the file
+#' @return Saves the file to the specified directory, and returns the path to 
+#'     the file
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#' create_certificate(cohort_name = "2023-fred-hutch",
-#'                    participant_name = "Name",
-#'                    start_date = "Sep 19",
-#'                    end_date = "Oct 19",
-#'                    cohort_website = "https://openscapes.github.io/2023-fred-hutch/")
+#' create_certificate(
+#'   cohort_name = "2023-fred-hutch",
+#'   first_name = "FirstName",
+#'   last_name = "LastName",
+#'   start_date = "2023-09-19",
+#'   end_date = "2023-10-19",
+#'   cohort_website = "https://openscapes.github.io/2023-fred-hutch/",
+#'   cohort_type = "standard"
+#' )
 #' }
-create_certificate <- function(cohort_name, 
-                               first_name,
-                               last_name,
-                               start_date, 
-                               end_date,
-                               cohort_website, 
-                               output_dir = ".") {
+create_certificate <- function(
+  cohort_name, 
+  first_name,
+  last_name,
+  start_date, 
+  end_date,
+  cohort_website, 
+  cohort_type = c("standard", "nmfs"),
+  output_dir = ".", 
+  quiet = TRUE,
+  ...
+) {
   # adapted from https://bookdown.org/yihui/rmarkdown/params-knit.html
+
+  cohort_type <- match.arg(cohort_type)
+
+  start_date <- as.Date(start_date)
+  end_date <- as.Date(end_date)
+
+  template <- switch (cohort_type,
+    standard = system.file("certificate/certificate.qmd", package = "kyber"),
+    nmfs = system.file("certificate/certificate-nmfs.qmd", package = "kyber")
+  )
     
   participant_name <- paste(first_name, last_name)
-  rmarkdown::render(
-    system.file("certificate/certificate.Rmd",package = "kyber"),
-    params = list(
-      cohort_name = cohort_name, 
+
+  outfile <- paste0(
+    "OpenscapesCertificate",
+    "_",
+    gsub("\\s+", "-", cohort_name),
+    "_",
+    gsub("\\s+", "-", participant_name),
+    ".pdf"
+  )
+
+  cohort_name_formatted <- cohort_name |> 
+    stringr::str_replace_all("[-_]+", " ") |> 
+    stringr::str_to_title() |> 
+    stringr::str_replace("[Nn][mM][fF][sS]", "NMFS")
+  
+  quarto::quarto_render(
+    template,
+    output_format = "typst",
+    execute_params = list(
+      cohort_name = cohort_name_formatted, 
       participant_name = participant_name, 
-      start_date = start_date, 
-      end_date = end_date, 
+      start_date = format(start_date, "%B %d, %Y"),
+      end_date = format(end_date, "%B %d, %Y"), 
       cohort_website = cohort_website
     ),
-    output_format = "pdf_document",
-    output_file = paste0(
-      "OpenscapesCertificate",
-      "_",
-      gsub("\\s+", "-", cohort_name),
-      "_",
-      gsub("\\s+", "-", participant_name),
-      ".pdf"
-    ),
-    output_dir = output_dir
+    output_file = outfile,
+    quiet = quiet,
+    ...
+  )
+
+  if (output_dir != ".") {
+    fs::dir_create(output_dir)
+    fs::file_move(outfile, output_dir)
+  }
+
+  cli::cli_inform(
+    c("v" = "File written to {.path {fs::path(output_dir, outfile)}}")
   )
 }
 
@@ -81,46 +126,62 @@ create_certificate <- function(cohort_name,
 #' )
 #' }
 create_batch_certificates <- function(registry,
-                                      participants,
-                                      cohort_name,
-                                      output_dir = ".") {
-  
-  if (!cohort_name %in% registry$cohort_name) {
-    stop("'cohort_name' is not a cohort in 'registry_sheet'", call. = FALSE)
-  }
-  
-  if (!cohort_name %in% participants$cohort) {
-    stop("'cohort_name' is not a cohort in 'participant_sheet'", call. = FALSE)
-  }
-  
-  registry_cohort <- dplyr::filter(
-    registry,
-    .data$cohort_name == !!cohort_name
-  )
-  
-  participants_cohort <- dplyr::filter(
-    participants,
-    .data$cohort == !!cohort_name
-  )
-  
-  ## Loop through each participant in list and create certificate for each
-  
-  dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
-
-  for (row in seq_len(nrow(participants_cohort))) {
-    create_certificate(
-      cohort_name = registry_cohort$cohort_name,
-      first_name = participants_cohort$first[row],
-      last_name = participants_cohort$last[row],
-      start_date = registry_cohort$date_start,
-      end_date = registry_cohort$date_end,
-      cohort_website = registry_cohort$cohort_website,
-      output_dir = output_dir         
+  participants,
+  cohort_name,
+  cohort_type,
+  output_dir = ".") {
+    
+    if (!cohort_name %in% registry$cohort_name) {
+      stop("'cohort_name' is not a cohort in 'registry_sheet'", call. = FALSE)
+    }
+    
+    if (!cohort_name %in% participants$cohort) {
+      stop("'cohort_name' is not a cohort in 'participant_sheet'", call. = FALSE)
+    }
+    
+    registry_cohort <- dplyr::filter(
+      registry,
+      .data$cohort_name == !!cohort_name
     )
     
-    output_dir
-  }
-  
+    participants_cohort <- dplyr::filter(
+      participants,
+      .data$cohort == !!cohort_name
+    )
+    
+    ## Loop through each participant in list and create certificate for each
+    
+    dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
+    
+    for (row in seq_len(nrow(participants_cohort))) {
+      tryCatch({
+        first_name <- participants_cohort$first[row]
+        last_name <- participants_cohort$last[row]
+        
+        create_certificate(
+          cohort_name = cohort_name,
+          first_name = first_name,
+          last_name = last_name,
+          start_date = registry_cohort$date_start,
+          end_date = registry_cohort$date_end,
+          cohort_website = registry_cohort$cohort_website,
+          cohort_type = cohort_type,
+          output_dir = output_dir         
+        )
+      }, 
+      error = function(e) {
+        cli::cli_inform(
+          c(
+            "x" = "Unable to create certificate for {.val {paste(first_name, last_name)}}",
+            "i" = paste("  Error:", e$message)
+        )
+      )
+      }
+    )
+}
+
+output_dir
+
 }
   
   
