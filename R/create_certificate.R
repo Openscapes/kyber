@@ -143,12 +143,13 @@ create_batch_certificates <- function(registry,
 
   for (row in seq_len(nrow(participants_cohort))) {
     create_certificate(
-      cohort_name = registry_cohort$cohort_name,
+      cohort_name = cohort_name,
       first_name = participants_cohort$first[row],
       last_name = participants_cohort$last[row],
-      start_date = registry_cohort$date_start,
-      end_date = registry_cohort$date_end,
+      start_date = format(registry_cohort$date_start, "%B %d, %Y"),
+      end_date = format(registry_cohort$date_end, "%B %d, %Y"),
       cohort_website = registry_cohort$cohort_website,
+      cohort_type = cohort_type,
       output_dir = output_dir         
     )
     
