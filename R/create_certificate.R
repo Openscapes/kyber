@@ -44,6 +44,9 @@ create_certificate <- function(
 
   cohort_type <- match.arg(cohort_type)
 
+  start_date <- as.Date(start_date)
+  end_date <- as.Date(end_date)
+
   template <- switch (cohort_type,
     standard = system.file("certificate/certificate.qmd", package = "kyber"),
     nmfs = system.file("certificate/nmfs-certificate.qmd", package = "kyber")
@@ -71,8 +74,8 @@ create_certificate <- function(
     execute_params = list(
       cohort_name = cohort_name_formatted, 
       participant_name = participant_name, 
-      start_date = start_date, 
-      end_date = end_date, 
+      start_date = format(start_date, "%B %d, %Y"),
+      end_date = format(end_date, "%B %d, %Y"), 
       cohort_website = cohort_website
     ),
     output_file = outfile,
@@ -155,8 +158,8 @@ create_batch_certificates <- function(registry,
           cohort_name = cohort_name,
           first_name = first_name,
           last_name = last_name,
-          start_date = format(as.Date(registry_cohort$date_start), "%B %d, %Y"),
-          end_date = format(as.Date(registry_cohort$date_end), "%B %d, %Y"),
+          start_date = registry_cohort$date_start,
+          end_date = registry_cohort$date_end,
           cohort_website = registry_cohort$cohort_website,
           cohort_type = cohort_type,
           output_dir = output_dir         
