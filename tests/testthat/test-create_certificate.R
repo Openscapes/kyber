@@ -5,8 +5,8 @@ test_that("create_certificate works", {
     "Test cohort",
     first_name = "Jane",
     last_name = "Doe",
-    start_date = "Oct 19",
-    end_date = "Dec 19",
+    start_date = "2024-10-19",
+    end_date = "2024-12-19",
     cohort_website = "https://google.com",
     output_dir = tdir
   )
@@ -23,8 +23,8 @@ test_that("create_certificate works with nmfs", {
     "NMFS Openscapes 2024",
     first_name = "Jane",
     last_name = "Doe",
-    start_date = "Oct 19",
-    end_date = "Dec 19",
+    start_date = "2024-10-19",
+    end_date = "2024-12-19",
     cohort_website = "https://google.com",
     cohort_type = "nmfs",
     output_dir = tdir
