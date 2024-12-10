@@ -29,13 +29,13 @@
 #' )
 #' }
 create_certificate <- function(
-  cohort_name, 
-  first_name,
-  last_name,
-  start_date, 
-  end_date,
-  cohort_website, 
-  cohort_type = c("standard", "nmfs"),
+  cohort_name = NULL, 
+  first_name = NULL,
+  last_name = NULL,
+  start_date = NULL, 
+  end_date = NULL,
+  cohort_website = NULL, 
+  cohort_type = c("standard", "nmfs", "pathways"),
   output_dir = ".", 
   quiet = TRUE,
   ...
@@ -49,13 +49,18 @@ create_certificate <- function(
 
   template <- switch (cohort_type,
     standard = system.file("certificate/certificate.qmd", package = "kyber"),
-    nmfs = system.file("certificate/nmfs-certificate.qmd", package = "kyber")
+    nmfs = system.file("certificate/nmfs-certificate.qmd", package = "kyber"),
+    pathways = system.file("certificate/pathways-certificate.qmd", package = "kyber")
   )
     
   participant_name <- paste(first_name, last_name)
 
   outfile <- paste0(
-    "OpenscapesCertificate",
+    ifelse(
+      cohort_type == "pathways",
+      paste0("Certificate_Pathways-to-Open-Science-", lubridate::year(start_date)),
+      "OpenscapesCertificate"
+    ),
     "_",
     gsub("\\s+", "-", cohort_name),
     "_",

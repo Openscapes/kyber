@@ -35,6 +35,23 @@ test_that("create_certificate works with nmfs", {
   ))
 })
 
+test_that("create_certificate works with pathways", {
+  tdir <- withr::local_tempdir()
+  
+  cert_path <- create_certificate(
+    first_name = "Jane",
+    last_name = "Doe",
+    start_date = "2024-10-19",
+    end_date = "2024-12-19",
+    cohort_type = "pathways",
+    output_dir = tdir
+  )
+  
+  expect_true(file.exists(
+    file.path(tdir, "OpenscapesCertificate_NMFS-Openscapes-2024_Jane-Doe.pdf")
+  ))
+})
+
 test_that("create_batch_certificates works", {
   tdir <- withr::local_tempdir()
 
