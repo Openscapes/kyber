@@ -114,48 +114,57 @@ create_certificate <- function(
 #' )
 #' }
 create_batch_certificates <- function(registry,
-                                      participants,
-                                      cohort_name,
-                                      cohort_type,
-                                      output_dir = ".") {
-  
-  if (!cohort_name %in% registry$cohort_name) {
-    stop("'cohort_name' is not a cohort in 'registry_sheet'", call. = FALSE)
-  }
-  
-  if (!cohort_name %in% participants$cohort) {
-    stop("'cohort_name' is not a cohort in 'participant_sheet'", call. = FALSE)
-  }
-  
-  registry_cohort <- dplyr::filter(
-    registry,
-    .data$cohort_name == !!cohort_name
-  )
-  
-  participants_cohort <- dplyr::filter(
-    participants,
-    .data$cohort == !!cohort_name
-  )
-  
-  ## Loop through each participant in list and create certificate for each
-  
-  dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
-
-  for (row in seq_len(nrow(participants_cohort))) {
-    create_certificate(
-      cohort_name = cohort_name,
-      first_name = participants_cohort$first[row],
-      last_name = participants_cohort$last[row],
-      start_date = format(registry_cohort$date_start, "%B %d, %Y"),
-      end_date = format(registry_cohort$date_end, "%B %d, %Y"),
-      cohort_website = registry_cohort$cohort_website,
-      cohort_type = cohort_type,
-      output_dir = output_dir         
+  participants,
+  cohort_name,
+  cohort_type,
+  output_dir = ".") {
+    
+    if (!cohort_name %in% registry$cohort_name) {
+      stop("'cohort_name' is not a cohort in 'registry_sheet'", call. = FALSE)
+    }
+    
+    if (!cohort_name %in% participants$cohort) {
+      stop("'cohort_name' is not a cohort in 'participant_sheet'", call. = FALSE)
+    }
+    
+    registry_cohort <- dplyr::filter(
+      registry,
+      .data$cohort_name == !!cohort_name
     )
     
-    output_dir
-  }
-  
+    participants_cohort <- dplyr::filter(
+      participants,
+      .data$cohort == !!cohort_name
+    )
+    
+    ## Loop through each participant in list and create certificate for each
+    
+    dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
+    
+    for (row in seq_len(nrow(participants_cohort))) {
+      tryCatch({
+        first_name <- participants_cohort$first[row]
+        last_name <- participants_cohort$last[row]
+        
+        create_certificate(
+          cohort_name = cohort_name,
+          first_name = first_name,
+          last_name = last_name,
+          start_date = format(registry_cohort$date_start, "%B %d, %Y"),
+          end_date = format(registry_cohort$date_end, "%B %d, %Y"),
+          cohort_website = registry_cohort$cohort_website,
+          cohort_type = cohort_type,
+          output_dir = output_dir         
+        )
+      }, 
+      error = function(e) {
+        cli::cli_alert_danger("Unable to create certificate for {.val {paste(first_name, last_name)}}")
+      }
+    )
+}
+
+output_dir
+
 }
   
   
