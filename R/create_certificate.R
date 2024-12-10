@@ -52,7 +52,6 @@ create_certificate <- function(
   participant_name <- paste(first_name, last_name)
 
   outfile <- paste0(
-    intersect(cohort_type, "nmfs"),
     "OpenscapesCertificate",
     "_",
     gsub("\\s+", "-", cohort_name),

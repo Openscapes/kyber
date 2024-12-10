@@ -20,7 +20,7 @@ test_that("create_certificate works with nmfs", {
   tdir <- withr::local_tempdir()
   
   cert_path <- create_certificate(
-    "Test cohort",
+    "NMFS Openscapes 2024",
     first_name = "Jane",
     last_name = "Doe",
     start_date = "Oct 19",
@@ -31,6 +31,6 @@ test_that("create_certificate works with nmfs", {
   )
   
   expect_true(file.exists(
-    file.path(tdir, "nmfsOpenscapesCertificate_Test-cohort_Jane-Doe.pdf")
+    file.path(tdir, "OpenscapesCertificate_NMFS-Openscapes-2024_Jane-Doe.pdf")
   ))
 })
