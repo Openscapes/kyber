@@ -2,7 +2,7 @@
 "_PACKAGE"
 
 ## usethis namespace: start
-#' @importFrom dplyr .data
+#' @importFrom dplyr .data .env
 #' @importFrom gh gh
 ## usethis namespace: end
 NULL
