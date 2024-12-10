@@ -59,12 +59,17 @@ create_certificate <- function(
     gsub("\\s+", "-", participant_name),
     ".pdf"
   )
+
+  cohort_name_formatted <- cohort_name |> 
+    stringr::str_replace_all("[-_]+", " ") |> 
+    stringr::str_to_title() |> 
+    stringr::str_replace("[Nn][mM][fF][sS]", "NMFS")
   
   quarto::quarto_render(
     template,
     output_format = "typst",
     execute_params = list(
-      cohort_name = cohort_name, 
+      cohort_name = cohort_name_formatted, 
       participant_name = participant_name, 
       start_date = start_date, 
       end_date = end_date, 
