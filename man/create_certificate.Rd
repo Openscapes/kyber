@@ -24,9 +24,11 @@ create_certificate(
 
 \item{last_name}{Last name of participant}
 
-\item{start_date}{cohort start date}
+\item{start_date}{cohort start date. \code{Date} or character in a standard format
+(eg., YYYY-MM-DD)}
 
-\item{end_date}{cohort end date}
+\item{end_date}{cohort end date. \code{Date} or character in a standard format
+(eg., YYYY-MM-DD)}
 
 \item{cohort_website}{cohort website}
 
@@ -54,8 +56,8 @@ create_certificate(
   cohort_name = "2023-fred-hutch",
   first_name = "FirstName",
   last_name = "LastName",
-  start_date = "Sep 19",
-  end_date = "Oct 19",
+  start_date = "2023-09-19",
+  end_date = "2023-10-19",
   cohort_website = "https://openscapes.github.io/2023-fred-hutch/",
   cohort_type = "standard"
 )
