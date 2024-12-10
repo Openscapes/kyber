@@ -55,3 +55,21 @@ create_batch_certificates(
 )
 
 ```
+
+## Create a batch of certificates for NMFS Openscapes cohorts
+
+The process is the same as for the standard cohorts, but set the `cohort_type` 
+parameter to `"nmfs"`, and it will use the appropriate NMFS Openscapes template.
+
+```{r}
+#| eval: false
+
+create_batch_certificates(
+  registry = registry,
+  participants = participants,
+  cohort_name = "2024-nmfs-champions-a",
+  cohort_type = "nmfs",
+  output_dir = "~/Desktop/2024-nmfs-champions-a"
+)
+
+```
