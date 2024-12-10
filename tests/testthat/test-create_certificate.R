@@ -48,7 +48,7 @@ test_that("create_certificate works with pathways", {
   )
   
   expect_true(file.exists(
-    file.path(tdir, "OpenscapesCertificate_NMFS-Openscapes-2024_Jane-Doe.pdf")
+    file.path(tdir, "Certificate_Pathways-to-Open-Science-2024__Jane-Doe.pdf")
   ))
 })
 

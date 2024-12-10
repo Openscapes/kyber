@@ -5,13 +5,13 @@
 \title{Render certificates of completion for a participant in a cohort}
 \usage{
 create_certificate(
-  cohort_name,
-  first_name,
-  last_name,
-  start_date,
-  end_date,
-  cohort_website,
-  cohort_type = c("standard", "nmfs"),
+  cohort_name = NULL,
+  first_name = NULL,
+  last_name = NULL,
+  start_date = NULL,
+  end_date = NULL,
+  cohort_website = NULL,
+  cohort_type = c("standard", "nmfs", "pathways"),
   output_dir = ".",
   quiet = TRUE,
   ...
