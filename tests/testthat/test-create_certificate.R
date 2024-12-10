@@ -37,17 +37,17 @@ test_that("create_certificate works with nmfs", {
 
 test_that("create_batch_certificates works", {
   tdir <- withr::local_tempdir()
-
+  
   participants <- dplyr::tibble(
-      cohort = c(
-        "2024-nmfs-champions-a",
-        "2024-nmfs-champions-a",
-        "2024-champions",
-        "2024-champions"
-      ),
-      first = c("Sally", "Rupert", "Lily", "Leo"),
-      last = c("Green", "White", "Brown", "Blue")
-    )
+    cohort = c(
+      "2024-nmfs-champions-a",
+      "2024-nmfs-champions-a",
+      "2024-champions",
+      "2024-champions"
+    ),
+    first = c("Sally", "Rupert", "Lily", "Leo"),
+    last = c("Green", "White", "Brown", "Blue")
+  )
   
   registry <- dplyr::tibble(
     cohort_name = c(
@@ -63,7 +63,7 @@ test_that("create_batch_certificates works", {
       "https://nasa-openscapes.github.io/2024-nasa-champions"
     )
   )
-
+  
   create_batch_certificates(
     registry = registry,
     participants = participants,
@@ -71,7 +71,7 @@ test_that("create_batch_certificates works", {
     cohort_type = "nmfs",
     output_dir = file.path(tdir, "nmfs-a")
   )
-
+  
   create_batch_certificates(
     registry = registry,
     participants = participants,
@@ -79,8 +79,36 @@ test_that("create_batch_certificates works", {
     cohort_type = "nmfs",
     output_dir = file.path(tdir, "nasa")
   )
-
+  
   expect_snapshot(
     list.files(tdir, recursive = TRUE)
+  )
+})
+
+test_that("create_batch_certificates gives message when it fails but still proceeds", {
+  tdir <- withr::local_tempdir()
+  
+  participants <- dplyr::tibble(
+    cohort = "2024-nmfs-champions-a",
+    first = "Sally",
+    last = "Green"
+  )
+  
+  registry <- dplyr::tibble(
+    cohort_name = "2024-nmfs-champions-a",
+    date_start = "yesterday", # will cause certificate create to fail
+    date_end = "2024-02-02",
+    cohort_website = "https://nmfs-openscapes.github.io/2024-nmfs-champions"
+  )
+  
+  expect_snapshot(
+    create_batch_certificates(
+      registry = registry,
+      participants = participants,
+      cohort_name = "2024-nmfs-champions-a",
+      cohort_type = "nmfs",
+      output_dir = file.path(tdir, "nmfs-a")
+    ),
+    transform = \(x) gsub("\\[1\\] .+(/nmfs-a)", "[1] \"output_dirname\\1", x)
   )
 })
