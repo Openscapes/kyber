@@ -6,14 +6,16 @@
 #' @param start_date cohort start date
 #' @param end_date cohort end date
 #' @param cohort_website cohort website
-#' @param cohort_type `"standard"` or `"nmfs"` cohort
+#' @param cohort_type What kind of cohort are the certificates for? This will
+#'     choose the appropriate certificate template: `"standard"` (default) or 
+#'     `"nmfs"`.
 #' @param output_dir output directory for certificates. Default `"."`
-#' @param quiet Suppress quarto warnings and other messages. Default `TRUE`
+#' @param quiet Suppress quarto warnings and other messages. Default `TRUE`.
+#'     Set to `FALSE` to help debug if any errors occur.
 #' @param ... Other parameters passed on to [quarto::quarto_render()]
-#' 
 #'
-#' @return Saves the file to your current working directory, and 
-#'   returns the path to the file
+#' @return Saves the file to the specified directory, and returns the path to 
+#'     the file
 #' @export
 #'
 #' @examples

@@ -30,17 +30,20 @@ create_certificate(
 
 \item{cohort_website}{cohort website}
 
-\item{cohort_type}{\code{"standard"} or \code{"nmfs"} cohort}
+\item{cohort_type}{What kind of cohort are the certificates for? This will
+choose the appropriate certificate template: \code{"standard"} (default) or
+\code{"nmfs"}.}
 
 \item{output_dir}{output directory for certificates. Default \code{"."}}
 
-\item{quiet}{Suppress quarto warnings and other messages. Default \code{TRUE}}
+\item{quiet}{Suppress quarto warnings and other messages. Default \code{TRUE}.
+Set to \code{FALSE} to help debug if any errors occur.}
 
 \item{...}{Other parameters passed on to \code{\link[quarto:quarto_render]{quarto::quarto_render()}}}
 }
 \value{
-Saves the file to your current working directory, and
-returns the path to the file
+Saves the file to the specified directory, and returns the path to
+the file
 }
 \description{
 Render certificates of completion for a participant in a cohort
