@@ -158,7 +158,12 @@ create_batch_certificates <- function(registry,
         )
       }, 
       error = function(e) {
-        cli::cli_alert_danger("Unable to create certificate for {.val {paste(first_name, last_name)}}")
+        cli::cli_inform(
+          c(
+            "x" = "Unable to create certificate for {.val {paste(first_name, last_name)}}",
+            "i" = paste("  Error:", e$message)
+        )
+      )
       }
     )
 }
