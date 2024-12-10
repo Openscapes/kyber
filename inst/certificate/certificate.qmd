@@ -1,4 +1,5 @@
 ---
+format: typst
 params:
   cohort_name: "2023 Fred Hutch"
   participant_name: "Lastname"
@@ -6,17 +7,22 @@ params:
   end_date: "October 24"
   cohort_website: "https://openscapes.github.io/2023-fred-hutch/"
   files: ["openscapes_hex.png"]
-
-output: html_document
-# output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+```{=typst}
+#set page(numbering: none)
+```
 
-## Openscapes Champions Program Certificate of Completion
+```{=typst}
+#align(center, text(17pt)[
+  *Openscapes Champions Program \ Certificate of Completion*
+])
+```
+
 Certificate of Completion: `r params$cohort_name` Cohort  
 `r params$cohort_website`
 
@@ -27,6 +33,4 @@ This certifies that `r params$participant_name` <!---`r params$participant_name_
 
 <https://doi.org/10.5281/zenodo.7407247>
 
-<img src="openscapes_hex.png" width="100">
-
-
+![](openscapes_hex.png){width=100 fig-align="center"}
