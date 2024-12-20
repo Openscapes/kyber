@@ -8,7 +8,7 @@ create_batch_certificates(
   registry,
   participants,
   cohort_name,
-  cohort_type,
+  cohort_type = c("standard", "nmfs", "pathways"),
   output_dir = "."
 )
 }
