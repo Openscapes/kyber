@@ -43,7 +43,7 @@ participants <- read_sheet("path-to-participants")
 create_batch_certificates(
   registry,
   particpants,
-  "2023-fred-hutch", 
+  "2023-fred-hutch",
   "~/Desktop/fred-hutch-certificates"
 )
 }
