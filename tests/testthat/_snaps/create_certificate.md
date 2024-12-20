@@ -8,7 +8,7 @@
       [3] "nmfs-a/OpenscapesCertificate_2024-nmfs-champions-a_Rupert-White.pdf"
       [4] "nmfs-a/OpenscapesCertificate_2024-nmfs-champions-a_Sally-Green.pdf" 
 
-# create_batch_certificates gives error message when it fails but still proceeds
+# create_batch_certificates gives message when it fails but still proceeds
 
     Code
       create_batch_certificates(registry = registry, participants = participants,

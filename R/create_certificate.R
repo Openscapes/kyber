@@ -45,7 +45,7 @@ create_certificate <- function(
     ...) {
   # adapted from https://bookdown.org/yihui/rmarkdown/params-knit.html
 
-  match.arg(cohort_type)
+  cohort_type <- match.arg(cohort_type)
 
   start_date <- as.Date(start_date)
   end_date <- as.Date(end_date)
@@ -138,7 +138,7 @@ create_batch_certificates <- function(
     stop("'cohort_name' is not a cohort in 'participant_sheet'", call. = FALSE)
   }
 
-  match.arg(cohort_type)
+  cohort_type <- match.arg(cohort_type)
 
   registry_cohort <- dplyr::filter(
     registry,
