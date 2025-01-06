@@ -6,11 +6,12 @@ params:
 
 ## Closing • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-- **Task for next time: Prepare your Pathways presentation** (3 min) – All 
-  - Have a Seaside Chat with your research group
-  - Prepare to present your Pathway work-in-progress on our final call
-    - Each group has 5 minutes to share their pathway: (3 min present + 2 min Qs)
-    - You've been practicing this through the reflections breakout groups on earlier Calls
-    - Team leads are encouraged not to present!
-    - See [Champions Series - Pathways Chapter](https://openscapes.github.io/series/core-lessons/pathways.html) for more details and examples
-    - Share Pathway Doc in our PathwayShare folder
+-   **Task for next time: Prepare your Pathways presentation** (3 min) – All
+    -   Have a Seaside Chat with your research group
+    -   Prepare to present your Pathway work-in-progress on our final call
+        -   Each group has 5 minutes to share their pathway: (3 min present + 2 min Qs)
+        -   You've been practicing this through the reflections breakout groups on earlier Calls
+        -   We will be "joyfully strict" on timing. Consider using the [inverted pyramid](https://en.wikipedia.org/wiki/Inverted_pyramid_(journalism)) approach and put your take-home message or punchline at the beginning of your story. This is a good approach to storytelling and critical in case you run out of time.
+        -   Team leads are encouraged not to present!
+        -   See [Champions Series - Pathways Chapter](https://openscapes.github.io/series/core-lessons/pathways.html) for more details and examples
+        -   Share Pathway Doc in our PathwayShare folder
