@@ -6,7 +6,7 @@ params:
 
 ## Coding strategies • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-- **Coding strategies for Future Us** ([slides](https://docs.google.com/presentation/d/1krzD4lt0k7Zu-_lfIFSubABXMLBvTpmg3Ab2GrdbnpU/)) (15 min) – Julie
+- **Coding strategies for Future Us** ([slides](https://docs.google.com/presentation/d/1krzD4lt0k7Zu-_lfIFSubABXMLBvTpmg3Ab2GrdbnpU/)) (20 min) – Julie
   - Type of tool needed:
     - Programming language (R, python)
     - Code editor (RStudio IDE, Jupyter)
@@ -40,7 +40,7 @@ params:
   - 
   - 
   - 
-- **Discussion** (15 min) – All
+- **Discussion** (10 min) – All
   - ‎
   -  
   - 
