@@ -157,6 +157,8 @@
 <span><span class="co"># Then render the README.Rmd to README.md</span></span>
 <span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">render</a></span><span class="op">(</span><span class="fu"><a href="https://fs.r-lib.org/reference/path.html" class="external-link">path</a></span><span class="op">(</span><span class="va">repo_path</span>, <span class="st">"README.Rmd"</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
+<span><span class="co"># To create a readme independently of creating a repo use: `kyber::create_readme()`, which is called by `init_repo()`. Then knit the README.Rmd to README.md.</span></span>
+<span></span>
 <span><span class="co"># We still need to work out the next part of the workflow and the extent to</span></span>
 <span><span class="co"># which it should be automated, but I imagine something like:</span></span>
 <span><span class="co">#</span></span>
