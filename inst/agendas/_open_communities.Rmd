@@ -15,10 +15,7 @@ params:
   -  
 - (<font color="red">pause recording</font>)
 - **Breakout groups** (12 min) – All (groups of 3-4, same as reflections)
-  - **Prompt: Explore communities resources & tutorials relevant for your next Seaside Chat**
-  - Explore a few communities of interest / from the slides
-  - What communities are you already a part of?
-  - What would you like to learn with your research group? How does this fit with your Pathway?
+  - **Prompt: Where do you go to learn? How do you find what you need? What is one resource or tutorial you might explore in your next Seaside Chat?**
   - ‎
   - 
   -  
