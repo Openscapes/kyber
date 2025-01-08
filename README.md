@@ -103,6 +103,8 @@ repo_path <- init_repo(repo_name)
 # Then render the README.Rmd to README.md
 render(path(repo_path, "README.Rmd"))
 
+# To create a readme independently of creating a repo use: `kyber::create_readme()`, which is called by `init_repo()`. Then knit the README.Rmd to README.md.
+
 # We still need to work out the next part of the workflow and the extent to
 # which it should be automated, but I imagine something like:
 #
