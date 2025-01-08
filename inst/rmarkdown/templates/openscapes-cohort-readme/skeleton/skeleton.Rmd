@@ -14,9 +14,9 @@ db <- kyber:::readme_setup(params)
 
 # `r db$cr$cohort_name_long`
 
-Welcome to the `r db$cr$cohort_name_long` Cohort! This is a Cohort for [TODO: who is this cohort for?]. To learn more about the program, what to expect, and outcomes, and lessons, please see the [Champions Program Lesson Series](https://openscapes.github.io/series).
+Welcome to the `r db$cr$cohort_name_long` Cohort! This is a Cohort for [TODO: who is this cohort for?] To learn more about the program, what to expect, and outcomes, and lessons, please see the [Champions Program Lesson Series](https://openscapes.github.io/series).
 
-<img src="horst-champions-trailhead.png" align="right" width="450"/>
+<img src="horst-champions-trailhead.png" align="right" width="450">
 
 ## Cohort Agendas
 
@@ -26,7 +26,7 @@ We will meet as a Cohort via Zoom five times over two months for 1.5 hours each:
 -   **Times:** `r kyber:::fmt_duration(db$cr$time_start, 90)`
 -   **Location:** remotely, via Zoom
 
-Agendas are accessible to Cohort participants in our [Cohort Google Drive Folder](%60r%20db$cr$google_drive_folder%60); they are also an archive of our live google-docing. Please see <https://openscapes.org/series> to view blank versions of the agendas.
+Agendas are accessible to Cohort participants in our [Cohort Google Drive Folder] [TODO:link to folder]; they are also an archive of our live google-docing. Please see <https://openscapes.org/series> to view blank versions of the agendas.
 
 <!---TODO create schedule table programmatically
 ```{r, echo=FALSE}
@@ -38,13 +38,19 @@ Cohort Call Topics          | Lesson Series Chapters |      Seaside Chat Topics
 ------------------|----------------------|---------------------------
 1. Openscapes mindset | [mindset](https://openscapes.github.io/series/mindset), [better science for future us](https://openscapes.github.io/series/core-lessons/better-science) | Seaside Chat (trailhead)
 2. GitHub for publishing & project management | [publishing](https://openscapes.github.io/series/github-pub), [project management](https://openscapes.github.io/series/github-issues) | Seaside Chat: shared organizing with GitHub
-3. Team culture and data strategies for future us | [team culture](https://openscapes.github.io/series/team-culture), [data strategies](https://openscapes.github.io/series/core-lessons/data-strategies) | Seaside Chat (code of conduct);<br>Co-working
-4. Open communities and coding strategies for future us | [open communities](https://openscapes.github.io/series/core-lessons/communities), [coding strategies](https://openscapes.github.io/series/core-lessons/coding-strategies) | Seaside Chat (pathway); Coworking
+3. Team culture and data strategies for future us | [team culture](https://openscapes.github.io/series/team-culture), [data strategies](https://openscapes.github.io/series/core-lessons/data-strategies) | Seaside Chat (code of conduct)
+4. Open communities and coding strategies for future us | [open communities](https://openscapes.github.io/series/core-lessons/communities), [coding strategies](https://openscapes.github.io/series/core-lessons/coding-strategies) | Seaside Chat (pathway)
 5. Pathways share and next steps | [pathways](https://openscapes.github.io/series/core-lessons/pathways) | 
+
+<!---TODO: link to issues labeled 'digest'. 
+Note result will be empty until after first call digest is posted.
+
+[**Cohort Call Digests**](`r paste0(params$github_repo, "issues")`)
+--->
 
 ## Coworking times (optional)
 
-Coworking sessions are where get our own work done at the same time together. Sometimes, this means quiet work with check-ins to break up focused work and get feedback, and sometimes this involves asking questions and screensharing to learn and problem solve. We will make breakout rooms in Zoom so people working on related themes can meet and learn from each other.
+Coworking sessions are where get our own work done at the same time together. Sometimes, this means quiet work with check-ins to break up focused work and get feedback, and sometimes this involves asking questions and screensharing to learn and problem solve. We will make breakout rooms so people working on related themes can meet and learn from each other.
 
 -   **Dates:**
 -   **Times:**
