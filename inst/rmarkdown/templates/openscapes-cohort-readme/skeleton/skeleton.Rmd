@@ -14,7 +14,7 @@ db <- kyber:::readme_setup(params)
 
 # `r db$cr$cohort_name_long`
 
-Welcome to the `r db$cr$cohort_name_long` Cohort! This is a Cohort for [TODO: who is this cohort for?]. Please see the [Champions Program Lesson Series](https://openscapes.github.io/series) for what to expect, outcomes, and to browse the open lesson materials.
+Welcome to the `r db$cr$cohort_name_long` Cohort! This is a Cohort for [TODO: who is this cohort for?]. To learn more about what to expect (the purpose, outcomes, and process of our Cohort) and to browse the open lesson materials, please see the [Champions Program Lesson Series](https://openscapes.github.io/series).
 
 <img src="horst-champions-trailhead.png" align="right" width="450">
 
