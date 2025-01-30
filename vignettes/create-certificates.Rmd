@@ -25,8 +25,8 @@ create_certificate(
   cohort_name = "2023-fred-hutch",
   first_name = "First Name",
   last_name = "Last Name",
-  start_date = "Sep 19",
-  end_date = "Oct 19",
+  start_date = "2023-09-19",
+  end_date = "2023-10-19",
   cohort_website = "https://openscapes.github.io/2023-fred-hutch/"
 )
 ```
@@ -52,6 +52,24 @@ create_batch_certificates(
   participants = participants,
   cohort_name = "2023-fred-hutch",
   output_dir = "~/Desktop/fred-hutch-certificates"
+)
+
+```
+
+## Create a batch of certificates for NMFS Openscapes cohorts
+
+The process is the same as for the standard cohorts, but set the `cohort_type` 
+parameter to `"nmfs"`, and it will use the appropriate NMFS Openscapes template.
+
+```{r}
+#| eval: false
+
+create_batch_certificates(
+  registry = registry,
+  participants = participants,
+  cohort_name = "2024-nmfs-champions-a",
+  cohort_type = "nmfs",
+  output_dir = "~/Desktop/2024-nmfs-champions-a"
 )
 
 ```
