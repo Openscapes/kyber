@@ -8,7 +8,7 @@ create_batch_certificates(
   registry,
   participants,
   cohort_name,
-  cohort_type,
+  cohort_type = c("standard", "nmfs", "pathways"),
   output_dir = "."
 )
 }
@@ -43,7 +43,7 @@ participants <- read_sheet("path-to-participants")
 create_batch_certificates(
   registry,
   particpants,
-  "2023-fred-hutch", 
+  "2023-fred-hutch",
   "~/Desktop/fred-hutch-certificates"
 )
 }
