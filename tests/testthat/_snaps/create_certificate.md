@@ -20,3 +20,19 @@
     Output
       [1] "output_dirname/nmfs-a"
 
+# create_batch_pathways_certificates works with defaults
+
+    Code
+      list.files(tdir, recursive = TRUE)
+    Output
+      [1] "pathways/Certificate_Pathways-to-Open-Science-2024_Firstname-Lastname.pdf"           
+      [2] "pathways/Certificate_Pathways-to-Open-Science-2024_Firstname-MiddleName-Lastname.pdf"
+
+# create_batch_pathways_certificates works specifying more args
+
+    Code
+      list.files(tdir, recursive = TRUE)
+    Output
+      [1] "pathways/Certificate_test-pathways-cohort-2024_Firstname-Lastname.pdf"           
+      [2] "pathways/Certificate_test-pathways-cohort-2024_Firstname-MiddleName-Lastname.pdf"
+

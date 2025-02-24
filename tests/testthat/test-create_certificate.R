@@ -1,6 +1,6 @@
 test_that("create_certificate works", {
   tdir <- withr::local_tempdir()
-  
+
   cert_path <- create_certificate(
     "Test cohort",
     first_name = "Jane",
@@ -10,7 +10,7 @@ test_that("create_certificate works", {
     cohort_website = "https://google.com",
     output_dir = tdir
   )
-  
+
   expect_true(file.exists(
     file.path(tdir, "OpenscapesCertificate_Test-cohort_Jane-Doe.pdf")
   ))
@@ -18,7 +18,7 @@ test_that("create_certificate works", {
 
 test_that("create_certificate works with nmfs", {
   tdir <- withr::local_tempdir()
-  
+
   cert_path <- create_certificate(
     "NMFS Openscapes 2024",
     first_name = "Jane",
@@ -29,7 +29,7 @@ test_that("create_certificate works with nmfs", {
     cohort_type = "nmfs",
     output_dir = tdir
   )
-  
+
   expect_true(file.exists(
     file.path(tdir, "OpenscapesCertificate_NMFS-Openscapes-2024_Jane-Doe.pdf")
   ))
@@ -37,7 +37,7 @@ test_that("create_certificate works with nmfs", {
 
 test_that("create_certificate works with pathways", {
   tdir <- withr::local_tempdir()
-  
+
   cert_path <- create_certificate(
     first_name = "Jane",
     last_name = "Doe",
@@ -46,15 +46,15 @@ test_that("create_certificate works with pathways", {
     cohort_type = "pathways",
     output_dir = tdir
   )
-  
+
   expect_true(file.exists(
-    file.path(tdir, "Certificate_Pathways-to-Open-Science-2024__Jane-Doe.pdf")
+    file.path(tdir, "Certificate_Pathways-to-Open-Science-2024_Jane-Doe.pdf")
   ))
 })
 
 test_that("create_batch_certificates works", {
   tdir <- withr::local_tempdir()
-  
+
   participants <- dplyr::tibble(
     cohort = c(
       "2024-nmfs-champions-a",
@@ -65,7 +65,7 @@ test_that("create_batch_certificates works", {
     first = c("Sally", "Rupert", "Lily", "Leo"),
     last = c("Green", "White", "Brown", "Blue")
   )
-  
+
   registry <- dplyr::tibble(
     cohort_name = c(
       "2024-nmfs-champions-a",
@@ -80,7 +80,7 @@ test_that("create_batch_certificates works", {
       "https://nasa-openscapes.github.io/2024-nasa-champions"
     )
   )
-  
+
   create_batch_certificates(
     registry = registry,
     participants = participants,
@@ -88,7 +88,7 @@ test_that("create_batch_certificates works", {
     cohort_type = "nmfs",
     output_dir = file.path(tdir, "nmfs-a")
   )
-  
+
   create_batch_certificates(
     registry = registry,
     participants = participants,
@@ -96,7 +96,7 @@ test_that("create_batch_certificates works", {
     cohort_type = "nmfs",
     output_dir = file.path(tdir, "nasa")
   )
-  
+
   expect_snapshot(
     list.files(tdir, recursive = TRUE)
   )
@@ -104,20 +104,20 @@ test_that("create_batch_certificates works", {
 
 test_that("create_batch_certificates gives message when it fails but still proceeds", {
   tdir <- withr::local_tempdir()
-  
+
   participants <- dplyr::tibble(
     cohort = "2024-nmfs-champions-a",
     first = "Sally",
     last = "Green"
   )
-  
+
   registry <- dplyr::tibble(
     cohort_name = "2024-nmfs-champions-a",
     date_start = "yesterday", # will cause certificate create to fail
     date_end = "2024-02-02",
     cohort_website = "https://nmfs-openscapes.github.io/2024-nmfs-champions"
   )
-  
+
   expect_snapshot(
     create_batch_certificates(
       registry = registry,
@@ -127,5 +127,51 @@ test_that("create_batch_certificates gives message when it fails but still proce
       output_dir = file.path(tdir, "nmfs-a")
     ),
     transform = \(x) gsub("\\[1\\] .+(/nmfs-a)", "[1] \"output_dirname\\1", x)
+  )
+})
+
+test_that("create_batch_pathways_certificates works with defaults", {
+  tdir <- withr::local_tempdir()
+
+  participants <- dplyr::tibble(
+    participant_name = c(
+      "Firstname Lastname",
+      "Firstname MiddleName Lastname"
+    )
+  )
+
+  create_batch_pathways_certificates(
+    participant_sheet = participants,
+    start_date = "2024-01-01",
+    end_date = "2024-02-01",
+    output_dir = file.path(tdir, "pathways")
+  )
+
+  expect_snapshot(
+    list.files(tdir, recursive = TRUE)
+  )
+})
+
+test_that("create_batch_pathways_certificates works specifying more args", {
+  tdir <- withr::local_tempdir()
+
+  participants <- dplyr::tibble(
+    participant_name = c(
+      "Firstname Lastname",
+      "Firstname MiddleName Lastname"
+    )
+  )
+
+  create_batch_pathways_certificates(
+    participant_sheet = participants,
+    start_date = "2024-01-01",
+    end_date = "2024-02-01",
+    cohort_name = "test pathways cohort",
+    cohort_website = "https://test-pathways",
+    output_dir = file.path(tdir, "pathways")
+  )
+
+  expect_snapshot(
+    list.files(tdir, recursive = TRUE)
   )
 })
