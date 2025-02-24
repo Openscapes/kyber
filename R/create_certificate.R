@@ -68,17 +68,18 @@ create_certificate <- function(
       cohort_type == "pathways",
       paste0(
         "Certificate_",
-        cohort_name %||% "Pathways-to-Open-Science-",
+        cohort_name %||% "Pathways-to-Open-Science",
+        "-",
         lubridate::year(start_date)
       ),
-      "OpenscapesCertificate"
+      paste0("OpenscapesCertificate_", cohort_name)
     ),
     "_",
-    gsub("\\s+", "-", cohort_name),
-    "_",
-    gsub("\\s+", "-", participant_name),
+    participant_name,
     ".pdf"
   )
+
+  outfile <- gsub("\\s+", "-", outfile)
 
   cohort_name_formatted <- cohort_name |>
     stringr::str_replace_all("[-_]+", " ") |>
