@@ -67,7 +67,7 @@ create_certificate <- function(
     ifelse(
       cohort_type == "pathways",
       paste0(
-        "Certificate_Pathways-to-Open-Science-",
+        "Certificate_",
         lubridate::year(start_date)
       ),
       "OpenscapesCertificate"
@@ -141,7 +141,7 @@ create_batch_certificates <- function(
   registry,
   participants,
   cohort_name,
-  cohort_type = c("standard", "nmfs", "pathways"),
+  cohort_type = c("standard", "nmfs"),
   output_dir = "."
 ) {
   if (!cohort_name %in% registry$cohort_name) {
@@ -199,45 +199,59 @@ create_batch_certificates <- function(
   output_dir
 }
 
-# Ideas for my original approach before Nick Tierney's help
+create_batch_pathways_certificates <- function(
+  participant_sheet,
+  start_date,
+  end_date,
+  cohort_name = "Pathways to Open Science",
+  cohort_website = "https://openscapes.github.io/pathways-to-open-science/",
+  output_dir = ".",
+  ...
+) {
+  if (!"participant_name" %in% names(participant_sheet)) {
+    cli::cli_abort(
+      "There should be a column called {.val participant_name} in the {.val participant_sheet} data.frame",
+    )
+  }
 
-# kyber::call_agenda(
-#   registry_url = "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/edit#gid=942365997",
-#   cohort_id = "2022-nasa-champions",
-#   call_number = 3)
+  start_date <- as.Date(start_date)
+  end_date <- as.Date(end_date)
 
-# kyber_function(registry, ParticpantsList) %>%
-# kyber::create_certificate <- function(registry, ParticpantsList) %>%
+  participant_names <- stringr::str_split(
+    participant_sheet$participant_name,
+    "\\s+",
+    n = 2
+  )
 
-# 1. Read cohort_metadata from OpenscapesChampionsCohortRegistry gsheet
-# Get values of these variables about the Cohort
-# cohort_name_long
-# cohort_website
-# date_start to date_end
-#
-# 2. Get participant names from OpenscapesParticipantsMainList sheet
-# Approach 1: copy names from sheet and use datapasta to paste as tribble, analogous to generating name.md files for GitHub Clinic
-# library(stringr)
-# library(datapasta) # install.packages("datapasta")
-# library(kyber) ## remotes::install_github("openscapes/kyber")
-# library(here)
-# library(fs)
-#
-# ## use `datapasta` addin to vector_tribble these names formatted from the spreadsheet!
-# cohort <- c(tibble::tribble(
-#   ~first,             ~last,
-#   "_demo",       "",
-#   "Erin",        "Robinson",
-#   "Julie",         "Lowndes"
-# )
-# )
-#
-# ## create .md files for each Champion
-# kyber::short_names(cohort$first, cohort$last) |>
-#   create_github_clinic(here())
+  dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 
-# Output as pdfs named openscapes_certificate_name.pdf, one per participant
+  for (name in participant_names) {
+    tryCatch(
+      {
+        first_name <- name[1]
+        last_name <- name[2]
 
-# Upload pdfs to Cohort Folder
+        create_certificate(
+          cohort_name = cohort_name,
+          first_name = first_name,
+          last_name = last_name,
+          start_date = start_date,
+          end_date = end_date,
+          cohort_website = cohort_website,
+          cohort_type = "pathways",
+          output_dir = output_dir
+        )
+      },
+      error = function(e) {
+        cli::cli_inform(
+          c(
+            "x" = "Unable to create certificate for {.val {name}}",
+            "i" = paste("  Error:", e$message)
+          )
+        )
+      }
+    )
+  }
 
-# In Closing of Final Cohort Call, add "get your certificate" and point to folder location
+  output_dir
+}
