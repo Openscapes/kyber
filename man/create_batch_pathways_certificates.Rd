@@ -9,7 +9,6 @@ create_batch_pathways_certificates(
   start_date,
   end_date,
   cohort_name = "Pathways to Open Science",
-  cohort_website = "https://openscapes.github.io/pathways-to-open-science/",
   output_dir = ".",
   ...
 )
@@ -23,9 +22,7 @@ create_batch_pathways_certificates(
 \item{end_date}{cohort end date. \code{Date} or character in a standard format
 (eg., YYYY-MM-DD)}
 
-\item{cohort_name}{Name of the cohort; default `"Pathways to Open Science"``}
-
-\item{cohort_website}{URL for the cohort website. Default \code{"https://openscapes.github.io/pathways-to-open-science/"}}
+\item{cohort_name}{Name of the cohort; default \code{"Pathways to Open Science"}}
 
 \item{output_dir}{output directory for certificates. Default \code{"."}}
 

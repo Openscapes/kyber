@@ -204,8 +204,7 @@ create_batch_certificates <- function(
 #' Create batch certificates for Pathways participants
 #'
 #' @param participant_sheet A data frame with a column 'participant_name' containing full names of participants.
-#' @param cohort_name Name of the cohort; default `"Pathways to Open Science"``
-#' @param cohort_website URL for the cohort website. Default `"https://openscapes.github.io/pathways-to-open-science/"`
+#' @param cohort_name Name of the cohort; default `"Pathways to Open Science"`
 #' @inheritParams create_certificate
 #'
 #' @returns
@@ -218,7 +217,6 @@ create_batch_pathways_certificates <- function(
   start_date,
   end_date,
   cohort_name = "Pathways to Open Science",
-  cohort_website = "https://openscapes.github.io/pathways-to-open-science/",
   output_dir = ".",
   ...
 ) {
@@ -251,7 +249,6 @@ create_batch_pathways_certificates <- function(
           last_name = last_name,
           start_date = start_date,
           end_date = end_date,
-          cohort_website = cohort_website,
           cohort_type = "pathways",
           output_dir = output_dir
         )
