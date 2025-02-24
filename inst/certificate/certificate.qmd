@@ -1,5 +1,6 @@
 ---
 format: typst
+fig-format: png
 params:
   cohort_name: "2023 Fred Hutch"
   participant_name: "Lastname"
@@ -7,6 +8,7 @@ params:
   end_date: "October 24"
   cohort_website: "https://openscapes.github.io/2023-fred-hutch/"
   files: ["openscapes_hex.png"]
+
 ---
 
 ```{r setup, include=FALSE}
