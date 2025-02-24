@@ -30,7 +30,7 @@ create_certificate(
 \item{end_date}{cohort end date. \code{Date} or character in a standard format
 (eg., YYYY-MM-DD)}
 
-\item{cohort_website}{cohort website}
+\item{cohort_website}{cohort website URL.}
 
 \item{cohort_type}{What kind of cohort are the certificates for? This will
 choose the appropriate certificate template: \code{"standard"} (default) or

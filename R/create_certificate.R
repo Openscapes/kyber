@@ -7,7 +7,7 @@
 #'     (eg., YYYY-MM-DD)
 #' @param end_date cohort end date. `Date` or character in a standard format
 #'     (eg., YYYY-MM-DD)
-#' @param cohort_website cohort website
+#' @param cohort_website cohort website URL.
 #' @param cohort_type What kind of cohort are the certificates for? This will
 #'     choose the appropriate certificate template: `"standard"` (default) or
 #'     `"nmfs"`.
@@ -199,6 +199,18 @@ create_batch_certificates <- function(
   output_dir
 }
 
+#' Create batch certificates for Pathways participants
+#'
+#' @param participant_sheet A data frame with a column 'participant_name' containing full names of participants.
+#' @param cohort_name Name of the cohort; default `"Pathways to Open Science"``
+#' @param cohort_website URL for the cohort website. Default `"https://openscapes.github.io/pathways-to-open-science/"`
+#' @inheritParams create_certificate
+#'
+#' @returns
+#' The path to the output directory. Individual certificate creation failures
+#' will be reported but won't stop the batch process.
+#'
+#' @export
 create_batch_pathways_certificates <- function(
   participant_sheet,
   start_date,
