@@ -68,6 +68,7 @@ create_certificate <- function(
       cohort_type == "pathways",
       paste0(
         "Certificate_",
+        cohort_name %||% "Pathways-to-Open-Science-",
         lubridate::year(start_date)
       ),
       "OpenscapesCertificate"
