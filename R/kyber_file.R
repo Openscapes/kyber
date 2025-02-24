@@ -14,12 +14,10 @@
 kyber_file <- function(path = NULL){
   if(is.null(path)) {
     list.files(
-      system.file(c("agendas", "kyber-templates", "ms-word-themes", 
-                    "readmes"), package = "kyber"), 
-      full.names = TRUE) 
+      system.file(c("agendas", "kyber-templates", "ms-word-themes"), 
+                  package = "kyber"), full.names = TRUE) 
   } else {
-    system.file(c("agendas", "kyber-templates", "ms-word-themes", 
-                  "readmes"), path, package = "kyber", 
-                mustWork = TRUE)
+    system.file(c("agendas", "kyber-templates", "ms-word-themes"), 
+                path, package = "kyber", mustWork = TRUE)
   }
 }

@@ -10,52 +10,65 @@ library(knitr)
 db <- kyber:::readme_setup(params)
 ```
 
-<a align="left" href="`r db$cr$github_repo`"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="35px"></a>
+<a align="left" href="`r db$cr$github_repo`"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="35px"/></a>
 
 # `r db$cr$cohort_name_long`
 
-Welcome to the `r db$cr$cohort_name_long` Cohort! This is a Cohort for [TODO: who is this cohort for?]. Learn more about Openscapes and the Champions Program: <https://openscapes.org>. 
+Welcome to the `r db$cr$cohort_name_long` Cohort! This is a Cohort for [TODO: who is this cohort for?]. To learn more about what to expect (the purpose, outcomes, and process of our Cohort) and to browse the open lesson materials, please see the [Champions Program Lesson Series](https://openscapes.github.io/series).
 
-<img align="right" src="horst-champions-trailhead.png" width="450">  
+<img src="horst-champions-trailhead.png" align="right" width="450">
 
 ## Cohort Agendas
 
-We will meet as a Cohort via Zoom five times over two months for 1.5 hours each:  
+We will meet as a Cohort via Zoom five times over two months for 1.5 hours each:
 
-- **Dates:** `r kyber:::pretty_date_sequence(db$date_range)`
-- **Times:** `r kyber:::fmt_duration(db$cr$time_start, 90)`
-- **Location:** remotely, via Zoom
+-   **Dates:** `r kyber:::pretty_date_sequence(db$date_range)`
+-   **Times:** `r kyber:::fmt_duration(db$cr$time_start, 90)`
+-   **Location:** remotely, via Zoom
 
-Agendas are accessible to Cohort participants in our [Cohort Google Drive Folder](`r db$cr$google_drive_folder`); they are also an archive of our live google-docing. Please see <https://openscapes.org/series> to view blank versions of the agendas. 
+Agendas are accessible to Cohort participants in our [Cohort Google Drive Folder] [TODO:link to folder]; they are also an archive of our live google-docing. Please see <https://openscapes.org/series> to view blank versions of the agendas.
 
+<!---TODO create schedule table programmatically
 ```{r, echo=FALSE}
 knitr::kable(db$schedule)
 ```
+--->
 
-## Co-working times (optional)
+Cohort Call Topics          | Lesson Series Chapters |      Seaside Chat Topics
+------------------|----------------------|---------------------------
+1. Openscapes mindset | [mindset](https://openscapes.github.io/series/mindset), [better science for future us](https://openscapes.github.io/series/core-lessons/better-science) | Seaside Chat (trailhead)
+2. GitHub for publishing & project management | [publishing](https://openscapes.github.io/series/github-pub), [project management](https://openscapes.github.io/series/github-issues) | Seaside Chat: shared organizing with GitHub
+3. Team culture and data strategies for future us | [team culture](https://openscapes.github.io/series/team-culture), [data strategies](https://openscapes.github.io/series/core-lessons/data-strategies) | Seaside Chat (code of conduct)
+4. Open communities and coding strategies for future us | [open communities](https://openscapes.github.io/series/core-lessons/communities), [coding strategies](https://openscapes.github.io/series/core-lessons/coding-strategies) | Seaside Chat (pathway)
+5. Pathways share and next steps | [pathways](https://openscapes.github.io/series/core-lessons/pathways) | 
 
-Co-working sessions are where we work at the same time together. Sometimes, this means quiet work with check-ins to break up focused work and get feedback, and sometimes this involves asking questions and screensharing to learn and problem solve.
+<!---TODO: link to issues labeled 'digest'. 
+Note result will be empty until after first call digest is posted.
 
-- **Dates:**
-- **Times:**
-- **Location:** remotely, via Zoom
+[**Cohort Call Digests**](`r paste0(params$github_repo, "issues")`)
+--->
 
-## Participating teams
-Some brief information about participating teams. Please add any edits directly (we'll learn how in our GitHub Clinic!)
+## Coworking times (optional)
 
-## Openscapes Team
+Coworking sessions are where get our own work done at the same time together. Sometimes, this means quiet work with check-ins to break up focused work and get feedback, and sometimes this involves asking questions and screensharing to learn and problem solve. We will make breakout rooms so people working on related themes can meet and learn from each other.
 
-[TODO: Add Planning Google Folder]
+-   **Dates:**
+-   **Times:**
+-   **Location:** remotely, via Zoom
 
-[Planning Google Folder]()
+## Participating teams and individuals
 
-Julie Lowndes, Openscapes Co-Lead, NCEAS, UCSB, is co-leading
-Erin Robinson, Openscapes Co-Lead, Metadata Game Changers, is co-leading
+Some brief information about participating teams and individuals. Please add any edits directly (we'll learn how in our GitHub Clinic!)
+
+## Our Team
+
+Julie Lowndes (@jules32), Openscapes
+Stefanie Butland (@stefaniebutland), Openscapes
+Andy Teucher (@teucher), Openscapes
 
 ## More about Openscapes and the Champions program:
 
-* **[Our path to better science in less time using open data science tools](https://www.nature.com/articles/s41559-017-0160)** (Lowndes et al 2017, _Nature Ecology & Evolution_) - this paper greatly influences the whole Champions program and we’ll ask that everyone participating reads it before our first Cohort Call on September 9. 
-* **[Openscapes: Better Science for Future Us](https://docs.google.com/presentation/d/1HGw4P095-lblHiGQHXYidHiVysjrPxuojxTxKtE13vk/edit#slide=id.ge2b7c2f974_0_2017)** - 2021 plenary talk at the Society for Open, Reliable, and Transparent Ecology and Evolutionary biology (SORTEE) inaugural conference 
-* **[Openscapes embraces kindness and inclusion in open science](https://sparcopen.org/impact-story/openscapes-embraces-kindness-and-inclusion-of-open-science/)** - 2021 article about Openscapes
-* **[openscapes.org](https://openscapes.org/)** – Openscapes is operated at the National Center for Ecological Analysis & Synthesis, UC Santa Barbara
+- [**Our path to better science in less time using open data science tools**](https://www.nature.com/articles/s41559-017-0160) (Lowndes et al. 2017) - This describes a marine science team’s transition to open collaborative teamwork. It was the original inspiration for creating the Champions Program and heavily influences the Core Lessons. We’ll ask that everyone participating reads it before our first Cohort Call.
+- [**Supercharge your research: a ten-week plan for open data science**](https://openscapes.github.io/supercharge-research/) (Lowndes et al. 2019) - This was co-authored with the inaugural Champions Cohort, capturing the most valuable take-aways for marine and environmental science early career faculty.
+- [**Shifting institutional culture to develop climate solutions with Open Science**](https://onlinelibrary.wiley.com/doi/10.1002/ece3.11341) (Lowndes et al. 2024) - This was co-authored by Openscapes mentors across organizations – including NASA Earthdata, NOAA Fisheries, EPA, California Water Boards, Pathways to Open Science, Fred Hutch Cancer Center.
 

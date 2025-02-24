@@ -96,10 +96,14 @@ repo_name <- "2021-ilm-rotj"
 
 # This will open a README.Rmd for you to edit
 # In yaml of README.Rmd, `cohort_name: "Cohort"` replace "Cohort" with specific cohort name
+# Default organization for repo is openscapes. To initialize the repo in another org,
+# specify org name as in `init_repo("repo_name", org = "nmfs-openscapes")`
 repo_path <- init_repo(repo_name)
 
 # Then render the README.Rmd to README.md
 render(path(repo_path, "README.Rmd"))
+
+# To create a readme independently of creating a repo use: `kyber::create_readme()`, which is called by `init_repo()`. Then knit the README.Rmd to README.md.
 
 # We still need to work out the next part of the workflow and the extent to
 # which it should be automated, but I imagine something like:
@@ -280,9 +284,11 @@ kyber::call_agenda(
     call_number = 4)
 ```    
 
-1. To review the call agenda, open `agenda.md`, click Preview, and view it in the Viewer Tab. 
+6. To review the call agenda, open `agenda.md`, click Preview, and view it in the Viewer Tab. 
 
 Usually you can repeat steps 3-5 whenever you make edits you want to review, however if there are problems try restarting you R session.
+
+To update the template for all Cohort README.Rmd's, edit [`inst/rmarkdown/templates/openscapes-cohort-readme/skeleton/skeleton.Rmd`](https://github.com/Openscapes/kyber/blob/main/inst/rmarkdown/templates/openscapes-cohort-readme/skeleton/skeleton.Rmd)
 
 ## Contributing to Kyber
 
@@ -296,5 +302,5 @@ To contribute to Kyber, fork the repo, unchecking the "Copy the main branch only
 - then `git push origin new-branch`
 - keep adding, committing, and pushing, then when you're ready open a PR
 
-We started using this workflow when the [California Water Boards Openscapes]((https://cawaterboarddatacenter.github.io/swrcb-openscapes/) team began using Kyber to create Agendas from some unique source Rmd files. For example, Water Boards Cohort Calls are 2 hours, not the default 1.5 hrs, their lesson order is different from Openscapes Core Lessons, and includes a new lesson on Documentation.
+We started using this workflow when the [California Water Boards Openscapes](https://cawaterboarddatacenter.github.io/swrcb-openscapes/) team began using Kyber to create Agendas from some unique source Rmd files. For example, Water Boards Cohort Calls are 2 hours, not the default 1.5 hrs, their lesson order is different from Openscapes Core Lessons, and includes a new lesson on Documentation.
 
