@@ -1,5 +1,6 @@
 ---
 format: typst
+fig-format: png
 params:
   participant_name: "Ileana Fenwick"
   start_date: "January 25"
