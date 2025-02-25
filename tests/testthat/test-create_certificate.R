@@ -171,7 +171,7 @@ test_that("create_batch_pathways_certificates proceeds with warning when one col
         output_dir = file.path(tdir, "pathways")
       )
     ),
-    transform = function(x) gsub(paste0(tdir, ".*"), "", x)
+    transform = function(x) gsub("\\[1].+", "", x)
   )
 
   expect_snapshot(

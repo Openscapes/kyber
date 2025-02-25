@@ -38,7 +38,7 @@
       Warning:
       Did not find a "participant_name" column in the "participants" data.frame, but there is one column named "other_name".  Using that column.
     Output
-      [1] "
+      
 
 ---
 
