@@ -76,7 +76,7 @@ create_batch_certificates(
 
 ```
 
-## Create a batch of certificates for a Pathways cohort
+## Create certificates for a Pathways cohort
 
 We have a dedicated function `create_batch_pathways_certificates()` to create certificates for the Pathways To Open Science program. 
 Registration for this is recorded in a google sheet from Zoom signups, with a column named `participant_name` that contains full names of participants.
@@ -91,5 +91,21 @@ create_batch_pathways_certificates(
   start_date = "2024-01-01",
   end_date = "2024-02-28",
   output_dir = "~/Desktop/pathways-certificates"
+)
+```
+
+To create a single Pathways certificate, use the `create_certificate()` function
+and specify `cohort_type = "pathways"`. The only other arguments you need to supply
+are `first_name`, `last_name`, `start_date`, and `end_date`:
+
+```{r}
+#| eval: false
+
+create_certificate(
+  first_name = "Firstname",
+  last_name = "Lastname",
+  start_date = "2024-01-01",
+  end_date = "2024-02-28",
+  cohort_type = "pathways"
 )
 ```
