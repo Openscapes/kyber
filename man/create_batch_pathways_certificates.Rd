@@ -5,7 +5,7 @@
 \title{Create batch certificates for Pathways participants}
 \usage{
 create_batch_pathways_certificates(
-  participant_sheet,
+  participants,
   start_date,
   end_date,
   cohort_name = "Pathways to Open Science",
@@ -14,7 +14,7 @@ create_batch_pathways_certificates(
 )
 }
 \arguments{
-\item{participant_sheet}{A data frame with a column 'participant_name' containing full names of participants.}
+\item{participants}{A data frame with a column 'participant_name' containing full names of participants.}
 
 \item{start_date}{cohort start date. \code{Date} or character in a standard format
 (eg., YYYY-MM-DD)}

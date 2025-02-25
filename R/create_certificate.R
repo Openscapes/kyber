@@ -151,7 +151,7 @@ create_batch_certificates <- function(
   }
 
   if (!cohort_name %in% participants$cohort) {
-    stop("'cohort_name' is not a cohort in 'participant_sheet'", call. = FALSE)
+    stop("'cohort_name' is not a cohort in 'participants'", call. = FALSE)
   }
 
   cohort_type <- match.arg(cohort_type)
@@ -203,7 +203,7 @@ create_batch_certificates <- function(
 
 #' Create batch certificates for Pathways participants
 #'
-#' @param participant_sheet A data frame with a column 'participant_name' containing full names of participants.
+#' @param participants A data frame with a column 'participant_name' containing full names of participants.
 #' @param cohort_name Name of the cohort; default `"Pathways to Open Science"`
 #' @inheritParams create_certificate
 #'
@@ -213,27 +213,17 @@ create_batch_certificates <- function(
 #'
 #' @export
 create_batch_pathways_certificates <- function(
-  participant_sheet,
+  participants,
   start_date,
   end_date,
   cohort_name = "Pathways to Open Science",
   output_dir = ".",
   ...
 ) {
-  if (!"participant_name" %in% names(participant_sheet)) {
-    cli::cli_abort(
-      "There should be a column called {.val participant_name} in the {.val participant_sheet} data.frame",
-    )
-  }
-
   start_date <- as.Date(start_date)
   end_date <- as.Date(end_date)
 
-  participant_names <- stringr::str_split(
-    participant_sheet$participant_name,
-    "\\s+",
-    n = 2
-  )
+  participant_names <- get_participant_names(participants)
 
   dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 
@@ -265,4 +255,37 @@ create_batch_pathways_certificates <- function(
   }
 
   output_dir
+}
+
+get_participant_names <- function(participants) {
+  UseMethod("get_participant_names")
+}
+
+#' @export
+get_participant_names.character <- function(participants) {
+  stringr::str_split(
+    participants,
+    "\\s+",
+    n = 2
+  )
+}
+
+#' @export
+get_participant_names.data.frame <- function(participants) {
+  if ("participant_name" %in% names(participants)) {
+    get_participant_names(participants[["participant_name"]])
+  } else {
+    if (length(participants) == 1) {
+      cli::cli_warn(
+        "Did not find a {.val participant_name} column in the {.val participants} 
+        data.frame, but there is one column named {.val {names(participants)}}. 
+        Using that column."
+      )
+      get_participant_names(participants[[1]])
+    } else {
+      cli::cli_abort(
+        "There should be a single column called {.val participant_name} in the {.val participants} data.frame",
+      )
+    }
+  }
 }

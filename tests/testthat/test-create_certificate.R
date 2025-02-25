@@ -141,7 +141,75 @@ test_that("create_batch_pathways_certificates works with defaults", {
   )
 
   create_batch_pathways_certificates(
-    participant_sheet = participants,
+    participants = participants,
+    start_date = "2024-01-01",
+    end_date = "2024-02-01",
+    output_dir = file.path(tdir, "pathways")
+  )
+
+  expect_snapshot(
+    list.files(tdir, recursive = TRUE)
+  )
+})
+
+test_that("create_batch_pathways_certificates proceeds with warning when one column with unexpected name", {
+  tdir <- withr::local_tempdir()
+
+  participants <- dplyr::tibble(
+    other_name = c(
+      "Firstname Lastname",
+      "Firstname MiddleName Lastname"
+    )
+  )
+
+  expect_snapshot(
+    suppressMessages(
+      create_batch_pathways_certificates(
+        participants = participants,
+        start_date = "2024-01-01",
+        end_date = "2024-02-01",
+        output_dir = file.path(tdir, "pathways")
+      )
+    ),
+    transform = function(x) gsub(paste0(tdir, ".*"), "", x)
+  )
+
+  expect_snapshot(
+    list.files(tdir, recursive = TRUE)
+  )
+})
+
+test_that("create_batch_pathways_certificates errors when > 1 unexpected column", {
+  tdir <- withr::local_tempdir()
+
+  participants <- dplyr::tibble(
+    first_col = c(
+      "Firstname Lastname",
+      "Firstname MiddleName Lastname"
+    ),
+    second_col = 1:2
+  )
+
+  expect_snapshot(
+    suppressMessages(
+      create_batch_pathways_certificates(
+        participants = participants,
+        start_date = "2024-01-01",
+        end_date = "2024-02-01",
+        output_dir = file.path(tdir, "pathways")
+      )
+    ),
+    error = TRUE
+  )
+})
+
+test_that("create_batch_pathways_certificates works with a character vector", {
+  tdir <- withr::local_tempdir()
+
+  participants <- c("Firstname Lastname", "Firstname MiddleName Lastname")
+
+  create_batch_pathways_certificates(
+    participants = participants,
     start_date = "2024-01-01",
     end_date = "2024-02-01",
     output_dir = file.path(tdir, "pathways")
@@ -163,7 +231,7 @@ test_that("create_batch_pathways_certificates works specifying more args", {
   )
 
   create_batch_pathways_certificates(
-    participant_sheet = participants,
+    participants = participants,
     start_date = "2024-01-01",
     end_date = "2024-02-01",
     cohort_name = "test pathways cohort",
