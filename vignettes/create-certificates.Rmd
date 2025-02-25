@@ -38,7 +38,9 @@ First load data from a cohort google sheet:
 ```{r}
 #| eval: false
 
-registry <- read_sheet("https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc") # OpenscapesChampionsCohortRegistry
+registry <- read_sheet(
+  "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc"
+) # OpenscapesChampionsCohortRegistry
 participants <- read_sheet("URL to OpenscapesParticipantsMainList")
 ```
 
@@ -72,4 +74,22 @@ create_batch_certificates(
   output_dir = "~/Desktop/2024-nmfs-champions-a"
 )
 
+```
+
+## Create a batch of certificates for a Pathways cohort
+
+We have a dedicated function `create_batch_pathways_certificates()` to create certificates for the Pathways To Open Science program. 
+Registration for this is recorded in a google sheet from Zoom signups, with a column named `participant_name` that contains full names of participants.
+This should be imported into R as a `data.frame` (usually using `{googlesheets4}` or `{datapasta}`), and is passed to the `participants_sheet` argument:
+
+```{r}
+#| eval: false
+sheet <- googlesheets4::read_sheet("url to pathways registration sheet")
+
+create_batch_pathways_certificates(
+  participant_sheet = sheet,
+  start_date = "2024-01-01",
+  end_date = "2024-02-28",
+  output_dir = "~/Desktop/pathways-certificates"
+)
 ```
