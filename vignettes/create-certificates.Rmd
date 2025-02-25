@@ -79,8 +79,8 @@ create_batch_certificates(
 ## Create certificates for a Pathways cohort
 
 We have a dedicated function `create_batch_pathways_certificates()` to create certificates for the Pathways To Open Science program. 
-Registration for this is recorded in a google sheet from Zoom signups, with a column named `participant_name` that contains full names of participants.
-This should be imported into R as a `data.frame` (usually using `{googlesheets4}` or `{datapasta}`), and is passed to the `participants_sheet` argument:
+The list of names is passed to the `participants_sheet` argument.
+It can either be a character vector of names or a `data.frame` with a column named `participant_name` that contains full names of participants (usually imported from a Google sheet of registrants ).
 
 ```{r}
 #| eval: false
