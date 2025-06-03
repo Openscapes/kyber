@@ -33,6 +33,6 @@ Dates: `r params$start_date` to `r params$end_date`
 This certifies that `r params$participant_name` <!---`r params$participant_name_first` `r params$participant_name_last`---> has completed the Openscapes Champions Program, an open data science mentorship program for science teams. It is a multi-month program that is designed to ignite incremental and sustainable change within research teams and beyond. It helps teams get their own work done and participate in open science, while building skills and community within the realities of scientists’ busy schedules, varying expertise and needs. Learn more at [openscapes.org/initiatives](https://openscapes.org/initiatives).
 
 
-<https://doi.org/10.5281/zenodo.7407247>
+<https://doi.org/10.5281/zenodo.7407246>
 
 ![](openscapes_hex.png){width=100 fig-align="center"}
