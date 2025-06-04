@@ -93,7 +93,7 @@ test_that("create_batch_certificates works", {
     registry = registry,
     participants = participants,
     cohort_name = "2024-champions",
-    cohort_type = "nmfs",
+    cohort_type = "standard",
     output_dir = file.path(tdir, "nasa")
   )
 
