@@ -192,7 +192,7 @@ create_batch_certificates <- function(
             "i" = paste("  Error:", e$message)
           )
         )
-      }, 
+      },
       warning = function(w) {
         cli::cli_inform(
           c(
@@ -216,6 +216,18 @@ create_batch_certificates <- function(
 #' @returns
 #' The path to the output directory. Individual certificate creation failures
 #' will be reported but won't stop the batch process.
+#'
+#' @examples
+#' \dontrun{
+#' participants <- read_csv("zoom-participants.csv")
+#'
+#' create_batch_pathways_certificates(
+#'   particpants,
+#'   start_date = "2024-01-01",
+#'   end_date = "2024-02-01",
+#'   "~/Desktop/pathways-certificates"
+#' )
+#' }
 #'
 #' @export
 create_batch_pathways_certificates <- function(
