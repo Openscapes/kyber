@@ -9,8 +9,8 @@
 #'     (eg., YYYY-MM-DD)
 #' @param cohort_website cohort website URL.
 #' @param cohort_type What kind of cohort are the certificates for? This will
-#'     choose the appropriate certificate template: `"standard"` (default) or
-#'     `"nmfs"`.
+#'     choose the appropriate certificate template: `"standard"` (default),
+#'     `"nmfs"`, or `"pathways"``.
 #' @param output_dir output directory for certificates. Default `"."`
 #' @param quiet Suppress quarto warnings and other messages. Default `TRUE`.
 #'     Set to `FALSE` to help debug if any errors occur.
