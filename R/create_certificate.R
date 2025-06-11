@@ -53,12 +53,9 @@ create_certificate <- function(
 
   template <- switch(
     cohort_type,
-    standard = system.file("certificate/certificate.qmd", package = "kyber"),
-    nmfs = system.file("certificate/certificate-nmfs.qmd", package = "kyber"),
-    pathways = system.file(
-      "certificate/certificate-pathways.qmd",
-      package = "kyber"
-    )
+    standard = kyber_file("certificate.qmd"),
+    nmfs = kyber_file("certificate-nmfs.qmd"),
+    pathways = kyber_file("certificate-pathways.qmd")
   )
 
   participant_name <- paste(first_name, last_name)
