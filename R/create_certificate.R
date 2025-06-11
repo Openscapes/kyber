@@ -98,7 +98,8 @@ create_certificate <- function(
     ...
   )
 
-  if (output_dir != ".") {
+  output_dir <- fs::path_abs(output_dir)
+  if (output_dir != fs::path_abs(".")) {
     fs::dir_create(output_dir)
     fs::file_move(outfile, output_dir)
   }
