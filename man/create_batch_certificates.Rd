@@ -23,8 +23,8 @@ create_batch_certificates(
 \code{participants}}
 
 \item{cohort_type}{What kind of cohort are the certificates for? This will
-choose the appropriate certificate template: \code{"standard"} (default) or
-\code{"nmfs"}.}
+choose the appropriate certificate template: \code{"standard"} (default),
+\code{"nmfs"}, or `"pathways"``.}
 
 \item{output_dir}{output directory for certificates. Default \code{"."}}
 }
