@@ -192,6 +192,14 @@ create_batch_certificates <- function(
             "i" = paste("  Error:", e$message)
           )
         )
+      }, 
+      warning = function(w) {
+        cli::cli_inform(
+          c(
+            "!" = "Warning while creating certificate for {.val {paste(first_name, last_name)}}",
+            "i" = paste("  Warning:", w$message)
+          )
+        )
       }
     )
   }
@@ -246,6 +254,14 @@ create_batch_pathways_certificates <- function(
           c(
             "x" = "Unable to create certificate for {.val {name}}",
             "i" = paste("  Error:", e$message)
+          )
+        )
+      },
+      warning = function(w) {
+        cli::cli_inform(
+          c(
+            "!" = "Warning while creating certificate for {.val {name}}",
+            "i" = paste("  Warning:", w$message)
           )
         )
       }
