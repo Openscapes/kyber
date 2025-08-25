@@ -1,7 +1,9 @@
 #' Create GitHub Clinic Files
 #'
 #' @param names A vector of names for the markdown files that should be created.
-#' The `.md` extension will be added automatically.
+#' The `.md` extension will be added automatically. The names should be unique.
+#' If there exists a file with the same name in the target directory, the new file
+#' will be prepended with `_duplicate_` and a warning will be issued.
 #' @param path Path to the directory where `github-clinic` should be created.
 #'
 #' @importFrom fs path dir_create file_copy
