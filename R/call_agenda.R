@@ -13,7 +13,7 @@
 #' @importFrom tools file_ext
 #' @importFrom purrr keep map_lgl map map_chr map_dfr map_dbl discard list_flatten
 #' @importFrom dplyr filter pull
-#' @importFrom parsermd parse_rmd as_tibble as_document
+#' @importFrom parsermd parse_rmd as_tibble as_document as_ast
 #' @importFrom rmarkdown render yaml_front_matter
 #' @importFrom lubridate as_date dweeks
 #' @export
@@ -161,6 +161,7 @@ call_agenda <- function(registry_url, cohort_id, call_number,
       list_flatten() %>% 
       map_dfr(as_tibble) %>% 
       filter(type != "rmd_yaml_list") %>% 
+      as_ast() |> 
       as_document()
     lines_[grep("\\\\\\[", lines_)] <- gsub("\\\\\\[", "[", lines_[grep("\\\\\\[", lines_)])
     lines_[grep("\\\\\\[", lines_)] <- gsub("\\\\\\]", "]", lines_[grep("\\\\\\[", lines_)])
@@ -178,4 +179,3 @@ durations_to_start_times <- function(durations, start) {
   #durations[durations == max(durations)] <- 0
   start_time + minutes(cumsum(durations))
 }
-
