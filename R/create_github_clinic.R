@@ -17,10 +17,11 @@
 #' list.files("github-clinic")
 #' #> "erin.md"  "julia.md"
 #' }
-create_github_clinic <- function(names, path = getwd()){
-  if(any(duplicated(names))){
-    stop("Each name must be unique. The following names are duplicated: ", 
-         unique(names[duplicated(names)]))
+create_github_clinic <- function(names, path = getwd()) {
+  if (any(duplicated(names))) {
+    cli::cli_abort(
+      "Each name must be unique, but {unique(names[duplicated(names)])} {?is/are} duplicated."
+    )
   }
   
   names <- gsub("^\\s+|\\s+$", "", names)
