@@ -30,8 +30,16 @@ create_github_clinic <- function(names, path = getwd()){
                                  "github_clinic_md_text.md", package = "kyber")
   clinic_path <- fs::path(path, "github-clinic")
   fs::dir_create(clinic_path)
+  file_names <- fs::dir_ls(clinic_path, glob = "*.md")
+
   for (i in names) {
-    fs::file_copy(clinic_template, fs::path(clinic_path, i, ext = "md"))  
+    if (paste0(i, ".md") %in% basename(file_names)) {
+      cli::cli_warn(
+        "A file named {.file {i}.md} already exists. It has prepended with {.code _duplicate_}; please fix manually."
+      )
+      i <- paste0("_duplicate_", i)
+    }
+    fs::file_copy(clinic_template, fs::path(clinic_path, i, ext = "md"))
   }
   invisible(clinic_path)
 }
