@@ -1,8 +1,24 @@
-# Interaction with duplicated names works (#120)
+# Fails with duplicate names
+
+    Code
+      create_github_clinic(names = c("julia", "erin", "julia"))
+    Condition
+      Error in `create_github_clinic()`:
+      ! Each name must be unique, but 'julia' is duplicated.
+
+# Interaction with existing file names works (#120)
 
     Code
       create_github_clinic(kyber::short_names("Stef", "Jones"), dir)
     Condition
-      Error:
-      ! [EEXIST] Failed to copy '/Users/andy/dev/openscapes/kyber/inst/kyber-templates/github_clinic_md_text.md' to '/var/folders/_f/n9fw7ctx3fqf2ty9ylw502g80000gn/T/Rtmppw0ZIi/github-clinic/stef.md': file already exists
+      Warning:
+      A file named 'stef.md' already exists. It has prepended with `_duplicate_`; please fix manually.
+
+---
+
+    Code
+      list.files(file.path(dir, "github-clinic"))
+    Output
+      [1] "_duplicate_stef.md" "erin_l.md"          "erin_r.md"         
+      [4] "stef.md"           
 

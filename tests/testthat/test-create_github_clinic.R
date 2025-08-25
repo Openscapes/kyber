@@ -12,7 +12,14 @@ test_that("The GitHub Clinic Folder can be created.", {
   expect_true(result)
 })
 
-test_that("Interaction with duplicated names works (#120)", {
+test_that("Fails with duplicate names", {
+  expect_snapshot(
+    create_github_clinic(names = c("julia", "erin", "julia")),
+    error = TRUE
+  )
+})
+
+test_that("Interaction with existing file names works (#120)", {
   cohort <- tibble::tribble(
     ~first,
     ~last,
