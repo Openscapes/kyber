@@ -178,11 +178,11 @@ cohort1 <- tibble::tribble(
   "Julie",   "Lowndes"
 )
 
-## use `datapasta` addin to vector_tribble these names formatted from the cohort 2spreadsheet!
+## use `datapasta` addin to vector_tribble these names formatted from the cohort 2 spreadsheet!
 cohort2 <- tibble::tribble(
   ~first,      ~last,                   
   "Andy",      "Teucher",
-  "Stefanie",  "Butland"
+  "Julie",  "Andrews"
 )
 
 # Combine them into one tibble if you have multiple cohorts
