@@ -2,7 +2,7 @@
 params:
   start_time: "1:00pm ET"
   duration: 13
-  files: ["screenshot-gdoc-zoom-setup.png", "wheel_of_power_duckworth.jpg"]
+  files: ["openscapes_champions_landscape.png", "screenshot-gdoc-zoom-setup.png", "wheel_of_power_duckworth.jpg"]
 ---
 
 ## Welcome • `r kyber:::fmt_duration(params$start_time, params$duration)`
@@ -52,7 +52,7 @@ params:
 
 -   **Many paths forward, together** (3 min) – Julie
 
-![](openscapes_champions_landscape.png)
+<center>![](openscapes_champions_landscape.png)</center>
 
 *Think about where are you showing up today*
 
