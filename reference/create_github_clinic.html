@@ -52,7 +52,9 @@
 
 <dl><dt id="arg-names">names<a class="anchor" aria-label="anchor" href="#arg-names"></a></dt>
 <dd><p>A vector of names for the markdown files that should be created.
-The <code>.md</code> extension will be added automatically.</p></dd>
+The <code>.md</code> extension will be added automatically. The names should be unique.
+If there exists a file with the same name in the target directory, the new file
+will be prepended with <code>_duplicate_</code> and a warning will be issued.</p></dd>
 
 
 <dt id="arg-path">path<a class="anchor" aria-label="anchor" href="#arg-path"></a></dt>

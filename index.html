@@ -207,34 +207,47 @@
 <ol style="list-style-type: decimal">
 <li>Open the cohort repo as a project in RStudio and create a new script (temporary, you’ll deleted it but it’s a nicer place to work)</li>
 <li>Copy the following into the script, then delete the examples “Erin, Julie”. You’ll keep the <code>_demo.md</code>, which is what you’ll demo live.</li>
-<li>Go to the ParticipantsList, and copy the 2 first and last columns</li>
+<li>Go to the ParticipantsList, and copy the 2 first and last columns.</li>
 <li>Back in RStudio, put your cursor inside the “tribble” parentheses, then, in the Addin menu in the top of RStudio, select “Paste as Tribble”!</li>
+<li>If you have more than one participant list (e.g., from moore than one cohort), copy them individually into separate tibbles, then use <code><a href="https://dplyr.tidyverse.org/reference/bind_rows.html" class="external-link">dplyr::bind_rows()</a></code> to combine them into one tibble.</li>
 <li>Then, double-check the column headers - they are likely not <code>first</code> and <code>last</code> as is written in the <code><a href="reference/short_names.html">kyber::short_names</a></code> call. The easiest thing is to update the column names in the <code><a href="reference/short_names.html">kyber::short_names</a></code> code before running (for example: <code>kyber::short_names(cohort$First.Name, cohort$Last.Name)</code>
 </li>
 </ol>
-<pre><code><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://stringr.tidyverse.org" class="external-link">stringr</a></span><span class="op">)</span></span>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://stringr.tidyverse.org" class="external-link">stringr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/milesmcbain/datapasta" class="external-link">datapasta</a></span><span class="op">)</span> <span class="co"># install.packages("datapasta")</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://openscapes.github.io/kyber/">kyber</a></span><span class="op">)</span> <span class="co">## remotes::install_github("openscapes/kyber")</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://here.r-lib.org/" class="external-link">here</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://fs.r-lib.org" class="external-link">fs</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">## use `datapasta` addin to vector_tribble these names formatted from the spreadsheet!</span></span>
-<span><span class="va">cohort</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html" class="external-link">tribble</a></span><span class="op">(</span></span>
-<span>                      <span class="op">~</span><span class="va">first</span>,             <span class="op">~</span><span class="va">last</span>,</span>
-<span>                      <span class="st">"_demo"</span>,       <span class="st">""</span>,</span>
-<span>                      <span class="st">"Erin"</span>,        <span class="st">"Robinson"</span>,</span>
-<span>                      <span class="st">"Julie"</span>,         <span class="st">"Lowndes"</span></span>
-<span>               <span class="op">)</span></span>
+<span><span class="co">## use `datapasta` addin to vector_tribble these names formatted from the cohort 1 spreadsheet!</span></span>
+<span><span class="va">cohort1</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html" class="external-link">tribble</a></span><span class="op">(</span></span>
+<span>  <span class="op">~</span><span class="va">first</span>,    <span class="op">~</span><span class="va">last</span>,</span>
+<span>  <span class="st">"_demo"</span>,   <span class="st">""</span>,                      </span>
+<span>  <span class="st">"Erin"</span>,    <span class="st">"Robinson"</span>,</span>
+<span>  <span class="st">"Julie"</span>,   <span class="st">"Lowndes"</span></span>
 <span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">## create .md files for each Champion</span></span>
-<span><span class="fu">kyber</span><span class="fu">::</span><span class="fu"><a href="reference/short_names.html">short_names</a></span><span class="op">(</span><span class="va">cohort</span><span class="op">$</span><span class="va">first</span>, <span class="va">cohort</span><span class="op">$</span><span class="va">last</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>   <span class="fu"><a href="reference/create_github_clinic.html">create_github_clinic</a></span><span class="op">(</span><span class="fu">here</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">## use `datapasta` addin to vector_tribble these names formatted from the cohort 2 spreadsheet!</span></span>
+<span><span class="va">cohort2</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html" class="external-link">tribble</a></span><span class="op">(</span></span>
+<span>  <span class="op">~</span><span class="va">first</span>,      <span class="op">~</span><span class="va">last</span>,                   </span>
+<span>  <span class="st">"Andy"</span>,      <span class="st">"Teucher"</span>,</span>
+<span>  <span class="st">"Julie"</span>,  <span class="st">"Andrews"</span></span>
+<span><span class="op">)</span></span>
 <span></span>
+<span><span class="co"># Combine them into one tibble if you have multiple cohorts</span></span>
+<span><span class="va">all_cohorts</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html" class="external-link">bind_rows</a></span><span class="op">(</span><span class="va">cohort1</span>, <span class="va">cohort2</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create .md files for each Champion. `short_names()` makes sure duplicated first names</span></span>
+<span><span class="co"># are disambiguated with last initial.</span></span>
+<span><span class="fu">kyber</span><span class="fu">::</span><span class="fu"><a href="reference/short_names.html">short_names</a></span><span class="op">(</span><span class="va">all_cohorts</span><span class="op">$</span><span class="va">first</span>, <span class="va">all_cohorts</span><span class="op">$</span><span class="va">last</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>   <span class="fu"><a href="reference/create_github_clinic.html">create_github_clinic</a></span><span class="op">(</span><span class="fu">here</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span>   </span>
 <span><span class="co">## copy trailhead image into parent folder</span></span>
-<span><span class="va">trailhead_png</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"kyber-templates"</span>,</span>
+<span><span class="va">trailhead_png</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"kyber-templates"</span>, </span>
 <span>                               <span class="st">"horst-champions-trailhead.png"</span>, package <span class="op">=</span> <span class="st">"kyber"</span><span class="op">)</span></span>
-<span><span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/copy.html" class="external-link">file_copy</a></span><span class="op">(</span><span class="va">trailhead_png</span>, <span class="fu">here</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>  </span></code></pre>
+<span><span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/copy.html" class="external-link">file_copy</a></span><span class="op">(</span><span class="va">trailhead_png</span>, <span class="fu">here</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>  </span></code></pre></div>
 <p>You’ll now have .md files for each participant in the cohort! Any duplicate names with have a <code>_LastInitial</code>. Check by clicking into the <code>github-clinic</code> folder and opening a file.</p>
 <p><strong>Now</strong>, commit and push the Markdown files in the <code>github-clinic</code> folder plus the `horst-champions-trailhead.png in the top-level folder to GitHub.com. Don’t push the .gitignore or .rproj since they’re not relevant for the Clinic. (You can do Command-A to select all files and then unclick those 2 you don’t want).</p>
 </div>
