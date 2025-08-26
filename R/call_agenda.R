@@ -85,9 +85,8 @@ call_agenda <- function(registry_url, cohort_id, call_number,
 
   if (durations$expected_total != durations$calculated_total) {
     cli::cli_warn(
-      "The sum of the individual durations ({durations$calculated} minutes) 
-      does not equal the expected duration ({durations$expected} minutes) 
-      specified in the YAML front matter of the templates."
+      "The sum of the individual durations ({durations$calculated_total} minutes) 
+      does not equal the expected duration ({durations$expected_total} minutes)."
     )
   }
   
