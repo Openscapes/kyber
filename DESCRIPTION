@@ -35,6 +35,7 @@ Imports:
     stringr
 Suggests: 
     testthat (>= 3.0.0),
+    tibble,
     usethis,
     withr
 Config/testthat/edition: 3

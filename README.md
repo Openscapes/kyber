@@ -155,30 +155,42 @@ The following suggestions aid next steps as of July 14, 2022:
 If you haven't already, clone the Cohort Repo to RStudio (File > New Project > Version Control > Git) , then run the following code. Detailed instructions of what this looks like:
 
 1. Open the cohort repo as a project in RStudio and create a new script (temporary, you'll deleted it but it's a nicer place to work)
-1. Copy the following into the script, then delete the examples "Erin, Julie". You'll keep the `_demo.md`, which is what you'll demo live. 
-2. Go to the ParticipantsList, and copy the 2 first and last columns
-3. Back in RStudio, put your cursor inside the "tribble" parentheses, then, in the Addin menu in the top of RStudio, select "Paste as Tribble"!
-4. Then, double-check the column headers - they are likely not `first` and `last` as is written in the `kyber::short_names` call. The easiest thing is to update the column names in the `kyber::short_names` code before running (for example: `kyber::short_names(cohort$First.Name, cohort$Last.Name)`
+2. Copy the following into the script, then delete the examples "Erin, Julie". You'll keep the `_demo.md`, which is what you'll demo live. 
+3. Go to the ParticipantsList, and copy the 2 first and last columns.
+4. Back in RStudio, put your cursor inside the "tribble" parentheses, then, in the Addin menu in the top of RStudio, select "Paste as Tribble"!
+5. If you have more than one participant list (e.g., from moore than one cohort), copy them individually into separate tibbles, then use `dplyr::bind_rows()` to combine them into one tibble.
+6. Then, double-check the column headers - they are likely not `first` and `last` as is written in the `kyber::short_names` call. The easiest thing is to update the column names in the `kyber::short_names` code before running (for example: `kyber::short_names(cohort$First.Name, cohort$Last.Name)`
 
 
-```
+```r
 library(stringr)
 library(datapasta) # install.packages("datapasta")
 library(kyber) ## remotes::install_github("openscapes/kyber")
 library(here)
 library(fs)
+library(dplyr)
 
-## use `datapasta` addin to vector_tribble these names formatted from the spreadsheet!
-cohort <- c(tibble::tribble(
-                      ~first,             ~last,
-                      "_demo",       "",                      
-                      "Erin",        "Robinson",
-                      "Julie",         "Lowndes"
-               )
+## use `datapasta` addin to vector_tribble these names formatted from the cohort 1 spreadsheet!
+cohort1 <- tibble::tribble(
+  ~first,    ~last,
+  "_demo",   "",                      
+  "Erin",    "Robinson",
+  "Julie",   "Lowndes"
 )
 
-## create .md files for each Champion
-kyber::short_names(cohort$first, cohort$last) |>
+## use `datapasta` addin to vector_tribble these names formatted from the cohort 2 spreadsheet!
+cohort2 <- tibble::tribble(
+  ~first,      ~last,                   
+  "Andy",      "Teucher",
+  "Julie",  "Andrews"
+)
+
+# Combine them into one tibble if you have multiple cohorts
+all_cohorts <- dplyr::bind_rows(cohort1, cohort2)
+
+# Create .md files for each Champion. `short_names()` makes sure duplicated first names
+# are disambiguated with last initial.
+kyber::short_names(all_cohorts$first, all_cohorts$last) |>
    create_github_clinic(here())
    
 ## copy trailhead image into parent folder
@@ -303,4 +315,3 @@ To contribute to Kyber, fork the repo, unchecking the "Copy the main branch only
 - keep adding, committing, and pushing, then when you're ready open a PR
 
 We started using this workflow when the [California Water Boards Openscapes](https://cawaterboarddatacenter.github.io/swrcb-openscapes/) team began using Kyber to create Agendas from some unique source Rmd files. For example, Water Boards Cohort Calls are 2 hours, not the default 1.5 hrs, their lesson order is different from Openscapes Core Lessons, and includes a new lesson on Documentation.
-
