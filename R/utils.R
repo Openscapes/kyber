@@ -98,3 +98,42 @@ fmt_schedule_dates <- function(date_range){
     map_chr(~ifelse(nchar(.x) == 1, paste0("0", .x), .x))
   paste0(months_, "/", days_)
 }
+
+get_cohort_type <- function(cohort_registry, cohort_id) {
+  cohort_registry %>% 
+    filter(cohort_name == cohort_id) %>% 
+    pull(cohort_type)
+}
+
+get_template_files <- function(call_registry, call_number, cohort_type_) {
+  call_registry %>% 
+    filter(call == call_number) %>% 
+    filter(cohort_type == cohort_type_) %>% 
+    as.character() %>% 
+    keep(~nzchar(file_ext(.x)))
+}
+
+warn_if_any_not_rmd <- function(template_files) {
+  not_rmd <- template_files %>% 
+    file_ext() %>% 
+    keep(nzchar) %>% 
+    map_lgl(~!grepl("[R|r]md$", .x))
+  
+  if(any(not_rmd)){
+    warning(paste(
+      "The following file(s) are not Rmd files which may cause errors:",
+      paste(template_files[not_rmd], collapse = ", ")
+    ))
+  }
+}
+
+stop_if_any_templates_not_installed <- function(template_files) {
+  templates_installed <- (template_files %in% basename(kyber_file()))
+  
+  if(!all(templates_installed)){
+    stop(paste(
+      "The following template file(s) could not be found:",
+      paste(template_files[!templates_installed], collapse = ", ")
+    ))
+  }
+}
