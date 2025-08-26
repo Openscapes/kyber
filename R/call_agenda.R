@@ -24,6 +24,10 @@ call_agenda <- function(registry_url, cohort_id, call_number,
                         output_format = md_agenda(), output_file = "agenda.md"){
   
   cohort_registry <- read_sheet(registry_url, cohort_sheet, col_types = "c")
+
+  if (!(cohort_id %in% cohort_registry$cohort_name)) {
+    cli::cli_abort("{.var cohort_id} {.val {cohort_id}} not found in cohort registry. Check {.var cohort_id} against cohort names in registry.")
+  }
   call_registry <- read_sheet(registry_url, call_sheet, col_types = "c")
   temp_dir <- tempdir()
   params_registry <- list(website = website, cohort_name = cohort_id, 
