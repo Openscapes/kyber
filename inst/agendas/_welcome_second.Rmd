@@ -12,11 +12,12 @@ params:
   - CoC Reminder ([full version](https://www.openscapes.org/code-of-conduct/))
     - Be respectful and value each other’s ideas, styles and viewpoints.
     - Lead by example and match your actions with your words.
-   - Openscapes team here on this call: 
-    - Julie Lowndes
-    - Stefanie Butland
-    - Ileana Fenwick
-  - I am grateful I am for the land where I am here in Santa Barbara California and I want to honor the Chumash peoples who have been and continue to be stewards of the lands and waters here.
+  - **Our team here on this call:** 
+    - Julie Lowndes / Openscapes
+    - Stefanie Butland / Openscapes
+    - Ileana Fenwick / Openscapes
+    - Andy Teucher / Openscapes
+    - Openscapes Mentors - huge expertise; they can share and help answer questions
   
 - **Today’s goals** (1 min) – Julie
   - ‎

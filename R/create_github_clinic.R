@@ -1,37 +1,53 @@
 #' Create GitHub Clinic Files
 #'
 #' @param names A vector of names for the markdown files that should be created.
-#' The `.md` extension will be added automatically.
+#' The `.md` extension will be added automatically. The names should be unique.
+#' If there exists a file with the same name in the target directory, the new file
+#' will be prepended with `_duplicate_` and a warning will be issued.
 #' @param path Path to the directory where `github-clinic` should be created.
-#' 
+#'
 #' @importFrom fs path dir_create file_copy
 #' @export
-#' @examples 
+#' @examples
 #' \dontrun{
-#' 
+#'
 #' create_github_clinic(names = c("julia", "erin"))
-#' 
+#'
 #' file.exists("github-clinic")
 #' #> TRUE
-#' 
+#'
 #' list.files("github-clinic")
 #' #> "erin.md"  "julia.md"
 #' }
-create_github_clinic <- function(names, path = getwd()){
-  if(any(duplicated(names))){
-    stop("Each name must be unique. The following names are duplicated: ", 
-         unique(names[duplicated(names)]))
+create_github_clinic <- function(names, path = getwd()) {
+  if (any(duplicated(names))) {
+    cli::cli_abort(
+      "Each name must be unique, but '{unique(names[duplicated(names)])}' {?is/are} duplicated."
+    )
   }
-  
+
   names <- gsub("^\\s+|\\s+$", "", names)
   names <- gsub("\\s+", "-", names)
-  
-  clinic_template <- system.file("kyber-templates", 
-                                 "github_clinic_md_text.md", package = "kyber")
+
+  clinic_template <- system.file(
+    "kyber-templates",
+    "github_clinic_md_text.md",
+    package = "kyber"
+  )
+
   clinic_path <- fs::path(path, "github-clinic")
   fs::dir_create(clinic_path)
+  file_names <- fs::dir_ls(clinic_path, glob = "*.md")
+
   for (i in names) {
-    fs::file_copy(clinic_template, fs::path(clinic_path, i, ext = "md"))  
+    if (paste0(i, ".md") %in% basename(file_names)) {
+      cli::cli_warn(
+        "A file named {.file {i}.md} already exists. It has prepended with {.code _duplicate_}; please fix manually."
+      )
+      i <- paste0("_duplicate_", i)
+    }
+    fs::file_copy(clinic_template, fs::path(clinic_path, i, ext = "md"))
   }
+
   invisible(clinic_path)
 }

@@ -6,12 +6,11 @@ params:
 
 ## Closing • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-- **Task for next time: Have a Seaside Chat about GitHub** (3 min) – All 
+- **Task for next time: Have a Seaside Chat about GitHub** (3 min)
 - Have a Seaside Chat with your research group to explore/practice GitHub. Ideas:
     - Update your team’s information to our cohort repo's README: <`r params_registry$github_repo`>
     - Use GitHub Clinic slides to teach your broader research group
     - Discuss strategies for using GitHub with your broader research group 
       - [NMFS-OpenSci Project boards](https://nmfs-opensci.github.io/ResourceBook/content/project_management/github_project_boards.html)
-      - [Pinsky Lab Fishbowl Chat ](https://pinsky.marine.rutgers.edu/fishbowl-chat-1/) 
-      - [Other Champions Examples](https://github.com/Openscapes/how_we_work)
+
 - Share updates on Slack or as a GitHub Issue in our cohort repo!

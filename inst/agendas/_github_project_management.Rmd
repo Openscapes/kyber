@@ -6,27 +6,48 @@ params:
 
 ## GitHub for Project Management • `r kyber:::fmt_duration(params$start_time, params$duration)`
 
-- **GitHub Clinic: Issues** ([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/edit#slide=id.g20695b6755c_0_148) 17-20) (10 min) – Stef
-  - 
-  - 
-  - 
-- **Breakout groups: practice using Issues ** (10 min) (<font color="red">pause recording</font>) – (breakouts as teams) - Julie
-- *This second breakout group is more collaborative: tag others and screenshare*
+-   **GitHub Clinic: Issues** ([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/edit#slide=id.g20695b6755c_0_148) 17-20 and demo) (10 min) – Stef
 
-  - Create an issue with your group, write in it, practice Markdown
-  - Contribute to other groups’ discussions
-  - Learn anything cool? Share!  
-  - 
-  - (<font color="red">resume recording</font>)
-  - Project Boards, Organizations ([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/edit#slide=id.g20695b6755c_0_185) 21-22) (2 min) - Stef
-  - ‎
-  - 
-  - 
-- **Discussion and screenshares** (13 min)
-  - ‎
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+    -   
+
+    -   
+
+-   **Breakout groups: practice using Issues** (10 min) (<font color="red">pause recording</font>) – (breakouts as teams) - Julie
+
+-   *This second breakout group is more collaborative: tag others and screenshare*
+
+    -   **Goals:** practice using Issues for collaboration, Markdown practice
+        -   Go to our cohort repo’s Issues
+        -   Create an Issue, tag people in your breakout group (ask their usernames) 
+        -   Browse issues, comment in other Issues. Try:
+            -   Practicing Markdown
+            -   Creating a label and applying it, assigning people 
+            -   Adding an emoji
+            -   Adding issues to a Project (create one if need be) 
+            -   Closing an Issue
+    -   Have fun! Talk to your breakout group, share what you learn.
+    -   
+    -   
+    -   ‎
+    -   
+    -   
+
+-   **Regroup & unwatch ‎repository** ‎([slides](https://docs.google.com/presentation/d/1geUN-dv-NMx6IgeCwMRVmTO8nZaauIl26tZDOrkLW_E/edit#slide=id.g20695b6755c_0_185) 21) (2 min) - Stef
+
+    -   
+
+-   **Discussion and screenshares** (11 min) (<font color="red">resume recording</font>)
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+    -   
+
+    -   
