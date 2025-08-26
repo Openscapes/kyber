@@ -22,17 +22,25 @@ check_duration <- function(registry_url, cohort_id, call_number,
     map(yaml_front_matter) %>% 
     map(~.x$params)
   
-  durations <- template_params %>% 
-    map_dbl(~ ifelse(is.null(.x$duration), NA, .x$duration))
-  
-  total_duration <- template_params %>% 
-    map_dbl(~ ifelse(is.null(.x$total_duration), NA, .x$total_duration))
-  
-  paste("Specified total duration:", 
-        (list_flatten(template_params))$total_duration, "minutes") %>%
+  durations <- durations_from_template_params(template_params)
+
+  paste("Specified total duration:", durations$expected_total, "minutes") %>%
     cli_alert_info()
-  paste("Calculated total duration:", 
-        sum(durations, na.rm = TRUE), "minutes") %>%
+  paste("Calculated total duration:", durations$calculated_total, "minutes") %>%
     cli_alert_info()
   invisible()
+}
+
+durations_from_template_params <- function(template_params) {
+  durations <- template_params %>%
+    map_dbl(~ ifelse(is.null(.x$duration), NA, .x$duration))
+
+  total_duration <- template_params %>%
+    map_dbl(~ ifelse(is.null(.x$total_duration), NA, .x$total_duration))
+
+  list(
+    durations = durations,
+    expected_total = list_flatten(template_params)$total_duration,
+    calculated_total = sum(durations, na.rm = TRUE)
+  )
 }
