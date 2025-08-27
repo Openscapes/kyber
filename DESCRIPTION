@@ -28,7 +28,7 @@ Imports:
     knitr,
     lubridate,
     magrittr,
-    parsermd,
+    parsermd (>= 0.2.0),
     purrr,
     rmarkdown,
     rstudioapi,
