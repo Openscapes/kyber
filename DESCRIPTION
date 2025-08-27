@@ -32,7 +32,8 @@ Imports:
     purrr,
     rmarkdown,
     rstudioapi,
-    stringr
+    stringr,
+    whisker
 Suggests: 
     testthat (>= 3.0.0),
     tibble,
