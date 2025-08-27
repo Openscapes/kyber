@@ -160,7 +160,7 @@ call_agenda <- function(registry_url, cohort_id, call_number,
       map(~list(.x, parse_rmd("\n"))) %>% 
       list_flatten() %>% 
       map_dfr(as_tibble) %>% 
-      filter(type != "rmd_yaml_list") %>% 
+      filter(type != "rmd_yaml") %>% 
       as_ast() |> 
       as_document()
     lines_[grep("\\\\\\[", lines_)] <- gsub("\\\\\\[", "[", lines_[grep("\\\\\\[", lines_)])
