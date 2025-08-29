@@ -93,7 +93,7 @@ create_certificate <- function(
       end_date = format(end_date, "%B %d, %Y"),
       cohort_website = cohort_website
     ),
-    output_file = outfile,
+    quarto_args = c('--output', outfile),
     quiet = quiet,
     ...
   )
