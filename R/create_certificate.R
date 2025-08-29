@@ -127,6 +127,8 @@ create_certificate <- function(
 #'
 #' @examples
 #' \dontrun{
+#' googlesheets4::gs4_auth()
+#' 
 #' registry <- googlesheets4::read_sheet("path-to-registry")
 #' participants <- googlesheets4::read_sheet("path-to-participants")
 #'

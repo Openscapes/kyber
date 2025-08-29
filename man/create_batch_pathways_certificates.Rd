@@ -40,7 +40,7 @@ Create batch certificates for Pathways participants
 participants <- read_csv("zoom-participants.csv")
 
 create_batch_pathways_certificates(
-  particpants,
+  participants,
   start_date = "2024-01-01",
   end_date = "2024-02-01",
   "~/Desktop/pathways-certificates"

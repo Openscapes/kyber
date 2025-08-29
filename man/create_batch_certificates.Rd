@@ -37,8 +37,10 @@ create a certificate for each participant
 }
 \examples{
 \dontrun{
-registry <- read_sheet("path-to-registry")
-participants <- read_sheet("path-to-participants")
+googlesheets4::gs4_auth()
+
+registry <- googlesheets4::read_sheet("path-to-registry")
+participants <- googlesheets4::read_sheet("path-to-participants")
 
 create_batch_certificates(
   registry,
