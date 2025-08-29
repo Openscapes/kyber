@@ -25,8 +25,8 @@ create_certificate(
   cohort_name = "2023-fred-hutch",
   first_name = "First Name",
   last_name = "Last Name",
-  start_date = "Sep 19",
-  end_date = "Oct 19",
+  start_date = "2023-09-19",
+  end_date = "2023-10-19",
   cohort_website = "https://openscapes.github.io/2023-fred-hutch/"
 )
 ```
@@ -38,7 +38,9 @@ First load data from a cohort google sheet:
 ```{r}
 #| eval: false
 
-registry <- read_sheet("https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc") # OpenscapesChampionsCohortRegistry
+registry <- read_sheet(
+  "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc"
+) # OpenscapesChampionsCohortRegistry
 participants <- read_sheet("URL to OpenscapesParticipantsMainList")
 ```
 
@@ -54,4 +56,56 @@ create_batch_certificates(
   output_dir = "~/Desktop/fred-hutch-certificates"
 )
 
+```
+
+## Create a batch of certificates for NMFS Openscapes cohorts
+
+The process is the same as for the standard cohorts, but set the `cohort_type` 
+parameter to `"nmfs"`, and it will use the appropriate NMFS Openscapes template.
+
+```{r}
+#| eval: false
+
+create_batch_certificates(
+  registry = registry,
+  participants = participants,
+  cohort_name = "2024-nmfs-champions-a",
+  cohort_type = "nmfs",
+  output_dir = "~/Desktop/2024-nmfs-champions-a"
+)
+
+```
+
+## Create certificates for a Pathways cohort
+
+We have a dedicated function `create_batch_pathways_certificates()` to create certificates for the Pathways To Open Science program. 
+The list of names is passed to the `participants_sheet` argument.
+It can either be a character vector of names or a `data.frame` with a column named `participant_name` that contains full names of participants (usually imported from a Google sheet of registrants ).
+
+```{r}
+#| eval: false
+sheet <- googlesheets4::read_sheet("url to pathways registration sheet")
+
+create_batch_pathways_certificates(
+  participants = sheet,
+  start_date = "2024-01-01",
+  end_date = "2024-02-28",
+  output_dir = "~/Desktop/pathways-certificates"
+)
+```
+
+To create a single Pathways certificate, use the `create_certificate()` function
+and specify `cohort_type = "pathways"`. The only other arguments you need to supply
+are `first_name`, `last_name`, `start_date`, and `end_date`:
+
+```{r}
+#| eval: false
+
+create_certificate(
+  first_name = "Firstname",
+  last_name = "Lastname",
+  start_date = "2024-01-01",
+  end_date = "2024-02-28",
+  cohort_type = "pathways"
+)
 ```

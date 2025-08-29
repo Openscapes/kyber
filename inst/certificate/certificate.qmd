@@ -1,0 +1,41 @@
+---
+title: "Openscapes Champions Program"
+format:
+  typst:
+    template-partials: 
+      - typst/typst-show.typ
+      - typst/typst-template.typ
+fig-format: png
+params:
+  cohort_name: "2023 Fred Hutch"
+  participant_name: "FirstName Lastname"
+  start_date: "August 29"
+  end_date: "October 24"
+  cohort_website: "https://openscapes.github.io/2023-fred-hutch/"
+  files: ["openscapes_hex.png"]
+author: "`r params$participant_name`"
+subtitle: "Certificate of Completion: `r params$cohort_name` Cohort"
+dates: "`r params$start_date` - `r params$end_date`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+This certifies that `r params$participant_name` <!---`r params$participant_name_first` `r params$participant_name_last`---> has completed the Openscapes Champions Program, an open data science mentorship program for science teams. It is a multi-month program that is designed to ignite incremental and sustainable change within research teams and beyond. It helps teams get their own work done and participate in open science, while building skills and community within the realities of scientists’ busy schedules, varying expertise and needs. Learn more at [openscapes.org/initiatives](https://openscapes.org/initiatives).
+
+```{=typst}
+#v(1em)
+```
+
+![](openscapes_hex.png){width=120 fig-align="center"}
+
+```{=typst}
+#v(1em)
+```
+
+::: {.block}
+
+<https://doi.org/10.5281/zenodo.7407246> `#h(1fr)`{=typst} `r paste0("<", params$cohort_website, ">")`
+
+:::

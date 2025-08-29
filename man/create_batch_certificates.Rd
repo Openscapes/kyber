@@ -8,6 +8,7 @@ create_batch_certificates(
   registry,
   participants,
   cohort_name,
+  cohort_type = c("standard", "nmfs"),
   output_dir = "."
 )
 }
@@ -21,6 +22,10 @@ create_batch_certificates(
 \item{cohort_name}{Name of the cohort as it appears in \code{registry} and
 \code{participants}}
 
+\item{cohort_type}{What kind of cohort are the certificates for? This will
+choose the appropriate certificate template: \code{"standard"} (default),
+\code{"nmfs"}, or `"pathways"``.}
+
 \item{output_dir}{output directory for certificates. Default \code{"."}}
 }
 \value{
@@ -32,13 +37,15 @@ create a certificate for each participant
 }
 \examples{
 \dontrun{
-registry <- read_sheet("path-to-registry")
-participants <- read_sheet("path-to-participants")
+googlesheets4::gs4_auth()
+
+registry <- googlesheets4::read_sheet("path-to-registry")
+participants <- googlesheets4::read_sheet("path-to-participants")
 
 create_batch_certificates(
   registry,
   particpants,
-  "2023-fred-hutch", 
+  "2023-fred-hutch",
   "~/Desktop/fred-hutch-certificates"
 )
 }
