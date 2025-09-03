@@ -34,36 +34,11 @@ call_agenda <- function(registry_url, cohort_id, call_number,
                           call = call_number)
   cohort_name <- date_start <- type <- NULL
   
-  cohort_type_ <- cohort_registry %>% 
-    filter(cohort_name == cohort_id) %>% 
-    pull(cohort_type)
+  cohort_type_ <- get_cohort_type(cohort_registry, cohort_id)
+  template_files <- get_template_files(call_registry, call_number, cohort_type_)
   
-  template_files <- call_registry %>% 
-    filter(call == call_number) %>% 
-    filter(cohort_type == cohort_type_) %>% 
-    as.character() %>% 
-    keep(~nzchar(file_ext(.x)))
-  
-  not_rmd <- template_files %>% 
-    file_ext() %>% 
-    keep(nzchar) %>% 
-    map_lgl(~!grepl("[R|r]md$", .x))
-  
-  if(any(not_rmd)){
-    warning(paste(
-      "The following file(s) are not Rmd files which may cause errors:",
-      paste(template_files[not_rmd], collapse = ", ")
-    ))
-  }
-  
-  templates_installed <- (template_files %in% basename(kyber_file()))
-  
-  if(!all(templates_installed)){
-    stop(paste(
-      "The following template file(s) could not be found:",
-      paste(template_files[!templates_installed], collapse = ", ")
-    ))
-  }
+  warn_if_any_not_rmd(template_files)
+  stop_if_any_templates_not_installed(template_files)
   
   template_files <- template_files %>% 
     map_chr(kyber_file)
@@ -109,12 +84,19 @@ call_agenda <- function(registry_url, cohort_id, call_number,
   template_params <- template_files %>% 
     map(yaml_front_matter) %>% 
     map(~.x$params)
+
+  durations <- durations_from_template_params(template_params)
+
+  if (durations$expected_total != durations$calculated_total) {
+    cli::cli_warn(
+      "The sum of the individual durations ({durations$calculated_total} minutes) 
+      does not equal the expected duration ({durations$expected_total} minutes)."
+    )
+  }
   
-  template_durations <- template_params %>% 
-    map(~.x$duration) %>% 
-    map_dbl(~ifelse(is.null(.x), NA, .x))
+  params_registry$total_duration <- durations$calculated_total
   
-  params_registry$total_duration <- sum(template_durations, na.rm = TRUE)
+  template_durations <- durations$durations
   
   start_times <- durations_to_start_times(template_durations, 
                                           params_registry$call_start_time) %>% 
