@@ -44,13 +44,16 @@
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">create_certificate</span><span class="op">(</span></span>
-<span>  <span class="va">cohort_name</span>,</span>
-<span>  <span class="va">first_name</span>,</span>
-<span>  <span class="va">last_name</span>,</span>
-<span>  <span class="va">start_date</span>,</span>
-<span>  <span class="va">end_date</span>,</span>
-<span>  <span class="va">cohort_website</span>,</span>
-<span>  output_dir <span class="op">=</span> <span class="st">"."</span></span>
+<span>  cohort_name <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  first_name <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  last_name <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  start_date <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  end_date <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  cohort_website <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  cohort_type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"standard"</span>, <span class="st">"nmfs"</span>, <span class="st">"pathways"</span><span class="op">)</span>,</span>
+<span>  output_dir <span class="op">=</span> <span class="st">"."</span>,</span>
+<span>  quiet <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  <span class="va">...</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -71,35 +74,56 @@
 
 
 <dt id="arg-start-date">start_date<a class="anchor" aria-label="anchor" href="#arg-start-date"></a></dt>
-<dd><p>cohort start date</p></dd>
+<dd><p>cohort start date. <code>Date</code> or character in a standard format
+(eg., YYYY-MM-DD)</p></dd>
 
 
 <dt id="arg-end-date">end_date<a class="anchor" aria-label="anchor" href="#arg-end-date"></a></dt>
-<dd><p>cohort end date</p></dd>
+<dd><p>cohort end date. <code>Date</code> or character in a standard format
+(eg., YYYY-MM-DD)</p></dd>
 
 
 <dt id="arg-cohort-website">cohort_website<a class="anchor" aria-label="anchor" href="#arg-cohort-website"></a></dt>
-<dd><p>cohort website</p></dd>
+<dd><p>cohort website URL.</p></dd>
+
+
+<dt id="arg-cohort-type">cohort_type<a class="anchor" aria-label="anchor" href="#arg-cohort-type"></a></dt>
+<dd><p>What kind of cohort are the certificates for? This will
+choose the appropriate certificate template: <code>"standard"</code> (default),
+<code>"nmfs"</code>, or `"pathways"“.</p></dd>
 
 
 <dt id="arg-output-dir">output_dir<a class="anchor" aria-label="anchor" href="#arg-output-dir"></a></dt>
 <dd><p>output directory for certificates. Default <code>"."</code></p></dd>
 
+
+<dt id="arg-quiet">quiet<a class="anchor" aria-label="anchor" href="#arg-quiet"></a></dt>
+<dd><p>Suppress quarto warnings and other messages. Default <code>TRUE</code>.
+Set to <code>FALSE</code> to help debug if any errors occur.</p></dd>
+
+
+<dt id="arg--">...<a class="anchor" aria-label="anchor" href="#arg--"></a></dt>
+<dd><p>Other parameters passed on to <code><a href="https://quarto-dev.github.io/quarto-r/reference/quarto_render.html" class="external-link">quarto::quarto_render()</a></code></p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>Saves the file to your current working directory, and
-returns the path to the file</p>
+    <p>Saves the file to the specified directory, and returns the path to
+the file</p>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
-<span class="r-in"><span><span class="fu">create_certificate</span><span class="op">(</span>cohort_name <span class="op">=</span> <span class="st">"2023-fred-hutch"</span>,</span></span>
-<span class="r-in"><span>                   participant_name <span class="op">=</span> <span class="st">"Name"</span>,</span></span>
-<span class="r-in"><span>                   start_date <span class="op">=</span> <span class="st">"Sep 19"</span>,</span></span>
-<span class="r-in"><span>                   end_date <span class="op">=</span> <span class="st">"Oct 19"</span>,</span></span>
-<span class="r-in"><span>                   cohort_website <span class="op">=</span> <span class="st">"https://openscapes.github.io/2023-fred-hutch/"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">create_certificate</span><span class="op">(</span></span></span>
+<span class="r-in"><span>  cohort_name <span class="op">=</span> <span class="st">"2023-fred-hutch"</span>,</span></span>
+<span class="r-in"><span>  first_name <span class="op">=</span> <span class="st">"FirstName"</span>,</span></span>
+<span class="r-in"><span>  last_name <span class="op">=</span> <span class="st">"LastName"</span>,</span></span>
+<span class="r-in"><span>  start_date <span class="op">=</span> <span class="st">"2023-09-19"</span>,</span></span>
+<span class="r-in"><span>  end_date <span class="op">=</span> <span class="st">"2023-10-19"</span>,</span></span>
+<span class="r-in"><span>  cohort_website <span class="op">=</span> <span class="st">"https://openscapes.github.io/2023-fred-hutch/"</span>,</span></span>
+<span class="r-in"><span>  cohort_type <span class="op">=</span> <span class="st">"standard"</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>

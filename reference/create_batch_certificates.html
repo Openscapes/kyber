@@ -50,6 +50,7 @@ create a certificate for each participant</p>
 <span>  <span class="va">registry</span>,</span>
 <span>  <span class="va">participants</span>,</span>
 <span>  <span class="va">cohort_name</span>,</span>
+<span>  cohort_type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"standard"</span>, <span class="st">"nmfs"</span><span class="op">)</span>,</span>
 <span>  output_dir <span class="op">=</span> <span class="st">"."</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
@@ -73,6 +74,12 @@ create a certificate for each participant</p>
 <code>participants</code></p></dd>
 
 
+<dt id="arg-cohort-type">cohort_type<a class="anchor" aria-label="anchor" href="#arg-cohort-type"></a></dt>
+<dd><p>What kind of cohort are the certificates for? This will
+choose the appropriate certificate template: <code>"standard"</code> (default),
+<code>"nmfs"</code>, or `"pathways"“.</p></dd>
+
+
 <dt id="arg-output-dir">output_dir<a class="anchor" aria-label="anchor" href="#arg-output-dir"></a></dt>
 <dd><p>output directory for certificates. Default <code>"."</code></p></dd>
 
@@ -85,13 +92,15 @@ create a certificate for each participant</p>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
-<span class="r-in"><span><span class="va">registry</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html" class="external-link">read_sheet</a></span><span class="op">(</span><span class="st">"path-to-registry"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="va">participants</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html" class="external-link">read_sheet</a></span><span class="op">(</span><span class="st">"path-to-participants"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">googlesheets4</span><span class="fu">::</span><span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/gs4_auth.html" class="external-link">gs4_auth</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">registry</span> <span class="op">&lt;-</span> <span class="fu">googlesheets4</span><span class="fu">::</span><span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html" class="external-link">read_sheet</a></span><span class="op">(</span><span class="st">"path-to-registry"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">participants</span> <span class="op">&lt;-</span> <span class="fu">googlesheets4</span><span class="fu">::</span><span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html" class="external-link">read_sheet</a></span><span class="op">(</span><span class="st">"path-to-participants"</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">create_batch_certificates</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  <span class="va">registry</span>,</span></span>
 <span class="r-in"><span>  <span class="va">particpants</span>,</span></span>
-<span class="r-in"><span>  <span class="st">"2023-fred-hutch"</span>, </span></span>
+<span class="r-in"><span>  <span class="st">"2023-fred-hutch"</span>,</span></span>
 <span class="r-in"><span>  <span class="st">"~/Desktop/fred-hutch-certificates"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
