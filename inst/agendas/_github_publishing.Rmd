@@ -1,7 +1,7 @@
 ---
 params:
   start_time: "12:00pm PT"
-  duration: 42
+  duration: 41
 ---
 
 ## Growth Mindset & GitHub for Publishing • `r kyber:::fmt_duration(params$start_time, params$duration)`
