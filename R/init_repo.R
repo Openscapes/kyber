@@ -68,6 +68,7 @@ init_repo <- function(name, org = "openscapes", path = getwd(),
     create_readme(
       fs::path(repo_path, "README.Rmd"),
       template,
+      cohort_name = name,
       edit = edit
     )
   }
