@@ -7,6 +7,7 @@
 create_readme(
   file = "README.Rmd",
   template = "openscapes-cohort-readme",
+  cohort_name = basename(getwd()),
   edit = TRUE
 )
 }
@@ -16,6 +17,8 @@ create_readme(
 \item{template}{Template to use as the basis for the draft. This is either
 the full path to a template directory or the name of a template directory
 within the \code{rmarkdown/templates} directory of a package.}
+
+\item{cohort_name}{The name of the cohort. Defaults to the current working directory name.}
 
 \item{edit}{\code{TRUE} to edit the template immediately}
 }

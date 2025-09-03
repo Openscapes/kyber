@@ -1,6 +1,6 @@
 Package: kyber
 Title: Set Up Learning Cohorts on GitHub
-Version: 0.1.0
+Version: 0.1.0.9000
 Authors@R: 
     c(person(given = "Sean",
              family = "Kross",
@@ -30,9 +30,11 @@ Imports:
     magrittr,
     parsermd (>= 0.2.0),
     purrr,
+    quarto,
     rmarkdown,
     rstudioapi,
-    stringr
+    stringr,
+    whisker
 Suggests: 
     testthat (>= 3.0.0),
     tibble,

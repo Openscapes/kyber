@@ -95,7 +95,7 @@ library(fs)
 repo_name <- "2021-ilm-rotj"
 
 # This will open a README.Rmd for you to edit
-# In yaml of README.Rmd, `cohort_name: "Cohort"` replace "Cohort" with specific cohort name
+# In yaml of README.Rmd, `cohort_name:` will be automatically filled in based on `repo_name`. 
 # Default organization for repo is openscapes. To initialize the repo in another org,
 # specify org name as in `init_repo("repo_name", org = "nmfs-openscapes")`
 repo_path <- init_repo(repo_name)
