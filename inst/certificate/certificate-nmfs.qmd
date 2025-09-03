@@ -1,0 +1,41 @@
+---
+title: "NMFS Openscapes Champions Program"
+format:
+  typst:
+    template-partials: 
+      - typst/typst-show.typ
+      - typst/typst-template.typ
+fig-format: png
+params:
+  cohort_name: "NMFS Openscapes Champions Program"
+  participant_name: "Name"
+  start_date: "October 8"
+  end_date: "December 4"
+  cohort_website: "https://nmfs-openscapes.github.io/2024-nmfs-champions/"
+  files: ["nmfs-openscapes-logo.png"]
+author: "`r params$participant_name`"
+subtitle: "Certificate of Completion: `r params$cohort_name` Cohort"
+dates: "`r params$start_date` - `r params$end_date`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+This certifies that `r params$participant_name` has completed the NMFS Openscapes Champions Program, a training and mentorship program in open science tools and practices for NOAA’s National Marine Fisheries Service science teams and staff. It is a multi-month program that is designed to ignite incremental and sustainable change within research teams and beyond. It helps teams get their own work done and participate in open science, while building skills and community within the realities of their busy schedules, varying expertise and needs. This was supported as part of NOAA Fisheries' data, infrastructure and workflow modernization effort. Learn more at [nmfs-openscapes.github.io/champions](https://nmfs-openscapes.github.io/champions).
+
+```{=typst}
+#v(0.5em)
+```
+
+![](nmfs-openscapes-logo.png){height=120 fig-align="center"}
+
+```{=typst}
+#v(0.5em)
+```
+
+::: {.block}
+
+<https://doi.org/10.5281/zenodo.7407246> `#h(1fr)`{=typst} `r paste0("<", params$cohort_website, ">")`
+
+:::
