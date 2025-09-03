@@ -30,6 +30,7 @@ Imports:
     magrittr,
     parsermd,
     purrr,
+    quarto,
     rmarkdown,
     rstudioapi,
     stringr
