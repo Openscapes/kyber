@@ -15,13 +15,18 @@
 #' @examples
 #' \dontrun{
 #'   list_team_members(team = "2023-superdogs-test-cohort", org = "openscapes")
-#'   list_team_members(team = "2023-superdogs-test-cohort", org = "openscapes", 
+#'   list_team_members(team = "2023-superdogs-test-cohort", org = "openscapes",
 #'                     names_only = FALSE)
-#'   list_team_members(team = "2023-superdogs-test-cohort", org = "openscapes", 
+#'   list_team_members(team = "2023-superdogs-test-cohort", org = "openscapes",
 #'                     members = "invitations")
 #' }
-list_team_members <- function(team, org = "openscapes", names_only = TRUE, 
-                              members = c("members", "invitations"), ...) {
+list_team_members <- function(
+  team,
+  org = "openscapes",
+  names_only = TRUE,
+  members = c("members", "invitations"),
+  ...
+) {
   check_gh_pat()
 
   team <- tolower(team)
@@ -30,8 +35,14 @@ list_team_members <- function(team, org = "openscapes", names_only = TRUE,
   members <- match.arg(members)
 
   if (!team %in% org_teams$slug) {
-    stop("'", team, "' is not part of the '", org, "' organization", 
-         call. = FALSE)
+    stop(
+      "'",
+      team,
+      "' is not part of the '",
+      org,
+      "' organization",
+      call. = FALSE
+    )
   }
 
   team_members <- gh(
@@ -39,15 +50,15 @@ list_team_members <- function(team, org = "openscapes", names_only = TRUE,
     org = org,
     team_slug = team,
     members = members,
-    ..., 
+    ...,
     .limit = Inf
   )
 
   if (!names_only) return(dplyr::bind_rows(team_members))
-    
+
   vapply(team_members, `[[`, FUN.VALUE = character(1), "login")
 }
-  
+
 #' List teams in a GitHub organization
 #'
 #' @inheritParams list_team_members
@@ -65,15 +76,15 @@ list_team_members <- function(team, org = "openscapes", names_only = TRUE,
 #' }
 list_teams <- function(org = "openscapes", names_only = TRUE, ...) {
   check_gh_pat()
-    
+
   teams <- gh("GET /orgs/{org}/teams", org = org, ..., .limit = Inf) %>%
     purrr::map(function(x) {
-      if(!is.null(x[["parent"]])) {
+      if (!is.null(x[["parent"]])) {
         x[["parent"]] <- x[["parent"]][["name"]]
       }
       x
     })
-  
+
   if (!names_only) return(dplyr::bind_rows(teams))
 
   vapply(teams, `[[`, FUN.VALUE = character(1), "name")

@@ -35,9 +35,9 @@ List members of a GitHub Team
 \examples{
 \dontrun{
   list_team_members(team = "2023-superdogs-test-cohort", org = "openscapes")
-  list_team_members(team = "2023-superdogs-test-cohort", org = "openscapes", 
+  list_team_members(team = "2023-superdogs-test-cohort", org = "openscapes",
                     names_only = FALSE)
-  list_team_members(team = "2023-superdogs-test-cohort", org = "openscapes", 
+  list_team_members(team = "2023-superdogs-test-cohort", org = "openscapes",
                     members = "invitations")
 }
 }
