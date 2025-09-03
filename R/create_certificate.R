@@ -58,7 +58,8 @@ create_certificate <- function(
     pathways = kyber_file("certificate-pathways.qmd")
   )
 
-  participant_name <- paste(first_name, last_name)
+  participant_name <- paste(first_name, last_name) |>
+    clean_participant_names()
 
   outfile <- paste0(
     ifelse(
@@ -316,4 +317,10 @@ get_participant_names.data.frame <- function(participants) {
       )
     }
   }
+}
+
+clean_participant_names <- function(names) {
+  names <- gsub("\\(.+\\)", "", names) # trim leading/trailing whitespace
+  names <- gsub("\\s+", " ", names)
+  trimws(names)
 }
