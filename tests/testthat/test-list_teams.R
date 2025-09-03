@@ -7,8 +7,10 @@ test_that("list_teams works", {
     list_teams(names_only = FALSE),
     "data.frame"
   )
-  expect_equal(length(list_teams(names_only = TRUE)), 
-               nrow(list_teams(names_only = FALSE)))
+  expect_equal(
+    length(list_teams(names_only = TRUE)),
+    nrow(list_teams(names_only = FALSE))
+  )
 })
 
 test_that("list_team_members works", {

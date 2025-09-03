@@ -1,10 +1,10 @@
 #' Create a Call Agenda
-#' 
+#'
 #' @param registry_url The URL to the cohort registry.
 #' @param cohort_id The ID of the cohort.
 #' @param call_number The call number of the agenda.
 #' @param cohort_sheet The sheet in the registry with cohort information.
-#' @param call_sheet The sheet in the registry with information about 
+#' @param call_sheet The sheet in the registry with information about
 #' individual calls.
 #' @param website A website for the cohort.
 #' @param output_format The output format of the agenda.
@@ -17,73 +17,83 @@
 #' @importFrom rmarkdown render yaml_front_matter
 #' @importFrom lubridate as_date dweeks
 #' @export
-call_agenda <- function(registry_url, cohort_id, call_number,
-                        cohort_sheet = "cohort_metadata", 
-                        call_sheet = "call_metadata",
-                        website = paste0("https://openscapes.github.io/", cohort_id), 
-                        output_format = md_agenda(), output_file = "agenda.md"){
-  
+call_agenda <- function(
+  registry_url,
+  cohort_id,
+  call_number,
+  cohort_sheet = "cohort_metadata",
+  call_sheet = "call_metadata",
+  website = paste0("https://openscapes.github.io/", cohort_id),
+  output_format = md_agenda(),
+  output_file = "agenda.md"
+) {
   cohort_registry <- read_sheet(registry_url, cohort_sheet, col_types = "c")
 
   if (!(cohort_id %in% cohort_registry$cohort_name)) {
-    cli::cli_abort("{.var cohort_id} {.val {cohort_id}} not found in cohort registry. Check {.var cohort_id} against cohort names in registry.")
+    cli::cli_abort(
+      "{.var cohort_id} {.val {cohort_id}} not found in cohort registry. Check {.var cohort_id} against cohort names in registry."
+    )
   }
   call_registry <- read_sheet(registry_url, call_sheet, col_types = "c")
   temp_dir <- tempdir()
-  params_registry <- list(website = website, cohort_name = cohort_id, 
-                          call = call_number)
+  params_registry <- list(
+    website = website,
+    cohort_name = cohort_id,
+    call = call_number
+  )
   cohort_name <- date_start <- type <- NULL
-  
+
   cohort_type_ <- get_cohort_type(cohort_registry, cohort_id)
   template_files <- get_template_files(call_registry, call_number, cohort_type_)
-  
+
   warn_if_any_not_rmd(template_files)
   stop_if_any_templates_not_installed(template_files)
-  
-  template_files <- template_files %>% 
+
+  template_files <- template_files %>%
     map_chr(kyber_file)
-  
-  params_registry$date <- cohort_registry %>% 
-    filter(cohort_name == cohort_id) %>% 
-    pull(date_start) %>% 
-    usa_date_to_iso8601() %>% 
+
+  params_registry$date <- cohort_registry %>%
+    filter(cohort_name == cohort_id) %>%
+    pull(date_start) %>%
+    usa_date_to_iso8601() %>%
     as.character()
-  
-  cohort_type_months <- cohort_registry %>% 
-    filter(cohort_name == cohort_id) %>% 
+
+  cohort_type_months <- cohort_registry %>%
+    filter(cohort_name == cohort_id) %>%
     pull(cohort_type_months)
-  
+
   if (cohort_type_months == "2-month") {
-    params_registry$date <- (as_date(params_registry$date) + lubridate::dweeks(seq(0, 10, 2)[call_number])) %>% 
+    params_registry$date <- (as_date(params_registry$date) +
+      lubridate::dweeks(seq(0, 10, 2)[call_number])) %>%
       as.character()
   }
-  
-  params_registry$call_start_time <- cohort_registry %>% 
-    filter(cohort_name == cohort_id) %>% 
+
+  params_registry$call_start_time <- cohort_registry %>%
+    filter(cohort_name == cohort_id) %>%
     pull("time_start")
-  
+
   tz <- tz(params_registry$call_start_time)
-  
-  params_registry$google_drive_folder <- cohort_registry %>% 
-    filter(cohort_name == cohort_id) %>% 
+
+  params_registry$google_drive_folder <- cohort_registry %>%
+    filter(cohort_name == cohort_id) %>%
     pull("google_drive_folder")
-  
-  params_registry$github_repo <- cohort_registry %>% 
-    filter(cohort_name == cohort_id) %>% 
+
+  params_registry$github_repo <- cohort_registry %>%
+    filter(cohort_name == cohort_id) %>%
     pull("github_repo")
 
-  params_registry$cohort_website <- cohort_registry %>% 
-    filter(cohort_name == cohort_id) %>% 
+  params_registry$cohort_website <- cohort_registry %>%
+    filter(cohort_name == cohort_id) %>%
     pull("cohort_website")
-    
-  params_registry$title <- call_registry %>% 
-    filter(cohort_type == cohort_type_) %>% 
-    filter(call == call_number) %>% 
+
+  params_registry$title <- call_registry %>%
+    filter(cohort_type == cohort_type_) %>%
+    filter(call == call_number) %>%
     pull("title")
-  
-  template_params <- template_files %>% 
-    map(yaml_front_matter) %>% 
-    map(~.x$params)
+
+  template_params <- template_files %>%
+    map(yaml_front_matter) %>%
+    map(~ .x$params)
 
   durations <- durations_from_template_params(template_params)
 
@@ -93,43 +103,52 @@ call_agenda <- function(registry_url, cohort_id, call_number,
       does not equal the expected duration ({durations$expected_total} minutes)."
     )
   }
-  
+
   params_registry$total_duration <- durations$calculated_total
-  
+
   template_durations <- durations$durations
-  
-  start_times <- durations_to_start_times(template_durations, 
-                                          params_registry$call_start_time) %>% 
-    map_chr(fmt_time) %>% 
+
+  start_times <- durations_to_start_times(
+    template_durations,
+    params_registry$call_start_time
+  ) %>%
+    map_chr(fmt_time) %>%
     paste(tz)
-  
-  files <- template_params %>% 
-    map(~.x$files) %>% 
-    keep(Negate(is.null)) %>% 
-    unlist() %>% 
+
+  files <- template_params %>%
+    map(~ .x$files) %>%
+    keep(Negate(is.null)) %>%
+    unlist() %>%
     unique()
-  
-  if(length(files) > 0) {
+
+  if (length(files) > 0) {
     file.copy(
       system.file("agendas", files, package = "kyber"),
       dirname(output_file)
     )
   }
-  
-  param_names <- template_params %>% map(names) %>% 
-    map(~discard(.x, ..1 %in% "files"))
-  
+
+  param_names <- template_params %>%
+    map(names) %>%
+    map(~ discard(.x, ..1 %in% "files"))
+
   output_md_paths <- rep("", length(template_files))
-  for(i in seq_along(template_files)){
-    params_registry$start_time <- ifelse(i < 2, start_times[i], start_times[i - 1])
+  for (i in seq_along(template_files)) {
+    params_registry$start_time <- ifelse(
+      i < 2,
+      start_times[i],
+      start_times[i - 1]
+    )
     params_registry$duration <- template_durations[i]
-    
-    output_md_paths[i] <- render(template_files[i], 
-                                 output_format = output_format$output_format, 
-                                 output_dir = temp_dir, 
-                                 params = params_registry[param_names[[i]]])
+
+    output_md_paths[i] <- render(
+      template_files[i],
+      output_format = output_format$output_format,
+      output_dir = temp_dir,
+      params = params_registry[param_names[[i]]]
+    )
   }
-  
+
   new_output_md_paths <- gsub("\\.md$", ".Rmd", output_md_paths)
   old_output_md_paths <- output_md_paths
   test_rename <- rep(FALSE, length(output_md_paths))
@@ -137,25 +156,33 @@ call_agenda <- function(registry_url, cohort_id, call_number,
     test_rename[i] <- file.rename(output_md_paths[i], new_output_md_paths[i])
   }
   output_md_paths <- new_output_md_paths
-  
+
   result <- FALSE
-  if(output_format$type == "md"){
+  if (output_format$type == "md") {
     result <- output_file
-    lines_ <- output_md_paths %>% 
-      map(parse_rmd) %>% 
-      map(~list(.x, parse_rmd("\n"))) %>% 
-      list_flatten() %>% 
-      map_dfr(as_tibble) %>% 
-      filter(type != "rmd_yaml") %>% 
-      as_ast() |> 
+    lines_ <- output_md_paths %>%
+      map(parse_rmd) %>%
+      map(~ list(.x, parse_rmd("\n"))) %>%
+      list_flatten() %>%
+      map_dfr(as_tibble) %>%
+      filter(type != "rmd_yaml") %>%
+      as_ast() |>
       as_document()
-    lines_[grep("\\\\\\[", lines_)] <- gsub("\\\\\\[", "[", lines_[grep("\\\\\\[", lines_)])
-    lines_[grep("\\\\\\[", lines_)] <- gsub("\\\\\\]", "]", lines_[grep("\\\\\\[", lines_)])
+    lines_[grep("\\\\\\[", lines_)] <- gsub(
+      "\\\\\\[",
+      "[",
+      lines_[grep("\\\\\\[", lines_)]
+    )
+    lines_[grep("\\\\\\[", lines_)] <- gsub(
+      "\\\\\\]",
+      "]",
+      lines_[grep("\\\\\\[", lines_)]
+    )
     writeLines(lines_, result)
   } else {
     stop("Agenda output format not supported.")
   }
-  
+
   invisible(result)
 }
 
