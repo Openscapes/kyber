@@ -243,3 +243,36 @@ test_that("create_batch_pathways_certificates works specifying more args", {
     list.files(tdir, recursive = TRUE)
   )
 })
+
+test_that("participant names are cleaned (#154)", {
+  participants <- c(
+    "Firstname Lastname1 (he/him)",
+    "Firstname (she/her) Lastname2",
+    "Firstname Lastname3 (they/them)"
+  )
+
+  expect_equal(
+    clean_participant_names(
+      participants
+    ),
+    paste0(
+      "Firstname Lastname",
+      1:3
+    )
+  )
+
+  tdir <- withr::local_tempdir()
+
+  suppressMessages(
+    create_batch_pathways_certificates(
+      participants = participants,
+      start_date = "2024-01-01",
+      end_date = "2024-02-01",
+      output_dir = file.path(tdir, "pathways")
+    )
+  )
+
+  expect_snapshot(
+    list.files(tdir, recursive = TRUE)
+  )
+})

@@ -74,3 +74,12 @@
       [1] "pathways/Certificate_test-pathways-cohort-2024_Firstname-Lastname.pdf"           
       [2] "pathways/Certificate_test-pathways-cohort-2024_Firstname-MiddleName-Lastname.pdf"
 
+# participant names are cleaned (#154)
+
+    Code
+      list.files(tdir, recursive = TRUE)
+    Output
+      [1] "pathways/Certificate_Pathways-to-Open-Science-2024_Firstname-Lastname1.pdf"
+      [2] "pathways/Certificate_Pathways-to-Open-Science-2024_Firstname-Lastname2.pdf"
+      [3] "pathways/Certificate_Pathways-to-Open-Science-2024_Firstname-Lastname3.pdf"
+
