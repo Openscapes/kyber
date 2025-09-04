@@ -8,12 +8,14 @@
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-What the package does (one paragraph).
+Provides tools for setting up Openscapes learning cohorts, including creating agendas, creating and modifying GitHub org/team memberships, setting up cohort GitHub repositories, and creating completion certificates.
 }
 \seealso{
 Useful links:
 \itemize{
   \item \url{https://openscapes.github.io/kyber/}
+  \item \url{https://github.com/Openscapes/kyber}
+  \item Report bugs at \url{https://github.com/Openscapes/kyber/issues}
 }
 
 }
