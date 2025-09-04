@@ -315,3 +315,17 @@ To contribute to Kyber, fork the repo, unchecking the "Copy the main branch only
 - keep adding, committing, and pushing, then when you're ready open a PR
 
 We started using this workflow when the [California Water Boards Openscapes](https://cawaterboarddatacenter.github.io/swrcb-openscapes/) team began using Kyber to create Agendas from some unique source Rmd files. For example, Water Boards Cohort Calls are 2 hours, not the default 1.5 hrs, their lesson order is different from Openscapes Core Lessons, and includes a new lesson on Documentation.
+
+### PR review process
+
+We have established a lightweight workflow for PRs and PR reviews so that we have a process with which we are all familiar, and can help us be the most efficient.
+
+It is based on [the tidyverse code review principles](https://code-review.tidyverse.org/).
+
+For those of us who have write access to the repo and are [close-knit collaborators](https://code-review.tidyverse.org/collaboration/#sec-close-knit-collaboration) we use the pattern described [here](https://code-review.tidyverse.org/reviewer/comments.html#sec-approve-with-comments).
+
+The PR author submits a relatively small, [focused PR](https://code-review.tidyverse.org/author/focused.html#sec-what-is-focused) and tags at least one person to review it. The reviewer reviews and provides comments, with inline suggestions where appropriate. It is helpful to "label" comments with their [severity/importance](https://code-review.tidyverse.org/reviewer/comments.html#sec-label-comment-severity).
+
+If the PR is largely ok with some minor changes, the reviewer submits their review clicking `Approve with comments`. This signals to the author that there are changes that should be made, but it is up to the PR author to make the changes and decide that they meet the intent of the reviewer's comments. The _author then merges the PR themselves_ without further review. This means that PRs turn around faster and require less time of both the author and reviewer.
+
+If there are more substantial changes to be made, then the [`Request Changes`](https://code-review.tidyverse.org/reviewer/comments.html#sec-request-changes) review button should be used, signalling that the reviewer would like to review the next round of changes before approving. When the author has finished their edits they re-request a review from the original reviewer.
