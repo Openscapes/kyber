@@ -1,25 +1,20 @@
 Package: kyber
 Title: Set Up Learning Cohorts on GitHub
 Version: 0.1.0.9000
-Authors@R: 
-    c(person(given = "Sean",
-             family = "Kross",
-             role = c("aut", "cre"),
-             email = "sean@seankross.com",
-             comment = c(ORCID = "0000-0001-5215-0316")),
-      person(given = "Julia",
-             family = "Lowndes",
-             role = c("aut"),
-             comment = c(ORCID = "0000-0003-1682-3872")))
+Authors@R: c(
+    person("Sean", "Kross", , "sean@seankross.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-5215-0316")),
+    person("Julia", "Lowndes", role = "aut",
+           comment = c(ORCID = "0000-0003-1682-3872"))
+  )
 Description: Provides tools for setting up Openscapes learning cohorts,
     including creating agendas, creating and modifying GitHub org/team
     memberships, setting up cohort GitHub repositories, and creating
     completion certificates.
 License: MIT + file LICENSE
-Encoding: UTF-8
-LazyData: true
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+URL: https://openscapes.github.io/kyber/,
+    https://github.com/Openscapes/kyber
+BugReports: https://github.com/Openscapes/kyber/issues
 Imports: 
     cli,
     dplyr,
@@ -43,7 +38,10 @@ Suggests:
     tibble,
     usethis,
     withr
+VignetteBuilder: 
+    knitr
 Config/testthat/edition: 3
-URL: https://openscapes.github.io/kyber/, https://github.com/Openscapes/kyber
-VignetteBuilder: knitr
-BugReports: https://github.com/Openscapes/kyber/issues
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
