@@ -15,6 +15,8 @@ License: MIT + file LICENSE
 URL: https://openscapes.github.io/kyber/,
     https://github.com/Openscapes/kyber
 BugReports: https://github.com/Openscapes/kyber/issues
+Depends: 
+    R (>= 4.1.0)
 Imports: 
     cli,
     dplyr,
