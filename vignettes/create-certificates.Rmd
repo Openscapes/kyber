@@ -14,26 +14,9 @@ library(googlesheets4)
 library(dplyr)
 ```
 
-## Create a single certificate
+## Create a batch of certificates for NMFS Openscapes cohorts
 
-For a single certificate, you can supply all of the values manually:
-
-```{r}
-#| eval: false
-
-create_certificate(
-  cohort_name = "2023-fred-hutch",
-  first_name = "First Name",
-  last_name = "Last Name",
-  start_date = "2023-09-19",
-  end_date = "2023-10-19",
-  cohort_website = "https://openscapes.github.io/2023-fred-hutch/"
-)
-```
-
-## Create a batch of certificates for a cohort
-
-First load data from a cohort google sheet:
+First load data from the Champions registry google sheet and participants sheet:
 
 ```{r}
 #| eval: false
@@ -44,24 +27,8 @@ registry <- read_sheet(
 participants <- read_sheet("URL to OpenscapesParticipantsMainList")
 ```
 
-Then call the `create_batch_certificates()` function to create the certificates:
-
-```{r}
-#| eval: false
-
-create_batch_certificates(
-  registry = registry,
-  participants = participants,
-  cohort_name = "2023-fred-hutch",
-  output_dir = "~/Desktop/fred-hutch-certificates"
-)
-
-```
-
-## Create a batch of certificates for NMFS Openscapes cohorts
-
-The process is the same as for the standard cohorts, but set the `cohort_type` 
-parameter to `"nmfs"`, and it will use the appropriate NMFS Openscapes template.
+Then run `create_batch_certificates()`, set the `cohort_type` parameter to `"nmfs"`, and set `cohort_name` to the name that matches the cohort in the registry. 
+The function will create certificates using the appropriate NMFS Openscapes template.
 
 ```{r}
 #| eval: false
@@ -94,9 +61,55 @@ create_batch_pathways_certificates(
 )
 ```
 
-To create a single Pathways certificate, use the `create_certificate()` function
-and specify `cohort_type = "pathways"`. The only other arguments you need to supply
-are `first_name`, `last_name`, `start_date`, and `end_date`:
+## Create a batch of certificates for a "standard" Champions cohort
+
+First load data from the Champions registry google sheet and participants sheet:
+
+```{r}
+#| eval: false
+
+registry <- read_sheet(
+  "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc"
+) # OpenscapesChampionsCohortRegistry
+participants <- read_sheet("URL to OpenscapesParticipantsMainList")
+```
+
+Then call the `create_batch_certificates()` function to create the certificates. 
+Specify the `cohort_name` parameter to match the cohort in the registry. 
+Leave `cohort_type` as the default `"standard"`. 
+The function will create certificates using the appropriate template.
+
+```{r}
+#| eval: false
+
+create_batch_certificates(
+  registry = registry,
+  participants = participants,
+  cohort_name = "2023-fred-hutch",
+  output_dir = "~/Desktop/fred-hutch-certificates"
+)
+
+```
+
+## Create a single certificate
+
+For a single certificate, you can supply all of the values manually:
+
+```{r}
+#| eval: false
+
+create_certificate(
+  cohort_name = "2023-fred-hutch",
+  first_name = "First Name",
+  last_name = "Last Name",
+  start_date = "2023-09-19",
+  end_date = "2023-10-19",
+  cohort_website = "https://openscapes.github.io/2023-fred-hutch/"
+)
+```
+
+To create a single Pathways certificate, use the `create_certificate()` function and specify `cohort_type = "pathways"`. 
+The only other arguments you need to supply are `first_name`, `last_name`, `start_date`, and `end_date`:
 
 ```{r}
 #| eval: false
