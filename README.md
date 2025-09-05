@@ -9,8 +9,16 @@
 
 You can install Kyber using the `remotes` package:
 
+To install the latest release version from GitHub:
+
 ``` r
-remotes::install_github("openscapes/kyber@main")
+remotes::install_github("openscapes/kyber@*release")
+```
+
+To install the development version from GitHub:
+
+``` r
+remotes::install_github("openscapes/kyber")
 ```
 
 ## Overview

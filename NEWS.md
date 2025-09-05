@@ -1,3 +1,5 @@
+# kyber (development version)
+
 # kyber 0.2.0
 
 * Ensure total duration of call agendas == sum of section durations (#66)
