@@ -28,7 +28,7 @@
 
     <a class="navbar-brand me-2" href="index.html">kyber</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,8 +73,12 @@
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>You can install Kyber using the <code>remotes</code> package:</p>
+<p>To install the latest release version from GitHub:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"openscapes/kyber@main"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"openscapes/kyber@*release"</span><span class="op">)</span></span></code></pre></div>
+<p>To install the development version from GitHub:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"openscapes/kyber"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
@@ -109,14 +113,14 @@
 </h3>
 <p>Using Kyber requires more configuration than most R packages since Kyber functions automate processes on GitHub that you would normally do by hand.</p>
 <p>First, make sure that you have <code>googlesheets4</code> installed and that you have authorized your computer to read from Google Sheets. Run the following to test your configuration settings:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://googlesheets4.tidyverse.org" class="external-link">googlesheets4</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">cohort_registry_url</span> <span class="op">&lt;-</span> <span class="st">"https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/"</span></span>
 <span></span>
 <span><span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html" class="external-link">read_sheet</a></span><span class="op">(</span><span class="va">cohort_registry_url</span>, sheet <span class="op">=</span> <span class="st">"test-sheet"</span><span class="op">)</span></span></code></pre></div>
 <p>For creating the GitHub Team and adding usernames, Kyber requires you to set up a GitHub Personal Access Token with scopes for <strong>repo</strong> and <strong>admin:org</strong>. See the <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token" class="external-link">GitHub PAT documentation</a> for more information about how to generate your PAT. You can create your PAT with <code><a href="https://usethis.r-lib.org/reference/github-token.html" class="external-link">usethis::create_github_token()</a></code> with their defaults, plus <code>admin:org</code>. Please make sure that you do not share your PAT or commit it to a Git repository, since anyone with your PAT can act as you on GitHub.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://usethis.r-lib.org" class="external-link">usethis</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://gitcreds.r-lib.org/" class="external-link">gitcreds</a></span><span class="op">)</span></span>
 <span></span>
@@ -141,7 +145,7 @@
 <h3 id="id_1-create-github-repo-with-readme">1. Create GitHub repo with README<a class="anchor" aria-label="anchor" href="#id_1-create-github-repo-with-readme"></a>
 </h3>
 <p>Creating a repo creates a local folder with README.Rmd</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://openscapes.github.io/kyber/">kyber</a></span><span class="op">)</span> </span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rstudio/rmarkdown" class="external-link">rmarkdown</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tibble.tidyverse.org/" class="external-link">tibble</a></span><span class="op">)</span></span>
@@ -215,7 +219,7 @@
 <li>Then, double-check the column headers - they are likely not <code>first</code> and <code>last</code> as is written in the <code><a href="reference/short_names.html">kyber::short_names</a></code> call. The easiest thing is to update the column names in the <code><a href="reference/short_names.html">kyber::short_names</a></code> code before running (for example: <code>kyber::short_names(cohort$First.Name, cohort$Last.Name)</code>
 </li>
 </ol>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://stringr.tidyverse.org" class="external-link">stringr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/milesmcbain/datapasta" class="external-link">datapasta</a></span><span class="op">)</span> <span class="co"># install.packages("datapasta")</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://openscapes.github.io/kyber/">kyber</a></span><span class="op">)</span> <span class="co">## remotes::install_github("openscapes/kyber")</span></span>
@@ -268,7 +272,7 @@
 <li>Run the following code again and check that everyone was added!</li>
 <li>Finally, in the ParticipantList, highlight all usernames we’ve added in green. This helps us know who else to add during the live clinic session.</li>
 </ol>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## First make sure you have a GitHub PAT set. If you need one, here's what you'd do:</span></span>
 <span><span class="co"># usethis::create_github_token() ## use their defaults plus `admin:org`</span></span>
 <span><span class="co"># Sys.setenv(GITHUB_PAT = "ghp_0id4zkO4GqSuEsC6Zs22wf34Y0u3270") </span></span>
