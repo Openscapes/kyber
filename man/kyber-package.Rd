@@ -31,7 +31,7 @@ Authors:
 
 Other contributors:
 \itemize{
-  \item Openscapes (022je8241) [copyright holder]
+  \item Openscapes (\href{https://ror.org/022je8241}{ROR}) [copyright holder]
 }
 
 }
