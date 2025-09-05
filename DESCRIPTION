@@ -4,8 +4,14 @@ Version: 0.1.0.9000
 Authors@R: c(
     person("Sean", "Kross", , "sean@seankross.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-5215-0316")),
-    person("Julia", "Lowndes", role = "aut",
-           comment = c(ORCID = "0000-0003-1682-3872"))
+    person("Julia", "Lowndes", , "julia@openscapes.org", role = "aut",
+           comment = c(ORCID = "0000-0003-1682-3872")),
+    person("Andy", "Teucher", , "andy.teucher@gmail.com", role = "aut",
+           comment = c(ORCID = "0000-0002-7840-692X")),
+    person("Stefanie", "Butland", , "stefaniebutland@gmail.com", role = "aut",
+           comment = c(ORCID = "0000-0002-5427-8951")),
+    person("Openscapes", role = "cph",
+           comment = c(ROR = "022je8241"))
   )
 Description: Provides tools for setting up Openscapes learning cohorts,
     including creating agendas, creating and modifying GitHub org/team
@@ -46,4 +52,4 @@ Config/testthat/edition: 3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3

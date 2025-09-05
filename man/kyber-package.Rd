@@ -24,7 +24,14 @@ Useful links:
 
 Authors:
 \itemize{
-  \item Julia Lowndes (\href{https://orcid.org/0000-0003-1682-3872}{ORCID})
+  \item Julia Lowndes \email{julia@openscapes.org} (\href{https://orcid.org/0000-0003-1682-3872}{ORCID})
+  \item Andy Teucher \email{andy.teucher@gmail.com} (\href{https://orcid.org/0000-0002-7840-692X}{ORCID})
+  \item Stefanie Butland \email{stefaniebutland@gmail.com} (\href{https://orcid.org/0000-0002-5427-8951}{ORCID})
+}
+
+Other contributors:
+\itemize{
+  \item Openscapes (022je8241) [copyright holder]
 }
 
 }
