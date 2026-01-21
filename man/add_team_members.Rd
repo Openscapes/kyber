@@ -13,12 +13,16 @@ add_team_members(team, members, org = "openscapes")
 
 \item{org}{The GitHub organization that owns the team and the repository.}
 }
+\value{
+list of responses from the GitHub API
+}
 \description{
-Add GitHub Users to a Team
+This also adds them to the organization that contains the team. All users
+will get an invitation by email and on GitHub.com, that they need to accept.
+This invitation expires after seven days.
 }
 \examples{
 \dontrun{
-
-kyber::add_team_members("2021-ilm-rotj-team", members = c("erinmr", "seankross"))
+add_team_members("2021-ilm-rotj-team", members = c("not-ateucher", "seankross"))
 }
 }
