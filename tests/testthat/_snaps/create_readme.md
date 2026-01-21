@@ -1,4 +1,4 @@
-# Templates can be created.
+# Templates can be created and cohort name populated
 
     Code
       readLines(test_readme, n = 3)
