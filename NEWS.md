@@ -1,6 +1,6 @@
 # kyber (development version)
 
-* Added two new functions:
+* Added two new functions (#174):
     - `remove_team_members()` for removing a list of people from a GitHub team
     - `remove_org_members()` for removing people from an organization.
 
