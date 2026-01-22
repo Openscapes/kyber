@@ -1,5 +1,9 @@
 # kyber (development version)
 
+* Added two new functions:
+    - `remove_team_members()` for removing a list of people from a GitHub team
+    - `remove_org_members()` for removing people from an organization.
+
 # kyber 0.2.0
 
 * Ensure total duration of call agendas == sum of section durations (#66)
