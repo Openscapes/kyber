@@ -51,7 +51,7 @@ add_remove_team_members_impl_ <- function(
   params <- list(role = "member")
 
   if (method == "DELETE") {
-    team_members <- list_team_members(team = team, org = org, )
+    team_members <- list_team_members(team = team, org = org)
     missing_members <- setdiff(members, team_members)
     if (length(missing_members) == length(members)) {
       cli::cli_abort(
