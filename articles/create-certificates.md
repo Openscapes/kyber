@@ -1,0 +1,115 @@
+# Create Cohort Certificates
+
+``` r
+library(kyber)
+library(googlesheets4)
+library(dplyr)
+```
+
+## Create a batch of certificates for NMFS Openscapes cohorts
+
+First load data from the Champions registry google sheet and
+participants sheet:
+
+``` r
+registry <- read_sheet(
+  "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc"
+) # OpenscapesChampionsCohortRegistry
+participants <- read_sheet("URL to OpenscapesParticipantsMainList")
+```
+
+Then run
+[`create_batch_certificates()`](https://openscapes.github.io/kyber/reference/create_batch_certificates.md),
+set the `cohort_type` parameter to `"nmfs"`, and set `cohort_name` to
+the name that matches the cohort in the registry. The function will
+create certificates using the appropriate NMFS Openscapes template.
+
+``` r
+create_batch_certificates(
+  registry = registry,
+  participants = participants,
+  cohort_name = "2024-nmfs-champions-a",
+  cohort_type = "nmfs",
+  output_dir = "~/Desktop/2024-nmfs-champions-a"
+)
+```
+
+## Create certificates for a Pathways cohort
+
+We have a dedicated function
+[`create_batch_pathways_certificates()`](https://openscapes.github.io/kyber/reference/create_batch_pathways_certificates.md)
+to create certificates for the Pathways To Open Science program. The
+list of names is passed to the `participants_sheet` argument. It can
+either be a character vector of names or a `data.frame` with a column
+named `participant_name` that contains full names of participants
+(usually imported from a Google sheet of registrants ).
+
+``` r
+sheet <- googlesheets4::read_sheet("url to pathways registration sheet")
+
+create_batch_pathways_certificates(
+  participants = sheet,
+  start_date = "2024-01-01",
+  end_date = "2024-02-28",
+  output_dir = "~/Desktop/pathways-certificates"
+)
+```
+
+## Create a batch of certificates for a “standard” Champions cohort
+
+First load data from the Champions registry google sheet and
+participants sheet:
+
+``` r
+registry <- read_sheet(
+  "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc"
+) # OpenscapesChampionsCohortRegistry
+participants <- read_sheet("URL to OpenscapesParticipantsMainList")
+```
+
+Then call the
+[`create_batch_certificates()`](https://openscapes.github.io/kyber/reference/create_batch_certificates.md)
+function to create the certificates. Specify the `cohort_name` parameter
+to match the cohort in the registry. Leave `cohort_type` as the default
+`"standard"`. The function will create certificates using the
+appropriate template.
+
+``` r
+create_batch_certificates(
+  registry = registry,
+  participants = participants,
+  cohort_name = "2023-fred-hutch",
+  output_dir = "~/Desktop/fred-hutch-certificates"
+)
+```
+
+## Create a single certificate
+
+For a single certificate, you can supply all of the values manually:
+
+``` r
+create_certificate(
+  cohort_name = "2023-fred-hutch",
+  first_name = "First Name",
+  last_name = "Last Name",
+  start_date = "2023-09-19",
+  end_date = "2023-10-19",
+  cohort_website = "https://openscapes.github.io/2023-fred-hutch/"
+)
+```
+
+To create a single Pathways certificate, use the
+[`create_certificate()`](https://openscapes.github.io/kyber/reference/create_certificate.md)
+function and specify `cohort_type = "pathways"`. The only other
+arguments you need to supply are `first_name`, `last_name`,
+`start_date`, and `end_date`:
+
+``` r
+create_certificate(
+  first_name = "Firstname",
+  last_name = "Lastname",
+  start_date = "2024-01-01",
+  end_date = "2024-02-28",
+  cohort_type = "pathways"
+)
+```
