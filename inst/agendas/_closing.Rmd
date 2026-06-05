@@ -29,7 +29,7 @@ params:
         -   [\@nasa-openscapes](https://github.com/NASA-Openscapes)
     -   mastodon: [fosstodon.org/\@openscapes](https://fosstodon.org/@openscapes)
     -   bluesky: [openscapes.bsky.social](https://bsky.app/profile/openscapes.bsky.social)
-    -   artwork: by the amazing [Allison Horst](https://bsky.app/profile/allisonhorst.bsky.social)
+    -   artwork: by the amazing [Allison Horst](https://allisonhorst.com/)
 
 -   **Feedback on this session**
 
