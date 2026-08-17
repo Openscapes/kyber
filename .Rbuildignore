@@ -11,3 +11,4 @@
 ^pkgdown$
 ^[.]?air[.]toml$
 ^\.vscode$
+\.quarto$
