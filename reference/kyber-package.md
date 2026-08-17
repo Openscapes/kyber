@@ -22,6 +22,9 @@ Useful links:
 
 Authors:
 
+- Sean Kross <sean@seankross.com>
+  ([ORCID](https://orcid.org/0000-0001-5215-0316))
+
 - Julia Lowndes <julia@openscapes.org>
   ([ORCID](https://orcid.org/0000-0003-1682-3872))
 
