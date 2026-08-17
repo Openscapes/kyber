@@ -8,7 +8,7 @@
 #' individual calls.
 #' @param website A website for the cohort.
 #' @param output_format The output format of the agenda.
-#' @param output_file The name of the output file with no file extension.
+#' @param output_file The name of the output file. Defaults to `"agenda_call_[call_number].md"`.
 #' @importFrom googlesheets4 read_sheet
 #' @importFrom tools file_ext
 #' @importFrom purrr keep map_lgl map map_chr map_dfr map_dbl discard list_flatten

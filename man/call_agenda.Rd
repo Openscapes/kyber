@@ -12,7 +12,7 @@ call_agenda(
   call_sheet = "call_metadata",
   website = paste0("https://openscapes.github.io/", cohort_id),
   output_format = md_agenda(),
-  output_file = "agenda.md"
+  output_file = paste0("agenda_call_", call_number, ".md")
 )
 }
 \arguments{
@@ -31,7 +31,7 @@ individual calls.}
 
 \item{output_format}{The output format of the agenda.}
 
-\item{output_file}{The name of the output file with no file extension.}
+\item{output_file}{The name of the output file. Defaults to \code{"agenda_call_[call_number].md"}.}
 }
 \description{
 Create a Call Agenda
