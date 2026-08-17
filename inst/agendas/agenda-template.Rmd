@@ -92,7 +92,7 @@ _Name / pronouns / [team]() / `r call_metadata$roll-call`
 
 ## `r call_metadata$topic1` • 10:30-11:10 PT
 
-_All Champions program slides are also linked from [https://openscapes.org/series](https://openscapes.github.io/series) _
+_All Champions program slides are also linked from [https://openscapes.github.io/series](https://openscapes.github.io/series) _
 
 ```{r, child = "_mindset.md"}
 # note: slide link is in this .md right now, so can easily re-use in digests

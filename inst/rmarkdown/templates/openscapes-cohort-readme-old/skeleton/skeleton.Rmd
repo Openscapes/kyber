@@ -95,7 +95,7 @@ Openscapes and the Champions Program: <https://openscapes.org>.
 
 Agenda links below are only accessible to Cohort participants (*coming soon!*),
 as they are also an archive of our live google-docing. Please 
-see <https://openscapes.org/series> for more detail and to view blank versions 
+see <https://openscapes.github.io/series> for more detail and to view blank versions 
 of the agendas.
  
 ```{r}

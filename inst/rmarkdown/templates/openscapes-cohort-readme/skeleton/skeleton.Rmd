@@ -30,7 +30,7 @@ We will meet as a Cohort via Zoom five times over two months for 1.5 hours each:
 -   **Times:** `r kyber:::fmt_duration(db$cr$time_start, 90)`
 -   **Location:** remotely, via Zoom
 
-Agendas are accessible to Cohort participants in our [Cohort Google Drive Folder] [TODO:link to folder]; they are also an archive of our live google-docing. Please see <https://openscapes.org/series> to view blank versions of the agendas.
+Agendas are accessible to Cohort participants in our [Cohort Google Drive Folder] [TODO:link to folder]; they are also an archive of our live google-docing. Please see <https://openscapes.github.io/series> to view blank versions of the agendas.
 
 <!---TODO create schedule table programmatically
 ```{r, echo=FALSE}
