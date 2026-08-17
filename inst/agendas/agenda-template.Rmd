@@ -6,25 +6,26 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 
 ## TODO read in Google Doc registry sheet
-cohort_metadata <- tibble(cohort_name = "2022-faseb",
-                      date_start = "01/28/2021",
-                      time_start = "10:00am PT", 
-                      cohort_type = "core-5calls",
-                      website = "https://openscapes.github.io/2022-faseb",
-                      google_drive_folder = "TODO"
+cohort_metadata <- tibble(
+  cohort_name = "2022-faseb",
+  date_start = "01/28/2021",
+  time_start = "10:00am PT",
+  cohort_type = "core-5calls",
+  website = "https://openscapes.github.io/2022-faseb",
+  google_drive_folder = "TODO"
 )
 
 
 ## TODO depending on cohort_type, read in Google Doc sheet
-call_metadata <- tibble(call = 1, 
-                    title = "Openscapes Mindset",
-                    opening = "Introductions",
-                    topic1 = "Openscapes Mindset",
-                    topic2 = "Onboarding", 
-                    goals = "We'll start working towards a common understanding...",
-                    roll-call = "Share something you're good at"
+call_metadata <- tibble(
+  call = 1,
+  title = "Openscapes Mindset",
+  opening = "Introductions",
+  topic1 = "Openscapes Mindset",
+  topic2 = "Onboarding",
+  goals = "We'll start working towards a common understanding...",
+  roll - call <- "Share something you're good at"
 )
-  
 ```
 
 # Call `r call_metadata$call`: `r call_metadata$title`
@@ -92,7 +93,7 @@ _Name / pronouns / [team]() / `r call_metadata$roll-call`
 
 ## `r call_metadata$topic1` • 10:30-11:10 PT
 
-_All Champions program slides are also linked from [https://openscapes.org/series](https://openscapes.github.io/series) _
+_All Champions program slides are also linked from [https://openscapes.github.io/series/](https://openscapes.github.io/series) _
 
 ```{r, child = "_mindset.md"}
 # note: slide link is in this .md right now, so can easily re-use in digests
