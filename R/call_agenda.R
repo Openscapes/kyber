@@ -25,7 +25,7 @@ call_agenda <- function(
   call_sheet = "call_metadata",
   website = paste0("https://openscapes.github.io/", cohort_id),
   output_format = md_agenda(),
-  output_file = "agenda.md"
+  output_file = paste0("agenda_call_", call_number, ".md")
 ) {
   cohort_registry <- read_sheet(registry_url, cohort_sheet, col_types = "c")
 
