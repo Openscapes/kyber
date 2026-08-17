@@ -19,7 +19,8 @@ add_team_to_repo <- function(repository, team, org = "openscapes") {
     team_slug = team,
     owner = org,
     repo = repository,
-    permission = "push"
+    permission = "push",
+    .progress = FALSE
   )
   invisible(response)
 }

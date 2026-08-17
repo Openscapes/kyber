@@ -31,7 +31,8 @@ create_team <- function(name, maintainers, org = "openscapes", visible = TRUE) {
     org = org,
     name = name,
     maintainers = as.list(maintainers),
-    privacy = privacy
+    privacy = privacy,
+    .progress = FALSE
   )
   invisible(response)
 }

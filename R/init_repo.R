@@ -32,7 +32,8 @@ init_repo <- function(
     "GET /orgs/{org}/repos",
     org = org,
     per_page = 100,
-    page = page
+    page = page,
+    .progress = FALSE
   ) %>%
     map_chr(~ .x$"name")
 
@@ -43,7 +44,8 @@ init_repo <- function(
       "GET /orgs/{org}/repos",
       org = org,
       per_page = 100,
-      page = page
+      page = page,
+      .progress = FALSE
     ) %>%
       map_chr(~ .x$"name") %>%
       c(repo_names)

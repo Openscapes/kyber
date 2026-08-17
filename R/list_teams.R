@@ -54,7 +54,9 @@ list_team_members <- function(
     .limit = Inf
   )
 
-  if (!names_only) return(dplyr::bind_rows(team_members))
+  if (!names_only) {
+    return(dplyr::bind_rows(team_members))
+  }
 
   vapply(team_members, `[[`, FUN.VALUE = character(1), "login")
 }
@@ -77,7 +79,13 @@ list_team_members <- function(
 list_teams <- function(org = "openscapes", names_only = TRUE, ...) {
   check_gh_pat()
 
-  teams <- gh("GET /orgs/{org}/teams", org = org, ..., .limit = Inf) %>%
+  teams <- gh(
+    "GET /orgs/{org}/teams",
+    org = org,
+    ...,
+    .limit = Inf,
+    .progress = FALSE
+  ) %>%
     purrr::map(function(x) {
       if (!is.null(x[["parent"]])) {
         x[["parent"]] <- x[["parent"]][["name"]]
@@ -85,7 +93,9 @@ list_teams <- function(org = "openscapes", names_only = TRUE, ...) {
       x
     })
 
-  if (!names_only) return(dplyr::bind_rows(teams))
+  if (!names_only) {
+    return(dplyr::bind_rows(teams))
+  }
 
   vapply(teams, `[[`, FUN.VALUE = character(1), "name")
 }
