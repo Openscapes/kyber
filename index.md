@@ -7,12 +7,14 @@ You can install Kyber using the `remotes` package:
 To install the latest release version from GitHub:
 
 ``` r
+
 remotes::install_github("openscapes/kyber@*release")
 ```
 
 To install the development version from GitHub:
 
 ``` r
+
 remotes::install_github("openscapes/kyber")
 ```
 
@@ -59,6 +61,7 @@ have authorized your computer to read from Google Sheets. Run the
 following to test your configuration settings:
 
 ``` r
+
 library(googlesheets4)
 
 cohort_registry_url <- "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc/"
@@ -78,6 +81,7 @@ share your PAT or commit it to a Git repository, since anyone with your
 PAT can act as you on GitHub.
 
 ``` r
+
 library(usethis)
 library(gitcreds)
 
@@ -103,6 +107,7 @@ This workflow often happens in 4 separate stages:
 Creating a repo creates a local folder with README.Rmd
 
 ``` r
+
 library(kyber) 
 library(rmarkdown)
 library(tibble)
@@ -208,6 +213,7 @@ Detailed instructions of what this looks like:
     `kyber::short_names(cohort$First.Name, cohort$Last.Name)`
 
 ``` r
+
 library(stringr)
 library(datapasta) # install.packages("datapasta")
 library(kyber) ## remotes::install_github("openscapes/kyber")
@@ -281,6 +287,7 @@ then unclick those 2 you don’t want).
     session.
 
 ``` r
+
 ## First make sure you have a GitHub PAT set. If you need one, here's what you'd do:
 # usethis::create_github_token() ## use their defaults plus `admin:org`
 # Sys.setenv(GITHUB_PAT = "ghp_0id4zkO4GqSuEsC6Zs22wf34Y0u3270") 

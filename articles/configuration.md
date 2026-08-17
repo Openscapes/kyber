@@ -15,6 +15,7 @@ access Google Sheets programmatically. Run the following code to
 configure `googlesheets4`:
 
 ``` r
+
 library(googlesheets4)
 
 gs4_auth()
@@ -25,6 +26,7 @@ with your Google account. After you have authorized `googlesheets4`, you
 can confirm that it is configured correctly by running the following:
 
 ``` r
+
 gs4_user()
 #> Logged in to googlesheets4 as your-name@email.com.
 ```
@@ -55,6 +57,7 @@ We have had success troubleshooting this error with the following
 method. First, try reading a Google Sheet into R:
 
 ``` r
+
 library(googlesheets4)
 
 cohort_registry_url <- "https://docs.google.com/spreadsheets/sheet-url..."
@@ -111,6 +114,7 @@ use Gert to set your GitHub username and email address locally with the
 following code:
 
 ``` r
+
 library(gert)
 
 git_config_global_set("user.name", "[your GitHub username]")
@@ -120,6 +124,7 @@ git_config_global_set("user.email", "[the email you used to sign up for GitHub]"
 Confirm your configuration was set correctly by running:
 
 ``` r
+
 git_config_global()
 ```
 
@@ -134,6 +139,7 @@ this token already selected. After you execute the code below, scroll to
 the bottom of the page and click the green “Generate token” button.
 
 ``` r
+
 library(usethis)
 
 create_github_token(
@@ -148,7 +154,7 @@ create_github_token(
 #> ℹ It is also a great idea to store this token in any password-management
 #>   software that you use.
 #> ☐ Open URL
-#>   <https://github.com/settings/tokens/new?scopes=repo,user,gist,workflow,admin:org&description=kyber-2026-02-03>.
+#>   <https://github.com/settings/tokens/new?scopes=repo,user,gist,workflow,admin:org&description=kyber-2026-08-17>.
 ```
 
 The token should appear as a string with about 40 random alphanumeric
@@ -157,6 +163,7 @@ running the code below. You will be prompted to enter the token into the
 R console:
 
 ``` r
+
 library(gitcreds)
 
 gitcreds_set()
@@ -174,6 +181,7 @@ see:
 You can check to make sure that you credentials are set up by running:
 
 ``` r
+
 gitcreds_get()
 ```
 

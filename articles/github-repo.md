@@ -7,6 +7,7 @@ Make sure your computer is configured according to the instructions in
 Run the following code to see if your GitHub credentials are set up:
 
 ``` r
+
 library(gitcreds)
 gitcreds_get()
 ```
@@ -43,6 +44,7 @@ function in the code below will do the following:
     to edit.
 
 ``` r
+
 library(kyber) 
 
 repo_name <- "2021-ilm-rotj"

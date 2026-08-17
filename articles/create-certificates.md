@@ -1,6 +1,7 @@
 # Create Cohort Certificates
 
 ``` r
+
 library(kyber)
 library(googlesheets4)
 library(dplyr)
@@ -12,6 +13,7 @@ First load data from the Champions registry google sheet and
 participants sheet:
 
 ``` r
+
 registry <- read_sheet(
   "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc"
 ) # OpenscapesChampionsCohortRegistry
@@ -25,6 +27,7 @@ the name that matches the cohort in the registry. The function will
 create certificates using the appropriate NMFS Openscapes template.
 
 ``` r
+
 create_batch_certificates(
   registry = registry,
   participants = participants,
@@ -45,6 +48,7 @@ named `participant_name` that contains full names of participants
 (usually imported from a Google sheet of registrants ).
 
 ``` r
+
 sheet <- googlesheets4::read_sheet("url to pathways registration sheet")
 
 create_batch_pathways_certificates(
@@ -61,6 +65,7 @@ First load data from the Champions registry google sheet and
 participants sheet:
 
 ``` r
+
 registry <- read_sheet(
   "https://docs.google.com/spreadsheets/d/1Ys9KiTXXmZ_laBoCV2QWEm7AcnGSVQaXvm2xpi4XTSc"
 ) # OpenscapesChampionsCohortRegistry
@@ -75,6 +80,7 @@ to match the cohort in the registry. Leave `cohort_type` as the default
 appropriate template.
 
 ``` r
+
 create_batch_certificates(
   registry = registry,
   participants = participants,
@@ -88,6 +94,7 @@ create_batch_certificates(
 For a single certificate, you can supply all of the values manually:
 
 ``` r
+
 create_certificate(
   cohort_name = "2023-fred-hutch",
   first_name = "First Name",
@@ -105,6 +112,7 @@ arguments you need to supply are `first_name`, `last_name`,
 `start_date`, and `end_date`:
 
 ``` r
+
 create_certificate(
   first_name = "Firstname",
   last_name = "Lastname",
