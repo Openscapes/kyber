@@ -179,6 +179,9 @@ call_agenda <- function(
       lines_[grep("\\\\\\[", lines_)]
     )
     writeLines(lines_, result)
+    cli::cli_alert_success(
+      "Agenda for call {call_number} of cohort {.val {cohort_id}} written to {.file {fs::path_abs(result)}}."
+    )
   } else {
     stop("Agenda output format not supported.")
   }
