@@ -24,6 +24,7 @@ Useful links:
 
 Authors:
 \itemize{
+  \item Sean Kross \email{sean@seankross.com} (\href{https://orcid.org/0000-0001-5215-0316}{ORCID})
   \item Julia Lowndes \email{julia@openscapes.org} (\href{https://orcid.org/0000-0003-1682-3872}{ORCID})
   \item Andy Teucher \email{andy.teucher@gmail.com} (\href{https://orcid.org/0000-0002-7840-692X}{ORCID})
   \item Stefanie Butland \email{stefaniebutland@gmail.com} (\href{https://orcid.org/0000-0002-5427-8951}{ORCID})

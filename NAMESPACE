@@ -24,55 +24,73 @@ export(remove_org_members)
 export(remove_team_members)
 export(short_names)
 import(knitr)
-importFrom(cli,cli_abort)
-importFrom(cli,cli_alert_info)
-importFrom(dplyr,.data)
-importFrom(dplyr,arrange)
-importFrom(dplyr,filter)
-importFrom(dplyr,group_by)
-importFrom(dplyr,group_split)
-importFrom(dplyr,mutate)
-importFrom(dplyr,pull)
-importFrom(dplyr,tibble)
-importFrom(fs,dir_create)
-importFrom(fs,file_copy)
-importFrom(fs,path)
-importFrom(gert,git_add)
-importFrom(gert,git_branch)
-importFrom(gert,git_branch_move)
-importFrom(gert,git_clone)
-importFrom(gert,git_commit)
-importFrom(gert,git_init)
-importFrom(gert,git_push)
-importFrom(gert,git_remote_add)
+importFrom(cli,
+  cli_abort,
+  cli_alert_info
+)
+importFrom(dplyr,
+  .data,
+  arrange,
+  filter,
+  group_by,
+  group_split,
+  mutate,
+  pull,
+  tibble
+)
+importFrom(fs,
+  dir_create,
+  file_copy,
+  path
+)
+importFrom(gert,
+  git_add,
+  git_branch,
+  git_branch_move,
+  git_clone,
+  git_commit,
+  git_init,
+  git_push,
+  git_remote_add
+)
 importFrom(gh,gh)
 importFrom(gitcreds,gitcreds_get)
 importFrom(googlesheets4,read_sheet)
-importFrom(lubridate,as_date)
-importFrom(lubridate,day)
-importFrom(lubridate,dweeks)
-importFrom(lubridate,minutes)
-importFrom(lubridate,month)
-importFrom(lubridate,parse_date_time)
+importFrom(lubridate,
+  as_date,
+  day,
+  dweeks,
+  minutes,
+  month,
+  parse_date_time
+)
 importFrom(magrittr,"%>%")
-importFrom(parsermd,as_ast)
-importFrom(parsermd,as_document)
-importFrom(parsermd,as_tibble)
-importFrom(parsermd,parse_rmd)
-importFrom(purrr,discard)
-importFrom(purrr,keep)
-importFrom(purrr,list_flatten)
-importFrom(purrr,map)
-importFrom(purrr,map_chr)
-importFrom(purrr,map_dbl)
-importFrom(purrr,map_dfr)
-importFrom(purrr,map_lgl)
-importFrom(purrr,safely)
-importFrom(rmarkdown,draft)
-importFrom(rmarkdown,md_document)
-importFrom(rmarkdown,render)
-importFrom(rmarkdown,yaml_front_matter)
-importFrom(rstudioapi,hasFun)
-importFrom(rstudioapi,navigateToFile)
+importFrom(parsermd,
+  as_ast,
+  as_document,
+  as_tibble,
+  parse_rmd
+)
+importFrom(purrr,
+  discard,
+  keep,
+  list_flatten,
+  map,
+  map_chr,
+  map_dbl,
+  map_dfr,
+  map_lgl,
+  safely
+)
+importFrom(rmarkdown,
+  draft,
+  md_document,
+  render,
+  yaml_front_matter
+)
+importFrom(rstudioapi,
+  hasFun,
+  navigateToFile
+)
 importFrom(stringr,str_extract)
 importFrom(tools,file_ext)
