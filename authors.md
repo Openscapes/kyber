@@ -21,13 +21,13 @@ Source:
 [`DESCRIPTION`](https://github.com/Openscapes/kyber/blob/main/DESCRIPTION)
 
 Kross S, Lowndes J, Teucher A, Butland S (2026). *kyber: Set Up Learning
-Cohorts on GitHub*. R package version 0.2.0.9000,
+Cohorts on GitHub*. R package version 0.3.0,
 <https://openscapes.github.io/kyber/>.
 
     @Manual{,
       title = {kyber: Set Up Learning Cohorts on GitHub},
       author = {Sean Kross and Julia Lowndes and Andy Teucher and Stefanie Butland},
       year = {2026},
-      note = {R package version 0.2.0.9000},
+      note = {R package version 0.3.0},
       url = {https://openscapes.github.io/kyber/},
     }
