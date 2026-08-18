@@ -10,7 +10,7 @@ call_agenda(
   call_number,
   cohort_sheet = "cohort_metadata",
   call_sheet = "call_metadata",
-  website = paste0("https://openscapes.github.io/", cohort_id),
+  website = NULL,
   output_format = md_agenda(),
   output_file = paste0("agenda_call_", call_number, ".md")
 )
@@ -27,7 +27,7 @@ call_agenda(
 \item{call_sheet}{The sheet in the registry with information about
 individual calls.}
 
-\item{website}{A website for the cohort.}
+\item{website}{A website for the cohort. Default \code{NULL} will pull it from the registry column \code{cohort_website}.}
 
 \item{output_format}{The output format of the agenda.}
 
