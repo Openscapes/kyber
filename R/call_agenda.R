@@ -41,7 +41,7 @@ call_agenda <- function(
   if (is.null(website)) {
     website <- cohort_registry %>%
       filter(cohort_name == cohort_id) %>%
-      pull(cohort_website)
+      pull("cohort_website")
   }
 
   params_registry <- list(
