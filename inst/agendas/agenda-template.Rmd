@@ -136,7 +136,7 @@ _All Champions program slides are also linked from [https://openscapes.github.io
 * **Efficiency Tip of the Day **(3 min) – Julie
 * Keyboard Shortcuts Part 1: Useful for any application (docs, email, code)
     * **Mac: **Arrow keys + option, + command, + shift, & in combination
-    * **PC:** Arrow keys + Ctrl + Fn + shift, & in combination
+    * **Windows:** Arrow keys + Ctrl + Fn + shift, & in combination
     * Here is some sample text for our demo. What a great sentence.
 * **Inclusion Tip of the Day**
     * Be mindful of words and idioms you use. Move away from language that is racist, sexist, violent, ableist, etc. Example: 

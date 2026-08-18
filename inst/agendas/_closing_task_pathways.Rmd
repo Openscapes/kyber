@@ -16,3 +16,5 @@ params:
         -   Team leads are encouraged not to present!
         -   See [Champions Series - Pathways Chapter](https://openscapes.github.io/series/core-lessons/pathways.html) for more details and examples
         -   Share Pathway Doc in our PathwayShare folder
+
+- **Open Science Tips of the Day** (2 min) – Stef

@@ -98,12 +98,12 @@ params:
                     -   Create a new bullet by hitting return
                     -   Shortcut to create new bullet:
                         -   Mac: Shift - Command - 8
-                        -   PC: Shift - Control - 8
+                        -   Windows: Shift - Control - 8
                 -   Comments / emojis / gifs / +1s to say “me too” are welcome! 🤓
                     -   Shortcut to insert emoji:
                         -   Mac: Control - Command - Space bar 🦑🐙🦀
 
-                        -   PC: Windows - Period OR Windows - Semicolon ; 🦖
+                        -   Windows: Windows - Period OR Windows - Semicolon ; 🦖
             -   Breakout groups – to help you reflect on your work and get to know each other
                 -   Mix of random and teams so you have different opportunities to meet and network. 
 

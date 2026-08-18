@@ -14,3 +14,5 @@ params:
       - [NMFS-OpenSci Project boards](https://nmfs-opensci.github.io/ResourceBook/content/project_management/github_project_boards.html)
 
 - Share updates on Slack or as a GitHub Issue in our cohort repo!
+
+- **Open Science Tips of the Day** (2 min) – Stef

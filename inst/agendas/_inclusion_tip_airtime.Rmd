@@ -4,6 +4,5 @@ params:
   duration: 1
 ---
 
-- **Inclusion Tip of the Day** (1 min) – Julie
-  - Good questions to help you think of your airtime (H/T [Kara Woo](https://karawoo.com/)):
+  - **Good questions to help you think of your airtime** (H/T [Kara Woo](https://karawoo.com/)):
     - “Does this need to be said, does it need to be said now, does it need to be said now by me” 
