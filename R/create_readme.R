@@ -39,8 +39,11 @@ create_readme <- function(
   )
 
   if (edit) {
-    if (rstudioapi::hasFun("navigateToFile"))
-      rstudioapi::navigateToFile(readme) else utils::file.edit(readme)
+    if (rstudioapi::hasFun("navigateToFile")) {
+      rstudioapi::navigateToFile(readme)
+    } else {
+      utils::file.edit(readme)
+    }
   }
 
   invisible(readme)
