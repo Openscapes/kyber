@@ -51,7 +51,7 @@
 <span>  <span class="va">call_number</span>,</span>
 <span>  cohort_sheet <span class="op">=</span> <span class="st">"cohort_metadata"</span>,</span>
 <span>  call_sheet <span class="op">=</span> <span class="st">"call_metadata"</span>,</span>
-<span>  website <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="st">"https://openscapes.github.io/"</span>, <span class="va">cohort_id</span><span class="op">)</span>,</span>
+<span>  website <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  output_format <span class="op">=</span> <span class="fu"><a href="md_agenda.html">md_agenda</a></span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  output_file <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="st">"agenda_call_"</span>, <span class="va">call_number</span>, <span class="st">".md"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
@@ -83,7 +83,7 @@ individual calls.</p></dd>
 
 
 <dt id="arg-website">website<a class="anchor" aria-label="anchor" href="#arg-website"></a></dt>
-<dd><p>A website for the cohort.</p></dd>
+<dd><p>A website for the cohort. Default <code>NULL</code> will pull it from the registry column <code>cohort_website</code>.</p></dd>
 
 
 <dt id="arg-output-format">output_format<a class="anchor" aria-label="anchor" href="#arg-output-format"></a></dt>

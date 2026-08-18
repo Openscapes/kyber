@@ -11,7 +11,7 @@ call_agenda(
   call_number,
   cohort_sheet = "cohort_metadata",
   call_sheet = "call_metadata",
-  website = paste0("https://openscapes.github.io/", cohort_id),
+  website = NULL,
   output_format = md_agenda(),
   output_file = paste0("agenda_call_", call_number, ".md")
 )
@@ -41,7 +41,8 @@ call_agenda(
 
 - website:
 
-  A website for the cohort.
+  A website for the cohort. Default `NULL` will pull it from the
+  registry column `cohort_website`.
 
 - output_format:
 
