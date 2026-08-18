@@ -22,3 +22,5 @@ params:
         -   Introduce yourself and tag your team
             -   Private channel for our cohort as you get comfortable
             -   New to Slack? [How Openscapes uses Slack](https://openscapes.github.io/approach-guide/approach/tooling.html#slack)
+
+- **Open Science Tips of the Day** (2 min) – Stef

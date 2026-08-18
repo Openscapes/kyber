@@ -75,7 +75,7 @@ params:
             -   Create a new bullet by hitting return
             -   Shortcut to create new bullet:
                 -   Mac: Shift - Command - 8
-                -   PC: Shift - Control - 8
+                -   Windows: Shift - Control - 8
             -   Comments / emojis / gifs / +1s to say “me too” are welcome! 🤓
                 -   Insert \> Emoji: 🦑 🎉
 

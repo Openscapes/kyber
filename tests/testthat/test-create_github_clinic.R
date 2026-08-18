@@ -21,13 +21,13 @@ test_that("Fails with duplicate names", {
 
 test_that("Interaction with existing file names works (#120)", {
   cohort <- tibble::tribble(
-    ~first,
-    ~last,
-    "Erin",
-    "Robinson",
-    "Erin",
-    "Lowndes",
-    "Stef",
+    ~first     ,
+    ~last      ,
+    "Erin"     ,
+    "Robinson" ,
+    "Erin"     ,
+    "Lowndes"  ,
+    "Stef"     ,
     "Butland"
   )
 

@@ -33,3 +33,5 @@ params:
     -   Thinking about data workflows as a collaborative effort
     -   Identifying and addressing shared needs
     -   Thinking ahead for future us
+
+**Open Science Tips of the Day** (2 min) – Stef
