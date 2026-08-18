@@ -18,7 +18,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/Openscapes/kyber/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/Openscapes/kyber/blob/v0.3.0/DESCRIPTION)
 
 Kross S, Lowndes J, Teucher A, Butland S (2026). *kyber: Set Up Learning
 Cohorts on GitHub*. R package version 0.3.0,
