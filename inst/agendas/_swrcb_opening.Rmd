@@ -2,7 +2,7 @@
 params:
   cohort_name: '[Cohort Name]'
   google_drive_folder: '[Google Drive Folder]'
-  website: '[Website]'
+  cohort_website: '[Cohort Website]'
 editor_options: 
   markdown: 
     wrap: 72
