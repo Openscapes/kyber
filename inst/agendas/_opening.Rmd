@@ -7,7 +7,7 @@ params:
 
 **Openscapes Champions Cohort Series [ `r params$cohort_name` ]** 
 
-Links: [Cohort Google Drive folder](`r params$google_drive_folder`), <font color="purple">Zoom:</font>
+Links: [Cohort Google Drive folder](`r params$google_drive_folder`), Zoom:
 
 Web: `r params$website`
 
