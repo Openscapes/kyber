@@ -154,7 +154,7 @@ create_github_token(
 #> ℹ It is also a great idea to store this token in any password-management
 #>   software that you use.
 #> ☐ Open URL
-#>   <https://github.com/settings/tokens/new?scopes=repo,user,gist,workflow,admin:org&description=kyber-2026-08-17>.
+#>   <https://github.com/settings/tokens/new?scopes=repo,user,gist,workflow,admin:org&description=kyber-2026-08-18>.
 ```
 
 The token should appear as a string with about 40 random alphanumeric
