@@ -6,7 +6,7 @@
 #' @param cohort_sheet The sheet in the registry with cohort information.
 #' @param call_sheet The sheet in the registry with information about
 #' individual calls.
-#' @param website A website for the cohort.
+#' @param website A website for the cohort. Default `NULL` will pull it from the registry column `cohort_website`.
 #' @param output_format The output format of the agenda.
 #' @param output_file The name of the output file. Defaults to `"agenda_call_[call_number].md"`.
 #' @importFrom googlesheets4 read_sheet
@@ -23,7 +23,7 @@ call_agenda <- function(
   call_number,
   cohort_sheet = "cohort_metadata",
   call_sheet = "call_metadata",
-  website = paste0("https://openscapes.github.io/", cohort_id),
+  website = NULL,
   output_format = md_agenda(),
   output_file = paste0("agenda_call_", call_number, ".md")
 ) {
@@ -34,13 +34,22 @@ call_agenda <- function(
       "{.var cohort_id} {.val {cohort_id}} not found in cohort registry. Check {.var cohort_id} against cohort names in registry."
     )
   }
+
   call_registry <- read_sheet(registry_url, call_sheet, col_types = "c")
   temp_dir <- tempdir()
+
+  if (is.null(website)) {
+    website <- cohort_registry %>%
+      filter(cohort_name == cohort_id) %>%
+      pull(cohort_website)
+  }
+
   params_registry <- list(
-    website = website,
+    cohort_website = website,
     cohort_name = cohort_id,
     call = call_number
   )
+
   cohort_name <- date_start <- type <- NULL
 
   cohort_type_ <- get_cohort_type(cohort_registry, cohort_id)
@@ -81,10 +90,6 @@ call_agenda <- function(
   params_registry$github_repo <- cohort_registry %>%
     filter(cohort_name == cohort_id) %>%
     pull("github_repo")
-
-  params_registry$cohort_website <- cohort_registry %>%
-    filter(cohort_name == cohort_id) %>%
-    pull("cohort_website")
 
   params_registry$title <- call_registry %>%
     filter(cohort_type == cohort_type_) %>%

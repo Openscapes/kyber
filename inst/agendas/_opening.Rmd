@@ -2,14 +2,14 @@
 params:
   cohort_name: '[Cohort Name]'
   google_drive_folder: '[Google Drive Folder]'
-  website: '[Website]'
+  cohort_website: '[Cohort Website]'
 ---
 
 **Openscapes Champions Cohort Series [ `r params$cohort_name` ]** 
 
 Links: [Cohort Google Drive folder](`r params$google_drive_folder`), <font color="purple">Zoom:</font>
 
-Web: `r params$website`
+Web: `r params$cohort_website`
 
 **Quick introduction:**
 
